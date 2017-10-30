@@ -32,12 +32,13 @@ public:
     explicit ExportImageDialog(QWidget* parent = 0, bool seq = false);
     ~ExportImageDialog();
 
+	void setCamerasInfo(const std::vector<std::pair<QString, QSize>>);
+
     void  setExportSize( QSize size );
     QSize getExportSize();
-
     bool getTransparency();
-
     QString getExportFormat();
+	QString getCameraLayerName();
 
 protected:
     Mode getMode();
@@ -45,11 +46,11 @@ protected:
 
 private slots:
     void formatChanged(QString format);
+	void cameraComboChanged(int index);
 
 private:
-    Ui::ExportImageOptions* ui;
-
-    FileType m_fileType;
+    Ui::ExportImageOptions* ui = nullptr;
+    FileType mFileType;
 };
 
 #endif // EXPORTIMAGEDIALOG_H

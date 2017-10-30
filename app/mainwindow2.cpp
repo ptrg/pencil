@@ -234,8 +234,8 @@ void MainWindow2::createMenus()
 
     /// --- Export Menu ---
     //connect( ui->actionExport_X_sheet, &QAction::triggered, mEditor, &Editor::exportX );
-    connect( ui->actionExport_Image, &QAction::triggered, this, &MainWindow2::exportImage );
-    connect( ui->actionExport_ImageSeq, &QAction::triggered, this, &MainWindow2::exportImageSequence );
+    connect( ui->actionExport_Image, &QAction::triggered, mCommands, &ActionCommands::exportImage );
+    connect( ui->actionExport_ImageSeq, &QAction::triggered, mCommands, &ActionCommands::exportImageSequence );
     connect( ui->actionExport_Movie, &QAction::triggered, mCommands, &ActionCommands::exportMovie );
 
     connect( ui->actionExport_Palette, &QAction::triggered, this, &MainWindow2::exportPalette );
@@ -712,127 +712,6 @@ void MainWindow2::lockWidgets(bool shouldLock)
     mTimeLine->setFeatures(feat);
 }
 
-void MainWindow2::exportImageSequence()
-{
-    // Get the camera layer
-    int cameraLayerId = mEditor->layers()->getLastCameraLayer();
-
-    LayerCamera *cameraLayer = dynamic_cast< LayerCamera* >(mEditor->object()->getLayer(cameraLayerId));
-
-    // Options
-    auto dialog =  new ExportImageDialog( this, true );
-    OnScopeExit( dialog->deleteLater() );
-
-    if(cameraLayer != nullptr)
-    {
-        dialog->setExportSize( cameraLayer->getViewRect().size() );
-    }
-    else
-    {
-        dialog->setExportSize( QSize(640,480) );
-    }
-    dialog->exec();
-
-    QString strFilePath = dialog->getFilePath();
-    QSize exportSize = dialog->getExportSize();
-    QString exportFormat = dialog->getExportFormat();
-    bool useTranparency = dialog->getTransparency();
-
-    if ( dialog->result() == QDialog::Rejected )
-    {
-        return; // false;
-    }
-
-
-    // Export
-//    QTransform view = RectMapTransform( mScribbleArea->getViewRect(), QRectF( QPointF( 0, 0 ), exportSize ) );
-//    view = mScribbleArea->getView() * view;
-
-
-    int projectLength = mEditor->layers()->projectLength();
-
-    // Show a progress dialog, as this can take a while if you have lots of frames.
-    QProgressDialog progress( tr( "Exporting image sequence..." ), tr( "Abort" ), 0, 100, this );
-    hideQuestionMark(progress);
-    progress.setWindowModality( Qt::WindowModal );
-    progress.show();
-
-    mEditor->object()->exportFrames( 1,
-                                     projectLength,
-                                     cameraLayer,
-                                     exportSize,
-                                     strFilePath,
-                                     exportFormat.toStdString().c_str(),
-                                     -1,
-                                     useTranparency,
-                                     true,
-                                     &progress,
-                                     100 );
-
-    progress.close();
-
-    //return true;
-}
-
-void MainWindow2::exportImage()
-{
-    QSettings settings( PENCIL2D, PENCIL2D );
-
-    // Get the camera layer
-    int cameraLayerId = mEditor->layers()->getLastCameraLayer();
-
-    LayerCamera *cameraLayer = dynamic_cast< LayerCamera* >(mEditor->object()->getLayer(cameraLayerId));
-
-
-    // Options
-    auto dialog =  new ExportImageDialog( this );
-    OnScopeExit( dialog->deleteLater() );
-
-    if(cameraLayer != nullptr)
-    {
-        dialog->setExportSize(cameraLayer->getViewRect().size());
-    }
-    else
-    {
-        dialog->setExportSize(QSize(640, 480));
-    }
-    dialog->exec();
-
-    QString filePath = dialog->getFilePath();
-    QSize exportSize = dialog->getExportSize();
-    QString exportFormat = dialog->getExportFormat();
-    bool useTranparency = dialog->getTransparency();
-
-    if ( dialog->result() == QDialog::Rejected )
-    {
-        return; // false;
-    }
-
-
-    // Export
-    QTransform view = RectMapTransform( mScribbleArea->getViewRect(), QRectF( QPointF( 0, 0 ), exportSize ) );
-//    view = mScribbleArea->getView() * view;
-
-    int projectLength = mEditor->layers()->projectLength();
-    if ( !mEditor->object()->exportIm( mEditor->currentFrame(),
-                                       projectLength,
-                                       view,
-                                       exportSize,
-                                       filePath,
-                                       exportFormat,
-                                       true,
-                                       useTranparency ) )
-    {
-        QMessageBox::warning( this,
-                              tr( "Warning" ),
-                              tr( "Unable to export image." ),
-                              QMessageBox::Ok,
-                              QMessageBox::Ok );
-        return;// false;
-    }
-    return; // true;
-}
-
 void MainWindow2::preferences()
 {
     mPrefDialog = new PreferencesDialog( this );
@@ -1074,8 +953,6 @@ void MainWindow2::aboutPencil()
 
 void MainWindow2::helpBox()
 {
-    //qDebug() << "Open help manual.";
-
     QString url = "http://www.pencil2d.org/documentation/";
     QDesktopServices::openUrl( QUrl(url) );
 }

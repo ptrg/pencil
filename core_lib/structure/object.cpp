@@ -520,15 +520,17 @@ QString Object::copyFileToDataFolder( QString strFilePath )
 }
 
 bool Object::exportFrames( int frameStart, int frameEnd,
-                           Layer* currentLayer,
-                           QSize exportSize, QString filePath,
-                           const char* format,
-                           int quality,
+                           LayerCamera* cameraLayer,
+                           QSize exportSize,
+				           QString filePath,
+                           QString format,
                            bool transparency,
                            bool antialiasing,
                            QProgressDialog* progress = NULL,
                            int progressMax = 50 )
 {
+	Q_ASSERT(cameraLayer);
+
     QSettings settings( PENCIL2D, PENCIL2D );
 
     QString extension = "";
@@ -571,67 +573,21 @@ bool Object::exportFrames( int frameStart, int frameEnd,
             }
         }
 
-        QImage imageToExport( exportSize, QImage::Format_ARGB32_Premultiplied );
-        QColor bgColor = Qt::white;
-        if (transparency) {
-            bgColor.setAlpha(0);
-        }
-        imageToExport.fill(bgColor);
+		QTransform view = cameraLayer->getViewAtFrame(currentFrame);
+		QSize camSize = cameraLayer->getViewSize();
 
-        QPainter painter( &imageToExport );
+		QString frameNumberString = QString::number(currentFrame);
+		while (frameNumberString.length() < 4)
+		{
+			frameNumberString.prepend("0");
+		}
+		QString sFileName = filePath + frameNumberString + extension;
 
-        QRect viewRect;
-        if(currentLayer != nullptr)
-        {
-            viewRect = ( ( LayerCamera* )currentLayer )->getViewRect();
-        }
-        else
-        {
-            // Some old .PCL files may not have a camera layer.
-            // In that case, use a default size.
-            viewRect = QRect( QPoint(-320,-240), QSize(640,480) );
-        }
-
-        QTransform mapView = RectMapTransform( viewRect, QRectF( QPointF( 0, 0 ), exportSize ) );
-//        mapView = ( ( LayerCamera* )currentLayer )->getViewAtFrame( currentFrame ) * mapView;
-        painter.setWorldTransform( mapView );
-
-        paintImage( painter, currentFrame, false, antialiasing );
-
-        QString frameNumberString = QString::number( currentFrame );
-        while ( frameNumberString.length() < 4 )
-        {
-            frameNumberString.prepend( "0" );
-        }
-        imageToExport.save( filePath + frameNumberString + extension, format, quality );
+		exportIm(currentFrame, view, camSize, exportSize, sFileName, format, antialiasing, transparency);
     }
 
     return true;
 }
-
-
-void convertNFrames( int fps, int exportFps, int* frameRepeat, int* frameReminder, int* framePutEvery, int* frameSkipEvery )
-{
-    /// --- simple conversion ---
-    *frameRepeat = exportFps / fps;     // identic frames to export per frame
-    *frameReminder = exportFps % fps;   // additional frames to export in an fps cycle (= 1 second)
-
-    /// --- modulo frames and their redistribution in time ---
-    if ( *frameReminder == 0 )                            /// frames left = 0 -> no need to add extra frames
-    {
-        *framePutEvery = 0; *frameSkipEvery = 0;
-    }        //  so, frameSkipEvery and framePutEvery will not be used.
-    else if ( *frameReminder > ( fps - *frameReminder ) )   /// frames to add > frames to skip -> frameSkipEvery will be used.
-    {
-        *frameSkipEvery = fps / ( fps - *frameReminder ); *framePutEvery = 0;
-    }
-    else                                                /// Frames to add < frames to skip -> framePutEvery will be used.
-    {
-        *framePutEvery = fps / *frameReminder; *frameSkipEvery = 0;
-    }
-    qDebug() << "-->convertedNFrames";
-}
-
 
 bool Object::exportX( int frameStart, int frameEnd, QTransform view, QSize exportSize, QString filePath, bool antialiasing )
 {
@@ -675,20 +631,23 @@ bool Object::exportX( int frameStart, int frameEnd, QTransform view, QSize expor
     return true;
 }
 
-bool Object::exportIm( int frameStart, int frameEnd, QTransform view, QSize exportSize, QString filePath, QString format, bool antialiasing, bool transparency )
+bool Object::exportIm( int frame, QTransform view, QSize cameraSize, QSize exportSize, QString filePath, QString format, bool antialiasing, bool transparency )
 {
-    Q_UNUSED( frameEnd );
     QImage imageToExport( exportSize, QImage::Format_ARGB32_Premultiplied );
 
     QColor bgColor = Qt::white;
-    if (transparency) {
+    if (transparency)
         bgColor.setAlpha(0);
-    }
     imageToExport.fill(bgColor);
 
-    QPainter painter( &imageToExport );
-    painter.setWorldTransform( view );
-    paintImage( painter, frameStart, false, antialiasing );
+	QTransform centralizeCamera;
+	centralizeCamera.translate(cameraSize.width() / 2, cameraSize.height() / 2);
+
+	QPainter painter(&imageToExport);
+	painter.setWorldTransform(view * centralizeCamera);
+	painter.setWindow(QRect(0, 0, cameraSize.width(), cameraSize.height()));
+
+    paintImage( painter, frame, false, antialiasing );
 
     return imageToExport.save( filePath, format.toStdString().c_str() );
 }

@@ -31,9 +31,8 @@ GNU General Public License for more details.
 #include "playbackmanager.h"
 #include "preferencemanager.h"
 #include "util.h"
+#include "app_util.h"
 
-//#include "layerbitmap.h"
-//#include "layervector.h"
 #include "layercamera.h"
 #include "layersound.h"
 #include "bitmapimage.h"
@@ -44,7 +43,7 @@ GNU General Public License for more details.
 #include "movieexporter.h"
 #include "filedialogex.h"
 #include "exportmoviedialog.h"
-
+#include "exportimagedialog.h"
 
 
 ActionCommands::ActionCommands( QWidget* parent ) : QObject( parent )
@@ -191,6 +190,136 @@ Status ActionCommands::exportMovie()
     }
     delete mExportMovieDialog;
     return Status::OK;
+}
+
+Status ActionCommands::exportImageSequence()
+{
+	// Options
+	auto dialog = new ExportImageDialog(mParent, true);
+	OnScopeExit(dialog->deleteLater());
+
+	std::vector< std::pair<QString, QSize> > camerasInfo;
+	auto cameraLayers = mEditor->object()->getLayersByType< LayerCamera >();
+	for (LayerCamera* i : cameraLayers)
+	{
+		camerasInfo.push_back(std::make_pair(i->name(), i->getViewSize()));
+	}
+
+	auto currLayer = mEditor->layers()->currentLayer();
+	if (currLayer->type() == Layer::CAMERA)
+	{
+		QString strName = currLayer->name();
+		auto it = std::find_if(camerasInfo.begin(), camerasInfo.end(),
+			[strName](std::pair<QString, QSize> p)
+		{
+			return p.first == strName;
+		});
+
+		Q_ASSERT(it != camerasInfo.end());
+		std::swap(camerasInfo[0], *it);
+	}
+	dialog->setCamerasInfo(camerasInfo);
+
+	dialog->exec();
+
+	if (dialog->result() == QDialog::Rejected)
+	{
+		return Status::SAFE;
+	}
+
+	QString strFilePath = dialog->getFilePath();
+	QSize exportSize = dialog->getExportSize();
+	QString exportFormat = dialog->getExportFormat();
+	bool useTranparency = dialog->getTransparency();
+
+	int projectLength = mEditor->layers()->projectLength();
+
+	QString sCameraLayerName = dialog->getCameraLayerName();
+	LayerCamera* cameraLayer = (LayerCamera*)mEditor->layers()->getLayerByName(sCameraLayerName);
+
+	// Show a progress dialog, as this can take a while if you have lots of frames.
+	QProgressDialog progress(tr("Exporting image sequence..."), tr("Abort"), 0, 100, mParent);
+	hideQuestionMark(progress);
+	progress.setWindowModality(Qt::WindowModal);
+	progress.show();
+
+	mEditor->object()->exportFrames(1, projectLength,
+		cameraLayer,
+		exportSize,
+		strFilePath,
+		exportFormat,
+		useTranparency,
+		true,
+		&progress,
+		100);
+
+	progress.close();
+
+	return Status::OK;
+}
+
+Status ActionCommands::exportImage()
+{
+	// Options
+	auto dialog = new ExportImageDialog(mParent);
+	OnScopeExit(dialog->deleteLater());
+
+	std::vector< std::pair<QString, QSize> > camerasInfo;
+	auto cameraLayers = mEditor->object()->getLayersByType< LayerCamera >();
+	for (LayerCamera* i : cameraLayers)
+	{
+		camerasInfo.push_back(std::make_pair(i->name(), i->getViewSize()));
+	}
+
+	auto currLayer = mEditor->layers()->currentLayer();
+	if (currLayer->type() == Layer::CAMERA)
+	{
+		QString strName = currLayer->name();
+		auto it = std::find_if(camerasInfo.begin(), camerasInfo.end(),
+			[strName](std::pair<QString, QSize> p)
+		{
+			return p.first == strName;
+		});
+
+		Q_ASSERT(it != camerasInfo.end());
+		std::swap(camerasInfo[0], *it);
+	}
+	dialog->setCamerasInfo(camerasInfo);
+
+	dialog->exec();
+
+	if (dialog->result() == QDialog::Rejected)
+	{
+		return Status::SAFE;
+	}
+
+	QString filePath = dialog->getFilePath();
+	QSize exportSize = dialog->getExportSize();
+	QString exportFormat = dialog->getExportFormat();
+	bool useTranparency = dialog->getTransparency();
+
+	// Export
+	QString sCameraLayerName = dialog->getCameraLayerName();
+	LayerCamera* cameraLayer = (LayerCamera*)mEditor->layers()->getLayerByName(sCameraLayerName);
+
+	QTransform view = cameraLayer->getViewAtFrame(mEditor->currentFrame());
+
+	if (!mEditor->object()->exportIm(mEditor->currentFrame(),
+		view,
+		cameraLayer->getViewSize(),
+		exportSize,
+		filePath,
+		exportFormat,
+		true,
+		useTranparency))
+	{
+		QMessageBox::warning(mParent,
+			tr("Warning"),
+			tr("Unable to export image."),
+			QMessageBox::Ok);
+		return Status::FAIL;
+	}
+	return Status::OK;
 }
 
 void ActionCommands::ZoomIn()

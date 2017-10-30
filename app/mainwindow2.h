@@ -82,13 +82,9 @@ public:
     bool saveAsNewDocument();
     bool maybeSave();
 
-    // import/export
+    // import
     void importImage();
-    void exportImage();
-
     void importImageSequence();
-    void exportImageSequence();
-
     void importMovie();
 
     void lockWidgets( bool shouldLock );
