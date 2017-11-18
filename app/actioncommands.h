@@ -29,16 +29,16 @@ class ActionCommands : public QObject
     Q_OBJECT
 
 public:
-    explicit ActionCommands( QWidget* parent = 0 );
+    explicit ActionCommands(QWidget* parent = 0);
     virtual ~ActionCommands();
 
-    void setCore( Editor* e ) { mEditor = e; }
-    
+    void setCore(Editor* e) { mEditor = e; }
+
     // file 
     Status importSound();
-	Status exportMovie();
-	Status exportImageSequence();
-	Status exportImage();
+    Status exportMovie();
+    Status exportImageSequence();
+    Status exportImage();
 
     // edit
 
@@ -50,8 +50,9 @@ public:
     void flipSelectionY();
     void rotateClockwise();
     void rotateCounterClockwise();
-
-    void showGrid( bool bShow );
+    void toggleMirror();
+    void toggleMirrorV();
+    void showGrid(bool bShow);
 
     // Animation
     void PlayStop();
@@ -69,7 +70,7 @@ public:
     Status addNewSoundLayer();
 
 private:
-    Editor* mEditor  = nullptr;
+    Editor* mEditor = nullptr;
     QWidget* mParent = nullptr;
     ExportMovieDialog* mExportMovieDialog = nullptr;
 };

@@ -196,7 +196,6 @@ void BrushTool::mousePressEvent( QMouseEvent *event )
 {
     if ( event->button() == Qt::LeftButton )
     {
-        mEditor->backup( typeName() );
         mScribbleArea->setAllDirty();
     }
 
@@ -212,10 +211,12 @@ void BrushTool::mousePressEvent( QMouseEvent *event )
 
 }
 
-void BrushTool::mouseReleaseEvent( QMouseEvent *event )
+void BrushTool::mouseReleaseEvent( QMouseEvent* event )
 {
     if ( event->button() == Qt::LeftButton )
     {
+        mEditor->backup(typeName());
+
         Layer* layer = mEditor->layers()->currentLayer();
         if ( mScribbleArea->isLayerPaintable() )
         {
@@ -230,27 +231,23 @@ void BrushTool::mouseReleaseEvent( QMouseEvent *event )
             }
         }
 
-        if ( layer->type() == Layer::BITMAP ) {
+        if ( layer->type() == Layer::BITMAP ) 
             paintBitmapStroke();
-        }
         else if (layer->type() == Layer::VECTOR )
-        {
             paintVectorStroke();
-        }
     }
     endStroke();
 }
 
-void BrushTool::mouseMoveEvent( QMouseEvent *event )
+void BrushTool::mouseMoveEvent( QMouseEvent* event )
 {
     if ( mScribbleArea->isLayerPaintable() )
     {
         if ( event->buttons() & Qt::LeftButton )
         {
             drawStroke();
-            if (properties.inpolLevel != m_pStrokeManager->getInpolLevel()) {
+            if (properties.inpolLevel != m_pStrokeManager->getInpolLevel())
                 m_pStrokeManager->setInpolLevel(properties.inpolLevel);
-            }
         }
     }
 }
@@ -258,11 +255,15 @@ void BrushTool::mouseMoveEvent( QMouseEvent *event )
 // draw a single paint dab at the given location
 void BrushTool::paintAt( QPointF point )
 {
-    qDebug() << "Made a single dab at " << point;
+    //qDebug() << "Made a single dab at " << point;
     Layer* layer = mEditor->layers()->currentLayer();
     if ( layer->type() == Layer::BITMAP )
     {
         qreal opacity = 1.0;
+        if (properties.pressure)
+        {
+            opacity = mCurrentPressure / 2;
+        }
         mCurrentWidth = properties.width;
         qreal brushWidth = mCurrentWidth;
 

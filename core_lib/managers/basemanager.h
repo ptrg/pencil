@@ -21,7 +21,7 @@ GNU General Public License for more details.
 #include "editor.h"
 
 class Object;
-
+class Layer;
 
 class BaseManager : public QObject
 {
@@ -30,14 +30,15 @@ public:
     explicit BaseManager(QObject* parent = 0);
     virtual ~BaseManager();
 
-    void setEditor( Editor* );
+    void setEditor(Editor*);
 
     Editor* editor() { return mEditor; }
     Object* object() { return mEditor->object(); }
 
     virtual bool init() = 0;
-    virtual Status load( Object* o ) = 0;
-	virtual Status save( Object* o ) = 0;
+    virtual Status load(Object* o) = 0;
+    virtual Status save(Object* o) = 0;
+    virtual void workingLayerChanged(Layer*) {}
 
 private:
     Editor* mEditor = nullptr;

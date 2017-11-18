@@ -14,15 +14,14 @@ MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
 GNU General Public License for more details.
 
 */
+#include "layer.h"
 
-#include <climits>
 #include <cassert>
-#include <QtDebug>
+#include <QDebug>
 #include <QInputDialog>
 #include <QLineEdit>
 #include "keyframe.h"
 #include "keyframefactory.h"
-#include "layer.h"
 #include "object.h"
 #include "timeline.h"
 #include "timelinecells.h"
@@ -65,7 +64,7 @@ void Layer::foreachKeyFrame( std::function<void( KeyFrame* )> action )
     }
 }
 
-bool Layer::keyExists( int position )
+bool Layer::keyExists( int position ) const
 {
     return ( mKeyFrames.find( position ) != mKeyFrames.end() );
 }
@@ -170,7 +169,7 @@ int Layer::firstKeyFramePosition()
     return 0;
 }
 
-int Layer::getMaxKeyFramePosition()
+int Layer::getMaxKeyFramePosition() const
 {
     if ( !mKeyFrames.empty() )
     {
@@ -239,7 +238,8 @@ bool Layer::moveKeyFrameBackward( int position )
 
 bool Layer::swapKeyFrames( int position1, int position2 ) //Current behaviour, need to refresh the swapped cels
 {
-    bool keyPosition1 = false, keyPosition2 = false;
+    bool keyPosition1 = false;
+    bool keyPosition2 = false;
     KeyFrame* pFirstFrame  = nullptr;
     KeyFrame* pSecondFrame = nullptr;
 
@@ -249,9 +249,6 @@ bool Layer::swapKeyFrames( int position1, int position2 ) //Current behaviour, n
         pFirstFrame = firstFrame->second;
 
         mKeyFrames.erase( position1 );
-
-        //pFirstFrame = getKeyFrameAt( position1 );
-        //removeKeyFrame( position1 );
 
         keyPosition1 = true;
     }
@@ -263,15 +260,11 @@ bool Layer::swapKeyFrames( int position1, int position2 ) //Current behaviour, n
 
         mKeyFrames.erase( position2 );
 
-        //pSecondFrame = getKeyFrameAt( position2 );
-        //removeKeyFrame( position2 );
-
         keyPosition2 = true;
     }
 
     if ( keyPosition2 )
     {
-        //addKeyFrame( position1, pSecondFrame );
         pSecondFrame->setPos( position1 );
         mKeyFrames.insert( std::make_pair( position1, pSecondFrame ) );
     } 
@@ -282,7 +275,6 @@ bool Layer::swapKeyFrames( int position1, int position2 ) //Current behaviour, n
 
     if ( keyPosition1 )
     {
-        //addKeyFrame( position2, pFirstFrame );
         pFirstFrame->setPos( position2 );
         mKeyFrames.insert( std::make_pair( position2, pFirstFrame ) );
     } 
@@ -366,8 +358,6 @@ void Layer::paintTrack( QPainter& painter, TimeLineCells* cells, int x, int y, i
 void Layer::paintFrames( QPainter& painter, TimeLineCells* cells, int y, int height, bool selected, int frameSize )
 {
     painter.setPen( QPen( QBrush( QColor( 40, 40, 40 ) ), 1, Qt::SolidLine, Qt::RoundCap, Qt::RoundJoin ) );
-
-    //qDebug() << "LayerType:" << ( int )( meType );
 
     for ( auto pair : mKeyFrames )
     {
@@ -712,6 +702,9 @@ bool Layer::isPaintable()
         case Layer::BITMAP:
         case Layer::VECTOR:
             return true;
+        case Layer::CAMERA:
+        case Layer::SOUND:
+            return false;
         default:
             break;
     }

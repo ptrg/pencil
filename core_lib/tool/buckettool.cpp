@@ -14,6 +14,7 @@ MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
 GNU General Public License for more details.
 
 */
+#include "buckettool.h"
 
 #include <QPixmap>
 #include <QPainter>
@@ -30,7 +31,6 @@ GNU General Public License for more details.
 #include "editor.h"
 #include "scribblearea.h"
 
-#include "buckettool.h"
 
 BucketTool::BucketTool( QObject *parent ) :
 StrokeTool( parent )
@@ -98,54 +98,50 @@ void BucketTool::setTolerance(const int tolerance)
 
 void BucketTool::mousePressEvent( QMouseEvent *event )
 {
-    if( event->button() == Qt::LeftButton ) {
-        mEditor->backup( typeName() );
+    if( event->button() == Qt::LeftButton )
+    {
         mScribbleArea->setAllDirty();
     }
 
     startStroke();
 }
 
-void BucketTool::mouseReleaseEvent( QMouseEvent *event )
+void BucketTool::mouseReleaseEvent(QMouseEvent* event)
 {
     Layer* layer = mEditor->layers()->currentLayer();
     if ( layer == NULL ) { return; }
 
-    if ( event->button() == Qt::LeftButton ) {
-        if ( layer->type() == Layer::BITMAP ) {
+    if ( event->button() == Qt::LeftButton )
+    {
+        mEditor->backup(typeName());
+
+        if ( layer->type() == Layer::BITMAP )
             paintBitmap(layer);
-        }
-        else if( layer->type() == Layer::VECTOR ) {
+        else if( layer->type() == Layer::VECTOR )
             paintVector(event, layer);
-        }
     }
     endStroke();
 }
 
-void BucketTool::mouseMoveEvent( QMouseEvent *event )
+void BucketTool::mouseMoveEvent(QMouseEvent* evt)
 {
     Layer* layer = mEditor->layers()->currentLayer();
-    if ( layer->type() == Layer::BITMAP) {
-        Q_UNUSED( event );
-    }
-    else if(layer->type() == Layer::VECTOR )
+    if(layer->type() == Layer::VECTOR )
     {
-        if( event->buttons() & Qt::LeftButton )
+        if (evt->buttons() & Qt::LeftButton)
         {
             drawStroke();
-            qDebug() << "DrawStroke" << event->pos() ;
+            qDebug() << "DrawStroke" << evt->pos() ;
         }
     }
-
-    Q_UNUSED( event );
 }
 
 void BucketTool::paintBitmap(Layer* layer)
 {
-    Layer *targetLayer = layer; // by default
+    Layer* targetLayer = layer; // by default
     int layerNumber = mEditor->layers()->currentLayerIndex(); // by default
 
-    BitmapImage *targetImage = ( ( LayerBitmap * )targetLayer )->getLastBitmapImageAtFrame( mEditor->currentFrame(), 0 );
+    BitmapImage* targetImage = ((LayerBitmap*)targetLayer)->getLastBitmapImageAtFrame(mEditor->currentFrame(), 0);
 
     QPoint point = getLastPoint().toPoint();
 
@@ -164,6 +160,7 @@ void BucketTool::paintBitmap(Layer* layer)
 
 void BucketTool::paintVector(QMouseEvent *event, Layer* layer)
 {
+    Q_UNUSED(event);
     mScribbleArea->clearBitmapBuffer();
     VectorImage *vectorImage = ( ( LayerVector * )layer )->getLastVectorImageAtFrame( mEditor->currentFrame(), 0 );
 

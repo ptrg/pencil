@@ -14,6 +14,7 @@ MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
 GNU General Public License for more details.
 
 */
+#include "penciltool.h"
 
 #include <QSettings>
 #include <QPixmap>
@@ -29,8 +30,6 @@ GNU General Public License for more details.
 #include "scribblearea.h"
 #include "pencilsettings.h"
 #include "blitrect.h"
-
-#include "penciltool.h"
 
 PencilTool::PencilTool( QObject* parent ) : StrokeTool( parent )
 {
@@ -139,12 +138,8 @@ void PencilTool::mousePressEvent( QMouseEvent *event )
 
     if ( event->button() == Qt::LeftButton )
     {
-        mEditor->backup( typeName() );
-
         mScribbleArea->setAllDirty();
         startStroke(); //start and appends first stroke
-
-        //Layer *layer = m_pEditor->getCurrentLayer();
 
         if ( mEditor->layers()->currentLayer()->type() == Layer::BITMAP ) // in case of bitmap, first pixel(mouseDown) is drawn
         {
@@ -182,6 +177,8 @@ void PencilTool::mouseReleaseEvent( QMouseEvent *event )
 {
     if ( event->button() == Qt::LeftButton )
     {
+        mEditor->backup(typeName());
+
         Layer* layer = mEditor->layers()->currentLayer();
         if ( mScribbleArea->isLayerPaintable() )
         {
@@ -196,13 +193,10 @@ void PencilTool::mouseReleaseEvent( QMouseEvent *event )
             }
         }
 
-        if ( layer->type() == Layer::BITMAP ) {
+        if ( layer->type() == Layer::BITMAP )
             paintBitmapStroke();
-        }
         else if (layer->type() == Layer::VECTOR )
-        {
             paintVectorStroke( layer );
-        }
     }
     endStroke();
 }
@@ -230,6 +224,11 @@ void PencilTool::paintAt( QPointF point )
     {
         qreal opacity = 1.0;
         mCurrentWidth = properties.width;
+        if (properties.pressure)
+        {
+            opacity = mCurrentPressure / 2;
+            mCurrentWidth *= mCurrentPressure;
+        }
         qreal brushWidth = mCurrentWidth;
 
         BlitRect rect;

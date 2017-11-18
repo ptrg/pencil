@@ -14,6 +14,7 @@ MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
 GNU General Public License for more details.
 
 */
+#include "smudgetool.h"
 
 #include <QPixmap>
 #include "editor.h"
@@ -25,8 +26,6 @@ GNU General Public License for more details.
 #include "layervector.h"
 #include "strokemanager.h"
 #include "blitrect.h"
-
-#include "smudgetool.h"
 
 SmudgeTool::SmudgeTool(QObject *parent) :
     StrokeTool(parent)
@@ -147,7 +146,6 @@ void SmudgeTool::mousePressEvent(QMouseEvent *event)
     {
         if (layer->type() == Layer::BITMAP)
         {
-            mEditor->backup(typeName());
             mScribbleArea->setAllDirty();
             startStroke();
             mLastBrushPoint = getCurrentPoint();
@@ -164,7 +162,6 @@ void SmudgeTool::mousePressEvent(QMouseEvent *event)
             if (mScribbleArea->mClosestVertices.size() > 0 || mScribbleArea->mClosestCurves.size() > 0)      // the user clicks near a vertex or a curve
             {
                 //qDebug() << "closestCurves:" << closestCurves << " | closestVertices" << closestVertices;
-                mEditor->backup(typeName());
                 VectorImage *vectorImage = ((LayerVector *)layer)->getLastVectorImageAtFrame(mEditor->currentFrame(), 0);
 
                 if (event->modifiers() != Qt::ShiftModifier && !vectorImage->isSelected(mScribbleArea->mClosestVertices))
@@ -194,6 +191,8 @@ void SmudgeTool::mouseReleaseEvent(QMouseEvent *event)
 
     if (event->button() == Qt::LeftButton)
     {
+        mEditor->backup(typeName());
+
         if (layer->type() == Layer::BITMAP)
         {
             drawStroke();
@@ -208,7 +207,7 @@ void SmudgeTool::mouseReleaseEvent(QMouseEvent *event)
             for (int k = 0; k < mScribbleArea->vectorSelection.curve.size(); k++)
             {
                 int curveNumber = mScribbleArea->vectorSelection.curve.at(k);
-                vectorImage->m_curves[curveNumber].smoothCurve();
+                vectorImage->mCurves[curveNumber].smoothCurve();
             }
             mScribbleArea->setModified(mEditor->layers()->currentLayerIndex(), mEditor->currentFrame());
         }

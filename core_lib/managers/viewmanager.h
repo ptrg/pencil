@@ -36,6 +36,7 @@ public:
     bool init() override;
     Status load( Object* ) override;
 	Status save( Object* ) override;
+	void workingLayerChanged(Layer* layer) override;
 
     QTransform getView();
     void resetView();
@@ -61,8 +62,8 @@ public:
     void scaleUp();
     void scaleDown();
 
-    void flipHorizontal( bool b );
-    void flipVertical( bool b );
+    void flipHorizontal(bool b);
+    void flipVertical(bool b);
 
     bool isFlipHorizontal() { return mIsFlipHorizontal; }
     bool isFlipVertical() { return mIsFlipVertical; }
@@ -70,13 +71,15 @@ public:
     void setCanvasSize(QSize size);
     void setCameraLayer(Layer* layer);
 
+    void updateViewTransforms();
+
     Q_SIGNAL void viewChanged();
+    Q_SIGNAL void viewFlipped();
+
+private:
 
     void onCurrentFrameChanged();
 
-    void updateViewTransforms();
-
-private:
     QTransform mView;
     QTransform mViewInverse;
     QTransform mViewCanvas;

@@ -14,6 +14,7 @@ MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
 GNU General Public License for more details.
 
 */
+#include "toolmanager.h"
 
 #include "pentool.h"
 #include "penciltool.h"
@@ -26,7 +27,6 @@ GNU General Public License for more details.
 #include "polylinetool.h"
 #include "selecttool.h"
 #include "smudgetool.h"
-#include "toolmanager.h"
 #include "editor.h"
 #include "pencilsettings.h"
 
@@ -203,8 +203,8 @@ void ToolManager::setAA( int usingAA )
 
 void ToolManager::setInpolLevel(int level)
 {
-    currentTool()->setInpolLevel( level );
-    Q_EMIT toolPropertyChanged(currentTool()->type(), INTERPOLATION );
+    currentTool()->setInpolLevel(level);
+    Q_EMIT toolPropertyChanged(currentTool()->type(), INTERPOLATION);
 }
 
 

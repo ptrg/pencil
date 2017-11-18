@@ -16,6 +16,7 @@ GNU General Public License for more details.
 */
 
 #include "viewmanager.h"
+
 #include "object.h"
 #include "camera.h"
 #include "layercamera.h"
@@ -32,17 +33,16 @@ ViewManager::ViewManager(QObject *parent) : BaseManager(parent)
 
 bool ViewManager::init()
 {
+    connect(editor(), &Editor::currentFrameChanged, this, &ViewManager::onCurrentFrameChanged);
     return true;
 }
 
-Status ViewManager::load( Object* o )
+Status ViewManager::load( Object* )
 {
     mCameraLayer = nullptr;
-
-    resetView();
-	updateViewTransforms();
-
-    connect(editor(), &Editor::currentFrameChanged, this, &ViewManager::onCurrentFrameChanged);
+    mCurrentCamera = mDefaultEditorCamera;
+    mCurrentCamera->reset();
+    updateViewTransforms();
 
     return Status::OK;
 }
@@ -51,6 +51,18 @@ Status ViewManager::save( Object* o )
 {
 	o->data()->setCurrentView( mView );
 	return Status();
+}
+
+void ViewManager::workingLayerChanged(Layer* layer)
+{
+	if (layer->type() == Layer::CAMERA)
+	{
+		setCameraLayer(layer);
+	}
+	else
+	{
+		setCameraLayer(nullptr);
+	}
 }
 
 QPointF ViewManager::mapCanvasToScreen( QPointF p )
@@ -218,6 +230,7 @@ void ViewManager::flipHorizontal( bool b )
         updateViewTransforms();
 
         Q_EMIT viewChanged();
+        Q_EMIT viewFlipped();
     }
 }
 
@@ -229,6 +242,7 @@ void ViewManager::flipVertical( bool b )
         updateViewTransforms();
 
         Q_EMIT viewChanged();
+        Q_EMIT viewFlipped();
     }
 }
 
@@ -275,5 +289,6 @@ void ViewManager::resetView()
         mCurrentCamera->reset();
         updateViewTransforms();
         Q_EMIT viewChanged();
+        Q_EMIT viewFlipped();
     }
 }

@@ -36,31 +36,26 @@ LayerManager::~LayerManager()
 
 bool LayerManager::init()
 {
-    lastCameraLayer = 0;
+    mLastCameraLayer = 0;
     return true;
 }
 
-Status LayerManager::load( Object* o )
+Status LayerManager::load(Object* o)
 {
     connect( o, &Object::layerChanged, this, &LayerManager::layerUpdated );
-
-    mCurrentLayerIndex = o->data()->getCurrentLayer();
-    lastCameraLayer = 0;
-
     emit layerCountChanged(o->getLayerCount());
-
     return Status::OK;
 }
 
-Status LayerManager::save( Object* o )
+Status LayerManager::save(Object*)
 {
-	o->data()->setCurrentLayer( mCurrentLayerIndex );
+	//o->data()->setCurrentLayer( mCurrentLayerIndex );
 	return Status::OK;
 }
 
 int LayerManager::getLastCameraLayer()
 {
-    return lastCameraLayer;
+    return mLastCameraLayer;
 }
 
 Layer* LayerManager::currentLayer()
@@ -72,7 +67,7 @@ Layer* LayerManager::currentLayer( int incr )
 {
     Q_ASSERT( editor()->object() != NULL );
 
-    return editor()->object()->getLayer( mCurrentLayerIndex + incr );
+    return editor()->object()->getLayer( editor()->currentLayerIndex() + incr );
 }
 
 Layer* LayerManager::getLayer( int index )
@@ -97,7 +92,7 @@ Layer* LayerManager::getLayerByName(QString sName)
 
 int LayerManager::currentLayerIndex()
 {
-    return mCurrentLayerIndex;
+    return editor()->currentLayerIndex();
 }
 
 void LayerManager::setCurrentLayer( int layerIndex )
@@ -110,17 +105,17 @@ void LayerManager::setCurrentLayer( int layerIndex )
         return;
     }
 
-    if ( mCurrentLayerIndex != layerIndex )
+    if (editor()->currentLayerIndex() != layerIndex )
     {
-        mCurrentLayerIndex = layerIndex;
-        Q_EMIT currentLayerChanged( mCurrentLayerIndex );
+        editor()->setCurrentLayerIndex(layerIndex);
+        Q_EMIT currentLayerChanged(layerIndex);
     }
 
     if ( editor()->object() )
     {
         if ( editor()->object()->getLayer( layerIndex )->type() == Layer::CAMERA )
         {
-            lastCameraLayer = layerIndex;
+            mLastCameraLayer = layerIndex;
         }
     }
 }
@@ -141,19 +136,19 @@ void LayerManager::setCurrentLayer( Layer* layer )
 
 void LayerManager::gotoNextLayer()
 {
-    if ( mCurrentLayerIndex < editor()->object()->getLayerCount() - 1 )
+    if (editor()->currentLayerIndex() < editor()->object()->getLayerCount() - 1 )
     {
-        mCurrentLayerIndex += 1;
-		Q_EMIT currentLayerChanged( mCurrentLayerIndex );
+        editor()->setCurrentLayerIndex(editor()->currentLayerIndex() + 1);
+		Q_EMIT currentLayerChanged(editor()->currentLayerIndex());
     }
 }
 
 void LayerManager::gotoPreviouslayer()
 {
-    if ( mCurrentLayerIndex > 0 )
+    if (editor()->currentLayerIndex() > 0 )
     {
-        mCurrentLayerIndex -= 1;
-		Q_EMIT currentLayerChanged( mCurrentLayerIndex );
+		editor()->setCurrentLayerIndex(editor()->currentLayerIndex() - 1);
+		Q_EMIT currentLayerChanged(editor()->currentLayerIndex());
     }
 }
 

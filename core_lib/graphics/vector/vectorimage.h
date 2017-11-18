@@ -38,7 +38,7 @@ public:
     VectorImage();
     virtual ~VectorImage();
 
-    void setObject( Object* pObj ) { mObject = pObj; }
+    void setObject(Object* pObj) { mObject = pObj; }
 
     bool read(QString filePath);
     Status write(QString filePath, QString format);
@@ -101,7 +101,7 @@ public:
     void applyVariableWidthToSelection(bool YesOrNo);
     void fillContour(QList<QPointF> contourPath, int colour);
     void fillSelectedPath(int colour);
-//    void fill(QPointF point, int colour, float tolerance);
+    //    void fill(QPointF point, int colour, float tolerance);
     void addArea(BezierArea bezierArea);
     int  getFirstAreaNumber(QPointF point);
     int  getLastAreaNumber(QPointF point);
@@ -133,25 +133,24 @@ public:
     QList<VertexRef> getAllVertices();
     int getCurveSize(int curveNumber);
 
-    QPainterPath getStrokedPath() { return mGetStrokedPath;}
+    QPainterPath getStrokedPath() { return mGetStrokedPath; }
 
-    QList<BezierCurve> m_curves;
-    QList<BezierArea> area;
-    QList<int> m_curveDisplayOrders;
+    QList<BezierCurve> mCurves;
+    QList<BezierArea> mArea;
+    QList<int> mCurveDisplayOrders;
 
     qreal getDistance(VertexRef r1, VertexRef r2);
 
-    QSize getSize() {return mSize;}
+    QSize getSize() { return mSize; }
 
 private:
-    void addPoint(int curveNumber, int vertexNumber, qreal fraction );
-	
-	void checkCurveExtremity(BezierCurve& newCurve, qreal tolerance);
-	void checkCurveIntersections(BezierCurve& newCurve, qreal tolerance);
+    void addPoint(int curveNumber, int vertexNumber, qreal fraction);
 
-//	QList<QPointF> getfillContourPoints(QPoint point);
-	void updateImageSize(BezierCurve& updatedCurve);
-        QPainterPath mGetStrokedPath;
+    void checkCurveExtremity(BezierCurve& newCurve, qreal tolerance);
+    void checkCurveIntersections(BezierCurve& newCurve, qreal tolerance);
+
+    void updateImageSize(BezierCurve& updatedCurve);
+    QPainterPath mGetStrokedPath;
 
 private:
     Object* mObject = nullptr;
