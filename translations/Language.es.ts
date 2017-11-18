@@ -32,71 +32,91 @@
 <context>
     <name>ActionCommands</name>
     <message>
-        <location filename="../app/actioncommands.cpp" line="66"/>
+        <location filename="../app/actioncommands.cpp" line="65"/>
         <source>No sound layer exists as a destination for your import. Create a new sound layer?</source>
         <translation>No existe capa de sonido como destino para el archivo importado. ¿Crear nueva capa de sonido?</translation>
     </message>
     <message>
-        <location filename="../app/actioncommands.cpp" line="67"/>
+        <location filename="../app/actioncommands.cpp" line="66"/>
         <source>Create sound layer</source>
         <translation>Crear capa de sonido</translation>
     </message>
     <message>
-        <location filename="../app/actioncommands.cpp" line="68"/>
+        <location filename="../app/actioncommands.cpp" line="67"/>
         <source>Don&apos;t create layer</source>
         <translation>No crear capa</translation>
     </message>
     <message>
-        <location filename="../app/actioncommands.cpp" line="78"/>
-        <location filename="../app/actioncommands.cpp" line="326"/>
-        <location filename="../app/actioncommands.cpp" line="339"/>
-        <location filename="../app/actioncommands.cpp" line="353"/>
-        <location filename="../app/actioncommands.cpp" line="368"/>
+        <location filename="../app/actioncommands.cpp" line="77"/>
+        <location filename="../app/actioncommands.cpp" line="455"/>
+        <location filename="../app/actioncommands.cpp" line="468"/>
+        <location filename="../app/actioncommands.cpp" line="482"/>
+        <location filename="../app/actioncommands.cpp" line="497"/>
         <source>Layer Properties</source>
         <translation>Propiedades de capa</translation>
     </message>
     <message>
-        <location filename="../app/actioncommands.cpp" line="79"/>
-        <location filename="../app/actioncommands.cpp" line="327"/>
-        <location filename="../app/actioncommands.cpp" line="340"/>
-        <location filename="../app/actioncommands.cpp" line="354"/>
-        <location filename="../app/actioncommands.cpp" line="369"/>
+        <location filename="../app/actioncommands.cpp" line="78"/>
+        <location filename="../app/actioncommands.cpp" line="456"/>
+        <location filename="../app/actioncommands.cpp" line="469"/>
+        <location filename="../app/actioncommands.cpp" line="483"/>
+        <location filename="../app/actioncommands.cpp" line="498"/>
         <source>Layer name:</source>
         <translation>Nombre de capa:</translation>
     </message>
     <message>
-        <location filename="../app/actioncommands.cpp" line="99"/>
+        <location filename="../app/actioncommands.cpp" line="98"/>
         <source>A sound clip already exists on this frame! Please select another frame or layer.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../app/actioncommands.cpp" line="164"/>
+        <location filename="../app/actioncommands.cpp" line="163"/>
         <source>Exporting movie...</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../app/actioncommands.cpp" line="186"/>
+        <location filename="../app/actioncommands.cpp" line="185"/>
         <source>Finished. Open movie now?</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../app/actioncommands.cpp" line="328"/>
+        <location filename="../app/actioncommands.cpp" line="241"/>
+        <source>Exporting image sequence...</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../app/actioncommands.cpp" line="241"/>
+        <source>Abort</source>
+        <translation type="unfinished">Abortar</translation>
+    </message>
+    <message>
+        <location filename="../app/actioncommands.cpp" line="317"/>
+        <source>Warning</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../app/actioncommands.cpp" line="318"/>
+        <source>Unable to export image.</source>
+        <translation type="unfinished">Imposible exportar imagen</translation>
+    </message>
+    <message>
+        <location filename="../app/actioncommands.cpp" line="457"/>
         <source>Bitmap Layer</source>
         <translation>Capa de bitmap</translation>
     </message>
     <message>
-        <location filename="../app/actioncommands.cpp" line="341"/>
+        <location filename="../app/actioncommands.cpp" line="470"/>
         <source>Vector Layer</source>
         <translation>Capa de vector</translation>
     </message>
     <message>
-        <location filename="../app/actioncommands.cpp" line="355"/>
+        <location filename="../app/actioncommands.cpp" line="484"/>
         <source>Camera Layer</source>
         <translation>Capa de cámara</translation>
     </message>
     <message>
-        <location filename="../app/actioncommands.cpp" line="80"/>
-        <location filename="../app/actioncommands.cpp" line="370"/>
+        <location filename="../app/actioncommands.cpp" line="79"/>
+        <location filename="../app/actioncommands.cpp" line="499"/>
         <source>Sound Layer</source>
         <translation>Capa de sonido</translation>
     </message>
@@ -450,13 +470,13 @@
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../core_lib/interface/editor.cpp" line="731"/>
-        <location filename="../core_lib/interface/editor.cpp" line="768"/>
+        <location filename="../core_lib/interface/editor.cpp" line="723"/>
+        <location filename="../core_lib/interface/editor.cpp" line="760"/>
         <source>Import Image</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../core_lib/interface/editor.cpp" line="964"/>
+        <location filename="../core_lib/interface/editor.cpp" line="956"/>
         <source>backup frame</source>
         <translation type="unfinished"></translation>
     </message>
@@ -491,12 +511,12 @@ p, li { white-space: pre-wrap; }
 <context>
     <name>ExportImageDialog</name>
     <message>
-        <location filename="../app/exportimagedialog.cpp" line="30"/>
+        <location filename="../app/exportimagedialog.cpp" line="31"/>
         <source>Export image sequence</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../app/exportimagedialog.cpp" line="34"/>
+        <location filename="../app/exportimagedialog.cpp" line="35"/>
         <source>Export image</source>
         <translation type="unfinished"></translation>
     </message>
@@ -504,32 +524,37 @@ p, li { white-space: pre-wrap; }
 <context>
     <name>ExportImageOptions</name>
     <message>
-        <location filename="../app/ui/exportimageoptions.ui" line="15"/>
+        <location filename="../app/ui/exportimageoptions.ui" line="23"/>
+        <source>Camera</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../app/ui/exportimageoptions.ui" line="35"/>
         <source>Resolution</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../app/ui/exportimageoptions.ui" line="56"/>
+        <location filename="../app/ui/exportimageoptions.ui" line="76"/>
         <source>Format</source>
         <translation type="unfinished">Formato</translation>
     </message>
     <message>
-        <location filename="../app/ui/exportimageoptions.ui" line="63"/>
+        <location filename="../app/ui/exportimageoptions.ui" line="83"/>
         <source>PNG</source>
         <translation type="unfinished">PNG</translation>
     </message>
     <message>
-        <location filename="../app/ui/exportimageoptions.ui" line="68"/>
+        <location filename="../app/ui/exportimageoptions.ui" line="88"/>
         <source>JPG</source>
         <translation type="unfinished">JPG</translation>
     </message>
     <message>
-        <location filename="../app/ui/exportimageoptions.ui" line="73"/>
+        <location filename="../app/ui/exportimageoptions.ui" line="93"/>
         <source>BMP</source>
         <translation type="unfinished">BMP</translation>
     </message>
     <message>
-        <location filename="../app/ui/exportimageoptions.ui" line="81"/>
+        <location filename="../app/ui/exportimageoptions.ui" line="101"/>
         <source>Transparency</source>
         <translation type="unfinished">Transparencia</translation>
     </message>
@@ -1013,17 +1038,17 @@ p, li { white-space: pre-wrap; }
 <context>
     <name>ImportExportDialog</name>
     <message>
-        <location filename="../app/ui/importexportdialog.ui" line="24"/>
+        <location filename="../app/ui/importexportdialog.ui" line="32"/>
         <source>File</source>
         <translation type="unfinished">Archivo</translation>
     </message>
     <message>
-        <location filename="../app/ui/importexportdialog.ui" line="40"/>
+        <location filename="../app/ui/importexportdialog.ui" line="48"/>
         <source>Browse...</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../app/ui/importexportdialog.ui" line="50"/>
+        <location filename="../app/ui/importexportdialog.ui" line="58"/>
         <source>Options</source>
         <translation type="unfinished">Opciones</translation>
     </message>
@@ -1309,13 +1334,13 @@ p, li { white-space: pre-wrap; }
     </message>
     <message>
         <location filename="../app/ui/mainwindow2.ui" line="336"/>
-        <location filename="../app/mainwindow2.cpp" line="1014"/>
+        <location filename="../app/mainwindow2.cpp" line="893"/>
         <source>Undo</source>
         <translation>Deshacer</translation>
     </message>
     <message>
         <location filename="../app/ui/mainwindow2.ui" line="345"/>
-        <location filename="../app/mainwindow2.cpp" line="1034"/>
+        <location filename="../app/mainwindow2.cpp" line="913"/>
         <source>Redo</source>
         <translation>Rehacer</translation>
     </message>
@@ -1427,7 +1452,7 @@ p, li { white-space: pre-wrap; }
     </message>
     <message>
         <location filename="../app/ui/mainwindow2.ui" line="514"/>
-        <location filename="../app/mainwindow2.cpp" line="1202"/>
+        <location filename="../app/mainwindow2.cpp" line="1079"/>
         <source>Play</source>
         <translation>Reproducir</translation>
     </message>
@@ -1604,7 +1629,6 @@ p, li { white-space: pre-wrap; }
         <location filename="../app/mainwindow2.cpp" line="488"/>
         <location filename="../app/mainwindow2.cpp" line="616"/>
         <location filename="../app/mainwindow2.cpp" line="652"/>
-        <location filename="../app/mainwindow2.cpp" line="827"/>
         <source>Warning</source>
         <translation>Advertencia</translation>
     </message>
@@ -1626,7 +1650,6 @@ p, li { white-space: pre-wrap; }
     <message>
         <location filename="../app/mainwindow2.cpp" line="495"/>
         <location filename="../app/mainwindow2.cpp" line="547"/>
-        <location filename="../app/mainwindow2.cpp" line="755"/>
         <source>Abort</source>
         <translation>Abortar</translation>
     </message>
@@ -1660,26 +1683,20 @@ p, li { white-space: pre-wrap; }
         <translation type="vanished">Guardar secuencia de imágenes</translation>
     </message>
     <message>
-        <location filename="../app/mainwindow2.cpp" line="755"/>
-        <source>Exporting image sequence...</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
         <source>Save Image</source>
         <translation type="vanished">Guardar imagen</translation>
     </message>
     <message>
-        <location filename="../app/mainwindow2.cpp" line="828"/>
         <source>Unable to export image.</source>
-        <translation>Imposible exportar imagen</translation>
+        <translation type="vanished">Imposible exportar imagen</translation>
     </message>
     <message>
-        <location filename="../app/mainwindow2.cpp" line="1019"/>
+        <location filename="../app/mainwindow2.cpp" line="898"/>
         <source>Undo   %1 %2</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../app/mainwindow2.cpp" line="1027"/>
+        <location filename="../app/mainwindow2.cpp" line="906"/>
         <source>Redo   %1 %2</source>
         <translation type="unfinished"></translation>
     </message>
@@ -1688,7 +1705,7 @@ p, li { white-space: pre-wrap; }
         <translation type="vanished">Exportar Como</translation>
     </message>
     <message>
-        <location filename="../app/mainwindow2.cpp" line="1197"/>
+        <location filename="../app/mainwindow2.cpp" line="1074"/>
         <source>Stop</source>
         <translation type="unfinished"></translation>
     </message>
@@ -1696,7 +1713,7 @@ p, li { white-space: pre-wrap; }
 <context>
     <name>MoveTool</name>
     <message>
-        <location filename="../core_lib/tool/movetool.cpp" line="128"/>
+        <location filename="../core_lib/tool/movetool.cpp" line="130"/>
         <source>Move</source>
         <translation>Mover</translation>
     </message>
@@ -3407,58 +3424,58 @@ p, li { white-space: pre-wrap; }
 <context>
     <name>ScribbleArea</name>
     <message>
-        <location filename="../core_lib/interface/scribblearea.cpp" line="563"/>
+        <location filename="../core_lib/interface/scribblearea.cpp" line="561"/>
         <source>Warning</source>
         <translation>Advertencia</translation>
     </message>
     <message>
-        <location filename="../core_lib/interface/scribblearea.cpp" line="564"/>
+        <location filename="../core_lib/interface/scribblearea.cpp" line="562"/>
         <source>You are drawing on a hidden layer! Please select another layer (or make the current layer visible).</source>
         <translation>Usted está dibujando en una capa oculta! Por favor seleccione otra capa (o haga visible la capa actual).</translation>
     </message>
     <message>
-        <location filename="../core_lib/interface/scribblearea.cpp" line="1712"/>
+        <location filename="../core_lib/interface/scribblearea.cpp" line="1675"/>
         <source>Delete Selection</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../core_lib/interface/scribblearea.cpp" line="1726"/>
-        <location filename="../core_lib/interface/scribblearea.cpp" line="1733"/>
+        <location filename="../core_lib/interface/scribblearea.cpp" line="1689"/>
+        <location filename="../core_lib/interface/scribblearea.cpp" line="1696"/>
         <source>Clear Image</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../core_lib/interface/scribblearea.cpp" line="1760"/>
+        <location filename="../core_lib/interface/scribblearea.cpp" line="1723"/>
         <source>There is a gap in your drawing (or maybe you have zoomed too much).</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../core_lib/interface/scribblearea.cpp" line="1761"/>
+        <location filename="../core_lib/interface/scribblearea.cpp" line="1724"/>
         <source>Sorry! This doesn&apos;t always work.Please try again (zoom a bit, click at another location... )&lt;br&gt;if it doesn&apos;t work, zoom a bit and check that your paths are connected by pressing F1.).</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../core_lib/interface/scribblearea.cpp" line="1765"/>
+        <location filename="../core_lib/interface/scribblearea.cpp" line="1728"/>
         <source>Out of bound.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../core_lib/interface/scribblearea.cpp" line="1766"/>
+        <location filename="../core_lib/interface/scribblearea.cpp" line="1729"/>
         <source>Could not find a closed path.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../core_lib/interface/scribblearea.cpp" line="1767"/>
+        <location filename="../core_lib/interface/scribblearea.cpp" line="1730"/>
         <source>Could not find the root index.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../core_lib/interface/scribblearea.cpp" line="1768"/>
+        <location filename="../core_lib/interface/scribblearea.cpp" line="1731"/>
         <source>Flood fill error</source>
         <translation>Error de Relleno</translation>
     </message>
     <message>
-        <location filename="../core_lib/interface/scribblearea.cpp" line="1768"/>
+        <location filename="../core_lib/interface/scribblearea.cpp" line="1731"/>
         <source>%1&lt;br&gt;&lt;br&gt;Error: %2</source>
         <translation type="unfinished"></translation>
     </message>
@@ -4062,6 +4079,16 @@ p, li { white-space: pre-wrap; }
     <message>
         <location filename="../app/tooloptionwidget.cpp" line="200"/>
         <source>Merge vector lines when they are close together</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../app/tooloptionwidget.cpp" line="328"/>
+        <source>Stroke Thickness</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../app/tooloptionwidget.cpp" line="333"/>
+        <source>Width</source>
         <translation type="unfinished"></translation>
     </message>
 </context>
