@@ -14,7 +14,7 @@
         <translation>Hivatalos weblap: &lt;a href=&quot;http://pencil2d.github.io&quot;&gt;pencil2d.github.io&lt;/a&gt;&lt;br&gt;Fejlesztők: &lt;b&gt;Pascal Naidon, Patrick Corrieri, Matt Chang&lt;/b&gt;&lt;br&gt;Köszönet: Qt Framework &lt;a href=&quot;https://qt.io&quot;&gt;https://www.qt.io/&lt;/a&gt;&lt;/&gt;&lt;br&gt;A terjesztés &lt;a href=&quot;http://www.gnu.org/licenses/gpl-2.0.html&quot;&gt;GNU General Public License, version 2&lt;/a&gt; hatálya alatt történik.&lt;/&gt;</translation>
     </message>
     <message>
-        <location filename="../app/aboutdialog.cpp" line="70"/>
+        <location filename="../app/aboutdialog.cpp" line="74"/>
         <source>OK</source>
         <translation>Oké</translation>
     </message>
@@ -32,101 +32,127 @@
         <translation type="vanished">Hivatalos weblap: &lt;a href=&quot;http://pencil2d.org&quot;&gt;pencil2d.org&lt;/a&gt;&lt;br&gt;Fejlesztők: &lt;b&gt;Pascal Naidon, Patrick Corrieri, Matt Chang, Cirus&lt;/b&gt;&lt;/&gt;&lt;br&gt;Köszönet: Qt Framework &lt;a href=&quot;http://qt-project.org&quot;&gt;qt-project.org&lt;/a&gt;&lt;/&gt;&lt;br&gt;A terjesztés &lt;a href=&quot;http://www.gnu.org/copyleft/gpl.html&quot;&gt;GPL Licenc&lt;/a&gt; alatt történik.&lt;/&gt;</translation>
     </message>
     <message>
-        <location filename="../app/aboutdialog.cpp" line="66"/>
         <source>commit: </source>
-        <translation>Feljlesztési lépés: </translation>
+        <translation type="vanished">Feljlesztési lépés: </translation>
     </message>
 </context>
 <context>
     <name>ActionCommands</name>
     <message>
-        <location filename="../app/actioncommands.cpp" line="65"/>
+        <location filename="../app/actioncommands.cpp" line="66"/>
         <source>No sound layer exists as a destination for your import. Create a new sound layer?</source>
         <translation>Nincs hang réteg a betöltendő állomány számára. Létrehoz egy új hang réteget?</translation>
     </message>
     <message>
-        <location filename="../app/actioncommands.cpp" line="66"/>
+        <location filename="../app/actioncommands.cpp" line="67"/>
         <source>Create sound layer</source>
         <translation>Hang réteg létrehozása</translation>
     </message>
     <message>
-        <location filename="../app/actioncommands.cpp" line="67"/>
+        <location filename="../app/actioncommands.cpp" line="68"/>
         <source>Don&apos;t create layer</source>
         <translation>Ne legyen réteg létrehozva</translation>
     </message>
     <message>
-        <location filename="../app/actioncommands.cpp" line="77"/>
-        <location filename="../app/actioncommands.cpp" line="469"/>
-        <location filename="../app/actioncommands.cpp" line="482"/>
-        <location filename="../app/actioncommands.cpp" line="496"/>
+        <location filename="../app/actioncommands.cpp" line="498"/>
         <location filename="../app/actioncommands.cpp" line="511"/>
+        <location filename="../app/actioncommands.cpp" line="525"/>
+        <location filename="../app/actioncommands.cpp" line="539"/>
         <source>Layer Properties</source>
         <translation>Réteg tulajdonságai</translation>
     </message>
     <message>
-        <location filename="../app/actioncommands.cpp" line="78"/>
-        <location filename="../app/actioncommands.cpp" line="470"/>
-        <location filename="../app/actioncommands.cpp" line="483"/>
-        <location filename="../app/actioncommands.cpp" line="497"/>
+        <location filename="../app/actioncommands.cpp" line="79"/>
+        <location filename="../app/actioncommands.cpp" line="499"/>
         <location filename="../app/actioncommands.cpp" line="512"/>
+        <location filename="../app/actioncommands.cpp" line="526"/>
+        <location filename="../app/actioncommands.cpp" line="540"/>
         <source>Layer name:</source>
         <translation>Réteg neve:</translation>
     </message>
     <message>
-        <location filename="../app/actioncommands.cpp" line="98"/>
+        <location filename="../app/actioncommands.cpp" line="78"/>
+        <source>Layer Properties</source>
+        <comment>Dialog title on creating a sound layer</comment>
+        <translation>Réteg tulajdonságai</translation>
+    </message>
+    <message>
+        <location filename="../app/actioncommands.cpp" line="80"/>
+        <source>Sound Layer</source>
+        <comment>Default name on creating a sound layer</comment>
+        <translation>Hang réteg</translation>
+    </message>
+    <message>
+        <location filename="../app/actioncommands.cpp" line="106"/>
         <source>A sound clip already exists on this frame! Please select another frame or layer.</source>
         <translation>Egy hang klip már el lett helyezve ezen a képkockán. Válasszon másik pozíciót vagy réteget!</translation>
     </message>
     <message>
-        <location filename="../app/actioncommands.cpp" line="163"/>
+        <location filename="../app/actioncommands.cpp" line="187"/>
         <source>Exporting movie...</source>
         <translation>Videó exportálása...</translation>
     </message>
     <message>
-        <location filename="../app/actioncommands.cpp" line="185"/>
+        <location filename="../app/actioncommands.cpp" line="209"/>
         <source>Finished. Open movie now?</source>
         <translation>Kész. Videó megnyitása most?</translation>
     </message>
     <message>
-        <location filename="../app/actioncommands.cpp" line="241"/>
+        <location filename="../app/actioncommands.cpp" line="265"/>
         <source>Exporting image sequence...</source>
         <translation>Képsorozat exportálása...</translation>
     </message>
     <message>
-        <location filename="../app/actioncommands.cpp" line="241"/>
+        <location filename="../app/actioncommands.cpp" line="265"/>
         <source>Abort</source>
         <translation>Megszakítás</translation>
     </message>
     <message>
-        <location filename="../app/actioncommands.cpp" line="319"/>
+        <location filename="../app/actioncommands.cpp" line="343"/>
         <source>Warning</source>
         <translation>Figyelmeztetés</translation>
     </message>
     <message>
-        <location filename="../app/actioncommands.cpp" line="320"/>
+        <location filename="../app/actioncommands.cpp" line="344"/>
         <source>Unable to export image.</source>
         <translation>A kép nem exportálható.</translation>
     </message>
     <message>
-        <location filename="../app/actioncommands.cpp" line="471"/>
+        <location filename="../app/actioncommands.cpp" line="500"/>
         <source>Bitmap Layer</source>
         <translation>Bitkép réteg</translation>
     </message>
     <message>
-        <location filename="../app/actioncommands.cpp" line="484"/>
+        <location filename="../app/actioncommands.cpp" line="513"/>
         <source>Vector Layer</source>
         <translation>Vektor réteg</translation>
     </message>
     <message>
-        <location filename="../app/actioncommands.cpp" line="498"/>
+        <location filename="../app/actioncommands.cpp" line="527"/>
         <source>Camera Layer</source>
         <translation>Kamera réteg</translation>
     </message>
     <message>
-        <location filename="../app/actioncommands.cpp" line="79"/>
-        <location filename="../app/actioncommands.cpp" line="513"/>
+        <location filename="../app/actioncommands.cpp" line="541"/>
         <source>Sound Layer</source>
         <translation>Hang réteg</translation>
+    </message>
+    <message>
+        <location filename="../app/actioncommands.cpp" line="558"/>
+        <source>Delete Layer</source>
+        <comment>Windows title of Delete current layer pop-up.</comment>
+        <translation>Réteg törlése</translation>
+    </message>
+    <message>
+        <location filename="../app/actioncommands.cpp" line="559"/>
+        <source>Are you sure you want to delete layer: </source>
+        <translation>Biztosan törölni akarja a következő réteget: </translation>
+    </message>
+    <message>
+        <location filename="../app/actioncommands.cpp" line="568"/>
+        <source>Please keep at least one camera layer in project</source>
+        <comment>text when failed to delete camera layer</comment>
+        <translation>Legalább egy kamera rétegnek lennie kell projektben</translation>
     </message>
 </context>
 <context>
@@ -474,24 +500,24 @@
 <context>
     <name>Editor</name>
     <message>
-        <location filename="../core_lib/interface/editor.cpp" line="541"/>
-        <location filename="../core_lib/interface/editor.cpp" line="562"/>
+        <location filename="../core_lib/interface/editor.cpp" line="540"/>
+        <location filename="../core_lib/interface/editor.cpp" line="561"/>
         <source>Paste</source>
         <translation>Beillesztés</translation>
     </message>
     <message>
-        <location filename="../core_lib/interface/editor.cpp" line="570"/>
+        <location filename="../core_lib/interface/editor.cpp" line="569"/>
         <source>Paste sound</source>
         <translation>Hang beillesztése</translation>
     </message>
     <message>
-        <location filename="../core_lib/interface/editor.cpp" line="756"/>
-        <location filename="../core_lib/interface/editor.cpp" line="782"/>
+        <location filename="../core_lib/interface/editor.cpp" line="804"/>
+        <location filename="../core_lib/interface/editor.cpp" line="830"/>
         <source>Import Image</source>
         <translation>Kép importálása</translation>
     </message>
     <message>
-        <location filename="../core_lib/interface/editor.cpp" line="973"/>
+        <location filename="../core_lib/interface/editor.cpp" line="1021"/>
         <source>Remove frame</source>
         <translation>Képkocka eltávolítása</translation>
     </message>
@@ -836,16 +862,16 @@ p, li { white-space: pre-wrap; }
 <context>
     <name>FileManager</name>
     <message>
-        <location filename="../core_lib/structure/filemanager.cpp" line="197"/>
-        <location filename="../core_lib/structure/filemanager.cpp" line="206"/>
-        <location filename="../core_lib/structure/filemanager.cpp" line="214"/>
+        <location filename="../core_lib/structure/filemanager.cpp" line="195"/>
+        <location filename="../core_lib/structure/filemanager.cpp" line="204"/>
+        <location filename="../core_lib/structure/filemanager.cpp" line="212"/>
         <source>Invalid Save Path</source>
         <translation>Érvénytelen mentési útvonal</translation>
     </message>
     <message>
-        <location filename="../core_lib/structure/filemanager.cpp" line="198"/>
+        <location filename="../core_lib/structure/filemanager.cpp" line="196"/>
         <source>The file path you have specified (&quot;%1&quot;) points to a directory, so the file cannot be saved.</source>
-        <translation>A megadott fájlútvonal (%1) egy könyvtárra mutat, ezért a fájl nem menthető.</translation>
+        <translation>A megadott fájlútvonal (&quot;%1&quot;) egy könyvtárra mutat, ezért a fájl nem menthető.</translation>
     </message>
     <message>
         <source>The file path you have specified (&quot;%1&quot;) cannot be written to, so the file cannot be saved. Please make sure that you have sufficent permissions to save to that location and try again.</source>
@@ -853,7 +879,7 @@ p, li { white-space: pre-wrap; }
     </message>
     <message>
         <location filename="../core_lib/structure/filemanager.cpp" line="253"/>
-        <location filename="../core_lib/structure/filemanager.cpp" line="263"/>
+        <location filename="../core_lib/structure/filemanager.cpp" line="271"/>
         <source>Cannot Create Data Directory</source>
         <translation>Az adatkönyvtár nem hozható létre</translation>
     </message>
@@ -862,9 +888,9 @@ p, li { white-space: pre-wrap; }
         <translation type="vanished">Az adatkönyvtár nem hozható létre: &quot;%1&quot;. Ellenőrizze, hogy rendelkezik-e a szükséges jogosultságokkal az adott helyre történő mentéshez és próbálja újra. Esetleg próbájon pclx formátumban menteni.</translation>
     </message>
     <message>
-        <location filename="../core_lib/structure/filemanager.cpp" line="255"/>
-        <location filename="../core_lib/structure/filemanager.cpp" line="267"/>
-        <location filename="../core_lib/structure/filemanager.cpp" line="313"/>
+        <location filename="../core_lib/structure/filemanager.cpp" line="259"/>
+        <location filename="../core_lib/structure/filemanager.cpp" line="277"/>
+        <location filename="../core_lib/structure/filemanager.cpp" line="324"/>
         <source>Internal Error</source>
         <translation>Belső hiba</translation>
     </message>
@@ -873,37 +899,37 @@ p, li { white-space: pre-wrap; }
         <translation type="vanished">Az adatkönyvtár nem hozható létre az ideiglenes útvonalon: &quot;%1&quot;. Ellenőrizze, hogy rendelkezik-e a szükséges jogosultságokkal az adott helyre történő mentéshez és próbálja újra. Esetleg próbájon pcl formátumban menteni.</translation>
     </message>
     <message>
-        <location filename="../core_lib/structure/filemanager.cpp" line="207"/>
+        <location filename="../core_lib/structure/filemanager.cpp" line="205"/>
         <source>The file path you have specified (&quot;%1&quot;) is in a directory (&quot;%2&quot;) which does not exist. Please save your file in a valid location.</source>
         <translation>A megadott útvonal (&quot;%1&quot;) egy nem létező könyvtárban (&quot;%2&quot;) van. Mentse egy érvényes helyre a fájlt.</translation>
     </message>
     <message>
-        <location filename="../core_lib/structure/filemanager.cpp" line="215"/>
+        <location filename="../core_lib/structure/filemanager.cpp" line="213"/>
         <source>The file path you have specified (&quot;%1&quot;) cannot be written to, so the file cannot be saved. Please make sure that you have sufficient permissions to save to that location and try again.</source>
-        <translation>A megadott fájlútvonal (%1) nem írható, ezért a fájl nem menthető. Ellenőrizze, hogy rendelkezik-e a szükséges jogosultságokkal az adott helyre történő mentéshez és próbálja újra.</translation>
+        <translation>A megadott fájlútvonal (&quot;%1&quot;) nem írható, ezért a fájl nem menthető. Ellenőrizze, hogy rendelkezik-e a szükséges jogosultságokkal az adott helyre történő mentéshez és próbálja újra.</translation>
     </message>
     <message>
-        <location filename="../core_lib/structure/filemanager.cpp" line="253"/>
+        <location filename="../core_lib/structure/filemanager.cpp" line="254"/>
         <source>Cannot create the data directory at &quot;%1&quot;. Please make sure that you have sufficient permissions to save to that location and try again. Alternatively try saving as pclx format.</source>
         <translation>Az adatkönyvtár nem hozható létre: &quot;%1&quot;. Ellenőrizze, hogy rendelkezik-e a szükséges jogosultságokkal az adott helyre történő mentéshez és próbálja újra. Esetleg próbájon pclx formátumban menteni.</translation>
     </message>
     <message>
-        <location filename="../core_lib/structure/filemanager.cpp" line="255"/>
+        <location filename="../core_lib/structure/filemanager.cpp" line="260"/>
         <source>Cannot create the data directory at temporary location &quot;%1&quot;. Please make sure that you have sufficient permissions to save to that location and try again. Alternatively try saving as pcl format.</source>
         <translation>Az adatkönyvtár nem hozható létre az ideiglenes útvonalon: &quot;%1&quot;. Ellenőrizze, hogy rendelkezik-e a szükséges jogosultságokkal az adott helyre történő mentéshez és próbálja újra. Esetleg próbájon pcl formátumban menteni.</translation>
     </message>
     <message>
-        <location filename="../core_lib/structure/filemanager.cpp" line="263"/>
+        <location filename="../core_lib/structure/filemanager.cpp" line="272"/>
         <source>Cannot use the path &quot;%1&quot; as a data directory since that currently points to a file. Please move or delete that file and try again. Alternatively try saving with the pclx format.</source>
         <translation>Az útvonal nem használható adatkönyvtárként, mert az egy fájlra mutat: &quot;%1&quot;. Helyezze át vagy törölje ezt a fájlt és próbálja újra. Esetleg próbájon pclx formátumban menteni.</translation>
     </message>
     <message>
-        <location filename="../core_lib/structure/filemanager.cpp" line="267"/>
+        <location filename="../core_lib/structure/filemanager.cpp" line="278"/>
         <source>Cannot use the data directory at temporary location &quot;%1&quot; since it is a file. Please move or delete that file and try again. Alternatively try saving with the pcl format.</source>
         <translation>Az útvonal nem használható adatkönyvtárként, mert az egy fájlra mutat: &quot;%1&quot;. Helyezze át vagy törölje ezt a fájlt és próbálja újra. Esetleg próbájon pcl formátumban menteni.</translation>
     </message>
     <message>
-        <location filename="../core_lib/structure/filemanager.cpp" line="313"/>
+        <location filename="../core_lib/structure/filemanager.cpp" line="324"/>
         <source>An internal error occurred while trying to save the file. Some or all of your file may not have saved.</source>
         <translation>Belső hiba keletkezett a fájl mentése közben. Egy vagy talán az összes fájl mentése meghiúsult.</translation>
     </message>
@@ -1253,12 +1279,12 @@ p, li { white-space: pre-wrap; }
 <context>
     <name>MainWindow2</name>
     <message>
-        <location filename="../app/ui/mainwindow2.ui" line="831"/>
+        <location filename="../app/ui/mainwindow2.ui" line="835"/>
         <source>Color Palette</source>
         <translation>Színpaletta</translation>
     </message>
     <message>
-        <location filename="../app/ui/mainwindow2.ui" line="372"/>
+        <location filename="../app/ui/mainwindow2.ui" line="376"/>
         <source>Paste</source>
         <translation>Beillesztés</translation>
     </message>
@@ -1314,7 +1340,7 @@ p, li { white-space: pre-wrap; }
     </message>
     <message>
         <location filename="../app/ui/mainwindow2.ui" line="155"/>
-        <location filename="../app/ui/mainwindow2.ui" line="799"/>
+        <location filename="../app/ui/mainwindow2.ui" line="803"/>
         <source>Tools</source>
         <translation>Eszközök</translation>
     </message>
@@ -1325,340 +1351,350 @@ p, li { white-space: pre-wrap; }
     </message>
     <message>
         <location filename="../app/ui/mainwindow2.ui" line="184"/>
-        <location filename="../app/ui/mainwindow2.ui" line="730"/>
+        <location filename="../app/ui/mainwindow2.ui" line="734"/>
         <source>Help</source>
         <translation>Súgó</translation>
     </message>
     <message>
-        <location filename="../app/ui/mainwindow2.ui" line="191"/>
+        <location filename="../app/ui/mainwindow2.ui" line="195"/>
         <source>Windows</source>
         <translation>Ablakok</translation>
     </message>
     <message>
-        <location filename="../app/ui/mainwindow2.ui" line="209"/>
+        <location filename="../app/ui/mainwindow2.ui" line="213"/>
         <source>New</source>
         <translation>Új</translation>
     </message>
     <message>
-        <location filename="../app/ui/mainwindow2.ui" line="218"/>
+        <location filename="../app/ui/mainwindow2.ui" line="222"/>
         <source>Open</source>
         <translation>Megnyitás</translation>
     </message>
     <message>
-        <location filename="../app/ui/mainwindow2.ui" line="227"/>
+        <location filename="../app/ui/mainwindow2.ui" line="231"/>
         <source>Save</source>
         <translation>Mentés</translation>
     </message>
     <message>
-        <location filename="../app/ui/mainwindow2.ui" line="236"/>
+        <location filename="../app/ui/mainwindow2.ui" line="240"/>
         <source>Save As ..</source>
         <translation>Mentés másként ..</translation>
     </message>
     <message>
-        <location filename="../app/ui/mainwindow2.ui" line="245"/>
+        <location filename="../app/ui/mainwindow2.ui" line="249"/>
         <source>Print</source>
         <translation>Nyomtatás</translation>
     </message>
     <message>
-        <location filename="../app/ui/mainwindow2.ui" line="254"/>
+        <location filename="../app/ui/mainwindow2.ui" line="258"/>
         <source>Exit</source>
         <translation>Kilépés</translation>
     </message>
     <message>
-        <location filename="../app/ui/mainwindow2.ui" line="262"/>
+        <location filename="../app/ui/mainwindow2.ui" line="266"/>
         <source>X-sheet ...</source>
         <translation>X-sheet ...</translation>
     </message>
     <message>
-        <location filename="../app/ui/mainwindow2.ui" line="270"/>
-        <location filename="../app/ui/mainwindow2.ui" line="309"/>
+        <location filename="../app/ui/mainwindow2.ui" line="274"/>
+        <location filename="../app/ui/mainwindow2.ui" line="313"/>
         <source>Image Sequence...</source>
         <translation>Képsorozat...</translation>
     </message>
     <message>
-        <location filename="../app/ui/mainwindow2.ui" line="275"/>
-        <location filename="../app/ui/mainwindow2.ui" line="304"/>
+        <location filename="../app/ui/mainwindow2.ui" line="279"/>
+        <location filename="../app/ui/mainwindow2.ui" line="308"/>
         <source>Image...</source>
         <translation>Kép...</translation>
     </message>
     <message>
-        <location filename="../app/ui/mainwindow2.ui" line="280"/>
-        <location filename="../app/ui/mainwindow2.ui" line="314"/>
+        <location filename="../app/ui/mainwindow2.ui" line="284"/>
+        <location filename="../app/ui/mainwindow2.ui" line="318"/>
         <source>Movie...</source>
         <translation>Videó...</translation>
     </message>
     <message>
-        <location filename="../app/ui/mainwindow2.ui" line="288"/>
-        <location filename="../app/ui/mainwindow2.ui" line="327"/>
+        <location filename="../app/ui/mainwindow2.ui" line="292"/>
+        <location filename="../app/ui/mainwindow2.ui" line="331"/>
         <source>Palette...</source>
         <translation>Paletta...</translation>
     </message>
     <message>
-        <location filename="../app/ui/mainwindow2.ui" line="296"/>
+        <location filename="../app/ui/mainwindow2.ui" line="300"/>
         <source>Svg Image...</source>
         <translation>Svg kép...</translation>
     </message>
     <message>
-        <location filename="../app/ui/mainwindow2.ui" line="322"/>
+        <location filename="../app/ui/mainwindow2.ui" line="326"/>
         <source>Sound...</source>
         <translation>Hang...</translation>
     </message>
     <message>
-        <location filename="../app/ui/mainwindow2.ui" line="336"/>
-        <location filename="../app/mainwindow2.cpp" line="907"/>
+        <location filename="../app/ui/mainwindow2.ui" line="340"/>
+        <location filename="../app/mainwindow2.cpp" line="928"/>
         <source>Undo</source>
         <translation>Visszavonás</translation>
     </message>
     <message>
-        <location filename="../app/ui/mainwindow2.ui" line="345"/>
-        <location filename="../app/mainwindow2.cpp" line="927"/>
+        <location filename="../app/ui/mainwindow2.ui" line="349"/>
+        <location filename="../app/mainwindow2.cpp" line="948"/>
         <source>Redo</source>
         <translation>Újra</translation>
     </message>
     <message>
-        <location filename="../app/ui/mainwindow2.ui" line="354"/>
+        <location filename="../app/ui/mainwindow2.ui" line="358"/>
         <source>Cut</source>
         <translation>Kivágás</translation>
     </message>
     <message>
-        <location filename="../app/ui/mainwindow2.ui" line="363"/>
+        <location filename="../app/ui/mainwindow2.ui" line="367"/>
         <source>Copy</source>
         <translation>Másolás</translation>
     </message>
     <message>
-        <location filename="../app/ui/mainwindow2.ui" line="377"/>
+        <location filename="../app/ui/mainwindow2.ui" line="381"/>
         <source>Crop</source>
         <translation>Csonkítás</translation>
     </message>
     <message>
-        <location filename="../app/ui/mainwindow2.ui" line="382"/>
+        <location filename="../app/ui/mainwindow2.ui" line="386"/>
         <source>Crop To Selection</source>
         <translation>Csonkítás kijelölésre</translation>
     </message>
     <message>
-        <location filename="../app/ui/mainwindow2.ui" line="387"/>
+        <location filename="../app/ui/mainwindow2.ui" line="391"/>
         <source>Select All</source>
         <translation>Minden kijelölése</translation>
     </message>
     <message>
-        <location filename="../app/ui/mainwindow2.ui" line="392"/>
+        <location filename="../app/ui/mainwindow2.ui" line="396"/>
         <source>Deselect All</source>
         <translation>Kijelölés megszüntetése</translation>
     </message>
     <message>
-        <location filename="../app/ui/mainwindow2.ui" line="401"/>
-        <location filename="../app/ui/mainwindow2.ui" line="594"/>
+        <location filename="../app/ui/mainwindow2.ui" line="405"/>
+        <location filename="../app/ui/mainwindow2.ui" line="598"/>
         <source>Clear Frame</source>
         <translation>Képkocka kiürítése</translation>
     </message>
     <message>
-        <location filename="../app/ui/mainwindow2.ui" line="406"/>
+        <location filename="../app/ui/mainwindow2.ui" line="410"/>
         <source>Preferences</source>
         <translation>Beállítások</translation>
     </message>
     <message>
-        <location filename="../app/ui/mainwindow2.ui" line="411"/>
+        <location filename="../app/ui/mainwindow2.ui" line="415"/>
         <source>Reset Windows</source>
         <translation>Ablakok visszaállítása</translation>
     </message>
     <message>
-        <location filename="../app/ui/mainwindow2.ui" line="420"/>
+        <location filename="../app/ui/mainwindow2.ui" line="424"/>
         <source>Zoom In</source>
         <translation>Nagyítás</translation>
     </message>
     <message>
-        <location filename="../app/ui/mainwindow2.ui" line="429"/>
+        <location filename="../app/ui/mainwindow2.ui" line="433"/>
         <source>Zoom Out</source>
         <translation>Kicsinyítés</translation>
     </message>
     <message>
-        <location filename="../app/ui/mainwindow2.ui" line="434"/>
+        <location filename="../app/ui/mainwindow2.ui" line="438"/>
         <source>Rotate Clockwise</source>
         <translation>Forgatás jobbra</translation>
     </message>
     <message>
-        <location filename="../app/ui/mainwindow2.ui" line="439"/>
+        <location filename="../app/ui/mainwindow2.ui" line="443"/>
         <source>Rotate AntiClosewise</source>
         <translation>Forgatás balra</translation>
     </message>
     <message>
-        <location filename="../app/ui/mainwindow2.ui" line="444"/>
+        <location filename="../app/ui/mainwindow2.ui" line="448"/>
         <source>Reset Zoom/Rotate</source>
         <translation>Nagyítás/Elforgatás visszaállítása</translation>
     </message>
     <message>
-        <location filename="../app/ui/mainwindow2.ui" line="453"/>
+        <location filename="../app/ui/mainwindow2.ui" line="457"/>
         <source>Horizontal Flip</source>
         <translation>Vízszintes tükrözés</translation>
     </message>
     <message>
-        <location filename="../app/ui/mainwindow2.ui" line="462"/>
+        <location filename="../app/ui/mainwindow2.ui" line="466"/>
         <source>Vertical Flip</source>
         <translation>Függőleges tükrözés</translation>
     </message>
     <message>
-        <location filename="../app/ui/mainwindow2.ui" line="467"/>
+        <location filename="../app/ui/mainwindow2.ui" line="471"/>
         <source>Preview</source>
         <translation>Előnézet</translation>
     </message>
     <message>
-        <location filename="../app/ui/mainwindow2.ui" line="475"/>
+        <location filename="../app/ui/mainwindow2.ui" line="479"/>
         <source>Grid</source>
         <translation>Rács</translation>
     </message>
     <message>
-        <location filename="../app/ui/mainwindow2.ui" line="487"/>
+        <location filename="../app/ui/mainwindow2.ui" line="491"/>
         <source>Previous</source>
         <translation>Előző</translation>
     </message>
     <message>
-        <location filename="../app/ui/mainwindow2.ui" line="490"/>
+        <location filename="../app/ui/mainwindow2.ui" line="494"/>
         <source>Show previous onion skin</source>
         <translation>Előző képfólia megjelenítése</translation>
     </message>
     <message>
-        <location filename="../app/ui/mainwindow2.ui" line="505"/>
+        <location filename="../app/ui/mainwindow2.ui" line="509"/>
         <source>Show next onion skin</source>
         <translation>Következő képfólia megjelenítése</translation>
     </message>
     <message>
-        <location filename="../app/ui/mainwindow2.ui" line="549"/>
+        <location filename="../app/ui/mainwindow2.ui" line="553"/>
         <source>Extend Frame</source>
         <translation>Képkocka kiterjesztése</translation>
     </message>
     <message>
-        <location filename="../app/ui/mainwindow2.ui" line="780"/>
+        <location filename="../app/ui/mainwindow2.ui" line="784"/>
         <source>MultiLayer Onion Skin</source>
         <translation>Többrétegű képfóliák</translation>
     </message>
     <message>
-        <location filename="../app/ui/mainwindow2.ui" line="791"/>
+        <location filename="../app/ui/mainwindow2.ui" line="795"/>
         <source>Range</source>
         <translation>Tartomány</translation>
     </message>
     <message>
-        <location filename="../app/ui/mainwindow2.ui" line="502"/>
+        <location filename="../app/ui/mainwindow2.ui" line="868"/>
+        <source>Pencil2D Webstie</source>
+        <translation>A Pencil2D weblapja</translation>
+    </message>
+    <message>
+        <location filename="../app/ui/mainwindow2.ui" line="873"/>
+        <source>Report a Bug</source>
+        <translation>Hiba jelentése</translation>
+    </message>
+    <message>
+        <location filename="../app/ui/mainwindow2.ui" line="506"/>
         <source>Next</source>
         <translation>Következő</translation>
     </message>
     <message>
-        <location filename="../app/ui/mainwindow2.ui" line="514"/>
-        <location filename="../app/mainwindow2.cpp" line="1092"/>
+        <location filename="../app/ui/mainwindow2.ui" line="518"/>
+        <location filename="../app/mainwindow2.cpp" line="1096"/>
         <source>Play</source>
         <translation>Lejátszás</translation>
     </message>
     <message>
-        <location filename="../app/ui/mainwindow2.ui" line="526"/>
+        <location filename="../app/ui/mainwindow2.ui" line="530"/>
         <source>Loop</source>
         <translation>Ismétlés</translation>
     </message>
     <message>
-        <location filename="../app/ui/mainwindow2.ui" line="535"/>
+        <location filename="../app/ui/mainwindow2.ui" line="539"/>
         <source>Next Frame</source>
         <translation>Következő képkocka</translation>
     </message>
     <message>
-        <location filename="../app/ui/mainwindow2.ui" line="544"/>
+        <location filename="../app/ui/mainwindow2.ui" line="548"/>
         <source>Previous Frame</source>
         <translation>Előző képkocka</translation>
     </message>
     <message>
-        <location filename="../app/ui/mainwindow2.ui" line="558"/>
+        <location filename="../app/ui/mainwindow2.ui" line="562"/>
         <source>Add Frame</source>
         <translation>Képkocka hozzáadása</translation>
     </message>
     <message>
-        <location filename="../app/ui/mainwindow2.ui" line="567"/>
+        <location filename="../app/ui/mainwindow2.ui" line="571"/>
         <source>Duplicate Frame</source>
         <translation>Képkocka kétszerezése</translation>
     </message>
     <message>
-        <location filename="../app/ui/mainwindow2.ui" line="576"/>
+        <location filename="../app/ui/mainwindow2.ui" line="580"/>
         <source>Remove Frame</source>
         <translation>Képkocka eltávolítása</translation>
     </message>
     <message>
-        <location filename="../app/ui/mainwindow2.ui" line="585"/>
+        <location filename="../app/ui/mainwindow2.ui" line="589"/>
         <source>Move</source>
         <translation>Mozgatás</translation>
     </message>
     <message>
-        <location filename="../app/ui/mainwindow2.ui" line="603"/>
+        <location filename="../app/ui/mainwindow2.ui" line="607"/>
         <source>Select</source>
         <translation>Kijelölés</translation>
     </message>
     <message>
-        <location filename="../app/ui/mainwindow2.ui" line="612"/>
+        <location filename="../app/ui/mainwindow2.ui" line="616"/>
         <source>Brush</source>
         <translation>Ecset</translation>
     </message>
     <message>
-        <location filename="../app/ui/mainwindow2.ui" line="621"/>
+        <location filename="../app/ui/mainwindow2.ui" line="625"/>
         <source>Polyline</source>
         <translation>Vonallánc</translation>
     </message>
     <message>
-        <location filename="../app/ui/mainwindow2.ui" line="630"/>
+        <location filename="../app/ui/mainwindow2.ui" line="634"/>
         <source>Smudge</source>
         <translation>Maszatolás</translation>
     </message>
     <message>
-        <location filename="../app/ui/mainwindow2.ui" line="639"/>
+        <location filename="../app/ui/mainwindow2.ui" line="643"/>
         <source>Pen</source>
         <translation>Toll</translation>
     </message>
     <message>
-        <location filename="../app/ui/mainwindow2.ui" line="648"/>
+        <location filename="../app/ui/mainwindow2.ui" line="652"/>
         <source>Hand</source>
         <translation>Kéz</translation>
     </message>
     <message>
-        <location filename="../app/ui/mainwindow2.ui" line="657"/>
+        <location filename="../app/ui/mainwindow2.ui" line="661"/>
         <source>Pencil</source>
         <translation>Ceruza</translation>
     </message>
     <message>
-        <location filename="../app/ui/mainwindow2.ui" line="666"/>
+        <location filename="../app/ui/mainwindow2.ui" line="670"/>
         <source>Bucket</source>
         <translation>Vödör</translation>
     </message>
     <message>
-        <location filename="../app/ui/mainwindow2.ui" line="675"/>
+        <location filename="../app/ui/mainwindow2.ui" line="679"/>
         <source>Eyedropper</source>
         <translation>Szemcseppentő</translation>
     </message>
     <message>
-        <location filename="../app/ui/mainwindow2.ui" line="684"/>
+        <location filename="../app/ui/mainwindow2.ui" line="688"/>
         <source>Eraser</source>
         <translation>Radír</translation>
     </message>
     <message>
-        <location filename="../app/ui/mainwindow2.ui" line="693"/>
+        <location filename="../app/ui/mainwindow2.ui" line="697"/>
         <source>New Bitmap Layer</source>
         <translation>Új bitkép réteg</translation>
     </message>
     <message>
-        <location filename="../app/ui/mainwindow2.ui" line="702"/>
+        <location filename="../app/ui/mainwindow2.ui" line="706"/>
         <source>New Vector Layer</source>
         <translation>Új vektor réteg</translation>
     </message>
     <message>
-        <location filename="../app/ui/mainwindow2.ui" line="711"/>
+        <location filename="../app/ui/mainwindow2.ui" line="715"/>
         <source>New Sound Layer</source>
         <translation>Új hang réteg</translation>
     </message>
     <message>
-        <location filename="../app/ui/mainwindow2.ui" line="720"/>
+        <location filename="../app/ui/mainwindow2.ui" line="724"/>
         <source>New Camera Layer</source>
         <translation>Új kamera réteg</translation>
     </message>
     <message>
-        <location filename="../app/ui/mainwindow2.ui" line="725"/>
+        <location filename="../app/ui/mainwindow2.ui" line="729"/>
         <source>Delete Current Layer</source>
         <translation>Aktuális réteg törlése</translation>
     </message>
     <message>
-        <location filename="../app/ui/mainwindow2.ui" line="735"/>
+        <location filename="../app/ui/mainwindow2.ui" line="739"/>
         <source>About</source>
         <translation>Névjegy</translation>
     </message>
@@ -1667,8 +1703,8 @@ p, li { white-space: pre-wrap; }
         <translation type="vanished">Paletta be- és kikapcsolása</translation>
     </message>
     <message>
-        <location filename="../app/ui/mainwindow2.ui" line="740"/>
-        <location filename="../app/ui/mainwindow2.ui" line="743"/>
+        <location filename="../app/ui/mainwindow2.ui" line="744"/>
+        <location filename="../app/ui/mainwindow2.ui" line="747"/>
         <source>Reset to default</source>
         <translation>Alapértékek visszaállítása</translation>
     </message>
@@ -1677,8 +1713,8 @@ p, li { white-space: pre-wrap; }
         <translation type="vanished">Next_KeyFrame</translation>
     </message>
     <message>
-        <location filename="../app/ui/mainwindow2.ui" line="753"/>
-        <location filename="../app/ui/mainwindow2.ui" line="756"/>
+        <location filename="../app/ui/mainwindow2.ui" line="757"/>
+        <location filename="../app/ui/mainwindow2.ui" line="760"/>
         <source>Next KeyFrame</source>
         <translation>Következő kulcsképkocka</translation>
     </message>
@@ -1687,8 +1723,8 @@ p, li { white-space: pre-wrap; }
         <translation type="vanished">Prev_KeyFrame</translation>
     </message>
     <message>
-        <location filename="../app/ui/mainwindow2.ui" line="766"/>
-        <location filename="../app/ui/mainwindow2.ui" line="769"/>
+        <location filename="../app/ui/mainwindow2.ui" line="770"/>
+        <location filename="../app/ui/mainwindow2.ui" line="773"/>
         <source>Previous KeyFrame</source>
         <translation>Előző kulcsképkocka</translation>
     </message>
@@ -1701,80 +1737,80 @@ p, li { white-space: pre-wrap; }
         <translation type="vanished">loopcontrol</translation>
     </message>
     <message>
-        <location filename="../app/ui/mainwindow2.ui" line="807"/>
+        <location filename="../app/ui/mainwindow2.ui" line="811"/>
         <source>Timeline</source>
         <translation>Idővonal</translation>
     </message>
     <message>
-        <location filename="../app/ui/mainwindow2.ui" line="815"/>
+        <location filename="../app/ui/mainwindow2.ui" line="819"/>
         <source>Options</source>
         <translation>Beállítások</translation>
     </message>
     <message>
-        <location filename="../app/ui/mainwindow2.ui" line="823"/>
+        <location filename="../app/ui/mainwindow2.ui" line="827"/>
         <source>Color Wheel</source>
         <translation>Színkerék</translation>
     </message>
     <message>
-        <location filename="../app/ui/mainwindow2.ui" line="839"/>
+        <location filename="../app/ui/mainwindow2.ui" line="843"/>
         <source>Display Options</source>
         <translation>Megjelenítés beállításai</translation>
     </message>
     <message>
-        <location filename="../app/ui/mainwindow2.ui" line="844"/>
+        <location filename="../app/ui/mainwindow2.ui" line="848"/>
         <source>Flip X</source>
         <translation>X tükrözés</translation>
     </message>
     <message>
-        <location filename="../app/ui/mainwindow2.ui" line="849"/>
+        <location filename="../app/ui/mainwindow2.ui" line="853"/>
         <source>Flip Y</source>
         <translation>Y tükrözés</translation>
     </message>
     <message>
-        <location filename="../app/ui/mainwindow2.ui" line="854"/>
+        <location filename="../app/ui/mainwindow2.ui" line="858"/>
         <source>Move Frame Forward</source>
         <translation>Képkocka mozgatása előre</translation>
     </message>
     <message>
-        <location filename="../app/ui/mainwindow2.ui" line="859"/>
+        <location filename="../app/ui/mainwindow2.ui" line="863"/>
         <source>Move Frame Backward</source>
         <translation>Képkocka mozgatása hátra</translation>
     </message>
     <message>
-        <location filename="../app/mainwindow2.cpp" line="141"/>
+        <location filename="../app/mainwindow2.cpp" line="159"/>
         <source>color palette:&lt;br&gt;use &lt;b&gt;(C)&lt;/b&gt;&lt;br&gt;toggle at cursor</source>
         <translation>Színpaletta:&lt;br&gt;&lt;b&gt;(C)&lt;/b&gt;lenyomásával&lt;br&gt;átváltás a kurzornál</translation>
     </message>
     <message>
-        <location filename="../app/mainwindow2.cpp" line="342"/>
+        <location filename="../app/mainwindow2.cpp" line="360"/>
         <source>Lock Windows</source>
         <translation>Ablakok zárolása</translation>
     </message>
     <message>
-        <location filename="../app/mainwindow2.cpp" line="353"/>
+        <location filename="../app/mainwindow2.cpp" line="373"/>
         <source>Open Recent</source>
         <translation>Legutóbbi megnyitása</translation>
     </message>
     <message>
-        <location filename="../app/mainwindow2.cpp" line="387"/>
+        <location filename="../app/mainwindow2.cpp" line="407"/>
         <source>
 
  You have successfully cleared the list</source>
         <translation>A lista sikeresen ki lett ürítve</translation>
     </message>
     <message>
-        <location filename="../app/mainwindow2.cpp" line="568"/>
+        <location filename="../app/mainwindow2.cpp" line="589"/>
         <source>&lt;br&gt;&lt;br&gt;An error has occurred and your file may not have saved successfully.If you believe that this error is an issue with Pencil2D, please create a new issue at:&lt;br&gt;&lt;a href=&apos;https://github.com/pencil2d/pencil/issues&apos;&gt;https://github.com/pencil2d/pencil/issues&lt;/a&gt;&lt;br&gt;Please be sure to include the following details in your issue:</source>
         <translation>&lt;br&gt;&lt;br&gt;Hiba történt, ami miatt valószínűleg a fájl mentése sem sikerült. Ha úgy gondolja, hogy az esemény a Pencil2D programban található hibára vezethető vissza, kérjük jelentse a következő helyen:&lt;br&gt;&lt;a href=&apos;https://github.com/pencil2d/pencil/issues&apos;&gt;https://github.com/pencil2d/pencil/issues&lt;/a&gt;&lt;br&gt;Mindenképpen mellékelje az alábbi részleteket is a bejelentéshez:</translation>
     </message>
     <message>
-        <location filename="../app/mainwindow2.cpp" line="628"/>
+        <location filename="../app/mainwindow2.cpp" line="649"/>
         <source>The animation is not saved yet.
  Do you want to save now?</source>
         <translation>Az animáció még nincs mentve. Szeretné most menteni?</translation>
     </message>
     <message>
-        <location filename="../app/mainwindow2.cpp" line="629"/>
+        <location filename="../app/mainwindow2.cpp" line="650"/>
         <source>Never ask again</source>
         <comment>AutoSave reminder button</comment>
         <translation>Ne kérdezze újra</translation>
@@ -1784,16 +1820,16 @@ p, li { white-space: pre-wrap; }
         <translation type="vanished">Fájl megnyitása...</translation>
     </message>
     <message>
-        <location filename="../app/mainwindow2.cpp" line="449"/>
-        <location filename="../app/mainwindow2.cpp" line="479"/>
-        <location filename="../app/mainwindow2.cpp" line="603"/>
-        <location filename="../app/mainwindow2.cpp" line="659"/>
+        <location filename="../app/mainwindow2.cpp" line="470"/>
+        <location filename="../app/mainwindow2.cpp" line="500"/>
+        <location filename="../app/mainwindow2.cpp" line="624"/>
+        <location filename="../app/mainwindow2.cpp" line="680"/>
         <source>Warning</source>
         <translation>Figyelmeztetés</translation>
     </message>
     <message>
-        <location filename="../app/mainwindow2.cpp" line="449"/>
-        <location filename="../app/mainwindow2.cpp" line="479"/>
+        <location filename="../app/mainwindow2.cpp" line="470"/>
+        <location filename="../app/mainwindow2.cpp" line="500"/>
         <source>Pencil cannot read this file. If you want to import images, use the command import.</source>
         <translation>A Pencil nem tudja olvasni ezt a fájlt. Képek beemeléséhez az &quot;Importálás&quot; művelet használható.</translation>
     </message>
@@ -1802,18 +1838,18 @@ p, li { white-space: pre-wrap; }
         <translation type="vanished">Mentés másként...</translation>
     </message>
     <message>
-        <location filename="../app/mainwindow2.cpp" line="486"/>
+        <location filename="../app/mainwindow2.cpp" line="507"/>
         <source>Opening document...</source>
         <translation>Dokumentum megnyitása...</translation>
     </message>
     <message>
-        <location filename="../app/mainwindow2.cpp" line="486"/>
-        <location filename="../app/mainwindow2.cpp" line="538"/>
+        <location filename="../app/mainwindow2.cpp" line="507"/>
+        <location filename="../app/mainwindow2.cpp" line="559"/>
         <source>Abort</source>
         <translation>Névjegy</translation>
     </message>
     <message>
-        <location filename="../app/mainwindow2.cpp" line="538"/>
+        <location filename="../app/mainwindow2.cpp" line="559"/>
         <source>Saving document...</source>
         <translation>Dokumentum mentése...</translation>
     </message>
@@ -1822,7 +1858,7 @@ p, li { white-space: pre-wrap; }
         <translation type="vanished">&lt;br&gt;&lt;br&gt;Hiba történt, ami miatt valószínűleg a fájl mentése sem sikerült. Ha úgy gondolja, hogy az esemény a Pencil2D programban található hibára vezethető vissza, kérjük jelentse a következő helyen:&lt;br&gt;&lt;a href=&apos;https://github.com/pencil2d/pencil/issues&apos;&gt;https://github.com/pencil2d/pencil/issues&lt;/a&gt;&lt;br&gt;Mindenképpen mellékelje az alábbi részleteket is a bejelentéshez:</translation>
     </message>
     <message>
-        <location filename="../app/mainwindow2.cpp" line="604"/>
+        <location filename="../app/mainwindow2.cpp" line="625"/>
         <source>This animation has been modified.
  Do you want to save your changes?</source>
         <translation>Ez az animáció meg lett változtatva.
@@ -1833,7 +1869,7 @@ p, li { white-space: pre-wrap; }
         <translation type="vanished">Kép importálása...</translation>
     </message>
     <message>
-        <location filename="../app/mainwindow2.cpp" line="660"/>
+        <location filename="../app/mainwindow2.cpp" line="681"/>
         <source>Unable to import image.&lt;br&gt;&lt;b&gt;TIP:&lt;/b&gt; Use Bitmap layer to import bitmaps.</source>
         <translation>A kép nem importálható.&lt;br&gt;&lt;b&gt;TIPP:&lt;/b&gt; Képek importálásához bitkép réteget kell használni.</translation>
     </message>
@@ -1866,12 +1902,12 @@ p, li { white-space: pre-wrap; }
         <translation type="vanished">A kép nem exportálható.</translation>
     </message>
     <message>
-        <location filename="../app/mainwindow2.cpp" line="912"/>
+        <location filename="../app/mainwindow2.cpp" line="933"/>
         <source>Undo   %1 %2</source>
         <translation>Visszavonás (%1):   %2</translation>
     </message>
     <message>
-        <location filename="../app/mainwindow2.cpp" line="920"/>
+        <location filename="../app/mainwindow2.cpp" line="941"/>
         <source>Redo   %1 %2</source>
         <translation>Újra (%1):   %2</translation>
     </message>
@@ -1888,7 +1924,7 @@ p, li { white-space: pre-wrap; }
         <translation type="vanished">Exportálás másként</translation>
     </message>
     <message>
-        <location filename="../app/mainwindow2.cpp" line="1087"/>
+        <location filename="../app/mainwindow2.cpp" line="1091"/>
         <source>Stop</source>
         <translation>Megállítás</translation>
     </message>
@@ -1903,122 +1939,122 @@ p, li { white-space: pre-wrap; }
 <context>
     <name>Object</name>
     <message>
-        <location filename="../core_lib/structure/object.cpp" line="424"/>
+        <location filename="../core_lib/structure/object.cpp" line="427"/>
         <source>Red</source>
         <translation>Piros</translation>
     </message>
     <message>
-        <location filename="../core_lib/structure/object.cpp" line="430"/>
+        <location filename="../core_lib/structure/object.cpp" line="433"/>
         <source>Green</source>
         <translation>Zöld</translation>
     </message>
     <message>
-        <location filename="../core_lib/structure/object.cpp" line="434"/>
+        <location filename="../core_lib/structure/object.cpp" line="437"/>
         <source>Blue</source>
         <translation>Kék</translation>
     </message>
     <message>
-        <location filename="../core_lib/structure/object.cpp" line="423"/>
+        <location filename="../core_lib/structure/object.cpp" line="426"/>
         <source>Black</source>
         <translation>Fekete</translation>
     </message>
     <message>
-        <location filename="../core_lib/structure/object.cpp" line="425"/>
+        <location filename="../core_lib/structure/object.cpp" line="428"/>
         <source>Dark Red</source>
         <translation>Sötét vörös</translation>
     </message>
     <message>
-        <location filename="../core_lib/structure/object.cpp" line="426"/>
+        <location filename="../core_lib/structure/object.cpp" line="429"/>
         <source>Orange</source>
         <translation>Narancs</translation>
     </message>
     <message>
-        <location filename="../core_lib/structure/object.cpp" line="427"/>
+        <location filename="../core_lib/structure/object.cpp" line="430"/>
         <source>Dark Orange</source>
         <translation>Sötét narancs</translation>
     </message>
     <message>
-        <location filename="../core_lib/structure/object.cpp" line="428"/>
+        <location filename="../core_lib/structure/object.cpp" line="431"/>
         <source>Yellow</source>
         <translation>Sárga</translation>
     </message>
     <message>
-        <location filename="../core_lib/structure/object.cpp" line="429"/>
+        <location filename="../core_lib/structure/object.cpp" line="432"/>
         <source>Dark Yellow</source>
         <translation>Sötét sárga</translation>
     </message>
     <message>
-        <location filename="../core_lib/structure/object.cpp" line="431"/>
+        <location filename="../core_lib/structure/object.cpp" line="434"/>
         <source>Dark Green</source>
         <translation>Sötét zöld</translation>
     </message>
     <message>
-        <location filename="../core_lib/structure/object.cpp" line="432"/>
+        <location filename="../core_lib/structure/object.cpp" line="435"/>
         <source>Cyan</source>
         <translation>Cián</translation>
     </message>
     <message>
-        <location filename="../core_lib/structure/object.cpp" line="433"/>
+        <location filename="../core_lib/structure/object.cpp" line="436"/>
         <source>Dark Cyan</source>
         <translation>Sötét cián</translation>
     </message>
     <message>
-        <location filename="../core_lib/structure/object.cpp" line="435"/>
+        <location filename="../core_lib/structure/object.cpp" line="438"/>
         <source>Dark Blue</source>
         <translation>Sötét kék</translation>
     </message>
     <message>
-        <location filename="../core_lib/structure/object.cpp" line="436"/>
+        <location filename="../core_lib/structure/object.cpp" line="439"/>
         <source>White</source>
         <translation>Fehér</translation>
     </message>
     <message>
-        <location filename="../core_lib/structure/object.cpp" line="437"/>
+        <location filename="../core_lib/structure/object.cpp" line="440"/>
         <source>Very Light Grey</source>
         <translation>Halvány szürke</translation>
     </message>
     <message>
-        <location filename="../core_lib/structure/object.cpp" line="438"/>
+        <location filename="../core_lib/structure/object.cpp" line="441"/>
         <source>Light Grey</source>
         <translation>Világos szürke</translation>
     </message>
     <message>
-        <location filename="../core_lib/structure/object.cpp" line="439"/>
+        <location filename="../core_lib/structure/object.cpp" line="442"/>
         <source>Grey</source>
         <translation>Szürke</translation>
     </message>
     <message>
-        <location filename="../core_lib/structure/object.cpp" line="440"/>
+        <location filename="../core_lib/structure/object.cpp" line="443"/>
         <source>Dark Grey</source>
         <translation>Sötét szürke</translation>
     </message>
     <message>
-        <location filename="../core_lib/structure/object.cpp" line="441"/>
+        <location filename="../core_lib/structure/object.cpp" line="444"/>
         <source>Light Skin</source>
         <translation>Világos bőr</translation>
     </message>
     <message>
-        <location filename="../core_lib/structure/object.cpp" line="442"/>
+        <location filename="../core_lib/structure/object.cpp" line="445"/>
         <source>Light Skin - shade</source>
         <translation>Világos bőr - árnyék</translation>
     </message>
     <message>
-        <location filename="../core_lib/structure/object.cpp" line="443"/>
+        <location filename="../core_lib/structure/object.cpp" line="446"/>
         <source>Skin</source>
         <translation>Bőr</translation>
     </message>
     <message>
-        <location filename="../core_lib/structure/object.cpp" line="444"/>
+        <location filename="../core_lib/structure/object.cpp" line="447"/>
         <source>Skin - shade</source>
         <translation>Bőr - árnyék</translation>
     </message>
     <message>
-        <location filename="../core_lib/structure/object.cpp" line="445"/>
+        <location filename="../core_lib/structure/object.cpp" line="448"/>
         <source>Dark Skin</source>
         <translation>Sötét bőr</translation>
     </message>
     <message>
-        <location filename="../core_lib/structure/object.cpp" line="446"/>
+        <location filename="../core_lib/structure/object.cpp" line="449"/>
         <source>Dark Skin - shade</source>
         <translation>Sötét bőr - árnyék</translation>
     </message>
@@ -2037,72 +2073,136 @@ p, li { white-space: pre-wrap; }
     </message>
     <message>
         <location filename="../app/main.cpp" line="76"/>
+        <location filename="../app/main.cpp" line="82"/>
         <source>Render the file to &lt;output_path&gt;</source>
         <translation>Fájl leképezése ide: &lt;kimeneti_útvonal&gt;</translation>
     </message>
     <message>
         <location filename="../app/main.cpp" line="77"/>
+        <location filename="../app/main.cpp" line="83"/>
         <source>output_path</source>
         <translation>kimeneti_útvonal</translation>
     </message>
     <message>
-        <location filename="../app/main.cpp" line="81"/>
+        <location filename="../app/main.cpp" line="88"/>
+        <source>Name of the camera layer to use</source>
+        <translation>A használni kívánt kamera réteg neve</translation>
+    </message>
+    <message>
+        <location filename="../app/main.cpp" line="89"/>
+        <source>layer_name</source>
+        <translation>réteg_neve</translation>
+    </message>
+    <message>
+        <location filename="../app/main.cpp" line="93"/>
         <source>Width of the output frames</source>
         <translation>A kimeneti képkockák szélessége</translation>
     </message>
     <message>
-        <location filename="../app/main.cpp" line="82"/>
-        <location filename="../app/main.cpp" line="87"/>
+        <location filename="../app/main.cpp" line="94"/>
+        <location filename="../app/main.cpp" line="99"/>
         <source>integer</source>
         <translation>egész szám</translation>
     </message>
     <message>
-        <location filename="../app/main.cpp" line="86"/>
+        <location filename="../app/main.cpp" line="98"/>
         <source>Height of the output frames</source>
         <translation>A kimeneti képkockák magassága</translation>
     </message>
     <message>
-        <location filename="../app/main.cpp" line="91"/>
+        <location filename="../app/main.cpp" line="103"/>
+        <source>The first frame you want to include in the exported movie</source>
+        <translation>Az első képkocka, amelynek már az exportált videóba kell kerülni</translation>
+    </message>
+    <message>
+        <location filename="../app/main.cpp" line="104"/>
+        <location filename="../app/main.cpp" line="111"/>
+        <source>frame</source>
+        <translation>képkocka</translation>
+    </message>
+    <message>
+        <location filename="../app/main.cpp" line="108"/>
+        <source>The last frame you want to include in the exported movie. Can also be last or last-sound to automatically use the last frame containing animation or sound, respectively</source>
+        <translation>Az utolsó képkocka, amelynek még az exportált videóba kell kerülni. Lehet az utolsó vagy az utolsó hang, hogy automaitusan az azt tartalmazó utolsó képkocka legyen használva.</translation>
+    </message>
+    <message>
+        <location filename="../app/main.cpp" line="115"/>
         <source>Render transparency when possible</source>
         <translation>Átlátszóság leképezése amikor lehetséges</translation>
     </message>
     <message>
-        <location filename="../app/main.cpp" line="110"/>
+        <location filename="../app/main.cpp" line="134"/>
         <source>Warning: width value %1 is not an integer, ignoring.</source>
-        <translation>Figyelmeztetés: a szélesség értéke %1 nem egész szám, ezért figyelmen kívül lesz hagyva.</translation>
+        <translation>Figyelmeztetés: a szélesség értéke (%1) nem egész szám, ezért figyelmen kívül lesz hagyva.</translation>
     </message>
     <message>
-        <location filename="../app/main.cpp" line="120"/>
+        <location filename="../app/main.cpp" line="144"/>
         <source>Warning: height value %1 is not an integer, ignoring.</source>
-        <translation>Figyelmeztetés: a magasság értéke %1 nem egész szám, ezért figyelmen kívül lesz hagyva.</translation>
+        <translation>Figyelmeztetés: a magasság értéke (%1) nem egész szám, ezért figyelmen kívül lesz hagyva.</translation>
     </message>
     <message>
-        <location filename="../app/main.cpp" line="139"/>
+        <location filename="../app/main.cpp" line="154"/>
+        <source>Warning: start value %1 is not an integer, ignoring.</source>
+        <translation>Figyelmeztetés: a kezdés értéke (%1) nem egész szám, ezért figyelmen kívül lesz hagyva.</translation>
+    </message>
+    <message>
+        <location filename="../app/main.cpp" line="159"/>
+        <source>Warning: start value must be at least 1, ignoring.</source>
+        <translation>Figyelmeztetés: a kezdés értéke legalább 1 kell legyen, figyelmen kívül lesz hagyva.</translation>
+    </message>
+    <message>
+        <location filename="../app/main.cpp" line="179"/>
+        <source>Warning: end value %1 is not an integer, last or last-sound, ignoring.</source>
+        <translation>Figyelmeztetés: a befejezés értéke (%1) nem egész szám, utolsó képkocka vagy utolsó hang, ezért figyelmen kívül lesz hagyva.</translation>
+    </message>
+    <message>
+        <location filename="../app/main.cpp" line="185"/>
+        <source>Warning: end value %1 is smaller than start value %2, ignoring.</source>
+        <translation>Figyelmeztetés: a befejezés értéke (%1) kisebb mint a kezdés értéke (%2), ezért figyelmen kívül lesz hagyva.</translation>
+    </message>
+    <message>
+        <location filename="../app/main.cpp" line="196"/>
         <source>Error: No input file specified.</source>
         <translation>Hiba: Nincs bemeneti fájl megadva.</translation>
     </message>
     <message>
-        <location filename="../app/main.cpp" line="143"/>
+        <location filename="../app/main.cpp" line="236"/>
+        <source>Warning: the specified camera layer %1 was not found, ignoring.</source>
+        <translation>Figyelmeztetés: a kamera réteg (%1) nem található, ezért figyelmen kívül lesz hagyva.</translation>
+    </message>
+    <message>
+        <location filename="../app/main.cpp" line="284"/>
+        <source>Warning: Transparency is not currenty supported in movie files</source>
+        <translation>Figyelmeztetés: Az átlátszóság jelenleg nincs támogatva a videofájlokban</translation>
+    </message>
+    <message>
+        <location filename="../app/main.cpp" line="286"/>
+        <source>Exporting movie...</source>
+        <translation>Videó exportálása...</translation>
+    </message>
+    <message>
+        <location filename="../app/main.cpp" line="292"/>
         <source>Exporting image sequence...</source>
         <translation>Képsorozat exportálása...</translation>
     </message>
     <message>
-        <location filename="../app/main.cpp" line="147"/>
+        <location filename="../app/main.cpp" line="203"/>
         <source>Error: the input file at &apos;%1&apos; does not exist</source>
-        <translation>Hiba: a bemeneti fájl &apos;%1&apos; nem létezik</translation>
+        <translation>Hiba: a bemeneti fájl nem létezik:  &apos;%1&apos;</translation>
     </message>
     <message>
-        <location filename="../app/main.cpp" line="152"/>
+        <location filename="../app/main.cpp" line="208"/>
         <source>Error: the input path &apos;%1&apos; is not a file</source>
-        <translation>Hiba: a bemeneti útvonal &apos;%1&apos; nem egy fájl</translation>
+        <translation>Hiba: a bemeneti útvonal nem egy fájl: &apos;%1&apos;</translation>
     </message>
     <message>
-        <location filename="../app/main.cpp" line="176"/>
+        <location filename="../app/main.cpp" line="265"/>
         <source>Warning: Output format is not specified or unsupported. Using PNG.</source>
         <translation>Figyelmeztetés: a kimeneti formátum nincs megadva vagy nincs támogatva. PNG lesz használva.</translation>
     </message>
     <message>
-        <location filename="../app/main.cpp" line="182"/>
+        <location filename="../app/main.cpp" line="288"/>
+        <location filename="../app/main.cpp" line="294"/>
         <source>Done.</source>
         <translation>Kész.</translation>
     </message>
@@ -3714,19 +3814,18 @@ p, li { white-space: pre-wrap; }
     <message>
         <location filename="../app/shortcutspage.cpp" line="96"/>
         <source>%1 is already used, overwrite?</source>
-        <translatorcomment>%1 már használatban van. Felülírás?</translatorcomment>
-        <translation></translation>
+        <translation>%1 már használatban van. Felülírás?</translation>
     </message>
 </context>
 <context>
     <name>TimeControls</name>
     <message>
-        <location filename="../core_lib/interface/timecontrols.cpp" line="87"/>
+        <location filename="../core_lib/interface/timecontrols.cpp" line="91"/>
         <source>Play</source>
         <translation>Lejátszás</translation>
     </message>
     <message>
-        <location filename="../core_lib/interface/timecontrols.cpp" line="88"/>
+        <location filename="../core_lib/interface/timecontrols.cpp" line="92"/>
         <source>Loop</source>
         <translation>Ismétlés</translation>
     </message>
@@ -3739,7 +3838,7 @@ p, li { white-space: pre-wrap; }
         <translation type="vanished">Ismétlés vége</translation>
     </message>
     <message>
-        <location filename="../core_lib/interface/timecontrols.cpp" line="64"/>
+        <location filename="../core_lib/interface/timecontrols.cpp" line="68"/>
         <source>Range</source>
         <translation>Tartomány</translation>
     </message>
@@ -3752,43 +3851,43 @@ p, li { white-space: pre-wrap; }
         <translation type="vanished">FPS: </translation>
     </message>
     <message>
-        <location filename="../core_lib/interface/timecontrols.cpp" line="43"/>
+        <location filename="../core_lib/interface/timecontrols.cpp" line="49"/>
         <source>Frames per second</source>
         <translation>Képkockák másodpercenként</translation>
     </message>
     <message>
-        <location filename="../core_lib/interface/timecontrols.cpp" line="52"/>
+        <location filename="../core_lib/interface/timecontrols.cpp" line="57"/>
         <source>Start of playback loop</source>
         <translation>Ismétlődő lejátszás kezdete</translation>
     </message>
     <message>
-        <location filename="../core_lib/interface/timecontrols.cpp" line="61"/>
+        <location filename="../core_lib/interface/timecontrols.cpp" line="65"/>
         <source>End of playback loop</source>
         <translation>Ismétlődő lejátszás vége</translation>
     </message>
     <message>
-        <location filename="../core_lib/interface/timecontrols.cpp" line="67"/>
+        <location filename="../core_lib/interface/timecontrols.cpp" line="71"/>
         <source>Playback range</source>
         <translation>Lejátszandó tartomány</translation>
     </message>
     <message>
-        <location filename="../core_lib/interface/timecontrols.cpp" line="89"/>
+        <location filename="../core_lib/interface/timecontrols.cpp" line="93"/>
         <source>Sound on/off</source>
         <translation>Hang be/ki</translation>
     </message>
     <message>
-        <location filename="../core_lib/interface/timecontrols.cpp" line="90"/>
+        <location filename="../core_lib/interface/timecontrols.cpp" line="94"/>
         <source>End</source>
         <translation>Befejezés</translation>
     </message>
     <message>
-        <location filename="../core_lib/interface/timecontrols.cpp" line="91"/>
-        <location filename="../core_lib/interface/timecontrols.cpp" line="199"/>
+        <location filename="../core_lib/interface/timecontrols.cpp" line="95"/>
+        <location filename="../core_lib/interface/timecontrols.cpp" line="201"/>
         <source>Start</source>
         <translation>Indítás</translation>
     </message>
     <message>
-        <location filename="../core_lib/interface/timecontrols.cpp" line="194"/>
+        <location filename="../core_lib/interface/timecontrols.cpp" line="196"/>
         <source>Stop</source>
         <translation>Megállítás</translation>
     </message>
@@ -3821,9 +3920,8 @@ p, li { white-space: pre-wrap; }
         <translation>Képfólia:</translation>
     </message>
     <message>
-        <location filename="../core_lib/interface/timeline.cpp" line="302"/>
         <source>Warning</source>
-        <translation>Figyelmeztetés</translation>
+        <translation type="vanished">Figyelmeztetés</translation>
     </message>
     <message>
         <location filename="../core_lib/interface/timeline.cpp" line="72"/>
@@ -3876,9 +3974,20 @@ p, li { white-space: pre-wrap; }
         <translation>Érintkező kulcsképkocka be- és kikapcsolása</translation>
     </message>
     <message>
-        <location filename="../core_lib/interface/timeline.cpp" line="303"/>
+        <location filename="../core_lib/interface/timeline.cpp" line="297"/>
+        <source>Delete Layer</source>
+        <comment>Windows title of Delete current layer pop-up.</comment>
+        <translation>Réteg törlése</translation>
+    </message>
+    <message>
+        <location filename="../core_lib/interface/timeline.cpp" line="298"/>
         <source>Are you sure you want to delete layer: </source>
         <translation>Biztosan törölni akarja a következő réteget: </translation>
+    </message>
+    <message>
+        <location filename="../core_lib/interface/timeline.cpp" line="307"/>
+        <source>Please keep at least one camera layer in project</source>
+        <translation>Legalább egy kamera rétegnek lennie kell projektben</translation>
     </message>
 </context>
 <context>
