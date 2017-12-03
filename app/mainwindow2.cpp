@@ -28,7 +28,6 @@ GNU General Public License for more details.
 #include <QFile>
 #include <QMessageBox>
 #include <QProgressDialog>
-#include <QDesktopServices>
 #include <QFileIconProvider>
 
 #include "pencildef.h"
@@ -56,7 +55,6 @@ GNU General Public License for more details.
 #include "timeline2.h"
 #include "errordialog.h"
 #include "importimageseqdialog.h"
-#include "aboutdialog.h"
 
 #include "colorbox.h"
 #include "util.h"
@@ -67,6 +65,24 @@ GNU General Public License for more details.
 #include "shortcutfilter.h"
 #include "movieexporter.h"
 #include "app_util.h"
+
+#define STRINGIFY(x) #x
+#define TOSTRING(x) STRINGIFY(x)
+#define S__GIT_TIMESTAMP__ TOSTRING(GIT_TIMESTAMP)
+
+#ifdef GIT_TIMESTAMP
+#define BUILD_DATE S__GIT_TIMESTAMP__
+#else
+#define BUILD_DATE __DATE__
+#endif
+
+#ifdef NIGHTLY_BUILD
+#define PENCIL_WINDOW_TITLE QString("[*]Pencil2D - Nightly Build %1").arg( BUILD_DATE )
+#else
+#define PENCIL_WINDOW_TITLE QString("[*]Pencil2D v%1").arg(APP_VERSION)
+#endif
+
+
 
 MainWindow2::MainWindow2(QWidget *parent) : QMainWindow(parent)
 {
@@ -95,6 +111,7 @@ MainWindow2::MainWindow2(QWidget *parent) : QMainWindow(parent)
     // 1. object 2. editor 3. scribble area 4. other widgets
     Object* object = new Object();
     object->init();
+    object->createDefaultLayers();
 
     mEditor = new Editor(this);
     mEditor->setScribbleArea(mScribbleArea);
@@ -118,13 +135,14 @@ MainWindow2::MainWindow2(QWidget *parent) : QMainWindow(parent)
 
     connect(mEditor, &Editor::needSave, this, &MainWindow2::autoSave);
     connect(mToolBox, &ToolBoxWidget::clearButtonClicked, mEditor, &Editor::clearCurrentFrame);
+    connect(mEditor->view(), &ViewManager::viewChanged, this, &MainWindow2::updateZoomLabel);
 
     //connect( mScribbleArea, &ScribbleArea::refreshPreview, mPreview, &PreviewWidget::updateImage );
     mEditor->tools()->setDefaultTool();
     mBackground->init(mEditor->preference());
     mEditor->updateObject();
 
-    connect(mEditor->view(), &ViewManager::viewChanged, this, &MainWindow2::updateZoomLabel);
+    setWindowTitle(PENCIL_WINDOW_TITLE);
 }
 
 MainWindow2::~MainWindow2()
@@ -260,7 +278,7 @@ void MainWindow2::createMenus()
     connect(ui->actionNew_Vector_Layer, &QAction::triggered, mCommands, &ActionCommands::addNewVectorLayer);
     connect(ui->actionNew_Sound_Layer, &QAction::triggered, mCommands, &ActionCommands::addNewSoundLayer);
     connect(ui->actionNew_Camera_Layer, &QAction::triggered, mCommands, &ActionCommands::addNewCameraLayer);
-    connect(ui->actionDelete_Current_Layer, &QAction::triggered, mEditor->layers(), &LayerManager::deleteCurrentLayer);
+    connect(ui->actionDelete_Current_Layer, &QAction::triggered, mCommands, &ActionCommands::deleteCurrentLayer);
 
     /// --- View Menu ---
     connect(ui->actionZoom_In, &QAction::triggered, mCommands, &ActionCommands::ZoomIn);
@@ -346,8 +364,10 @@ void MainWindow2::createMenus()
     bindActionWithSetting(lockWidgets, SETTING::LAYOUT_LOCK);
 
     // -------------- Help Menu ---------------
-    connect(ui->actionHelp, &QAction::triggered, this, &MainWindow2::helpBox);
-    connect(ui->actionAbout, &QAction::triggered, this, &MainWindow2::aboutPencil);
+    connect(ui->actionHelp, &QAction::triggered, mCommands, &ActionCommands::help);
+    connect(ui->actionAbout, &QAction::triggered, mCommands, &ActionCommands::about);
+    connect(ui->actionWebstie, &QAction::triggered, mCommands, &ActionCommands::website);
+    connect(ui->actionReport_Bug, &QAction::triggered, mCommands, &ActionCommands::reportbug);
 
     // --------------- Menus ------------------
     mRecentFileMenu = new RecentFileMenu(tr("Open Recent"), this);
@@ -356,8 +376,8 @@ void MainWindow2::createMenus()
 
     connect(mRecentFileMenu, &RecentFileMenu::loadRecentFile, this, &MainWindow2::openFile);
 
-    connect(ui->menuEdit, SIGNAL(aboutToShow()), this, SLOT(undoActSetText()));
-    connect(ui->menuEdit, SIGNAL(aboutToHide()), this, SLOT(undoActSetEnabled()));
+    connect(ui->menuEdit, &QMenu::aboutToShow, this, &MainWindow2::undoActSetText);
+    connect(ui->menuEdit, &QMenu::aboutToHide, this, &MainWindow2::undoActSetEnabled);
 }
 
 void MainWindow2::setMenuActionChecked(QAction* action, bool bChecked)
@@ -414,6 +434,7 @@ void MainWindow2::newDocument()
     {
         Object* object = new Object();
         object->init();
+        object->createDefaultLayers();
         mEditor->setObject(object);
         mEditor->scrubTo(0);
         mEditor->view()->resetView();
@@ -957,20 +978,6 @@ void MainWindow2::importPalette()
     }
 }
 
-void MainWindow2::aboutPencil()
-{
-    AboutDialog* about = new AboutDialog(this);
-
-    about->init();
-    about->exec();
-}
-
-void MainWindow2::helpBox()
-{
-    QString url = "http://www.pencil2d.org/documentation/";
-    QDesktopServices::openUrl(QUrl(url));
-}
-
 void MainWindow2::makeConnections(Editor* editor)
 {
     connect(editor, &Editor::updateBackup, this, &MainWindow2::updateSaveState);
@@ -999,9 +1006,6 @@ void MainWindow2::makeConnections(Editor* pEditor, TimeLine* pTimeline)
 {
     PlaybackManager* pPlaybackManager = pEditor->playback();
     connect(pTimeline, &TimeLine::duplicateKeyClick, pEditor, &Editor::duplicateKey);
-
-    connect(pTimeline, &TimeLine::loopStartClick, pPlaybackManager, &PlaybackManager::setRangedStartFrame);
-    connect(pTimeline, &TimeLine::loopEndClick, pPlaybackManager, &PlaybackManager::setRangedEndFrame);
 
     connect(pTimeline, &TimeLine::soundClick, pPlaybackManager, &PlaybackManager::enableSound);
     connect(pTimeline, &TimeLine::fpsClick, pPlaybackManager, &PlaybackManager::setFps);

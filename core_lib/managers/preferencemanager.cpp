@@ -20,8 +20,7 @@ GNU General Public License for more details.
 #include <QSettings>
 
 
-PreferenceManager::PreferenceManager( QObject* parent )
-    : BaseManager( parent )
+PreferenceManager::PreferenceManager(Editor* editor) : BaseManager(editor)
 {
 }
 
@@ -75,7 +74,7 @@ void PreferenceManager::loadPrefs()
 
     // Files
     set( SETTING::AUTO_SAVE,                settings.value( SETTING_AUTO_SAVE,              true ).toBool() );
-    set( SETTING::AUTO_SAVE_NUMBER,         settings.value( SETTING_AUTO_SAVE_NUMBER,       20 ).toInt() );
+    set( SETTING::AUTO_SAVE_NUMBER,         settings.value( SETTING_AUTO_SAVE_NUMBER,       25 ).toInt() );
 
     // Timeline
     //
