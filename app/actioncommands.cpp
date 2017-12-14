@@ -40,6 +40,7 @@ GNU General Public License for more details.
 #include "soundclip.h"
 #include "camera.h"
 
+#include "keyframefactory.h"
 #include "movieexporter.h"
 #include "filedialogex.h"
 #include "exportmoviedialog.h"
@@ -133,8 +134,11 @@ Status ActionCommands::importSound()
 
 Status ActionCommands::exportMovie()
 {
-    mExportMovieDialog = new ExportMovieDialog(mParent);
+    auto dialog = new ExportMovieDialog(mParent);
+    OnScopeExit(dialog->deleteLater());
 
+    dialog->init();
+    
     std::vector< std::pair<QString, QSize> > camerasInfo;
     auto cameraLayers = mEditor->object()->getLayersByType< LayerCamera >();
     for (LayerCamera* i : cameraLayers)
@@ -157,30 +161,27 @@ Status ActionCommands::exportMovie()
         std::swap(camerasInfo[0], *it);
     }
 
-    mExportMovieDialog->setCamerasInfo(camerasInfo);
+    dialog->setCamerasInfo(camerasInfo);
 
     int projectLenWithSounds = mEditor->layers()->projectLength(true);
     int projectLen = mEditor->layers()->projectLength(false);
 
-    mExportMovieDialog->setDefaultRange(1, projectLen, projectLenWithSounds);
-
-    if (!mExportMovieDialog->isVisible())
-    {
-        mExportMovieDialog->exec();
-    }
-    if (mExportMovieDialog->result() == QDialog::Rejected)
+    dialog->setDefaultRange(1, projectLen, projectLenWithSounds);
+    dialog->exec();
+    
+    if (dialog->result() == QDialog::Rejected)
     {
         return Status::SAFE;
     }
-    QString strMoviePath = mExportMovieDialog->getFilePath();
+    QString strMoviePath = dialog->getFilePath();
 
     ExportMovieDesc desc;
     desc.strFileName = strMoviePath;
-    desc.startFrame = mExportMovieDialog->getStartFrame();
-    desc.endFrame = mExportMovieDialog->getEndFrame();
+    desc.startFrame = dialog->getStartFrame();
+    desc.endFrame = dialog->getEndFrame();
     desc.fps = mEditor->playback()->fps();
-    desc.exportSize = mExportMovieDialog->getExportSize();
-    desc.strCameraName = mExportMovieDialog->getSelectedCameraName();
+    desc.exportSize = dialog->getExportSize();
+    desc.strCameraName = dialog->getSelectedCameraName();
 
     QProgressDialog progressDlg;
     progressDlg.setWindowModality(Qt::WindowModal);
@@ -204,23 +205,22 @@ Status ActionCommands::exportMovie()
 
     if (st.ok() && QFile::exists(strMoviePath))
     {
-        auto btn = QMessageBox::question(mParent,
-            "Pencil2D",
-            tr("Finished. Open movie now?"));
+        auto btn = QMessageBox::question(mParent, "Pencil2D",
+                                         tr("Finished. Open movie now?", "When movie export done."));
         if (btn == QMessageBox::Yes)
         {
             QDesktopServices::openUrl(QUrl::fromLocalFile(strMoviePath));
         }
     }
-    delete mExportMovieDialog;
     return Status::OK;
 }
 
 Status ActionCommands::exportImageSequence()
 {
-    // Options
-    auto dialog = new ExportImageDialog(mParent, true);
+    auto dialog = new ExportImageDialog(mParent, FileType::IMAGE_SEQUENCE);
     OnScopeExit(dialog->deleteLater());
+    
+    dialog->init();
 
     std::vector< std::pair<QString, QSize> > camerasInfo;
     auto cameraLayers = mEditor->object()->getLayersByType< LayerCamera >();
@@ -259,7 +259,7 @@ Status ActionCommands::exportImageSequence()
     int projectLength = mEditor->layers()->projectLength();
 
     QString sCameraLayerName = dialog->getCameraLayerName();
-    LayerCamera* cameraLayer = (LayerCamera*)mEditor->layers()->getLayerByName(sCameraLayerName);
+    LayerCamera* cameraLayer = (LayerCamera*)mEditor->layers()->findLayerByName(sCameraLayerName, Layer::CAMERA);
 
     // Show a progress dialog, as this can take a while if you have lots of frames.
     QProgressDialog progress(tr("Exporting image sequence..."), tr("Abort"), 0, 100, mParent);
@@ -268,14 +268,14 @@ Status ActionCommands::exportImageSequence()
     progress.show();
 
     mEditor->object()->exportFrames(1, projectLength,
-        cameraLayer,
-        exportSize,
-        strFilePath,
-        exportFormat,
-        useTranparency,
-        true,
-        &progress,
-        100);
+                                    cameraLayer,
+                                    exportSize,
+                                    strFilePath,
+                                    exportFormat,
+                                    useTranparency,
+                                    true,
+                                    &progress,
+                                    100);
 
     progress.close();
 
@@ -285,8 +285,10 @@ Status ActionCommands::exportImageSequence()
 Status ActionCommands::exportImage()
 {
     // Options
-    auto dialog = new ExportImageDialog(mParent);
+    auto dialog = new ExportImageDialog(mParent, FileType::IMAGE);
     OnScopeExit(dialog->deleteLater());
+
+    dialog->init();
 
     std::vector< std::pair<QString, QSize> > camerasInfo;
     auto cameraLayers = mEditor->object()->getLayersByType< LayerCamera >();
@@ -324,7 +326,7 @@ Status ActionCommands::exportImage()
 
     // Export
     QString sCameraLayerName = dialog->getCameraLayerName();
-    LayerCamera* cameraLayer = (LayerCamera*)mEditor->layers()->getLayerByName(sCameraLayerName);
+    LayerCamera* cameraLayer = (LayerCamera*)mEditor->layers()->findLayerByName(sCameraLayerName, Layer::CAMERA);
 
     QTransform view = cameraLayer->getViewAtFrame(mEditor->currentFrame());
 
@@ -340,9 +342,9 @@ Status ActionCommands::exportImage()
     if (!bOK)
     {
         QMessageBox::warning(mParent,
-            tr("Warning"),
-            tr("Unable to export image."),
-            QMessageBox::Ok);
+                             tr("Warning"),
+                             tr("Unable to export image."),
+                             QMessageBox::Ok);
         return Status::FAIL;
     }
     return Status::OK;
@@ -489,6 +491,31 @@ void ActionCommands::removeKey()
         default:
             break;
         }
+    }
+}
+
+void ActionCommands::duplicateKey()
+{
+    Layer* layer = mEditor->layers()->currentLayer();
+    if (layer == NULL) return;
+
+    KeyFrame* key = layer->getKeyFrameAt(mEditor->currentFrame());
+    if (key == nullptr) return;
+
+    KeyFrame* dupKey = key->clone();
+
+    int nextEmptyFrame = mEditor->currentFrame() + 1;
+    while (layer->keyExistsWhichCovers(nextEmptyFrame))
+    {
+        nextEmptyFrame += 1;
+    }
+
+    layer->addKeyFrame(nextEmptyFrame, dupKey);
+    mEditor->scrubTo(nextEmptyFrame);
+    
+    if (layer->type() == Layer::SOUND)
+    {
+        mEditor->sound()->processSound(dynamic_cast<SoundClip*>(dupKey));
     }
 }
 

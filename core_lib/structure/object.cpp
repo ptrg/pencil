@@ -28,15 +28,10 @@ GNU General Public License for more details.
 #include "layersound.h"
 #include "layercamera.h"
 
-//#include "flash.h"
 #include "util.h"
 #include "editor.h"
 #include "bitmapimage.h"
 #include "fileformat.h"
-
-// ******* Mac-specific: ******** (please comment (or reimplement) the lines below to compile on Windows or Linux
-//#include <CoreFoundation/CoreFoundation.h>
-// ******************************
 
 Object::Object(QObject* parent) : QObject(parent)
 {
@@ -250,12 +245,10 @@ Layer* Object::getLayer(int i) const
 Layer* Object::findLayerByName(QString strName, Layer::LAYER_TYPE type) const
 {
     bool bCheckType = (type != Layer::UNDEFINED);
-
     for (Layer* layer : mLayers)
     {
-        bool bTypeMatch = (bCheckType) ? (type == layer->type()) : true;
-
-        if (layer->name() == strName && bTypeMatch)
+        bool isTypeMatch = (bCheckType) ? (type == layer->type()) : true;
+        if (isTypeMatch && layer->name() == strName)
         {
             return layer;
         }
@@ -671,9 +664,4 @@ void Object::setData(ObjectData* d)
 {
     Q_ASSERT(d != nullptr);
     mData.reset(d);
-}
-
-void Object::setLayerUpdated(int layerId)
-{
-    emit layerChanged(layerId);
 }

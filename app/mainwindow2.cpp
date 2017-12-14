@@ -1,4 +1,4 @@
-﻿/*
+/*
 
 Pencil - Traditional Animation Software
 Copyright (C) 2005-2007 Patrick Corrieri & Pascal Naidon
@@ -319,7 +319,7 @@ void MainWindow2::createMenus()
     connect(ui->actionPrevious_Frame, &QAction::triggered, mCommands, &ActionCommands::GotoPrevFrame);
     connect(ui->actionNext_KeyFrame, &QAction::triggered, mCommands, &ActionCommands::GotoNextKeyFrame);
     connect(ui->actionPrev_KeyFrame, &QAction::triggered, mCommands, &ActionCommands::GotoPrevKeyFrame);
-    connect(ui->actionDuplicate_Frame, &QAction::triggered, mEditor, &Editor::duplicateKey);
+    connect(ui->actionDuplicate_Frame, &QAction::triggered, mCommands, &ActionCommands::duplicateKey);
     connect(ui->actionMove_Frame_Forward, &QAction::triggered, mEditor, &Editor::moveFrameForward);
     connect(ui->actionMove_Frame_Backward, &QAction::triggered, mEditor, &Editor::moveFrameBackward);
 
@@ -412,10 +412,18 @@ void MainWindow2::clearRecentFilesList()
 
 void MainWindow2::closeEvent(QCloseEvent* event)
 {
+    if (m2ndCloseEvent)
+    {
+        // https://bugreports.qt.io/browse/QTBUG-43344
+        event->accept();
+        return;
+    }
+
     if (maybeSave())
     {
         writeSettings();
         event->accept();
+        m2ndCloseEvent = true;
     }
     else
     {
@@ -487,9 +495,7 @@ bool MainWindow2::saveAsNewDocument()
     {
         fileName = fileName + PFF_EXTENSION;
     }
-
     return saveObject(fileName);
-
 }
 
 void MainWindow2::openFile(QString filename)
@@ -623,11 +629,12 @@ bool MainWindow2::maybeSave()
     {
         int ret = QMessageBox::warning(this, tr("Warning"),
                                        tr("This animation has been modified.\n Do you want to save your changes?"),
-                                       QMessageBox::Save | QMessageBox::Discard | QMessageBox::Cancel,
-                                       QMessageBox::Save);
+                                       QMessageBox::Discard | QMessageBox::Save | QMessageBox::Cancel);
         if (ret == QMessageBox::Save)
             return saveDocument();
-        else if (ret == QMessageBox::Cancel)
+        else if (ret == QMessageBox::Discard)
+            return true;
+        else
             return false;
     }
     return true;
@@ -652,7 +659,6 @@ bool MainWindow2::autoSave()
     msgBox.setDefaultButton(QMessageBox::Yes);
 
     int ret = msgBox.exec();
-    qDebug() << "ret=" << ret;
     if (ret == QMessageBox::Yes)
     {
         return saveDocument();
@@ -818,7 +824,6 @@ void MainWindow2::setupKeyboardShortcuts()
     ui->actionOpen->setShortcut(cmdKeySeq(CMD_OPEN_FILE));
     ui->actionSave->setShortcut(cmdKeySeq(CMD_SAVE_FILE));
     ui->actionSave_as->setShortcut(cmdKeySeq(CMD_SAVE_AS));
-    ui->actionPrint->setShortcut(cmdKeySeq(CMD_PRINT));
 
     ui->actionImport_Image->setShortcut(cmdKeySeq(CMD_IMPORT_IMAGE));
     ui->actionImport_ImageSeq->setShortcut(cmdKeySeq(CMD_IMPORT_IMAGE_SEQ));
@@ -830,8 +835,6 @@ void MainWindow2::setupKeyboardShortcuts()
     ui->actionExport_ImageSeq->setShortcut(cmdKeySeq(CMD_EXPORT_IMAGE_SEQ));
     ui->actionExport_Movie->setShortcut(cmdKeySeq(CMD_EXPORT_MOVIE));
     ui->actionExport_Palette->setShortcut(cmdKeySeq(CMD_EXPORT_PALETTE));
-    ui->actionExport_Svg_Image->setShortcut(cmdKeySeq(CMD_EXPORT_SVG));
-    ui->actionExport_X_sheet->setShortcut(cmdKeySeq(CMD_EXPORT_XSHEET));
 
     // edit menu
     ui->actionUndo->setShortcut(cmdKeySeq(CMD_UNDO));
@@ -999,13 +1002,13 @@ void MainWindow2::makeConnections(Editor* editor, ScribbleArea* scribbleArea)
     connect(editor, &Editor::selectAll, scribbleArea, &ScribbleArea::selectAll);
 
     connect(editor->view(), &ViewManager::viewChanged, scribbleArea, &ScribbleArea::updateAllFrames);
-    //    connect( editor->preference(), &PreferenceManager::preferenceChanged, scribbleArea, &ScribbleArea::onPreferencedChanged );
+    //connect( editor->preference(), &PreferenceManager::preferenceChanged, scribbleArea, &ScribbleArea::onPreferencedChanged );
 }
 
 void MainWindow2::makeConnections(Editor* pEditor, TimeLine* pTimeline)
 {
     PlaybackManager* pPlaybackManager = pEditor->playback();
-    connect(pTimeline, &TimeLine::duplicateKeyClick, pEditor, &Editor::duplicateKey);
+    connect(pTimeline, &TimeLine::duplicateKeyClick, mCommands, &ActionCommands::duplicateKey);
 
     connect(pTimeline, &TimeLine::soundClick, pPlaybackManager, &PlaybackManager::enableSound);
     connect(pTimeline, &TimeLine::fpsClick, pPlaybackManager, &PlaybackManager::setFps);

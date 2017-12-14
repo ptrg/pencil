@@ -62,6 +62,7 @@ public:
     void GotoPrevKeyFrame();
     Status addNewKey();
     void removeKey();
+    void duplicateKey();
 
     // Layer
     Status addNewBitmapLayer();
@@ -79,7 +80,6 @@ public:
 private:
     Editor* mEditor = nullptr;
     QWidget* mParent = nullptr;
-    ExportMovieDialog* mExportMovieDialog = nullptr;
 };
 
 #endif // COMMANDCENTER_H

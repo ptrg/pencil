@@ -863,13 +863,17 @@ void ScribbleArea::paintCanvasCursor(QPainter& painter)
 
 void ScribbleArea::updateCanvasCursor()
 {
+    float scalingFac = mEditor->view()->scaling();
+    qreal brushWidth = currentTool()->properties.width;
+    qreal brushFeather = currentTool()->properties.feather;
     if (currentTool()->isAdjusting)
     {
-        mCursorImg = currentTool()->quickSizeCursor();
+        mCursorImg = currentTool()->quickSizeCursor(brushWidth, brushFeather, scalingFac);
     }
     else if (mEditor->preference()->isOn(SETTING::DOTTED_CURSOR))
     {
-        mCursorImg = currentTool()->canvasCursor();
+        bool useFeather = currentTool()->properties.useFeather;
+        mCursorImg = currentTool()->canvasCursor(brushWidth, brushFeather, useFeather, scalingFac, width());
     }
     else
     {
@@ -1123,9 +1127,9 @@ void ScribbleArea::drawPen(QPointF thePoint, qreal brushWidth, QColor fillColour
                             QPainter::CompositionMode_Source, useAA);
 }
 
-void ScribbleArea::drawPencil(QPointF thePoint, qreal brushWidth, QColor fillColour, qreal opacity)
+void ScribbleArea::drawPencil(QPointF thePoint, qreal brushWidth, qreal fixedBrushFeather, QColor fillColour, qreal opacity)
 {
-    drawBrush(thePoint, brushWidth, 50, fillColour, opacity, true);
+    drawBrush(thePoint, brushWidth, fixedBrushFeather, fillColour, opacity, true);
 }
 
 void ScribbleArea::drawBrush(QPointF thePoint, qreal brushWidth, qreal mOffset, QColor fillColour, qreal opacity, bool usingFeather, int useAA)
@@ -1668,7 +1672,7 @@ void ScribbleArea::deleteSelection()
         Layer* layer = mEditor->layers()->currentLayer();
         if (layer == NULL) { return; }
 
-        mEditor->backup(tr("Delete Selection"));
+        mEditor->backup(tr("Delete Selection", "Undo Step: clear the selection area."));
 
         mClosestCurves.clear();
         if (layer->type() == Layer::VECTOR) { ((LayerVector *)layer)->getLastVectorImageAtFrame(mEditor->currentFrame(), 0)->deleteSelection(); }

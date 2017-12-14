@@ -150,6 +150,9 @@ private:
     QIcon mStartIcon;
     QIcon mStopIcon;
 
+    // a hack for MacOS because closeEvent fires twice
+    bool m2ndCloseEvent = false;
+    
     Ui::MainWindow2* ui = nullptr;
 };
 

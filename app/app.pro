@@ -40,8 +40,6 @@ HEADERS += \
     shortcutspage.h \
     preview.h \
     colorbox.h \
-    colorgrid.h \
-    colorgriditem.h \
     colorinspector.h \
     colorpalettewidget.h \
     colorwheel.h \
@@ -69,8 +67,6 @@ SOURCES += \
     shortcutspage.cpp \
     preview.cpp \
     colorbox.cpp \
-    colorgrid.cpp \
-    colorgriditem.cpp \
     colorinspector.cpp \
     colorpalettewidget.cpp \
     colorwheel.cpp \
@@ -101,19 +97,11 @@ FORMS += \
 
 DEPENDPATH += .
 
-VERSION = "0.6.0"
-DEFINES += APP_VERSION=\\\"$$VERSION\\\"
-
 GIT {
     DEFINES += GIT_EXISTS \
     "GIT_CURRENT_SHA1=$$system(git --git-dir=.git --work-tree=. -C $$_PRO_FILE_PWD_/../ rev-parse HEAD)" \
     "GIT_TIMESTAMP=$$system(git --git-dir=.git --work-tree=. -C $$_PRO_FILE_PWD_/../ log -n 1 --pretty=format:"%cd" --date=format:"%Y-%m-%d_%H:%M:%S")"
 }
-
-NIGHTLY {
-    DEFINES += NIGHTLY_BUILD
-}
-
 
 macx {
     RC_FILE = ../pencil.icns

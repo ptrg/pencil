@@ -23,7 +23,6 @@ GNU General Public License for more details.
 #include "mainwindow2.h"
 #include "pencilapplication.h"
 #include "layermanager.h"
-#include "object.h"
 
 
 void installTranslator( PencilApplication& app )
@@ -230,15 +229,15 @@ int handleArguments( PencilApplication& app )
 
     if ( !parser.value( cameraOption ).isEmpty() )
     {
-        cameraLayer = dynamic_cast<LayerCamera*>( mainWindow.mEditor->object()->findLayerByName( parser.value( cameraOption ), Layer::CAMERA ) );
+        cameraLayer = dynamic_cast<LayerCamera*>( mainWindow.mEditor->layers()->findLayerByName( parser.value( cameraOption ), Layer::CAMERA ) );
         if ( cameraLayer == nullptr )
         {
             err << PencilApplication::tr("Warning: the specified camera layer %1 was not found, ignoring.").arg( parser.value( cameraOption ) ) << endl;
         }
     }
-    if ( cameraLayer == nullptr ) {
-        int cameraLayerId = mainWindow.mEditor->layers()->getLastCameraLayer();
-        cameraLayer = dynamic_cast<LayerCamera*>( mainWindow.mEditor->object()->getLayer( cameraLayerId ) );
+    if ( cameraLayer == nullptr )
+    {
+        cameraLayer = dynamic_cast<LayerCamera*>(mainWindow.mEditor->layers()->getLastCameraLayer());
     }
 
     for ( int i = 0; i < outputPaths.length(); i++ )
@@ -255,6 +254,7 @@ int handleArguments( PencilApplication& app )
         extensionMapping[ "mp4" ] = "MP4";
         extensionMapping[ "avi" ] = "AVI";
         extensionMapping[ "gif" ] = "GIF";
+        extensionMapping[ "webm" ] = "WEBM";
         QString extension = outputPaths[i].mid( outputPaths[i].lastIndexOf( "." ) + 1 ).toLower();
         if ( inputPath.contains(".") && extensionMapping.contains( extension ) )
         {
@@ -275,6 +275,7 @@ int handleArguments( PencilApplication& app )
         formatMapping[ "MP4" ] = true;
         formatMapping[ "AVI" ] = true;
         formatMapping[ "GIF" ] = true;
+        formatMapping[ "WEBM" ] = true;
         asMovie = formatMapping[format];
 
         if ( asMovie )
@@ -286,12 +287,12 @@ int handleArguments( PencilApplication& app )
             out << PencilApplication::tr( "Exporting movie..." ) << endl;
             mainWindow.mEditor->exportMovieCLI( outputPaths[i], cameraLayer, width, height, startFrame, endFrame );
             out << PencilApplication::tr( "Done." ) << endl;
-            continue;
         }
-
-        out << PencilApplication::tr( "Exporting image sequence..." ) << endl;
-        mainWindow.mEditor->exportSeqCLI( outputPaths[i], cameraLayer, format, width, height, startFrame, endFrame, transparency );
-        out << PencilApplication::tr( "Done." ) << endl;
+        else {
+            out << PencilApplication::tr( "Exporting image sequence..." ) << endl;
+            mainWindow.mEditor->exportSeqCLI( outputPaths[i], cameraLayer, format, width, height, startFrame, endFrame, transparency );
+            out << PencilApplication::tr( "Done." ) << endl;
+        }
     }
 
     return 0;

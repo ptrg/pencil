@@ -23,7 +23,7 @@ env:
     - DOXYGEN_OUTPUT_DIR: $TRAVIS_BUILD_DIR/docs
 
 python:
- - "3.4"
+  - "3.4"
 addons:
   apt:
     sources:
@@ -53,18 +53,18 @@ before_install:
     brew update;
     brew install p7zip;
     brew install python3;
-    brew install qt@5.9;
-    brew link qt@5.9 --force;
+    brew install https://raw.githubusercontent.com/Homebrew/homebrew-core/13d52537d1e0e5f913de46390123436d220035f6/Formula/qt.rb;
+    brew link qt --force;
   fi'
 
 install:
-  - pip freeze > requirements.txt
-  - pip install -r requirements.txt
-  - pip install -U setuptools
-  - pip install -U virtualenvwrapper
-  - pip install -U google-api-python-client
+  - pip3 freeze > requirements.txt
+  - pip3 install -r requirements.txt
+  - pip3 install -U setuptools
+  - pip3 install -U virtualenvwrapper
+  - pip3 install -U google-api-python-client
   - python3 -V
-  - pip -V
+  - pip3 -V
 
 before_script:
   - echo "are changes related to source code?"
@@ -84,7 +84,7 @@ before_script:
 script:
   - mkdir "build" && cd build
   - 'if [ "$TRAVIS_BRANCH" == "release" ]; then
-    qmake ../ PREFIX=/usr CONFIG+=release DEFINES+=QT_NO_DEBUG_OUTPUT;
+    qmake ../ PREFIX=/usr CONFIG+=release DEFINES+=QT_NO_DEBUG_OUTPUT DEFINES+=PENCIL2D_RELEASE;
   else
     qmake ../ PREFIX=/usr CONFIG+=GIT CONFIG+=NIGHTLY;
   fi'
@@ -149,10 +149,10 @@ after_success:
     echo "Initiate deployment on Google Drive";
     cd "$TRAVIS_BUILD_DIR/util";
     if [ "$TRAVIS_OS_NAME" == "linux" ]; then
-      python nightly-build-upload.py "$LINUX_NIGHTLY_PARENT" "$TRAVIS_BUILD_DIR/build/pencil2d-linux-$(date +"%Y-%m-%d").AppImage";
+      python3 nightly-build-upload.py "$LINUX_NIGHTLY_PARENT" "$TRAVIS_BUILD_DIR/build/pencil2d-linux-$(date +"%Y-%m-%d").AppImage";
     fi;
     if [ "$TRAVIS_OS_NAME" == "osx" ]; then
-      python nightly-build-upload.py "$OSX_NIGHTLY_PARENT" "$TRAVIS_BUILD_DIR/build/pencil2d-mac-$(date +"%Y-%m-%d").zip";
+      python3 nightly-build-upload.py "$OSX_NIGHTLY_PARENT" "$TRAVIS_BUILD_DIR/build/pencil2d-mac-$(date +"%Y-%m-%d").zip";
     fi;
     echo "Operation done";
   fi'

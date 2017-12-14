@@ -42,14 +42,16 @@ public:
     Layer* currentLayer();
     Layer* currentLayer(int offset);
     Layer* getLayer(int index);
-    Layer* getLayerByName(QString sName);
-    int    getLastCameraLayer();
+    Layer* findLayerByName(QString sName, Layer::LAYER_TYPE type = Layer::UNDEFINED);
+    Layer* getLastCameraLayer();
     int    currentLayerIndex();
     void   setCurrentLayer(int nIndex);
     void   setCurrentLayer(Layer* layer);
     int    count();
 
     Status deleteLayer(int index);
+    Status renameLayer(Layer*, const QString& newName);
+    void notifyLayerChanged(Layer*);
 
     void gotoNextLayer();
     void gotoPreviouslayer();
@@ -66,14 +68,14 @@ public:
 
     int projectLength(bool includeSounds = true);
 
-    void layerUpdated(int layerId);
-
 Q_SIGNALS:
     void currentLayerChanged(int n);
     void layerCountChanged(int count);
 
 private:
-    int mLastCameraLayer = 0;
+    int getIndex(Layer*) const;
+
+    int mLastCameraLayerIdx = 0;
 };
 
 #endif
