@@ -14,8 +14,8 @@ GNU General Public License for more details.
 
 */
 
-#ifndef CANVASRENDERER_H
-#define CANVASRENDERER_H
+#ifndef CANVASPAINTER_H
+#define CANVASPAINTER_H
 
 
 #include <QObject>
@@ -27,9 +27,10 @@ GNU General Public License for more details.
 
 class Object;
 class Layer;
+class BitmapImage;
+class ViewManager;
 
-
-struct RenderOptions
+struct CanvasPainterOptions
 {
     bool  bPrevOnionSkin = false;
     bool  bNextOnionSkin = false;
@@ -47,52 +48,59 @@ struct RenderOptions
     bool  bOutlines = false;
     int   nShowAllLayers = 3;
     bool  bIsOnionAbsolute = false;
+    float scaling = 1.0f;
 };
 
 
-class CanvasRenderer : public QObject
+class CanvasPainter : public QObject
 {
     Q_OBJECT
 
 public:
-    explicit CanvasRenderer( QObject* parent = 0 );
-    virtual ~CanvasRenderer();
+    explicit CanvasPainter(QObject* parent = 0);
+    virtual ~CanvasPainter();
 
-    void setCanvas( QPixmap* canvas );
-    void setViewTransform( QTransform viewTransform );
-    void setOptions( RenderOptions p ) { mOptions = p; }
-    void setTransformedSelection( QRect selection, QTransform transform );
+    void setCanvas(QPixmap* canvas);
+    void setViewTransform(const QTransform view, const QTransform viewInverse);
+    void setOptions(const CanvasPainterOptions& p) { mOptions = p; }
+    void setTransformedSelection(QRect selection, QTransform transform);
     void ignoreTransformedSelection();
     QRect getCameraRect();
 
-    void paint( Object* object, int layer, int frame, QRect rect );
+    void paint(const Object* object, int layer, int frame, QRect rect);
     void renderGrid(QPainter& painter);
 
 private:
     void paintBackground();
-    void paintOnionSkin( QPainter& painter );
-    void paintCurrentFrame( QPainter& painter );
+    void paintOnionSkin(QPainter& painter);
 
-    void paintBitmapFrame( QPainter&, int layerId, int nFrame, bool colorize = false , bool useLastKeyFrame = true );
-    void paintVectorFrame(QPainter&, int layerId, int nFrame, bool colorize = false , bool useLastKeyFrame = true );
+    void paintCurrentFrame(QPainter& painter);
 
-    void paintTransformedSelection( QPainter& painter );
-    void paintGrid( QPainter& painter );
+    void paintBitmapFrame(QPainter&, int layerId, int nFrame, bool colorize = false, bool useLastKeyFrame = true);
+    void paintVectorFrame(QPainter&, int layerId, int nFrame, bool colorize = false, bool useLastKeyFrame = true);
+
+    void paintTransformedSelection(QPainter& painter);
+    void paintGrid(QPainter& painter);
     void paintCameraBorder(QPainter& painter);
-    void paintAxis( QPainter& painter );
+    void paintAxis(QPainter& painter);
+    void prescale(BitmapImage* bitmapImage);
 
 private:
+    const Object* mObject = nullptr;
     QPixmap* mCanvas = nullptr;
-    Object* mObject = nullptr;
     QTransform mViewTransform;
+    QTransform mViewInverse;
+
     QRect mCameraRect;
 
     int mCurrentLayerIndex = 0;
     int mFrameNumber = 0;
 
+    QImage mScaledBitmap;
+
     bool bMultiLayerOnionSkin = false;
-    
-    RenderOptions mOptions;
+
+    CanvasPainterOptions mOptions;
 
     // Handle selection transformation
     //

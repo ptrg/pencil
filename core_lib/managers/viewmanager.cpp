@@ -37,7 +37,7 @@ bool ViewManager::init()
     return true;
 }
 
-Status ViewManager::load( Object* )
+Status ViewManager::load(Object*)
 {
     mCameraLayer = nullptr;
     mCurrentCamera = mDefaultEditorCamera;
@@ -47,57 +47,62 @@ Status ViewManager::load( Object* )
     return Status::OK;
 }
 
-Status ViewManager::save( Object* o )
+Status ViewManager::save(Object* o)
 {
-	o->data()->setCurrentView( mView );
-	return Status();
+    o->data()->setCurrentView(mView);
+    return Status();
 }
 
 void ViewManager::workingLayerChanged(Layer* layer)
 {
-	if (layer->type() == Layer::CAMERA)
-	{
-		setCameraLayer(layer);
-	}
-	else
-	{
-		setCameraLayer(nullptr);
-	}
+    if (layer->type() == Layer::CAMERA)
+    {
+        setCameraLayer(layer);
+    }
+    else
+    {
+        setCameraLayer(nullptr);
+    }
 }
 
-QPointF ViewManager::mapCanvasToScreen( QPointF p )
+QPointF ViewManager::mapCanvasToScreen(QPointF p)
 {
-    return mViewCanvas.map( p );
+    return mViewCanvas.map(p);
 }
 
 QPointF ViewManager::mapScreenToCanvas(QPointF p)
 {
-    return mViewCanvasInverse.map( p );
+    return mViewCanvasInverse.map(p);
 }
 
-QPainterPath ViewManager::mapCanvasToScreen( const QPainterPath& path )
+QPainterPath ViewManager::mapCanvasToScreen(const QPainterPath& path)
 {
-    return mViewCanvas.map( path );
+    return mViewCanvas.map(path);
 }
 
-QRectF ViewManager::mapCanvasToScreen( const QRectF& rect )
+QRectF ViewManager::mapCanvasToScreen(const QRectF& rect)
 {
-    return mViewCanvas.mapRect( rect ) ;
+    return mViewCanvas.mapRect(rect);
 }
 
-QRectF ViewManager::mapScreenToCanvas( const QRectF& rect )
+QRectF ViewManager::mapScreenToCanvas(const QRectF& rect)
 {
-    return mViewCanvasInverse.mapRect( rect ) ;
+    return mViewCanvasInverse.mapRect(rect);
 }
 
-QPainterPath ViewManager::mapScreenToCanvas( const QPainterPath& path )
+QPainterPath ViewManager::mapScreenToCanvas(const QPainterPath& path)
 {
-    return mViewCanvasInverse.map( path );
+    return mViewCanvasInverse.map(path);
 }
 
 QTransform ViewManager::getView()
 {
     return mViewCanvas;
+}
+
+QTransform ViewManager::getViewInverse()
+{
+    return mViewCanvasInverse;
 }
 
 void ViewManager::updateViewTransforms()
@@ -123,7 +128,7 @@ void ViewManager::updateViewTransforms()
 
         mView = mCurrentCamera->getView();
     }
- 
+
     mViewInverse = mView.inverted();
 
     float flipX = mIsFlipHorizontal ? -1.f : 1.f;
@@ -156,7 +161,7 @@ void ViewManager::translate(float dx, float dy)
 
 void ViewManager::translate(QPointF offset)
 {
-    translate( offset.x(), offset.y() );
+    translate(offset.x(), offset.y());
 }
 
 float ViewManager::rotation()
@@ -190,41 +195,30 @@ float ViewManager::scaling()
 
 void ViewManager::scaleUp()
 {
+    for (size_t i = 0; i < mZoomLevels.size(); i++)
+    {
+        if (mZoomLevels[i] > scaling())
+        {
+            scale(mZoomLevels[i]);
+            return;
+        }
+    }
+
+    // out of pre-defined zoom levels
     scale(scaling() * 1.18f);
 }
 
 void ViewManager::scaleDown()
 {
-    scale(scaling() * 0.8333f);
-}
-
-void ViewManager::snapScale(int direction = 0)
-{
-    // find the nearest zoom level to snap to
-    int nearestZoomLevel = -1;
-    float leastZoomDistance = 0;
-    for (int i = 0; i < mZoomLevels.length(); i++)
+    for (size_t i = mZoomLevels.size() - 1; i >= 0; --i)
     {
-        float thisZoomLevel = mZoomLevels[i];
-        if (nearestZoomLevel == -1 || qAbs(scaling() - thisZoomLevel) < leastZoomDistance)
+        if (mZoomLevels[i] < scaling())
         {
-            leastZoomDistance = qAbs(scaling() - thisZoomLevel);
-            nearestZoomLevel = i;
+            scale(mZoomLevels[i]);
+            return;
         }
     }
-    // if snapping zooms in the right direction, then don't do anything else
-    if ( (mZoomLevels[nearestZoomLevel] > scaling() && direction == 1) ||
-         (mZoomLevels[nearestZoomLevel] < scaling() && direction == -1) )
-    {
-        direction = 0;
-    }
-
-    // now increase/decrease zoom by direction
-    int newZoomLevel = nearestZoomLevel + direction;
-    if (newZoomLevel >= 0 && newZoomLevel < mZoomLevels.length())
-    {
-        scale(mZoomLevels[newZoomLevel]);
-    }
+    scale(scaling() * 0.8333f);
 }
 
 void ViewManager::scale(float scaleValue)
@@ -237,10 +231,6 @@ void ViewManager::scale(float scaleValue)
     {
         scaleValue = mMaxScale;
     }
-    else if (scaleValue == mMinScale || scaleValue == mMaxScale)
-    {
-        return;
-    }
 
     if (mCurrentCamera)
     {
@@ -251,9 +241,9 @@ void ViewManager::scale(float scaleValue)
     }
 }
 
-void ViewManager::flipHorizontal( bool b )
+void ViewManager::flipHorizontal(bool b)
 {
-    if ( b != mIsFlipHorizontal )
+    if (b != mIsFlipHorizontal)
     {
         mIsFlipHorizontal = b;
         updateViewTransforms();
@@ -263,9 +253,9 @@ void ViewManager::flipHorizontal( bool b )
     }
 }
 
-void ViewManager::flipVertical( bool b )
+void ViewManager::flipVertical(bool b)
 {
-    if ( b != mIsFlipVertical )
+    if (b != mIsFlipVertical)
     {
         mIsFlipVertical = b;
         updateViewTransforms();
@@ -275,7 +265,7 @@ void ViewManager::flipVertical( bool b )
     }
 }
 
-void ViewManager::setCanvasSize( QSize size )
+void ViewManager::setCanvasSize(QSize size)
 {
     mCanvasSize = size;
     mCentre = QTransform::fromTranslate(mCanvasSize.width() / 2.f, mCanvasSize.height() / 2.f);
@@ -299,7 +289,7 @@ void ViewManager::setCameraLayer(Layer* layer)
     {
         mCameraLayer = nullptr;
     }
-    
+
     updateViewTransforms();
 }
 
