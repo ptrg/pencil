@@ -32,13 +32,15 @@ PlaybackManager::PlaybackManager(Editor* editor) : BaseManager(editor)
 
 PlaybackManager::~PlaybackManager()
 {
-    delete mFrameTimer;
+    delete mElapsedTimer;
 }
 
 bool PlaybackManager::init()
 {
     mTimer = new QTimer(this);
-    mFrameTimer = new QElapsedTimer;
+    mTimer->setTimerType(Qt::PreciseTimer);
+
+    mElapsedTimer = new QElapsedTimer;
     connect(mTimer, &QTimer::timeout, this, &PlaybackManager::timerTick);
     return true;
 }
@@ -86,9 +88,6 @@ void PlaybackManager::play()
         editor()->scrubTo(mStartFrame);
     }
 
-    // start counting frames
-    mFrameTimer->start();
-
     // get keyframe from layer
     KeyFrame* key = nullptr;
     if (!mListOfActiveSoundFrames.isEmpty())
@@ -119,8 +118,11 @@ void PlaybackManager::play()
         }
     }
 
-    mTimer->setInterval(10); // 100 fps
+    mTimer->setInterval(1000.f / mFps);
     mTimer->start();
+
+    // start counting frames
+    mElapsedTimer->start();
 
     // Check for any sounds we should start playing part-way through.
     mCheckForSoundsHalfway = true;
@@ -224,7 +226,7 @@ void PlaybackManager::playSounds(int frame)
                 clip->stop();
 
                 // make sure list is cleared on end
-                if (!mListOfActiveSoundFrames.isEmpty()) 
+                if (!mListOfActiveSoundFrames.isEmpty())
                     mListOfActiveSoundFrames.clear();
             }
         }
@@ -235,10 +237,29 @@ void PlaybackManager::playSounds(int frame)
     mCheckForSoundsHalfway = false;
 }
 
+/**
+ * @brief PlaybackManager::skipFrame()
+ * Small errors will accumulate while playing animation
+ * If the error time is larger than a frame interval, skip a frame.
+ */
+bool PlaybackManager::skipFrame()
+{
+    // uncomment these debug output to see what happens
+    //float expectedTime = (editor()->currentFrame() - mStartFrame + 1) * (1000.f / mFps);
+    //qDebug("Expected: %.2fms", expectedTime);
+    //qDebug("Actual:   %dms", mFrameTimer->elapsed());
+
+    int t = qRound((editor()->currentFrame() - mStartFrame) * (1000.f / mFps));
+    if (mElapsedTimer->elapsed() < t)
+        return true;
+
+    return false;
+}
+
 void PlaybackManager::stopSounds()
 {
     std::vector<LayerSound*> kSoundLayers;
-    
+
     for (int i = 0; i < object()->getLayerCount(); ++i)
     {
         Layer* layer = object()->getLayer(i);
@@ -263,6 +284,7 @@ void PlaybackManager::timerTick()
     int currentFrame = editor()->currentFrame();
     playSounds(currentFrame);
 
+    // reach the end
     if (currentFrame >= mEndFrame)
     {
         if (mIsLooping)
@@ -274,16 +296,14 @@ void PlaybackManager::timerTick()
         {
             stop();
         }
+        return;
     }
-    else
-    {
-        int ms = mFrameTimer->elapsed() * 1.10;
-        if (ms >= (1000 / mFps))
-        {
-            editor()->scrubForward();
-            mFrameTimer->restart();
-        }
-    }
+
+    if (skipFrame())
+        return;
+
+    // keep going 
+    editor()->scrubForward();
 }
 
 void PlaybackManager::setLooping(bool isLoop)

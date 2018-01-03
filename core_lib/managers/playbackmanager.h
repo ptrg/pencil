@@ -66,8 +66,8 @@ Q_SIGNALS:
 
 private:
     void timerTick();
-
     void playSounds(int frame);
+    bool skipFrame();
 
     int mStartFrame = 1;
     int mEndFrame = 60;
@@ -86,7 +86,7 @@ private:
     int mFps = 12;
 
     QTimer* mTimer = nullptr;
-    QElapsedTimer* mFrameTimer = nullptr;
+    QElapsedTimer* mElapsedTimer = nullptr;
 
     bool mCheckForSoundsHalfway = false;
     QList<int> mListOfActiveSoundFrames;
