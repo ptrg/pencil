@@ -4,6 +4,7 @@
 #include <QTemporaryDir>
 #include <QTemporaryFile>
 #include <QImage>
+#include "qminiz.h"
 #include "fileformat.h"
 #include "filemanager.h"
 #include "util.h"
@@ -70,7 +71,7 @@ TEST_CASE("FileManager invalid operations")
     }
 }
 
-TEST_CASE("FileManager Loading Test 1")
+TEST_CASE("FileManager Loading XML Tests")
 {
     SECTION("Minimal working xml")
     {
@@ -196,89 +197,50 @@ TEST_CASE("FileManager Loading Test 1")
     }
 }
 
-/*
-void TestFileManager::testGeneratePCLX()
+TEST_CASE("FileManager Load-a-zip Test")
 {
-    QTemporaryDir testDir("PENCIL_TEST_XXXXXXXX");
-    if (!testDir.isValid())
+    SECTION("Load a PCLX zip file")
     {
-        QFAIL("bad.");
+        QTemporaryDir testDir("PENCIL_TEST_XXXXXXXX");
+        REQUIRE(testDir.isValid());
+
+        // manually build a working project
+        // and use filemanager to load it.
+        QString sWorkFolderPath = testDir.path() + "/project_x";
+        QDir workDir(sWorkFolderPath);
+        REQUIRE(workDir.makeAbsolute());
+        REQUIRE(workDir.mkpath("."));
+
+        QString strMainXMLPath = workDir.filePath(PFF_XML_FILE_NAME);
+
+        QFile theXML(strMainXMLPath);
+        theXML.open(QIODevice::WriteOnly);
+
+        QTextStream fout(&theXML);
+        fout << "<!DOCTYPE PencilDocument><document>";
+        fout << "  <object>";
+        fout << "    <layer name='MyBitmapLayer' id='5' visibility='1' type='1' >";
+        fout << "      <image frame='1' topLeftY='0' src='005.001.png' topLeftX='0' />";
+        fout << "    </layer>";
+        fout << "  </object>";
+        fout << "</document>";
+        theXML.close();
+
+        REQUIRE(workDir.mkdir(PFF_DATA_DIR));
+       
+        QImage img(10, 10, QImage::Format_ARGB32_Premultiplied);
+        REQUIRE(img.save(workDir.absolutePath() + "/" PFF_DATA_DIR "/005.001.png"));
+
+        QString pclxFile = QDir(testDir.path()).filePath("test-animation.pclx");
+        REQUIRE(MiniZ::compressFolder(pclxFile, workDir.absolutePath()));
+
+        FileManager fm;
+        Object* o = fm.load(pclxFile);
+
+        REQUIRE(fm.error().ok());
+
+        Layer* layer = o->getLayer(0);
+        REQUIRE(layer->name() == "MyBitmapLayer");
+        REQUIRE(layer->id() == 5);
     }
-
-    QString strMainXMLPath = testDir.path() + "/" + PFF_XML_FILE_NAME;
-
-    QFile theXML(strMainXMLPath);
-    theXML.open(QIODevice::WriteOnly);
-
-    QTextStream fout(&theXML);
-    fout << "<!DOCTYPE PencilDocument><document>";
-    fout << "  <object>";
-    fout << "    <layer name='MyLayer' id='5' visibility='1' type='1' >";
-    fout << "      <image frame='1' topLeftY='0' src='003.001.png' topLeftX='0' />";
-    fout << "    </layer>";
-    fout << "  </object>";
-    fout << "</document>";
-    theXML.close();
-
-    QDir dir(testDir.path());
-    if (dir.mkdir(PFF_DATA_DIR))
-    {
-        dir.cd(PFF_DATA_DIR);
-    }
-    QImage img(10, 10, QImage::Format_ARGB32_Premultiplied);
-    img.save(dir.path() + "/003.001.png");
-
-    QTemporaryFile tmpPCLX("PENCIL_TEST_XXXXXXXX.pclx");
-    tmpPCLX.open();
-
-    bool ok = JlCompress::compressDir(tmpPCLX.fileName(), testDir.path());
-    QVERIFY(ok);
 }
-
-void TestFileManager::testLoadPCLX()
-{
-    QTemporaryDir testDir("PENCIL_TEST_XXXXXXXX");
-    if (!testDir.isValid())
-    {
-        QFAIL("bad.");
-    }
-
-    QString strMainXMLPath = testDir.path() + "/" + PFF_XML_FILE_NAME;
-
-    QFile theXML(strMainXMLPath);
-    theXML.open(QIODevice::WriteOnly);
-
-    QTextStream fout(&theXML);
-    fout << "<!DOCTYPE PencilDocument><document>";
-    fout << "  <object>";
-    fout << "    <layer name='MyBitmapLayer' id='5' visibility='1' type='1' >";
-    fout << "      <image frame='1' topLeftY='0' src='005.001.png' topLeftX='0' />";
-    fout << "    </layer>";
-    fout << "  </object>";
-    fout << "</document>";
-    theXML.close();
-
-    QDir dir(testDir.path());
-    if (dir.mkdir(PFF_DATA_DIR))
-    {
-        dir.cd(PFF_DATA_DIR);
-    }
-    QImage img(10, 10, QImage::Format_ARGB32_Premultiplied);
-    img.save(dir.path() + "/005.001.png");
-
-    QTemporaryFile tmpPCLX("PENCIL_TEST_XXXXXXXX.pclx");
-    tmpPCLX.open();
-
-    JlCompress::compressDir(tmpPCLX.fileName(), testDir.path());
-
-    FileManager fm;
-    Object* o = fm.load(tmpPCLX.fileName());
-
-    QVERIFY(fm.error().ok());
-
-    Layer* layer = o->getLayer(0);
-    QVERIFY(layer->name() == "MyBitmapLayer");
-    QVERIFY(layer->id() == 5);
-}
-
-*/
