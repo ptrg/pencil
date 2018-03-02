@@ -4,17 +4,11 @@
 <context>
     <name>AboutDialog</name>
     <message>
-<<<<<<< HEAD:translations/Language.hu_HU.ts
         <location filename="../app/aboutdialog.cpp" line="29"/>
-=======
-        <location filename="../app/ui/aboutdialog.ui" line="26"/>
->>>>>>> upstream/master:translations/pencil_hu_HU.ts
         <source>About</source>
-        <comment>About Dialog Window Title</comment>
-        <translation type="unfinished">Névjegy</translation>
+        <translation>Névjegy</translation>
     </message>
     <message>
-<<<<<<< HEAD:translations/Language.hu_HU.ts
         <location filename="../app/aboutdialog.cpp" line="51"/>
         <source>Official site: &lt;a href=&quot;http://pencil2d.github.io&quot;&gt;pencil2d.github.io&lt;/a&gt;&lt;br&gt;Developed by: &lt;b&gt;Pascal Naidon, Patrick Corrieri, Matt Chang&lt;/b&gt;&lt;br&gt;Thanks to Qt Framework &lt;a href=&quot;https://www.qt.io/&quot;&gt;https://www.qt.io/&lt;/a&gt;&lt;br&gt;Distributed under the &lt;a href=&quot;http://www.gnu.org/licenses/gpl-2.0.html&quot;&gt;GNU General Public License, version 2&lt;/a&gt;</source>
         <translation>Hivatalos weblap: &lt;a href=&quot;http://pencil2d.github.io&quot;&gt;pencil2d.github.io&lt;/a&gt;&lt;br&gt;Fejlesztők: &lt;b&gt;Pascal Naidon, Patrick Corrieri, Matt Chang&lt;/b&gt;&lt;br&gt;Köszönet: Qt Framework &lt;a href=&quot;https://qt.io&quot;&gt;https://www.qt.io/&lt;/a&gt;&lt;br&gt;A terjesztés &lt;a href=&quot;http://www.gnu.org/licenses/gpl-2.0.html&quot;&gt;GNU General Public License, version 2&lt;/a&gt; hatálya alatt történik.&lt;/&gt;</translation>
@@ -49,60 +43,26 @@
     <message>
         <source>commit: </source>
         <translation type="vanished">Feljlesztési lépés: </translation>
-=======
-        <location filename="../app/ui/aboutdialog.ui" line="52"/>
-        <source>Official site: &lt;a href=&quot;http://pencil2d.github.io&quot;&gt;pencil2d.github.io&lt;/a&gt;&lt;br&gt;Developed by: &lt;b&gt;Pascal Naidon, Patrick Corrieri, Matt Chang&lt;/b&gt;&lt;br&gt;Thanks to Qt Framework &lt;a href=&quot;https://www.qt.io/download&quot;&gt;https://www.qt.io/&lt;/a&gt;&lt;br&gt;miniz: &lt;a href=&quot;https://github.com/richgel999/miniz&quot;&gt;https://github.com/richgel999/miniz&lt;/a&gt;&lt;br&gt;Distributed under the &lt;a href=&quot;http://www.gnu.org/licenses/gpl-2.0.html&quot;&gt;GNU General Public License, version 2&lt;/a&gt;</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../app/aboutdialog.cpp" line="46"/>
-        <source>Version: %1</source>
-        <comment>Version Number in About Dialog</comment>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../app/aboutdialog.cpp" line="58"/>
-        <source>Copy to clipboard</source>
-        <comment>Copy system info from About Dialog</comment>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>OK</source>
-        <translation type="vanished">Oké</translation>
->>>>>>> upstream/master:translations/pencil_hu_HU.ts
     </message>
 </context>
 <context>
     <name>ActionCommands</name>
     <message>
-<<<<<<< HEAD:translations/Language.hu_HU.ts
         <location filename="../app/actioncommands.cpp" line="67"/>
-=======
-        <location filename="../app/actioncommands.cpp" line="68"/>
->>>>>>> upstream/master:translations/pencil_hu_HU.ts
         <source>No sound layer exists as a destination for your import. Create a new sound layer?</source>
         <translation>Nincs hang réteg a betöltendő állomány számára. Létrehoz egy új hang réteget?</translation>
     </message>
     <message>
-<<<<<<< HEAD:translations/Language.hu_HU.ts
         <location filename="../app/actioncommands.cpp" line="68"/>
-=======
-        <location filename="../app/actioncommands.cpp" line="69"/>
->>>>>>> upstream/master:translations/pencil_hu_HU.ts
         <source>Create sound layer</source>
         <translation>Hang réteg létrehozása</translation>
     </message>
     <message>
-<<<<<<< HEAD:translations/Language.hu_HU.ts
         <location filename="../app/actioncommands.cpp" line="69"/>
-=======
-        <location filename="../app/actioncommands.cpp" line="70"/>
->>>>>>> upstream/master:translations/pencil_hu_HU.ts
         <source>Don&apos;t create layer</source>
         <translation>Ne legyen réteg létrehozva</translation>
     </message>
     <message>
-<<<<<<< HEAD:translations/Language.hu_HU.ts
         <location filename="../app/actioncommands.cpp" line="209"/>
         <source>Finished. Open movie now?</source>
         <comment>When movie export done.</comment>
@@ -113,57 +73,19 @@
         <location filename="../app/actioncommands.cpp" line="538"/>
         <location filename="../app/actioncommands.cpp" line="552"/>
         <location filename="../app/actioncommands.cpp" line="566"/>
-=======
-        <location filename="../app/actioncommands.cpp" line="80"/>
-        <source>Layer Properties</source>
-        <comment>Dialog title on creating a sound layer</comment>
-        <translation type="unfinished">Réteg tulajdonságai</translation>
-    </message>
-    <message>
-        <location filename="../app/actioncommands.cpp" line="82"/>
-        <source>Sound Layer</source>
-        <comment>Default name on creating a sound layer</comment>
-        <translation type="unfinished">Hang réteg</translation>
-    </message>
-    <message>
-        <location filename="../app/actioncommands.cpp" line="189"/>
-        <source>Exporting movie</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../app/actioncommands.cpp" line="230"/>
-        <source>Finished. Open movie now?</source>
-        <comment>When movie export done.</comment>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../app/actioncommands.cpp" line="551"/>
-        <location filename="../app/actioncommands.cpp" line="564"/>
-        <location filename="../app/actioncommands.cpp" line="578"/>
-        <location filename="../app/actioncommands.cpp" line="592"/>
->>>>>>> upstream/master:translations/pencil_hu_HU.ts
         <source>Layer Properties</source>
         <translation>Réteg tulajdonságai</translation>
     </message>
     <message>
-<<<<<<< HEAD:translations/Language.hu_HU.ts
         <location filename="../app/actioncommands.cpp" line="80"/>
         <location filename="../app/actioncommands.cpp" line="526"/>
         <location filename="../app/actioncommands.cpp" line="539"/>
         <location filename="../app/actioncommands.cpp" line="553"/>
         <location filename="../app/actioncommands.cpp" line="567"/>
-=======
-        <location filename="../app/actioncommands.cpp" line="81"/>
-        <location filename="../app/actioncommands.cpp" line="552"/>
-        <location filename="../app/actioncommands.cpp" line="565"/>
-        <location filename="../app/actioncommands.cpp" line="579"/>
-        <location filename="../app/actioncommands.cpp" line="593"/>
->>>>>>> upstream/master:translations/pencil_hu_HU.ts
         <source>Layer name:</source>
         <translation>Réteg neve:</translation>
     </message>
     <message>
-<<<<<<< HEAD:translations/Language.hu_HU.ts
         <location filename="../app/actioncommands.cpp" line="79"/>
         <source>Layer Properties</source>
         <comment>Dialog title on creating a sound layer</comment>
@@ -177,14 +99,10 @@
     </message>
     <message>
         <location filename="../app/actioncommands.cpp" line="107"/>
-=======
-        <location filename="../app/actioncommands.cpp" line="108"/>
->>>>>>> upstream/master:translations/pencil_hu_HU.ts
         <source>A sound clip already exists on this frame! Please select another frame or layer.</source>
         <translation>Egy hang klip már el lett helyezve ezen a képkockán. Válasszon másik pozíciót vagy réteget!</translation>
     </message>
     <message>
-<<<<<<< HEAD:translations/Language.hu_HU.ts
         <location filename="../app/actioncommands.cpp" line="188"/>
         <source>Exporting movie...</source>
         <translation>Videó exportálása...</translation>
@@ -195,82 +113,45 @@
     </message>
     <message>
         <location filename="../app/actioncommands.cpp" line="265"/>
-=======
-        <source>Exporting movie...</source>
-        <translation type="vanished">Videó exportálása...</translation>
-    </message>
-    <message>
-        <location filename="../app/actioncommands.cpp" line="286"/>
->>>>>>> upstream/master:translations/pencil_hu_HU.ts
         <source>Exporting image sequence...</source>
         <translation>Képsorozat exportálása...</translation>
     </message>
     <message>
-<<<<<<< HEAD:translations/Language.hu_HU.ts
         <location filename="../app/actioncommands.cpp" line="265"/>
-=======
-        <location filename="../app/actioncommands.cpp" line="286"/>
->>>>>>> upstream/master:translations/pencil_hu_HU.ts
         <source>Abort</source>
         <translation>Megszakítás</translation>
     </message>
     <message>
-<<<<<<< HEAD:translations/Language.hu_HU.ts
         <location filename="../app/actioncommands.cpp" line="345"/>
-=======
-        <location filename="../app/actioncommands.cpp" line="366"/>
->>>>>>> upstream/master:translations/pencil_hu_HU.ts
         <source>Warning</source>
         <translation>Figyelmeztetés</translation>
     </message>
     <message>
-<<<<<<< HEAD:translations/Language.hu_HU.ts
         <location filename="../app/actioncommands.cpp" line="346"/>
         <source>Unable to export image.</source>
         <translation>A kép nem exportálható.</translation>
     </message>
     <message>
         <location filename="../app/actioncommands.cpp" line="527"/>
-=======
-        <location filename="../app/actioncommands.cpp" line="367"/>
-        <source>Unable to export image.</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../app/actioncommands.cpp" line="553"/>
->>>>>>> upstream/master:translations/pencil_hu_HU.ts
         <source>Bitmap Layer</source>
         <translation>Bitkép réteg</translation>
     </message>
     <message>
-<<<<<<< HEAD:translations/Language.hu_HU.ts
         <location filename="../app/actioncommands.cpp" line="540"/>
-=======
-        <location filename="../app/actioncommands.cpp" line="566"/>
->>>>>>> upstream/master:translations/pencil_hu_HU.ts
         <source>Vector Layer</source>
         <translation>Vektor réteg</translation>
     </message>
     <message>
-<<<<<<< HEAD:translations/Language.hu_HU.ts
         <location filename="../app/actioncommands.cpp" line="554"/>
-=======
-        <location filename="../app/actioncommands.cpp" line="580"/>
->>>>>>> upstream/master:translations/pencil_hu_HU.ts
         <source>Camera Layer</source>
         <translation>Kamera réteg</translation>
     </message>
     <message>
-<<<<<<< HEAD:translations/Language.hu_HU.ts
         <location filename="../app/actioncommands.cpp" line="568"/>
-=======
-        <location filename="../app/actioncommands.cpp" line="594"/>
->>>>>>> upstream/master:translations/pencil_hu_HU.ts
         <source>Sound Layer</source>
         <translation>Hang réteg</translation>
     </message>
     <message>
-<<<<<<< HEAD:translations/Language.hu_HU.ts
         <location filename="../app/actioncommands.cpp" line="585"/>
         <source>Delete Layer</source>
         <comment>Windows title of Delete current layer pop-up.</comment>
@@ -286,23 +167,6 @@
         <source>Please keep at least one camera layer in project</source>
         <comment>text when failed to delete camera layer</comment>
         <translation>Legalább egy kamera rétegnek lennie kell projektben</translation>
-=======
-        <location filename="../app/actioncommands.cpp" line="611"/>
-        <source>Delete Layer</source>
-        <comment>Windows title of Delete current layer pop-up.</comment>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../app/actioncommands.cpp" line="612"/>
-        <source>Are you sure you want to delete layer: </source>
-        <translation type="unfinished">Biztosan törölni akarja a következő réteget: </translation>
-    </message>
-    <message>
-        <location filename="../app/actioncommands.cpp" line="621"/>
-        <source>Please keep at least one camera layer in project</source>
-        <comment>text when failed to delete camera layer</comment>
-        <translation type="unfinished"></translation>
->>>>>>> upstream/master:translations/pencil_hu_HU.ts
     </message>
 </context>
 <context>
@@ -366,27 +230,24 @@
 <context>
     <name>CameraPropertiesDialog</name>
     <message>
-        <location filename="../core_lib/ui/camerapropertiesdialog.ui" line="6"/>
-        <source>Camera Properties</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../core_lib/ui/camerapropertiesdialog.ui" line="14"/>
+        <location filename="../core_lib/structure/layercamera.cpp" line="31"/>
         <source>Camera name:</source>
         <translation>Kamera neve:</translation>
     </message>
     <message>
-        <location filename="../core_lib/ui/camerapropertiesdialog.ui" line="38"/>
+        <location filename="../core_lib/structure/layercamera.cpp" line="38"/>
         <source>Camera size:</source>
         <translation>Kamera mérete:</translation>
     </message>
     <message>
+        <location filename="../core_lib/structure/layercamera.cpp" line="52"/>
         <source>Ok</source>
-        <translation type="vanished">Oké</translation>
+        <translation>Oké</translation>
     </message>
     <message>
+        <location filename="../core_lib/structure/layercamera.cpp" line="53"/>
         <source>Cancel</source>
-        <translation type="vanished">Mégse</translation>
+        <translation>Mégse</translation>
     </message>
 </context>
 <context>
@@ -399,7 +260,6 @@
     </message>
 </context>
 <context>
-<<<<<<< HEAD:translations/Language.hu_HU.ts
     <name>ColorGridItem</name>
     <message>
         <source>Cancel</source>
@@ -419,8 +279,6 @@
     </message>
 </context>
 <context>
-=======
->>>>>>> upstream/master:translations/pencil_hu_HU.ts
     <name>ColorInspector</name>
     <message>
         <location filename="../app/ui/colorinspector.ui" line="44"/>
@@ -434,70 +292,41 @@
     </message>
     <message>
         <location filename="../app/ui/colorinspector.ui" line="68"/>
-<<<<<<< HEAD:translations/Language.hu_HU.ts
         <location filename="../app/colorinspector.cpp" line="98"/>
-=======
-        <location filename="../app/colorinspector.cpp" line="89"/>
->>>>>>> upstream/master:translations/pencil_hu_HU.ts
         <source>Red</source>
         <translation>Vörös</translation>
     </message>
     <message>
         <location filename="../app/ui/colorinspector.ui" line="82"/>
-<<<<<<< HEAD:translations/Language.hu_HU.ts
         <location filename="../app/colorinspector.cpp" line="99"/>
-=======
-        <location filename="../app/colorinspector.cpp" line="90"/>
->>>>>>> upstream/master:translations/pencil_hu_HU.ts
         <source>Green</source>
         <translation>Zöld</translation>
     </message>
     <message>
         <location filename="../app/ui/colorinspector.ui" line="96"/>
-<<<<<<< HEAD:translations/Language.hu_HU.ts
         <location filename="../app/colorinspector.cpp" line="100"/>
-=======
-        <location filename="../app/colorinspector.cpp" line="91"/>
->>>>>>> upstream/master:translations/pencil_hu_HU.ts
         <source>Blue</source>
         <translation>Kék</translation>
     </message>
     <message>
         <location filename="../app/ui/colorinspector.ui" line="110"/>
-<<<<<<< HEAD:translations/Language.hu_HU.ts
         <location filename="../app/colorinspector.cpp" line="101"/>
         <location filename="../app/colorinspector.cpp" line="122"/>
-=======
-        <location filename="../app/colorinspector.cpp" line="92"/>
-        <location filename="../app/colorinspector.cpp" line="113"/>
->>>>>>> upstream/master:translations/pencil_hu_HU.ts
         <source>Alpha</source>
         <translation>Alfa</translation>
     </message>
     <message>
-<<<<<<< HEAD:translations/Language.hu_HU.ts
         <location filename="../app/colorinspector.cpp" line="119"/>
-=======
-        <location filename="../app/colorinspector.cpp" line="110"/>
->>>>>>> upstream/master:translations/pencil_hu_HU.ts
         <source>Hue</source>
         <translation>Színárnyalat</translation>
     </message>
     <message>
-<<<<<<< HEAD:translations/Language.hu_HU.ts
         <location filename="../app/colorinspector.cpp" line="120"/>
-=======
-        <location filename="../app/colorinspector.cpp" line="111"/>
->>>>>>> upstream/master:translations/pencil_hu_HU.ts
         <source>Saturation</source>
         <translation>Telítettség</translation>
     </message>
     <message>
-<<<<<<< HEAD:translations/Language.hu_HU.ts
         <location filename="../app/colorinspector.cpp" line="121"/>
-=======
-        <location filename="../app/colorinspector.cpp" line="112"/>
->>>>>>> upstream/master:translations/pencil_hu_HU.ts
         <source>Value</source>
         <translation>Érték</translation>
     </message>
@@ -505,152 +334,119 @@
 <context>
     <name>ColorPalette</name>
     <message>
+        <location filename="../app/ui/colorpalette.ui" line="14"/>
         <source>Color Palette</source>
-        <translation type="vanished">Színpaletta</translation>
+        <translation>Színpaletta</translation>
     </message>
     <message>
-        <location filename="../app/ui/colorpalette.ui" line="6"/>
-        <source>Color Palette</source>
-        <comment>Window title of color palette.</comment>
-        <translation type="unfinished">Színpaletta</translation>
-    </message>
-    <message>
-        <location filename="../app/ui/colorpalette.ui" line="47"/>
+        <location filename="../app/ui/colorpalette.ui" line="46"/>
         <source>Add Color</source>
         <translation>Szín hozzáadása</translation>
     </message>
     <message>
-        <location filename="../app/ui/colorpalette.ui" line="76"/>
+        <location filename="../app/ui/colorpalette.ui" line="75"/>
         <source>Remove Color</source>
         <translation>Szín eltávolítása</translation>
     </message>
     <message>
-        <location filename="../app/ui/colorpalette.ui" line="118"/>
+        <location filename="../app/ui/colorpalette.ui" line="117"/>
         <source>... </source>
         <translation>... </translation>
-    </message>
-    <message>
-        <location filename="../app/ui/colorpalette.ui" line="188"/>
-        <source>List Mode</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../app/ui/colorpalette.ui" line="191"/>
-        <source>Show palette as a list</source>
-        <translation type="unfinished">Paletta megjelenítése listaként</translation>
-    </message>
-    <message>
-        <location filename="../app/ui/colorpalette.ui" line="199"/>
-        <source>Grid Mode</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../app/ui/colorpalette.ui" line="202"/>
-        <source>Show palette as icons</source>
-        <translation type="unfinished">Paletta megjelenítése ikonokkal</translation>
-    </message>
-    <message>
-        <location filename="../app/ui/colorpalette.ui" line="212"/>
-        <source>Small swatch</source>
-        <translation type="unfinished">Kicsi méret</translation>
-    </message>
-    <message>
-        <location filename="../app/ui/colorpalette.ui" line="215"/>
-        <source>Sets swatch size to: 16x16px</source>
-        <translation type="unfinished">Nézet méretének beállítása: 16x16px</translation>
-    </message>
-    <message>
-        <location filename="../app/ui/colorpalette.ui" line="223"/>
-        <source>Medium Swatch</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../app/ui/colorpalette.ui" line="226"/>
-        <source>Sets swatch size to: 26x26px</source>
-        <translation type="unfinished">Nézet méretének beállítása: 26x26px</translation>
-    </message>
-    <message>
-        <location filename="../app/ui/colorpalette.ui" line="237"/>
-        <source>Large Swatch</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../app/ui/colorpalette.ui" line="240"/>
-        <source>Sets swatch size to: 36x36px</source>
-        <translation type="unfinished">Nézet méretének beállítása: 36x36px</translation>
     </message>
 </context>
 <context>
     <name>ColorPaletteWidget</name>
     <message>
+        <location filename="../app/colorpalettewidget.cpp" line="37"/>
         <source>Color Palette</source>
         <comment>Window title of color palette.</comment>
-        <translation type="vanished">Színpaletta</translation>
+        <translation>Színpaletta</translation>
     </message>
     <message>
-        <location filename="../app/colorpalettewidget.cpp" line="152"/>
-        <location filename="../app/colorpalettewidget.cpp" line="153"/>
+        <location filename="../app/colorpalettewidget.cpp" line="155"/>
+        <location filename="../app/colorpalettewidget.cpp" line="156"/>
         <source>Colour name</source>
         <translation>Szín neve</translation>
     </message>
     <message>
+        <source>Colour name:</source>
+        <translation type="vanished">Szín neve:</translation>
+    </message>
+    <message>
+        <location filename="../app/colorpalettewidget.cpp" line="196"/>
         <source>List mode</source>
-        <translation type="vanished">Lista mód</translation>
+        <translation>Lista mód</translation>
     </message>
     <message>
+        <location filename="../app/colorpalettewidget.cpp" line="197"/>
         <source>Show palette as a list</source>
-        <translation type="vanished">Paletta megjelenítése listaként</translation>
+        <translation>Paletta megjelenítése listaként</translation>
     </message>
     <message>
+        <location filename="../app/colorpalettewidget.cpp" line="203"/>
         <source>Grid mode</source>
-        <translation type="vanished">Rács mód</translation>
+        <translation>Rács mód</translation>
     </message>
     <message>
+        <location filename="../app/colorpalettewidget.cpp" line="204"/>
         <source>Show palette as icons</source>
-        <translation type="vanished">Paletta megjelenítése ikonokkal</translation>
+        <translation>Paletta megjelenítése ikonokkal</translation>
     </message>
     <message>
+        <location filename="../app/colorpalettewidget.cpp" line="211"/>
         <source>Small swatch</source>
-        <translation type="vanished">Kicsi méret</translation>
+        <translation>Kicsi méret</translation>
     </message>
     <message>
+        <location filename="../app/colorpalettewidget.cpp" line="212"/>
         <source>Sets swatch size to: 16x16px</source>
-        <translation type="vanished">Nézet méretének beállítása: 16x16px</translation>
+        <translation>Nézet méretének beállítása: 16x16px</translation>
     </message>
     <message>
+        <location filename="../app/colorpalettewidget.cpp" line="217"/>
         <source>Medium swatch</source>
-        <translation type="vanished">Közepes méret</translation>
+        <translation>Közepes méret</translation>
     </message>
     <message>
+        <location filename="../app/colorpalettewidget.cpp" line="218"/>
         <source>Sets swatch size to: 26x26px</source>
-        <translation type="vanished">Nézet méretének beállítása: 26x26px</translation>
+        <translation>Nézet méretének beállítása: 26x26px</translation>
     </message>
     <message>
+        <location filename="../app/colorpalettewidget.cpp" line="223"/>
         <source>Large swatch</source>
-        <translation type="vanished">Nagy méret</translation>
+        <translation>Nagy méret</translation>
     </message>
     <message>
+        <location filename="../app/colorpalettewidget.cpp" line="225"/>
         <source>Sets swatch size to: 36x36px</source>
-        <translation type="vanished">Nézet méretének beállítása: 36x36px</translation>
+        <translation>Nézet méretének beállítása: 36x36px</translation>
+    </message>
+    <message>
+        <source>Colour %1</source>
+        <translation type="vanished">%1 szín</translation>
+    </message>
+</context>
+<context>
+    <name>Dialog</name>
+    <message>
+        <source>Export Image Sequence</source>
+        <translation type="vanished">Képsorozat exportálása</translation>
     </message>
 </context>
 <context>
     <name>DisplayOption</name>
     <message>
+        <location filename="../app/ui/displayoption.ui" line="14"/>
         <source>Form</source>
-        <translation type="vanished">Űrlap</translation>
+        <translation>Űrlap</translation>
     </message>
     <message>
-<<<<<<< HEAD:translations/Language.hu_HU.ts
         <location filename="../app/ui/displayoption.ui" line="52"/>
-=======
-        <location filename="../app/ui/displayoption.ui" line="67"/>
->>>>>>> upstream/master:translations/pencil_hu_HU.ts
         <source>Horizontal flip</source>
         <translation>Vízszintes tükrözés</translation>
     </message>
     <message>
-<<<<<<< HEAD:translations/Language.hu_HU.ts
         <location filename="../app/ui/displayoption.ui" line="55"/>
         <location filename="../app/ui/displayoption.ui" line="84"/>
         <location filename="../app/ui/displayoption.ui" line="113"/>
@@ -659,93 +455,45 @@
         <location filename="../app/ui/displayoption.ui" line="200"/>
         <location filename="../app/ui/displayoption.ui" line="223"/>
         <location filename="../app/ui/displayoption.ui" line="246"/>
-=======
-        <location filename="../app/ui/displayoption.ui" line="44"/>
-        <location filename="../app/ui/displayoption.ui" line="102"/>
-        <location filename="../app/ui/displayoption.ui" line="134"/>
-        <location filename="../app/ui/displayoption.ui" line="166"/>
-        <location filename="../app/ui/displayoption.ui" line="192"/>
-        <location filename="../app/ui/displayoption.ui" line="221"/>
-        <location filename="../app/ui/displayoption.ui" line="259"/>
->>>>>>> upstream/master:translations/pencil_hu_HU.ts
         <source>...</source>
         <translation>...</translation>
     </message>
     <message>
-<<<<<<< HEAD:translations/Language.hu_HU.ts
         <location filename="../app/ui/displayoption.ui" line="75"/>
         <location filename="../app/ui/displayoption.ui" line="78"/>
-=======
-        <location filename="../app/ui/displayoption.ui" line="14"/>
-        <source>Display</source>
-        <comment>Window title of display options like .</comment>
-        <translation type="unfinished">Megjelenítés</translation>
-    </message>
-    <message>
-        <location filename="../app/ui/displayoption.ui" line="125"/>
-        <location filename="../app/ui/displayoption.ui" line="128"/>
->>>>>>> upstream/master:translations/pencil_hu_HU.ts
         <source>Onion skin previous frame</source>
         <translation>Előző képkocka fóliája</translation>
     </message>
     <message>
-<<<<<<< HEAD:translations/Language.hu_HU.ts
         <location filename="../app/ui/displayoption.ui" line="139"/>
         <location filename="../app/ui/displayoption.ui" line="142"/>
-=======
-        <location filename="../app/ui/displayoption.ui" line="163"/>
-        <source>Show invisible lines</source>
-        <translation>Láthatatlan vonalak megjelenítése</translation>
-    </message>
-    <message>
-        <location filename="../app/ui/displayoption.ui" line="250"/>
-        <location filename="../app/ui/displayoption.ui" line="253"/>
->>>>>>> upstream/master:translations/pencil_hu_HU.ts
         <source>Onion skin color: blue</source>
         <translation>Képfólia színe: kék</translation>
     </message>
     <message>
-<<<<<<< HEAD:translations/Language.hu_HU.ts
         <location filename="../app/ui/displayoption.ui" line="168"/>
         <location filename="../app/ui/displayoption.ui" line="171"/>
-=======
-        <location filename="../app/ui/displayoption.ui" line="38"/>
-        <location filename="../app/ui/displayoption.ui" line="41"/>
->>>>>>> upstream/master:translations/pencil_hu_HU.ts
         <source>Onion skin next frame</source>
         <translation>Következő képkocka fóliája</translation>
     </message>
     <message>
-<<<<<<< HEAD:translations/Language.hu_HU.ts
         <location filename="../app/ui/displayoption.ui" line="194"/>
         <location filename="../app/ui/displayoption.ui" line="197"/>
-=======
-        <location filename="../app/ui/displayoption.ui" line="215"/>
-        <location filename="../app/ui/displayoption.ui" line="218"/>
->>>>>>> upstream/master:translations/pencil_hu_HU.ts
         <source>Onion skin color: red</source>
         <translation>Képfólia színe: piros</translation>
     </message>
     <message>
-<<<<<<< HEAD:translations/Language.hu_HU.ts
         <location filename="../app/ui/displayoption.ui" line="110"/>
         <source>Show invisible lines</source>
         <translation>Láthatatlan vonalak megjelenítése</translation>
     </message>
     <message>
         <location filename="../app/ui/displayoption.ui" line="220"/>
-=======
-        <location filename="../app/ui/displayoption.ui" line="189"/>
->>>>>>> upstream/master:translations/pencil_hu_HU.ts
         <source>Show outlines only</source>
         <translation>Csak körvonalak megjelenítése</translation>
     </message>
     <message>
-<<<<<<< HEAD:translations/Language.hu_HU.ts
         <location filename="../app/ui/displayoption.ui" line="243"/>
-=======
-        <location filename="../app/ui/displayoption.ui" line="99"/>
->>>>>>> upstream/master:translations/pencil_hu_HU.ts
         <source>Vertical flip</source>
         <translation>Függőleges tükrözés</translation>
     </message>
@@ -753,39 +501,21 @@
 <context>
     <name>DisplayOptionWidget</name>
     <message>
+        <location filename="../app/displayoptionwidget.cpp" line="31"/>
         <source>Display</source>
         <comment>Window title of display options like .</comment>
-        <translation type="vanished">Megjelenítés</translation>
-    </message>
-</context>
-<context>
-    <name>DoubleProgressDialog</name>
-    <message>
-        <location filename="../app/ui/doubleprogressdialog.ui" line="27"/>
-        <source>Loading...</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../app/ui/doubleprogressdialog.ui" line="56"/>
-        <source>Cancel</source>
-        <translation type="unfinished">Mégse</translation>
+        <translation>Megjelenítés</translation>
     </message>
 </context>
 <context>
     <name>Editor</name>
     <message>
-<<<<<<< HEAD:translations/Language.hu_HU.ts
         <location filename="../core_lib/interface/editor.cpp" line="534"/>
         <location filename="../core_lib/interface/editor.cpp" line="555"/>
-=======
-        <location filename="../core_lib/interface/editor.cpp" line="536"/>
-        <location filename="../core_lib/interface/editor.cpp" line="557"/>
->>>>>>> upstream/master:translations/pencil_hu_HU.ts
         <source>Paste</source>
         <translation>Beillesztés</translation>
     </message>
     <message>
-<<<<<<< HEAD:translations/Language.hu_HU.ts
         <source>Paste sound</source>
         <translation type="vanished">Hang beillesztése</translation>
     </message>
@@ -804,18 +534,6 @@
         <source>backup frame</source>
         <translation type="vanished">képkocka mentése</translation>
     </message>
-=======
-        <location filename="../core_lib/interface/editor.cpp" line="967"/>
-        <source>Remove frame</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../core_lib/interface/editor.cpp" line="782"/>
-        <location filename="../core_lib/interface/editor.cpp" line="808"/>
-        <source>Import Image</source>
-        <translation>Kép importálása</translation>
-    </message>
->>>>>>> upstream/master:translations/pencil_hu_HU.ts
 </context>
 <context>
     <name>ErrorDialog</name>
@@ -825,16 +543,15 @@
         <translation>Párbeszéd</translation>
     </message>
     <message>
-        <location filename="../app/ui/errordialog.ui" line="55"/>
+        <location filename="../app/ui/errordialog.ui" line="52"/>
         <source>&lt;h3&gt;Title&lt;/h3&gt;</source>
         <translation>&lt;h3&gt;Cím&lt;/h3&gt;</translation>
     </message>
     <message>
-        <location filename="../app/ui/errordialog.ui" line="68"/>
+        <location filename="../app/ui/errordialog.ui" line="65"/>
         <source>Description</source>
         <translation>Leírás</translation>
     </message>
-<<<<<<< HEAD:translations/Language.hu_HU.ts
     <message>
         <source>&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;
 &lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;
@@ -847,8 +564,6 @@ p, li { white-space: pre-wrap; }
 &lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:&apos;.SF NS Text&apos;; font-size:13pt; font-weight:400; font-style:normal;&quot;&gt;
 &lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:&apos;Monaco&apos;;&quot;&gt;Részletek&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
-=======
->>>>>>> upstream/master:translations/pencil_hu_HU.ts
 </context>
 <context>
     <name>ExportImageDialog</name>
@@ -902,11 +617,70 @@ p, li { white-space: pre-wrap; }
     </message>
 </context>
 <context>
+    <name>ExportImageSeqDialog</name>
+    <message>
+        <source>Dialog</source>
+        <translation type="vanished">Párbeszéd</translation>
+    </message>
+    <message>
+        <source>Resolution (Set by the Camera)</source>
+        <translation type="vanished">Felbontás (Kamera által beállítva)</translation>
+    </message>
+    <message>
+        <source>Format</source>
+        <translation type="vanished">Formátum</translation>
+    </message>
+    <message>
+        <source>PNG</source>
+        <translation type="vanished">PNG</translation>
+    </message>
+    <message>
+        <source>JPG</source>
+        <translation type="vanished">JPG</translation>
+    </message>
+    <message>
+        <source>BMP</source>
+        <translation type="vanished">BMP</translation>
+    </message>
+    <message>
+        <source>Transparency</source>
+        <translation type="vanished">Átlátszóság</translation>
+    </message>
+</context>
+<context>
     <name>ExportMovieDialog</name>
     <message>
         <location filename="../app/exportmoviedialog.cpp" line="27"/>
         <source>Export Movie</source>
         <translation>Videó exportálása</translation>
+    </message>
+    <message>
+        <source>Camera</source>
+        <translation type="vanished">Kamera</translation>
+    </message>
+    <message>
+        <source>Resolution</source>
+        <translation type="vanished">Felbontás</translation>
+    </message>
+    <message>
+        <source>Width</source>
+        <translation type="vanished">Szélesség</translation>
+    </message>
+    <message>
+        <source>Height</source>
+        <translation type="vanished">Magasság</translation>
+    </message>
+    <message>
+        <source>Range</source>
+        <translation type="vanished">Tartomány</translation>
+    </message>
+    <message>
+        <source>Start</source>
+        <translation type="vanished">Indítás</translation>
+    </message>
+    <message>
+        <source>End</source>
+        <translation type="vanished">Befejezés</translation>
     </message>
 </context>
 <context>
@@ -966,7 +740,6 @@ p, li { white-space: pre-wrap; }
         <source>To the end of sound clips</source>
         <translation>A hangklipek végéig</translation>
     </message>
-<<<<<<< HEAD:translations/Language.hu_HU.ts
     <message>
         <source>Start</source>
         <translation type="vanished">Kezdés</translation>
@@ -975,11 +748,17 @@ p, li { white-space: pre-wrap; }
         <source>End</source>
         <translation type="vanished">Befejezés</translation>
     </message>
-=======
->>>>>>> upstream/master:translations/pencil_hu_HU.ts
 </context>
 <context>
     <name>FileDialog</name>
+    <message>
+        <source>Import sound...</source>
+        <translation type="vanished">Hang importálása...</translation>
+    </message>
+    <message>
+        <source>Export movie as ...</source>
+        <translation type="vanished">Videó exportálása másként ...</translation>
+    </message>
     <message>
         <location filename="../app/filedialogex.cpp" line="127"/>
         <source>Open animation</source>
@@ -1054,20 +833,43 @@ p, li { white-space: pre-wrap; }
     <message>
         <location filename="../app/filedialogex.cpp" line="175"/>
         <source>MP4 (*.mp4);;AVI (*.avi);; WebM (*.webm);; GIF (*.gif)</source>
-<<<<<<< HEAD:translations/Language.hu_HU.ts
         <translation>MP4 (*.mp4);;AVI (*.avi);; WebM (*.webm);; GIF (*.gif)</translation>
     </message>
     <message>
         <source>MP4 (*.mp4);;AVI (*.avi);;GIF (*.gif)</source>
         <translation type="vanished">MP4 (*.mp4);;AVI (*.avi);;GIF (*.gif)</translation>
-=======
-        <translation type="unfinished"></translation>
->>>>>>> upstream/master:translations/pencil_hu_HU.ts
     </message>
     <message>
         <location filename="../app/filedialogex.cpp" line="187"/>
         <source>MyAnimation.pclx</source>
         <translation>Animációm.pclx</translation>
+    </message>
+    <message>
+        <source>untitled.png</source>
+        <translation type="vanished">névtelen.png</translation>
+    </message>
+    <message>
+        <source>untitled.mp4</source>
+        <translation type="vanished">névtelen.mp4</translation>
+    </message>
+    <message>
+        <source>untitled.wav</source>
+        <translation type="vanished">névtelen.wav</translation>
+    </message>
+    <message>
+        <source>untitled.xml</source>
+        <translation type="vanished">névtelen.xml</translation>
+    </message>
+</context>
+<context>
+    <name>FileDialogEx</name>
+    <message>
+        <source>Import sound...</source>
+        <translation type="vanished">Hang importálása...</translation>
+    </message>
+    <message>
+        <source>WAV(*.wav);;MP3(*.mp3)</source>
+        <translation type="vanished">WAV(*.wav);;MP3(*.mp3)</translation>
     </message>
 </context>
 <context>
@@ -1080,7 +882,6 @@ p, li { white-space: pre-wrap; }
         <translation>Érvénytelen mentési útvonal</translation>
     </message>
     <message>
-<<<<<<< HEAD:translations/Language.hu_HU.ts
         <location filename="../core_lib/structure/filemanager.cpp" line="195"/>
         <source>The file path (&quot;%1&quot;) points to a directory.</source>
         <translation type="unfinished"></translation>
@@ -1170,80 +971,40 @@ p, li { white-space: pre-wrap; }
     </message>
     <message>
         <location filename="../core_lib/structure/filemanager.cpp" line="321"/>
-=======
-        <location filename="../core_lib/structure/filemanager.cpp" line="198"/>
-        <source>The path (&quot;%1&quot;) points to a directory.</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../core_lib/structure/filemanager.cpp" line="207"/>
-        <source>The directory (&quot;%1&quot;) does not exist.</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../core_lib/structure/filemanager.cpp" line="215"/>
-        <source>The path (&quot;%1&quot;) is not writable.</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../core_lib/structure/filemanager.cpp" line="253"/>
-        <location filename="../core_lib/structure/filemanager.cpp" line="262"/>
-        <source>Cannot Create Data Directory</source>
-        <translation>Az adatkönyvtár nem hozható létre</translation>
-    </message>
-    <message>
-        <location filename="../core_lib/structure/filemanager.cpp" line="254"/>
-        <source>Failed to create directory &quot;%1&quot;. Please make sure you have sufficient permissions.</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../core_lib/structure/filemanager.cpp" line="263"/>
-        <source>&quot;%1&quot; is a file. Please delete the file and try again.</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../core_lib/structure/filemanager.cpp" line="291"/>
-        <source>Internal Error</source>
-        <translation>Belső hiba</translation>
-    </message>
-    <message>
-        <location filename="../core_lib/structure/filemanager.cpp" line="292"/>
-        <source>An internal error occurred. Your file may not be saved successfully.</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
->>>>>>> upstream/master:translations/pencil_hu_HU.ts
         <source>An internal error occurred while trying to save the file. Some or all of your file may not have saved.</source>
-        <translation type="vanished">Belső hiba keletkezett a fájl mentése közben. Egy vagy talán az összes fájl mentése meghiúsult.</translation>
+        <translation>Belső hiba keletkezett a fájl mentése közben. Egy vagy talán az összes fájl mentése meghiúsult.</translation>
     </message>
 </context>
 <context>
     <name>FilesPage</name>
     <message>
-        <location filename="../app/ui/filespage.ui" line="17"/>
+        <source>Autosave documents</source>
+        <translation type="vanished">Dokumentumok automatikus mentése</translation>
+    </message>
+    <message>
+        <source>Enable autosave</source>
+        <translation type="vanished">Automatikus mentés engedélyezése</translation>
+    </message>
+    <message>
+        <source>Number of modifications before autosaving:</source>
+        <translation type="vanished">Változtatások száma az automatikus mentések előtt:</translation>
+    </message>
+    <message>
+        <location filename="../app/preferencesdialog.cpp" line="548"/>
         <source>Autosave documents</source>
         <comment>Preference</comment>
-<<<<<<< HEAD:translations/Language.hu_HU.ts
         <translation>Dokumentumok automatikus mentése</translation>
-=======
-        <translation type="unfinished"></translation>
->>>>>>> upstream/master:translations/pencil_hu_HU.ts
     </message>
     <message>
-        <location filename="../app/ui/filespage.ui" line="23"/>
+        <location filename="../app/preferencesdialog.cpp" line="549"/>
         <source>Enable autosave</source>
         <comment>Preference</comment>
-<<<<<<< HEAD:translations/Language.hu_HU.ts
         <translation>Automatikus mentés engedélyezése</translation>
-=======
-        <translation type="unfinished"></translation>
->>>>>>> upstream/master:translations/pencil_hu_HU.ts
     </message>
     <message>
-        <location filename="../app/ui/filespage.ui" line="30"/>
+        <location filename="../app/preferencesdialog.cpp" line="550"/>
         <source>Number of modifications before autosaving:</source>
         <comment>Preference</comment>
-<<<<<<< HEAD:translations/Language.hu_HU.ts
         <translation>Változtatások száma az automatikus mentések előtt:</translation>
     </message>
     <message>
@@ -1264,64 +1025,77 @@ p, li { white-space: pre-wrap; }
         <comment>Clear Recent Files (Preference)</comment>
         <translation>Kiürítés</translation>
     </message>
-=======
-        <translation type="unfinished"></translation>
-    </message>
->>>>>>> upstream/master:translations/pencil_hu_HU.ts
 </context>
 <context>
     <name>GeneralPage</name>
     <message>
-        <location filename="../app/ui/generalpage.ui" line="50"/>
+        <source>Window opacity</source>
+        <translation type="vanished">Ablak átlátszatlansága</translation>
+    </message>
+    <message>
+        <source>Background</source>
+        <translation type="vanished">Háttér</translation>
+    </message>
+    <message>
+        <source>Appearance</source>
+        <translation type="vanished">Megjelenés</translation>
+    </message>
+    <message>
+        <source>Rendering</source>
+        <translation type="vanished">Renderelés</translation>
+    </message>
+    <message>
+        <source>Editing</source>
+        <translation type="vanished">Szerkesztés</translation>
+    </message>
+    <message>
+        <location filename="../app/preferencesdialog.cpp" line="163"/>
         <source>Language</source>
         <comment>GroupBox title in Preference</comment>
         <translation>Nyelv</translation>
     </message>
     <message>
-        <location filename="../app/ui/generalpage.ui" line="71"/>
+        <location filename="../app/preferencesdialog.cpp" line="164"/>
         <source>Window opacity</source>
         <comment>GroupBox title in Preference</comment>
         <translation>Ablak átlátszatlansága</translation>
     </message>
     <message>
-        <location filename="../app/ui/generalpage.ui" line="130"/>
+        <location filename="../app/preferencesdialog.cpp" line="165"/>
         <source>Background</source>
         <comment>GroupBox title in Preference</comment>
         <translation>Háttér</translation>
     </message>
     <message>
-        <location filename="../app/ui/generalpage.ui" line="100"/>
+        <location filename="../app/preferencesdialog.cpp" line="166"/>
         <source>Appearance</source>
         <comment>GroupBox title in Preference</comment>
         <translation>Megjelenés</translation>
     </message>
     <message>
-        <location filename="../app/ui/generalpage.ui" line="56"/>
-        <location filename="../app/ui/generalpage.ui" line="60"/>
-        <source>[System-Language]</source>
-        <comment>First item of the language list</comment>
-        <translation type="unfinished"></translation>
+        <source>Rendering</source>
+        <comment>GroupBox title in Preference</comment>
+        <translation type="vanished">Renderelés</translation>
     </message>
     <message>
-        <location filename="../app/ui/generalpage.ui" line="174"/>
+        <location filename="../app/preferencesdialog.cpp" line="167"/>
         <source>Canvas</source>
         <comment>GroupBox title in Preference</comment>
         <translation>Rajzvászon</translation>
     </message>
     <message>
-        <location filename="../app/ui/generalpage.ui" line="203"/>
+        <location filename="../app/preferencesdialog.cpp" line="168"/>
         <source>Editing</source>
         <comment>GroupBox title in Preference</comment>
         <translation>Szerkesztés</translation>
     </message>
     <message>
-        <location filename="../app/ui/generalpage.ui" line="239"/>
+        <location filename="../app/preferencesdialog.cpp" line="169"/>
         <source>Grid</source>
         <comment>groupBox title in Preference</comment>
         <translation>Rács</translation>
     </message>
     <message>
-<<<<<<< HEAD:translations/Language.hu_HU.ts
         <source>&lt;System-Language&gt;</source>
         <translation type="vanished">&lt;Rendszer nyelve&gt;</translation>
     </message>
@@ -1332,116 +1106,135 @@ p, li { white-space: pre-wrap; }
     </message>
     <message>
         <location filename="../app/preferencesdialog.cpp" line="173"/>
-=======
-        <location filename="../app/preferencesdialog.cpp" line="95"/>
->>>>>>> upstream/master:translations/pencil_hu_HU.ts
         <source>Czech</source>
         <translation>Cseh</translation>
     </message>
     <message>
-        <location filename="../app/preferencesdialog.cpp" line="96"/>
+        <location filename="../app/preferencesdialog.cpp" line="174"/>
         <source>Danish</source>
         <translation>Dán</translation>
     </message>
     <message>
-        <location filename="../app/preferencesdialog.cpp" line="97"/>
+        <location filename="../app/preferencesdialog.cpp" line="175"/>
         <source>English</source>
         <translation>Angol</translation>
     </message>
     <message>
-        <location filename="../app/preferencesdialog.cpp" line="98"/>
+        <location filename="../app/preferencesdialog.cpp" line="176"/>
         <source>German</source>
         <translation>Német</translation>
     </message>
     <message>
-        <location filename="../app/preferencesdialog.cpp" line="99"/>
+        <location filename="../app/preferencesdialog.cpp" line="177"/>
         <source>Spanish</source>
         <translation>Spanyol</translation>
     </message>
     <message>
-        <location filename="../app/preferencesdialog.cpp" line="100"/>
+        <location filename="../app/preferencesdialog.cpp" line="178"/>
         <source>French</source>
         <translation>Francia</translation>
     </message>
     <message>
-        <location filename="../app/preferencesdialog.cpp" line="101"/>
+        <location filename="../app/preferencesdialog.cpp" line="179"/>
         <source>Hungarian</source>
         <translation>Magyar</translation>
     </message>
     <message>
-        <location filename="../app/preferencesdialog.cpp" line="102"/>
+        <location filename="../app/preferencesdialog.cpp" line="180"/>
         <source>Italian</source>
         <translation>Olasz</translation>
     </message>
     <message>
-        <location filename="../app/preferencesdialog.cpp" line="103"/>
+        <location filename="../app/preferencesdialog.cpp" line="181"/>
         <source>Japanese</source>
         <translation>Japán</translation>
     </message>
     <message>
-        <location filename="../app/preferencesdialog.cpp" line="104"/>
+        <location filename="../app/preferencesdialog.cpp" line="182"/>
         <source>Portuguese - Brazil</source>
         <translation>Portugál - Brazil</translation>
     </message>
     <message>
-        <location filename="../app/preferencesdialog.cpp" line="105"/>
+        <location filename="../app/preferencesdialog.cpp" line="183"/>
         <source>Russian</source>
         <translation>Orosz</translation>
     </message>
     <message>
-        <location filename="../app/preferencesdialog.cpp" line="106"/>
+        <location filename="../app/preferencesdialog.cpp" line="184"/>
         <source>Chinese - Taiwan</source>
         <translation>Kínai - Taiwan</translation>
     </message>
     <message>
-        <location filename="../app/ui/generalpage.ui" line="77"/>
+        <location filename="../app/preferencesdialog.cpp" line="186"/>
         <source>Opacity</source>
         <translation>Átlátszatlanság</translation>
     </message>
     <message>
-        <location filename="../app/ui/generalpage.ui" line="106"/>
+        <location filename="../app/preferencesdialog.cpp" line="234"/>
         <source>Shadows</source>
         <translation>Árnyékok</translation>
     </message>
     <message>
-        <location filename="../app/ui/generalpage.ui" line="113"/>
+        <location filename="../app/preferencesdialog.cpp" line="235"/>
         <source>Tool Cursors</source>
         <translation>Eszköz alakú kurzorok</translation>
     </message>
     <message>
-        <location filename="../app/ui/generalpage.ui" line="180"/>
+        <location filename="../app/preferencesdialog.cpp" line="236"/>
         <source>Antialiasing</source>
         <translation>Élsimítás</translation>
     </message>
     <message>
-        <location filename="../app/ui/generalpage.ui" line="120"/>
+        <location filename="../app/preferencesdialog.cpp" line="237"/>
         <source>Dotted Cursor</source>
         <translation>Pontozott kurzor</translation>
     </message>
     <message>
-        <location filename="../app/ui/generalpage.ui" line="267"/>
+        <location filename="../app/preferencesdialog.cpp" line="244"/>
         <source>Enable Grid</source>
         <translation>Rács bekapcsolása</translation>
     </message>
     <message>
-        <location filename="../app/ui/generalpage.ui" line="209"/>
-        <source>Vector curve smoothing</source>
-        <translation>Vektor görbe simítása</translation>
-    </message>
-    <message>
-        <location filename="../app/ui/generalpage.ui" line="229"/>
+        <location filename="../app/preferencesdialog.cpp" line="282"/>
         <source>Tablet high-resolution position</source>
         <translation>Nagy pontosságú pozicionálás táblagépen</translation>
     </message>
     <message>
-        <location filename="../app/preferencesdialog.cpp" line="202"/>
+        <location filename="../app/preferencesdialog.cpp" line="386"/>
         <source>Restart Required</source>
         <translation>Újraindítás szükséges</translation>
     </message>
     <message>
-        <location filename="../app/preferencesdialog.cpp" line="203"/>
+        <location filename="../app/preferencesdialog.cpp" line="387"/>
         <source>The language change will take effect after a restart of Pencil2D</source>
         <translation>A nyelv megváltoztatása csak a Pencil2D újraindítása után érvényesül</translation>
+    </message>
+    <message>
+        <location filename="../app/preferencesdialog.cpp" line="275"/>
+        <source>Vector curve smoothing</source>
+        <translation>Vektor görbe simítása</translation>
+    </message>
+</context>
+<context>
+    <name>GridPage</name>
+    <message>
+        <source>Grid Size</source>
+        <translation type="vanished">Rács mérete</translation>
+    </message>
+</context>
+<context>
+    <name>ImageSeqDialog</name>
+    <message>
+        <source>Image Sequence Dialog</source>
+        <translation type="vanished">Képsorozat párbeszéd</translation>
+    </message>
+    <message>
+        <source>Cancel</source>
+        <translation type="vanished">Mégse</translation>
+    </message>
+    <message>
+        <source>Import an image every # frame</source>
+        <translation type="vanished">Képek importálása # képkockánként</translation>
     </message>
 </context>
 <context>
@@ -1481,7 +1274,6 @@ p, li { white-space: pre-wrap; }
 <context>
     <name>Layer</name>
     <message>
-<<<<<<< HEAD:translations/Language.hu_HU.ts
         <source>Layer Properties</source>
         <translation type="vanished">Réteg tulajdonságai</translation>
     </message>
@@ -1491,9 +1283,6 @@ p, li { white-space: pre-wrap; }
     </message>
     <message>
         <location filename="../core_lib/structure/layer.cpp" line="40"/>
-=======
-        <location filename="../core_lib/structure/layer.cpp" line="39"/>
->>>>>>> upstream/master:translations/pencil_hu_HU.ts
         <source>Undefined Layer</source>
         <translation>Meghatározatlan réteg</translation>
     </message>
@@ -1509,7 +1298,7 @@ p, li { white-space: pre-wrap; }
 <context>
     <name>LayerCamera</name>
     <message>
-        <location filename="../core_lib/structure/layercamera.cpp" line="79"/>
+        <location filename="../core_lib/structure/layercamera.cpp" line="105"/>
         <source>Camera Layer</source>
         <translation>Kamera réteg</translation>
     </message>
@@ -1533,7 +1322,6 @@ p, li { white-space: pre-wrap; }
 <context>
     <name>MainWindow2</name>
     <message>
-<<<<<<< HEAD:translations/Language.hu_HU.ts
         <location filename="../app/ui/mainwindow2.ui" line="801"/>
         <source>Color Palette</source>
         <translation>Színpaletta</translation>
@@ -1544,74 +1332,51 @@ p, li { white-space: pre-wrap; }
         <translation>Beillesztés</translation>
     </message>
     <message>
-=======
->>>>>>> upstream/master:translations/pencil_hu_HU.ts
         <location filename="../app/ui/mainwindow2.ui" line="14"/>
         <source>MainWindow</source>
         <translation>Főablak</translation>
     </message>
     <message>
-        <location filename="../app/ui/mainwindow2.ui" line="62"/>
+        <location filename="../app/ui/mainwindow2.ui" line="38"/>
         <source>File</source>
         <translation>Fájl</translation>
     </message>
     <message>
-        <location filename="../app/ui/mainwindow2.ui" line="66"/>
+        <location filename="../app/ui/mainwindow2.ui" line="42"/>
         <source>Import</source>
         <translation>Importálás</translation>
     </message>
     <message>
-        <location filename="../app/ui/mainwindow2.ui" line="78"/>
+        <location filename="../app/ui/mainwindow2.ui" line="54"/>
         <source>Export</source>
         <translation>Exportálás</translation>
     </message>
     <message>
-<<<<<<< HEAD:translations/Language.hu_HU.ts
         <location filename="../app/ui/mainwindow2.ui" line="76"/>
-=======
-        <location filename="../app/ui/mainwindow2.ui" line="100"/>
->>>>>>> upstream/master:translations/pencil_hu_HU.ts
         <source>Edit</source>
         <translation>Szerkesztés</translation>
     </message>
     <message>
-<<<<<<< HEAD:translations/Language.hu_HU.ts
         <location filename="../app/ui/mainwindow2.ui" line="80"/>
-=======
-        <location filename="../app/ui/mainwindow2.ui" line="104"/>
->>>>>>> upstream/master:translations/pencil_hu_HU.ts
         <source>Selection</source>
         <translation>Kijelölés</translation>
     </message>
     <message>
-<<<<<<< HEAD:translations/Language.hu_HU.ts
         <location filename="../app/ui/mainwindow2.ui" line="102"/>
-=======
-        <location filename="../app/ui/mainwindow2.ui" line="126"/>
->>>>>>> upstream/master:translations/pencil_hu_HU.ts
         <source>View</source>
         <translation>Nézet</translation>
     </message>
     <message>
-<<<<<<< HEAD:translations/Language.hu_HU.ts
         <location filename="../app/ui/mainwindow2.ui" line="106"/>
-=======
-        <location filename="../app/ui/mainwindow2.ui" line="130"/>
->>>>>>> upstream/master:translations/pencil_hu_HU.ts
         <source>Onion Skin</source>
         <translation>Képfólia</translation>
     </message>
     <message>
-<<<<<<< HEAD:translations/Language.hu_HU.ts
         <location filename="../app/ui/mainwindow2.ui" line="132"/>
-=======
-        <location filename="../app/ui/mainwindow2.ui" line="156"/>
->>>>>>> upstream/master:translations/pencil_hu_HU.ts
         <source>Animation</source>
         <translation>Animáció</translation>
     </message>
     <message>
-<<<<<<< HEAD:translations/Language.hu_HU.ts
         <source>Tools</source>
         <comment>Window title of tool box.</comment>
         <translation type="vanished">Eszközök</translation>
@@ -1619,250 +1384,141 @@ p, li { white-space: pre-wrap; }
     <message>
         <location filename="../app/ui/mainwindow2.ui" line="152"/>
         <location filename="../app/ui/mainwindow2.ui" line="769"/>
-=======
-        <location filename="../app/ui/mainwindow2.ui" line="176"/>
-        <location filename="../app/ui/mainwindow2.ui" line="802"/>
->>>>>>> upstream/master:translations/pencil_hu_HU.ts
         <source>Tools</source>
         <translation>Eszközök</translation>
     </message>
     <message>
-<<<<<<< HEAD:translations/Language.hu_HU.ts
         <location filename="../app/ui/mainwindow2.ui" line="170"/>
-=======
-        <location filename="../app/ui/mainwindow2.ui" line="194"/>
->>>>>>> upstream/master:translations/pencil_hu_HU.ts
         <source>Layer</source>
         <translation>Réteg</translation>
     </message>
     <message>
-<<<<<<< HEAD:translations/Language.hu_HU.ts
         <location filename="../app/ui/mainwindow2.ui" line="181"/>
         <location filename="../app/ui/mainwindow2.ui" line="700"/>
-=======
-        <location filename="../app/ui/mainwindow2.ui" line="205"/>
-        <location filename="../app/ui/mainwindow2.ui" line="733"/>
->>>>>>> upstream/master:translations/pencil_hu_HU.ts
         <source>Help</source>
         <translation>Súgó</translation>
     </message>
     <message>
-<<<<<<< HEAD:translations/Language.hu_HU.ts
         <location filename="../app/ui/mainwindow2.ui" line="192"/>
-=======
-        <location filename="../app/ui/mainwindow2.ui" line="216"/>
->>>>>>> upstream/master:translations/pencil_hu_HU.ts
         <source>Windows</source>
         <translation>Ablakok</translation>
     </message>
     <message>
-<<<<<<< HEAD:translations/Language.hu_HU.ts
         <location filename="../app/ui/mainwindow2.ui" line="210"/>
-=======
-        <location filename="../app/ui/mainwindow2.ui" line="234"/>
->>>>>>> upstream/master:translations/pencil_hu_HU.ts
         <source>New</source>
         <translation>Új</translation>
     </message>
     <message>
-<<<<<<< HEAD:translations/Language.hu_HU.ts
         <location filename="../app/ui/mainwindow2.ui" line="219"/>
-=======
-        <location filename="../app/ui/mainwindow2.ui" line="243"/>
->>>>>>> upstream/master:translations/pencil_hu_HU.ts
         <source>Open</source>
         <translation>Megnyitás</translation>
     </message>
     <message>
-<<<<<<< HEAD:translations/Language.hu_HU.ts
         <location filename="../app/ui/mainwindow2.ui" line="228"/>
-=======
-        <location filename="../app/ui/mainwindow2.ui" line="252"/>
->>>>>>> upstream/master:translations/pencil_hu_HU.ts
         <source>Save</source>
         <translation>Mentés</translation>
     </message>
     <message>
-<<<<<<< HEAD:translations/Language.hu_HU.ts
         <location filename="../app/ui/mainwindow2.ui" line="237"/>
-=======
-        <location filename="../app/ui/mainwindow2.ui" line="261"/>
->>>>>>> upstream/master:translations/pencil_hu_HU.ts
         <source>Save As ..</source>
         <translation>Mentés másként ..</translation>
     </message>
     <message>
-<<<<<<< HEAD:translations/Language.hu_HU.ts
         <source>Print</source>
         <translation type="vanished">Nyomtatás</translation>
     </message>
     <message>
         <location filename="../app/ui/mainwindow2.ui" line="246"/>
-=======
-        <location filename="../app/ui/mainwindow2.ui" line="270"/>
->>>>>>> upstream/master:translations/pencil_hu_HU.ts
         <source>Exit</source>
         <translation>Kilépés</translation>
     </message>
     <message>
-<<<<<<< HEAD:translations/Language.hu_HU.ts
         <source>X-sheet ...</source>
         <translation type="vanished">X-sheet ...</translation>
     </message>
     <message>
         <location filename="../app/ui/mainwindow2.ui" line="251"/>
         <location filename="../app/ui/mainwindow2.ui" line="279"/>
-=======
-        <location filename="../app/ui/mainwindow2.ui" line="275"/>
-        <location filename="../app/ui/mainwindow2.ui" line="303"/>
->>>>>>> upstream/master:translations/pencil_hu_HU.ts
         <source>Image Sequence...</source>
         <translation>Képsorozat...</translation>
     </message>
     <message>
-<<<<<<< HEAD:translations/Language.hu_HU.ts
         <location filename="../app/ui/mainwindow2.ui" line="256"/>
         <location filename="../app/ui/mainwindow2.ui" line="274"/>
-=======
-        <location filename="../app/ui/mainwindow2.ui" line="280"/>
-        <location filename="../app/ui/mainwindow2.ui" line="298"/>
->>>>>>> upstream/master:translations/pencil_hu_HU.ts
         <source>Image...</source>
         <translation>Kép...</translation>
     </message>
     <message>
-<<<<<<< HEAD:translations/Language.hu_HU.ts
         <location filename="../app/ui/mainwindow2.ui" line="261"/>
         <location filename="../app/ui/mainwindow2.ui" line="284"/>
-=======
-        <location filename="../app/ui/mainwindow2.ui" line="285"/>
-        <location filename="../app/ui/mainwindow2.ui" line="308"/>
->>>>>>> upstream/master:translations/pencil_hu_HU.ts
         <source>Movie...</source>
         <translation>Videó...</translation>
     </message>
     <message>
-<<<<<<< HEAD:translations/Language.hu_HU.ts
         <location filename="../app/ui/mainwindow2.ui" line="269"/>
         <location filename="../app/ui/mainwindow2.ui" line="297"/>
-=======
-        <location filename="../app/ui/mainwindow2.ui" line="293"/>
-        <location filename="../app/ui/mainwindow2.ui" line="321"/>
->>>>>>> upstream/master:translations/pencil_hu_HU.ts
         <source>Palette...</source>
         <translation>Paletta...</translation>
     </message>
     <message>
-<<<<<<< HEAD:translations/Language.hu_HU.ts
         <source>Svg Image...</source>
         <translation type="vanished">Svg kép...</translation>
     </message>
     <message>
         <location filename="../app/ui/mainwindow2.ui" line="292"/>
-=======
-        <location filename="../app/ui/mainwindow2.ui" line="316"/>
->>>>>>> upstream/master:translations/pencil_hu_HU.ts
         <source>Sound...</source>
         <translation>Hang...</translation>
     </message>
     <message>
-<<<<<<< HEAD:translations/Language.hu_HU.ts
         <location filename="../app/ui/mainwindow2.ui" line="306"/>
         <location filename="../app/mainwindow2.cpp" line="932"/>
-=======
-        <location filename="../app/ui/mainwindow2.ui" line="330"/>
-        <location filename="../app/mainwindow2.cpp" line="930"/>
->>>>>>> upstream/master:translations/pencil_hu_HU.ts
         <source>Undo</source>
         <translation>Visszavonás</translation>
     </message>
     <message>
-<<<<<<< HEAD:translations/Language.hu_HU.ts
         <location filename="../app/ui/mainwindow2.ui" line="315"/>
         <location filename="../app/mainwindow2.cpp" line="952"/>
-=======
-        <location filename="../app/ui/mainwindow2.ui" line="342"/>
-        <location filename="../app/mainwindow2.cpp" line="950"/>
->>>>>>> upstream/master:translations/pencil_hu_HU.ts
         <source>Redo</source>
         <translation>Újra</translation>
     </message>
     <message>
-<<<<<<< HEAD:translations/Language.hu_HU.ts
         <location filename="../app/ui/mainwindow2.ui" line="324"/>
-=======
-        <location filename="../app/ui/mainwindow2.ui" line="351"/>
->>>>>>> upstream/master:translations/pencil_hu_HU.ts
         <source>Cut</source>
         <translation>Kivágás</translation>
     </message>
     <message>
-<<<<<<< HEAD:translations/Language.hu_HU.ts
         <location filename="../app/ui/mainwindow2.ui" line="333"/>
-=======
-        <location filename="../app/ui/mainwindow2.ui" line="360"/>
->>>>>>> upstream/master:translations/pencil_hu_HU.ts
         <source>Copy</source>
         <translation>Másolás</translation>
     </message>
     <message>
-<<<<<<< HEAD:translations/Language.hu_HU.ts
         <location filename="../app/ui/mainwindow2.ui" line="347"/>
-=======
-        <location filename="../app/ui/mainwindow2.ui" line="369"/>
-        <source>Paste</source>
-        <translation>Beillesztés</translation>
-    </message>
-    <message>
-        <location filename="../app/ui/mainwindow2.ui" line="374"/>
->>>>>>> upstream/master:translations/pencil_hu_HU.ts
         <source>Crop</source>
         <translation>Csonkítás</translation>
     </message>
     <message>
-<<<<<<< HEAD:translations/Language.hu_HU.ts
         <location filename="../app/ui/mainwindow2.ui" line="352"/>
-=======
-        <location filename="../app/ui/mainwindow2.ui" line="379"/>
->>>>>>> upstream/master:translations/pencil_hu_HU.ts
         <source>Crop To Selection</source>
         <translation>Csonkítás kijelölésre</translation>
     </message>
     <message>
-<<<<<<< HEAD:translations/Language.hu_HU.ts
         <location filename="../app/ui/mainwindow2.ui" line="357"/>
-=======
-        <location filename="../app/ui/mainwindow2.ui" line="384"/>
->>>>>>> upstream/master:translations/pencil_hu_HU.ts
         <source>Select All</source>
         <translation>Minden kijelölése</translation>
     </message>
     <message>
-<<<<<<< HEAD:translations/Language.hu_HU.ts
         <location filename="../app/ui/mainwindow2.ui" line="362"/>
-=======
-        <location filename="../app/ui/mainwindow2.ui" line="389"/>
->>>>>>> upstream/master:translations/pencil_hu_HU.ts
         <source>Deselect All</source>
         <translation>Kijelölés megszüntetése</translation>
     </message>
     <message>
-<<<<<<< HEAD:translations/Language.hu_HU.ts
         <location filename="../app/ui/mainwindow2.ui" line="371"/>
         <location filename="../app/ui/mainwindow2.ui" line="564"/>
-=======
-        <location filename="../app/ui/mainwindow2.ui" line="398"/>
-        <location filename="../app/ui/mainwindow2.ui" line="597"/>
->>>>>>> upstream/master:translations/pencil_hu_HU.ts
         <source>Clear Frame</source>
         <translation>Képkocka kiürítése</translation>
     </message>
     <message>
-<<<<<<< HEAD:translations/Language.hu_HU.ts
         <location filename="../app/ui/mainwindow2.ui" line="376"/>
-=======
-        <location filename="../app/ui/mainwindow2.ui" line="403"/>
->>>>>>> upstream/master:translations/pencil_hu_HU.ts
         <source>Preferences</source>
         <translation>Beállítások</translation>
     </message>
@@ -1907,43 +1563,26 @@ p, li { white-space: pre-wrap; }
         <translation>Függőleges tükrözés</translation>
     </message>
     <message>
-<<<<<<< HEAD:translations/Language.hu_HU.ts
         <location filename="../app/ui/mainwindow2.ui" line="437"/>
-=======
-        <location filename="../app/ui/mainwindow2.ui" line="470"/>
->>>>>>> upstream/master:translations/pencil_hu_HU.ts
         <source>Preview</source>
         <translation>Előnézet</translation>
     </message>
     <message>
-<<<<<<< HEAD:translations/Language.hu_HU.ts
         <location filename="../app/ui/mainwindow2.ui" line="445"/>
-=======
-        <location filename="../app/ui/mainwindow2.ui" line="478"/>
->>>>>>> upstream/master:translations/pencil_hu_HU.ts
         <source>Grid</source>
         <translation>Rács</translation>
     </message>
     <message>
-<<<<<<< HEAD:translations/Language.hu_HU.ts
         <location filename="../app/ui/mainwindow2.ui" line="457"/>
-=======
-        <location filename="../app/ui/mainwindow2.ui" line="490"/>
->>>>>>> upstream/master:translations/pencil_hu_HU.ts
         <source>Previous</source>
         <translation>Előző</translation>
     </message>
     <message>
-<<<<<<< HEAD:translations/Language.hu_HU.ts
         <location filename="../app/ui/mainwindow2.ui" line="460"/>
-=======
-        <location filename="../app/ui/mainwindow2.ui" line="493"/>
->>>>>>> upstream/master:translations/pencil_hu_HU.ts
         <source>Show previous onion skin</source>
         <translation>Előző képfólia megjelenítése</translation>
     </message>
     <message>
-<<<<<<< HEAD:translations/Language.hu_HU.ts
         <location filename="../app/ui/mainwindow2.ui" line="475"/>
         <source>Show next onion skin</source>
         <translation>Következő képfólia megjelenítése</translation>
@@ -1979,418 +1618,231 @@ p, li { white-space: pre-wrap; }
     </message>
     <message>
         <location filename="../app/ui/mainwindow2.ui" line="472"/>
-=======
-        <location filename="../app/ui/mainwindow2.ui" line="505"/>
->>>>>>> upstream/master:translations/pencil_hu_HU.ts
         <source>Next</source>
         <translation>Következő</translation>
     </message>
     <message>
-<<<<<<< HEAD:translations/Language.hu_HU.ts
         <location filename="../app/ui/mainwindow2.ui" line="484"/>
         <location filename="../app/mainwindow2.cpp" line="1100"/>
-=======
-        <location filename="../app/ui/mainwindow2.ui" line="508"/>
-        <source>Show next onion skin</source>
-        <translation>Következő képfólia megjelenítése</translation>
-    </message>
-    <message>
-        <location filename="../app/ui/mainwindow2.ui" line="517"/>
-        <location filename="../app/mainwindow2.cpp" line="1098"/>
->>>>>>> upstream/master:translations/pencil_hu_HU.ts
         <source>Play</source>
         <translation>Lejátszás</translation>
     </message>
     <message>
-<<<<<<< HEAD:translations/Language.hu_HU.ts
         <location filename="../app/ui/mainwindow2.ui" line="496"/>
-=======
-        <location filename="../app/ui/mainwindow2.ui" line="529"/>
->>>>>>> upstream/master:translations/pencil_hu_HU.ts
         <source>Loop</source>
         <translation>Ismétlés</translation>
     </message>
     <message>
-<<<<<<< HEAD:translations/Language.hu_HU.ts
         <location filename="../app/ui/mainwindow2.ui" line="505"/>
-=======
-        <location filename="../app/ui/mainwindow2.ui" line="538"/>
->>>>>>> upstream/master:translations/pencil_hu_HU.ts
         <source>Next Frame</source>
         <translation>Következő képkocka</translation>
     </message>
     <message>
-<<<<<<< HEAD:translations/Language.hu_HU.ts
         <location filename="../app/ui/mainwindow2.ui" line="514"/>
-=======
-        <location filename="../app/ui/mainwindow2.ui" line="547"/>
->>>>>>> upstream/master:translations/pencil_hu_HU.ts
         <source>Previous Frame</source>
         <translation>Előző képkocka</translation>
     </message>
     <message>
-<<<<<<< HEAD:translations/Language.hu_HU.ts
         <location filename="../app/ui/mainwindow2.ui" line="528"/>
-=======
-        <location filename="../app/ui/mainwindow2.ui" line="552"/>
-        <source>Extend Frame</source>
-        <translation>Képkocka kiterjesztése</translation>
-    </message>
-    <message>
-        <location filename="../app/ui/mainwindow2.ui" line="561"/>
->>>>>>> upstream/master:translations/pencil_hu_HU.ts
         <source>Add Frame</source>
         <translation>Képkocka hozzáadása</translation>
     </message>
     <message>
-<<<<<<< HEAD:translations/Language.hu_HU.ts
         <location filename="../app/ui/mainwindow2.ui" line="537"/>
-=======
-        <location filename="../app/ui/mainwindow2.ui" line="570"/>
->>>>>>> upstream/master:translations/pencil_hu_HU.ts
         <source>Duplicate Frame</source>
         <translation>Képkocka kétszerezése</translation>
     </message>
     <message>
-<<<<<<< HEAD:translations/Language.hu_HU.ts
         <location filename="../app/ui/mainwindow2.ui" line="546"/>
-=======
-        <location filename="../app/ui/mainwindow2.ui" line="579"/>
->>>>>>> upstream/master:translations/pencil_hu_HU.ts
         <source>Remove Frame</source>
         <translation>Képkocka eltávolítása</translation>
     </message>
     <message>
-<<<<<<< HEAD:translations/Language.hu_HU.ts
         <location filename="../app/ui/mainwindow2.ui" line="555"/>
-=======
-        <location filename="../app/ui/mainwindow2.ui" line="588"/>
->>>>>>> upstream/master:translations/pencil_hu_HU.ts
         <source>Move</source>
         <translation>Mozgatás</translation>
     </message>
     <message>
-<<<<<<< HEAD:translations/Language.hu_HU.ts
         <location filename="../app/ui/mainwindow2.ui" line="573"/>
-=======
-        <location filename="../app/ui/mainwindow2.ui" line="606"/>
->>>>>>> upstream/master:translations/pencil_hu_HU.ts
         <source>Select</source>
         <translation>Kijelölés</translation>
     </message>
     <message>
-<<<<<<< HEAD:translations/Language.hu_HU.ts
         <location filename="../app/ui/mainwindow2.ui" line="582"/>
-=======
-        <location filename="../app/ui/mainwindow2.ui" line="615"/>
->>>>>>> upstream/master:translations/pencil_hu_HU.ts
         <source>Brush</source>
         <translation>Ecset</translation>
     </message>
     <message>
-<<<<<<< HEAD:translations/Language.hu_HU.ts
         <location filename="../app/ui/mainwindow2.ui" line="591"/>
-=======
-        <location filename="../app/ui/mainwindow2.ui" line="624"/>
->>>>>>> upstream/master:translations/pencil_hu_HU.ts
         <source>Polyline</source>
         <translation>Vonallánc</translation>
     </message>
     <message>
-<<<<<<< HEAD:translations/Language.hu_HU.ts
         <location filename="../app/ui/mainwindow2.ui" line="600"/>
-=======
-        <location filename="../app/ui/mainwindow2.ui" line="633"/>
->>>>>>> upstream/master:translations/pencil_hu_HU.ts
         <source>Smudge</source>
         <translation>Maszatolás</translation>
     </message>
     <message>
-<<<<<<< HEAD:translations/Language.hu_HU.ts
         <location filename="../app/ui/mainwindow2.ui" line="609"/>
-=======
-        <location filename="../app/ui/mainwindow2.ui" line="642"/>
->>>>>>> upstream/master:translations/pencil_hu_HU.ts
         <source>Pen</source>
         <translation>Toll</translation>
     </message>
     <message>
-<<<<<<< HEAD:translations/Language.hu_HU.ts
         <location filename="../app/ui/mainwindow2.ui" line="618"/>
-=======
-        <location filename="../app/ui/mainwindow2.ui" line="651"/>
->>>>>>> upstream/master:translations/pencil_hu_HU.ts
         <source>Hand</source>
         <translation>Kéz</translation>
     </message>
     <message>
-<<<<<<< HEAD:translations/Language.hu_HU.ts
         <location filename="../app/ui/mainwindow2.ui" line="627"/>
-=======
-        <location filename="../app/ui/mainwindow2.ui" line="660"/>
->>>>>>> upstream/master:translations/pencil_hu_HU.ts
         <source>Pencil</source>
         <translation>Ceruza</translation>
     </message>
     <message>
-<<<<<<< HEAD:translations/Language.hu_HU.ts
         <location filename="../app/ui/mainwindow2.ui" line="636"/>
-=======
-        <location filename="../app/ui/mainwindow2.ui" line="669"/>
->>>>>>> upstream/master:translations/pencil_hu_HU.ts
         <source>Bucket</source>
         <translation>Vödör</translation>
     </message>
     <message>
-<<<<<<< HEAD:translations/Language.hu_HU.ts
         <location filename="../app/ui/mainwindow2.ui" line="645"/>
-=======
-        <location filename="../app/ui/mainwindow2.ui" line="678"/>
->>>>>>> upstream/master:translations/pencil_hu_HU.ts
         <source>Eyedropper</source>
         <translation>Szemcseppentő</translation>
     </message>
     <message>
-<<<<<<< HEAD:translations/Language.hu_HU.ts
         <location filename="../app/ui/mainwindow2.ui" line="654"/>
-=======
-        <location filename="../app/ui/mainwindow2.ui" line="687"/>
->>>>>>> upstream/master:translations/pencil_hu_HU.ts
         <source>Eraser</source>
         <translation>Radír</translation>
     </message>
     <message>
-<<<<<<< HEAD:translations/Language.hu_HU.ts
         <location filename="../app/ui/mainwindow2.ui" line="663"/>
-=======
-        <location filename="../app/ui/mainwindow2.ui" line="696"/>
->>>>>>> upstream/master:translations/pencil_hu_HU.ts
         <source>New Bitmap Layer</source>
         <translation>Új bitkép réteg</translation>
     </message>
     <message>
-<<<<<<< HEAD:translations/Language.hu_HU.ts
         <location filename="../app/ui/mainwindow2.ui" line="672"/>
-=======
-        <location filename="../app/ui/mainwindow2.ui" line="705"/>
->>>>>>> upstream/master:translations/pencil_hu_HU.ts
         <source>New Vector Layer</source>
         <translation>Új vektor réteg</translation>
     </message>
     <message>
-<<<<<<< HEAD:translations/Language.hu_HU.ts
         <location filename="../app/ui/mainwindow2.ui" line="681"/>
-=======
-        <location filename="../app/ui/mainwindow2.ui" line="714"/>
->>>>>>> upstream/master:translations/pencil_hu_HU.ts
         <source>New Sound Layer</source>
         <translation>Új hang réteg</translation>
     </message>
     <message>
-<<<<<<< HEAD:translations/Language.hu_HU.ts
         <location filename="../app/ui/mainwindow2.ui" line="690"/>
-=======
-        <location filename="../app/ui/mainwindow2.ui" line="723"/>
->>>>>>> upstream/master:translations/pencil_hu_HU.ts
         <source>New Camera Layer</source>
         <translation>Új kamera réteg</translation>
     </message>
     <message>
-<<<<<<< HEAD:translations/Language.hu_HU.ts
         <location filename="../app/ui/mainwindow2.ui" line="695"/>
-=======
-        <location filename="../app/ui/mainwindow2.ui" line="728"/>
->>>>>>> upstream/master:translations/pencil_hu_HU.ts
         <source>Delete Current Layer</source>
         <translation>Aktuális réteg törlése</translation>
     </message>
     <message>
-<<<<<<< HEAD:translations/Language.hu_HU.ts
         <location filename="../app/ui/mainwindow2.ui" line="705"/>
-=======
-        <location filename="../app/ui/mainwindow2.ui" line="738"/>
->>>>>>> upstream/master:translations/pencil_hu_HU.ts
         <source>About</source>
         <translation>Névjegy</translation>
     </message>
     <message>
-<<<<<<< HEAD:translations/Language.hu_HU.ts
         <source>Toggle palette</source>
         <translation type="vanished">Paletta be- és kikapcsolása</translation>
     </message>
     <message>
         <location filename="../app/ui/mainwindow2.ui" line="710"/>
         <location filename="../app/ui/mainwindow2.ui" line="713"/>
-=======
-        <location filename="../app/ui/mainwindow2.ui" line="743"/>
-        <location filename="../app/ui/mainwindow2.ui" line="746"/>
->>>>>>> upstream/master:translations/pencil_hu_HU.ts
         <source>Reset to default</source>
         <translation>Alapértékek visszaállítása</translation>
     </message>
     <message>
-        <location filename="../app/ui/mainwindow2.ui" line="783"/>
-        <source>MultiLayer Onion Skin</source>
-        <translation>Többrétegű képfóliák</translation>
+        <source>Next_KeyFrame</source>
+        <translation type="vanished">Next_KeyFrame</translation>
     </message>
     <message>
-<<<<<<< HEAD:translations/Language.hu_HU.ts
         <location filename="../app/ui/mainwindow2.ui" line="723"/>
         <location filename="../app/ui/mainwindow2.ui" line="726"/>
         <source>Next KeyFrame</source>
         <translation>Következő kulcsképkocka</translation>
-=======
-        <location filename="../app/ui/mainwindow2.ui" line="794"/>
-        <source>Range</source>
-        <translation>Tartomány</translation>
->>>>>>> upstream/master:translations/pencil_hu_HU.ts
     </message>
     <message>
-        <location filename="../app/ui/mainwindow2.ui" line="867"/>
-        <source>Pencil2D Website</source>
-        <translation type="unfinished"></translation>
+        <source>Prev_KeyFrame</source>
+        <translation type="vanished">Prev_KeyFrame</translation>
     </message>
     <message>
-<<<<<<< HEAD:translations/Language.hu_HU.ts
         <location filename="../app/ui/mainwindow2.ui" line="736"/>
         <location filename="../app/ui/mainwindow2.ui" line="739"/>
         <source>Previous KeyFrame</source>
         <translation>Előző kulcsképkocka</translation>
-=======
-        <location filename="../app/ui/mainwindow2.ui" line="872"/>
-        <source>Report a Bug</source>
-        <translation type="unfinished"></translation>
->>>>>>> upstream/master:translations/pencil_hu_HU.ts
     </message>
     <message>
-        <location filename="../app/ui/mainwindow2.ui" line="756"/>
-        <location filename="../app/ui/mainwindow2.ui" line="759"/>
-        <source>Next KeyFrame</source>
-        <translation>Következő kulcsképkocka</translation>
+        <source>MultiLayerOnionSkin</source>
+        <translation type="vanished">MultiLayerOnionSkin</translation>
     </message>
     <message>
-        <location filename="../app/ui/mainwindow2.ui" line="769"/>
-        <location filename="../app/ui/mainwindow2.ui" line="772"/>
-        <source>Previous KeyFrame</source>
-        <translation>Előző kulcsképkocka</translation>
+        <source>loopcontrol</source>
+        <translation type="vanished">loopcontrol</translation>
     </message>
     <message>
-<<<<<<< HEAD:translations/Language.hu_HU.ts
         <location filename="../app/ui/mainwindow2.ui" line="777"/>
-=======
-        <location filename="../app/ui/mainwindow2.ui" line="810"/>
->>>>>>> upstream/master:translations/pencil_hu_HU.ts
         <source>Timeline</source>
         <translation>Idővonal</translation>
     </message>
     <message>
-<<<<<<< HEAD:translations/Language.hu_HU.ts
         <location filename="../app/ui/mainwindow2.ui" line="785"/>
-=======
-        <location filename="../app/ui/mainwindow2.ui" line="818"/>
->>>>>>> upstream/master:translations/pencil_hu_HU.ts
         <source>Options</source>
         <translation>Beállítások</translation>
     </message>
     <message>
-<<<<<<< HEAD:translations/Language.hu_HU.ts
         <location filename="../app/ui/mainwindow2.ui" line="793"/>
-=======
-        <location filename="../app/ui/mainwindow2.ui" line="826"/>
->>>>>>> upstream/master:translations/pencil_hu_HU.ts
         <source>Color Wheel</source>
         <translation>Színkerék</translation>
     </message>
     <message>
-<<<<<<< HEAD:translations/Language.hu_HU.ts
         <location filename="../app/ui/mainwindow2.ui" line="809"/>
-=======
-        <location filename="../app/ui/mainwindow2.ui" line="834"/>
-        <source>Color Palette</source>
-        <translation>Színpaletta</translation>
-    </message>
-    <message>
-        <location filename="../app/ui/mainwindow2.ui" line="842"/>
->>>>>>> upstream/master:translations/pencil_hu_HU.ts
         <source>Display Options</source>
         <translation>Megjelenítés beállításai</translation>
     </message>
     <message>
-<<<<<<< HEAD:translations/Language.hu_HU.ts
         <location filename="../app/ui/mainwindow2.ui" line="814"/>
-=======
-        <location filename="../app/ui/mainwindow2.ui" line="847"/>
->>>>>>> upstream/master:translations/pencil_hu_HU.ts
         <source>Flip X</source>
         <translation>X tükrözés</translation>
     </message>
     <message>
-<<<<<<< HEAD:translations/Language.hu_HU.ts
         <location filename="../app/ui/mainwindow2.ui" line="819"/>
-=======
-        <location filename="../app/ui/mainwindow2.ui" line="852"/>
->>>>>>> upstream/master:translations/pencil_hu_HU.ts
         <source>Flip Y</source>
         <translation>Y tükrözés</translation>
     </message>
     <message>
-<<<<<<< HEAD:translations/Language.hu_HU.ts
         <location filename="../app/ui/mainwindow2.ui" line="824"/>
-=======
-        <location filename="../app/ui/mainwindow2.ui" line="857"/>
->>>>>>> upstream/master:translations/pencil_hu_HU.ts
         <source>Move Frame Forward</source>
         <translation>Képkocka mozgatása előre</translation>
     </message>
     <message>
-<<<<<<< HEAD:translations/Language.hu_HU.ts
         <location filename="../app/ui/mainwindow2.ui" line="829"/>
-=======
-        <location filename="../app/ui/mainwindow2.ui" line="862"/>
->>>>>>> upstream/master:translations/pencil_hu_HU.ts
         <source>Move Frame Backward</source>
         <translation>Képkocka mozgatása hátra</translation>
     </message>
     <message>
-<<<<<<< HEAD:translations/Language.hu_HU.ts
         <location filename="../app/mainwindow2.cpp" line="159"/>
-=======
-        <location filename="../app/mainwindow2.cpp" line="140"/>
->>>>>>> upstream/master:translations/pencil_hu_HU.ts
         <source>color palette:&lt;br&gt;use &lt;b&gt;(C)&lt;/b&gt;&lt;br&gt;toggle at cursor</source>
         <translation>Színpaletta:&lt;br&gt;&lt;b&gt;(C)&lt;/b&gt;lenyomásával&lt;br&gt;átváltás a kurzornál</translation>
     </message>
     <message>
-<<<<<<< HEAD:translations/Language.hu_HU.ts
         <location filename="../app/mainwindow2.cpp" line="361"/>
-=======
-        <location filename="../app/mainwindow2.cpp" line="336"/>
->>>>>>> upstream/master:translations/pencil_hu_HU.ts
         <source>Lock Windows</source>
         <translation>Ablakok zárolása</translation>
     </message>
     <message>
-<<<<<<< HEAD:translations/Language.hu_HU.ts
         <location filename="../app/mainwindow2.cpp" line="374"/>
-=======
-        <location filename="../app/mainwindow2.cpp" line="349"/>
->>>>>>> upstream/master:translations/pencil_hu_HU.ts
         <source>Open Recent</source>
         <translation>Legutóbbi megnyitása</translation>
     </message>
     <message>
-<<<<<<< HEAD:translations/Language.hu_HU.ts
         <location filename="../app/mainwindow2.cpp" line="408"/>
-=======
-        <location filename="../app/mainwindow2.cpp" line="383"/>
->>>>>>> upstream/master:translations/pencil_hu_HU.ts
         <source>
 
  You have successfully cleared the list</source>
         <translation>A lista sikeresen ki lett ürítve</translation>
     </message>
     <message>
-<<<<<<< HEAD:translations/Language.hu_HU.ts
         <location filename="../app/mainwindow2.cpp" line="596"/>
         <source>&lt;br&gt;&lt;br&gt;An error has occurred and your file may not have saved successfully.If you believe that this error is an issue with Pencil2D, please create a new issue at:&lt;br&gt;&lt;a href=&apos;https://github.com/pencil2d/pencil/issues&apos;&gt;https://github.com/pencil2d/pencil/issues&lt;/a&gt;&lt;br&gt;Please be sure to include the following details in your issue:</source>
         <translation>&lt;br&gt;&lt;br&gt;Hiba történt, ami miatt valószínűleg a fájl mentése sem sikerült. Ha úgy gondolja, hogy az esemény a Pencil2D programban található hibára vezethető vissza, kérjük jelentse a következő helyen:&lt;br&gt;&lt;a href=&apos;https://github.com/pencil2d/pencil/issues&apos;&gt;https://github.com/pencil2d/pencil/issues&lt;/a&gt;&lt;br&gt;Mindenképpen mellékelje az alábbi részleteket is a bejelentéshez:</translation>
@@ -2416,77 +1868,47 @@ p, li { white-space: pre-wrap; }
         <location filename="../app/mainwindow2.cpp" line="507"/>
         <location filename="../app/mainwindow2.cpp" line="631"/>
         <location filename="../app/mainwindow2.cpp" line="687"/>
-=======
-        <location filename="../app/mainwindow2.cpp" line="454"/>
-        <location filename="../app/mainwindow2.cpp" line="482"/>
-        <location filename="../app/mainwindow2.cpp" line="629"/>
-        <location filename="../app/mainwindow2.cpp" line="685"/>
->>>>>>> upstream/master:translations/pencil_hu_HU.ts
         <source>Warning</source>
         <translation>Figyelmeztetés</translation>
     </message>
     <message>
-<<<<<<< HEAD:translations/Language.hu_HU.ts
         <location filename="../app/mainwindow2.cpp" line="479"/>
         <location filename="../app/mainwindow2.cpp" line="507"/>
-=======
-        <location filename="../app/mainwindow2.cpp" line="454"/>
-        <location filename="../app/mainwindow2.cpp" line="482"/>
->>>>>>> upstream/master:translations/pencil_hu_HU.ts
         <source>Pencil cannot read this file. If you want to import images, use the command import.</source>
         <translation>A Pencil nem tudja olvasni ezt a fájlt. Képek beemeléséhez az &quot;Importálás&quot; művelet használható.</translation>
     </message>
     <message>
-<<<<<<< HEAD:translations/Language.hu_HU.ts
         <source>Save As...</source>
         <translation type="vanished">Mentés másként...</translation>
     </message>
     <message>
         <location filename="../app/mainwindow2.cpp" line="514"/>
-=======
-        <location filename="../app/mainwindow2.cpp" line="489"/>
->>>>>>> upstream/master:translations/pencil_hu_HU.ts
         <source>Opening document...</source>
         <translation>Dokumentum megnyitása...</translation>
     </message>
     <message>
-<<<<<<< HEAD:translations/Language.hu_HU.ts
         <location filename="../app/mainwindow2.cpp" line="514"/>
         <location filename="../app/mainwindow2.cpp" line="566"/>
-=======
-        <location filename="../app/mainwindow2.cpp" line="489"/>
-        <location filename="../app/mainwindow2.cpp" line="551"/>
->>>>>>> upstream/master:translations/pencil_hu_HU.ts
         <source>Abort</source>
         <translation>Névjegy</translation>
     </message>
     <message>
-<<<<<<< HEAD:translations/Language.hu_HU.ts
         <location filename="../app/mainwindow2.cpp" line="566"/>
-=======
-        <location filename="../app/mainwindow2.cpp" line="551"/>
->>>>>>> upstream/master:translations/pencil_hu_HU.ts
         <source>Saving document...</source>
         <translation>Dokumentum mentése...</translation>
     </message>
     <message>
-        <location filename="../app/mainwindow2.cpp" line="592"/>
-        <source>&lt;br&gt;&lt;br&gt;An error has occurred and your file may not have saved successfully.If you believe that this error is an issue with Pencil2D, please create a new issue at:&lt;br&gt;&lt;a href=&apos;https://github.com/pencil2d/pencil/issues&apos;&gt;https://github.com/pencil2d/pencil/issues&lt;/a&gt;&lt;br&gt;Please be sure to include the following details in your issue:</source>
-        <translation type="unfinished"></translation>
+        <source>&lt;br&gt;&lt;br&gt;An error has occurred and your file may not have saved successfully. If you believe that this error is an issue with Pencil2D, please create a new issue at:&lt;br&gt;&lt;a href=&apos;https://github.com/pencil2d/pencil/issues&apos;&gt;https://github.com/pencil2d/pencil/issues&lt;/a&gt;&lt;br&gt;Please be sure to include the following details in your issue:</source>
+        <translation type="vanished">&lt;br&gt;&lt;br&gt;Hiba történt, ami miatt valószínűleg a fájl mentése sem sikerült. Ha úgy gondolja, hogy az esemény a Pencil2D programban található hibára vezethető vissza, kérjük jelentse a következő helyen:&lt;br&gt;&lt;a href=&apos;https://github.com/pencil2d/pencil/issues&apos;&gt;https://github.com/pencil2d/pencil/issues&lt;/a&gt;&lt;br&gt;Mindenképpen mellékelje az alábbi részleteket is a bejelentéshez:</translation>
     </message>
     <message>
-<<<<<<< HEAD:translations/Language.hu_HU.ts
         <location filename="../app/mainwindow2.cpp" line="632"/>
-=======
-        <location filename="../app/mainwindow2.cpp" line="630"/>
->>>>>>> upstream/master:translations/pencil_hu_HU.ts
         <source>This animation has been modified.
  Do you want to save your changes?</source>
         <translation>Ez az animáció meg lett változtatva.
  Szeretné menteni a változásokat?</translation>
     </message>
     <message>
-<<<<<<< HEAD:translations/Language.hu_HU.ts
         <source>Import image...</source>
         <translation type="vanished">Kép importálása...</translation>
     </message>
@@ -2514,44 +1936,26 @@ p, li { white-space: pre-wrap; }
     <message>
         <source>Exporting image sequence...</source>
         <translation type="vanished">Képsorozat exportálása...</translation>
-=======
-        <location filename="../app/mainwindow2.cpp" line="655"/>
-        <source>The animation is not saved yet.
- Do you want to save now?</source>
-        <translation type="unfinished"></translation>
->>>>>>> upstream/master:translations/pencil_hu_HU.ts
     </message>
     <message>
-        <location filename="../app/mainwindow2.cpp" line="656"/>
-        <source>Never ask again</source>
-        <comment>AutoSave reminder button</comment>
-        <translation type="unfinished"></translation>
+        <source>Save Image</source>
+        <translation type="vanished">Kép mentése</translation>
     </message>
     <message>
-        <location filename="../app/mainwindow2.cpp" line="686"/>
-        <source>Unable to import image.&lt;br&gt;&lt;b&gt;TIP:&lt;/b&gt; Use Bitmap layer to import bitmaps.</source>
-        <translation>A kép nem importálható.&lt;br&gt;&lt;b&gt;TIPP:&lt;/b&gt; Képek importálásához bitkép réteget kell használni.</translation>
+        <source>Unable to export image.</source>
+        <translation type="vanished">A kép nem exportálható.</translation>
     </message>
     <message>
-<<<<<<< HEAD:translations/Language.hu_HU.ts
         <location filename="../app/mainwindow2.cpp" line="937"/>
-=======
-        <location filename="../app/mainwindow2.cpp" line="935"/>
->>>>>>> upstream/master:translations/pencil_hu_HU.ts
         <source>Undo   %1 %2</source>
         <translation>Visszavonás (%1):   %2</translation>
     </message>
     <message>
-<<<<<<< HEAD:translations/Language.hu_HU.ts
         <location filename="../app/mainwindow2.cpp" line="945"/>
-=======
-        <location filename="../app/mainwindow2.cpp" line="943"/>
->>>>>>> upstream/master:translations/pencil_hu_HU.ts
         <source>Redo   %1 %2</source>
         <translation>Újra (%1):   %2</translation>
     </message>
     <message>
-<<<<<<< HEAD:translations/Language.hu_HU.ts
         <source>Undo   </source>
         <translation type="vanished">Visszavonás:   </translation>
     </message>
@@ -2565,31 +1969,25 @@ p, li { white-space: pre-wrap; }
     </message>
     <message>
         <location filename="../app/mainwindow2.cpp" line="1095"/>
-=======
-        <location filename="../app/mainwindow2.cpp" line="1093"/>
->>>>>>> upstream/master:translations/pencil_hu_HU.ts
         <source>Stop</source>
         <translation>Megállítás</translation>
     </message>
 </context>
 <context>
+    <name>MoveTool</name>
+    <message>
+        <source>Move</source>
+        <translation type="vanished">Mozgatás</translation>
+    </message>
+</context>
+<context>
     <name>Object</name>
     <message>
-        <location filename="../core_lib/structure/object.cpp" line="394"/>
-        <source>Black</source>
-        <translation>Fekete</translation>
-    </message>
-    <message>
-<<<<<<< HEAD:translations/Language.hu_HU.ts
         <location filename="../core_lib/structure/object.cpp" line="420"/>
-=======
-        <location filename="../core_lib/structure/object.cpp" line="395"/>
->>>>>>> upstream/master:translations/pencil_hu_HU.ts
         <source>Red</source>
         <translation>Piros</translation>
     </message>
     <message>
-<<<<<<< HEAD:translations/Language.hu_HU.ts
         <location filename="../core_lib/structure/object.cpp" line="426"/>
         <source>Green</source>
         <translation>Zöld</translation>
@@ -2606,190 +2004,101 @@ p, li { white-space: pre-wrap; }
     </message>
     <message>
         <location filename="../core_lib/structure/object.cpp" line="421"/>
-=======
-        <location filename="../core_lib/structure/object.cpp" line="396"/>
->>>>>>> upstream/master:translations/pencil_hu_HU.ts
         <source>Dark Red</source>
         <translation>Sötét vörös</translation>
     </message>
     <message>
-<<<<<<< HEAD:translations/Language.hu_HU.ts
         <location filename="../core_lib/structure/object.cpp" line="422"/>
-=======
-        <location filename="../core_lib/structure/object.cpp" line="397"/>
->>>>>>> upstream/master:translations/pencil_hu_HU.ts
         <source>Orange</source>
         <translation>Narancs</translation>
     </message>
     <message>
-<<<<<<< HEAD:translations/Language.hu_HU.ts
         <location filename="../core_lib/structure/object.cpp" line="423"/>
-=======
-        <location filename="../core_lib/structure/object.cpp" line="398"/>
->>>>>>> upstream/master:translations/pencil_hu_HU.ts
         <source>Dark Orange</source>
         <translation>Sötét narancs</translation>
     </message>
     <message>
-<<<<<<< HEAD:translations/Language.hu_HU.ts
         <location filename="../core_lib/structure/object.cpp" line="424"/>
-=======
-        <location filename="../core_lib/structure/object.cpp" line="399"/>
->>>>>>> upstream/master:translations/pencil_hu_HU.ts
         <source>Yellow</source>
         <translation>Sárga</translation>
     </message>
     <message>
-<<<<<<< HEAD:translations/Language.hu_HU.ts
         <location filename="../core_lib/structure/object.cpp" line="425"/>
-=======
-        <location filename="../core_lib/structure/object.cpp" line="400"/>
->>>>>>> upstream/master:translations/pencil_hu_HU.ts
         <source>Dark Yellow</source>
         <translation>Sötét sárga</translation>
     </message>
     <message>
-<<<<<<< HEAD:translations/Language.hu_HU.ts
         <location filename="../core_lib/structure/object.cpp" line="427"/>
-=======
-        <location filename="../core_lib/structure/object.cpp" line="401"/>
-        <source>Green</source>
-        <translation>Zöld</translation>
-    </message>
-    <message>
-        <location filename="../core_lib/structure/object.cpp" line="402"/>
->>>>>>> upstream/master:translations/pencil_hu_HU.ts
         <source>Dark Green</source>
         <translation>Sötét zöld</translation>
     </message>
     <message>
-<<<<<<< HEAD:translations/Language.hu_HU.ts
         <location filename="../core_lib/structure/object.cpp" line="428"/>
-=======
-        <location filename="../core_lib/structure/object.cpp" line="403"/>
->>>>>>> upstream/master:translations/pencil_hu_HU.ts
         <source>Cyan</source>
         <translation>Cián</translation>
     </message>
     <message>
-<<<<<<< HEAD:translations/Language.hu_HU.ts
         <location filename="../core_lib/structure/object.cpp" line="429"/>
-=======
-        <location filename="../core_lib/structure/object.cpp" line="404"/>
->>>>>>> upstream/master:translations/pencil_hu_HU.ts
         <source>Dark Cyan</source>
         <translation>Sötét cián</translation>
     </message>
     <message>
-<<<<<<< HEAD:translations/Language.hu_HU.ts
         <location filename="../core_lib/structure/object.cpp" line="431"/>
-=======
-        <location filename="../core_lib/structure/object.cpp" line="405"/>
-        <source>Blue</source>
-        <translation>Kék</translation>
-    </message>
-    <message>
-        <location filename="../core_lib/structure/object.cpp" line="406"/>
->>>>>>> upstream/master:translations/pencil_hu_HU.ts
         <source>Dark Blue</source>
         <translation>Sötét kék</translation>
     </message>
     <message>
-<<<<<<< HEAD:translations/Language.hu_HU.ts
         <location filename="../core_lib/structure/object.cpp" line="432"/>
-=======
-        <location filename="../core_lib/structure/object.cpp" line="407"/>
->>>>>>> upstream/master:translations/pencil_hu_HU.ts
         <source>White</source>
         <translation>Fehér</translation>
     </message>
     <message>
-<<<<<<< HEAD:translations/Language.hu_HU.ts
         <location filename="../core_lib/structure/object.cpp" line="433"/>
-=======
-        <location filename="../core_lib/structure/object.cpp" line="408"/>
->>>>>>> upstream/master:translations/pencil_hu_HU.ts
         <source>Very Light Grey</source>
         <translation>Halvány szürke</translation>
     </message>
     <message>
-<<<<<<< HEAD:translations/Language.hu_HU.ts
         <location filename="../core_lib/structure/object.cpp" line="434"/>
-=======
-        <location filename="../core_lib/structure/object.cpp" line="409"/>
->>>>>>> upstream/master:translations/pencil_hu_HU.ts
         <source>Light Grey</source>
         <translation>Világos szürke</translation>
     </message>
     <message>
-<<<<<<< HEAD:translations/Language.hu_HU.ts
         <location filename="../core_lib/structure/object.cpp" line="435"/>
-=======
-        <location filename="../core_lib/structure/object.cpp" line="410"/>
->>>>>>> upstream/master:translations/pencil_hu_HU.ts
         <source>Grey</source>
         <translation>Szürke</translation>
     </message>
     <message>
-<<<<<<< HEAD:translations/Language.hu_HU.ts
         <location filename="../core_lib/structure/object.cpp" line="436"/>
-=======
-        <location filename="../core_lib/structure/object.cpp" line="411"/>
->>>>>>> upstream/master:translations/pencil_hu_HU.ts
         <source>Dark Grey</source>
         <translation>Sötét szürke</translation>
     </message>
     <message>
-<<<<<<< HEAD:translations/Language.hu_HU.ts
         <location filename="../core_lib/structure/object.cpp" line="437"/>
-=======
-        <location filename="../core_lib/structure/object.cpp" line="412"/>
->>>>>>> upstream/master:translations/pencil_hu_HU.ts
         <source>Light Skin</source>
         <translation>Világos bőr</translation>
     </message>
     <message>
-<<<<<<< HEAD:translations/Language.hu_HU.ts
         <location filename="../core_lib/structure/object.cpp" line="438"/>
-=======
-        <location filename="../core_lib/structure/object.cpp" line="413"/>
->>>>>>> upstream/master:translations/pencil_hu_HU.ts
         <source>Light Skin - shade</source>
         <translation>Világos bőr - árnyék</translation>
     </message>
     <message>
-<<<<<<< HEAD:translations/Language.hu_HU.ts
         <location filename="../core_lib/structure/object.cpp" line="439"/>
-=======
-        <location filename="../core_lib/structure/object.cpp" line="414"/>
->>>>>>> upstream/master:translations/pencil_hu_HU.ts
         <source>Skin</source>
         <translation>Bőr</translation>
     </message>
     <message>
-<<<<<<< HEAD:translations/Language.hu_HU.ts
         <location filename="../core_lib/structure/object.cpp" line="440"/>
-=======
-        <location filename="../core_lib/structure/object.cpp" line="415"/>
->>>>>>> upstream/master:translations/pencil_hu_HU.ts
         <source>Skin - shade</source>
         <translation>Bőr - árnyék</translation>
     </message>
     <message>
-<<<<<<< HEAD:translations/Language.hu_HU.ts
         <location filename="../core_lib/structure/object.cpp" line="441"/>
-=======
-        <location filename="../core_lib/structure/object.cpp" line="416"/>
->>>>>>> upstream/master:translations/pencil_hu_HU.ts
         <source>Dark Skin</source>
         <translation>Sötét bőr</translation>
     </message>
     <message>
-<<<<<<< HEAD:translations/Language.hu_HU.ts
         <location filename="../core_lib/structure/object.cpp" line="442"/>
-=======
-        <location filename="../core_lib/structure/object.cpp" line="417"/>
->>>>>>> upstream/master:translations/pencil_hu_HU.ts
         <source>Dark Skin - shade</source>
         <translation>Sötét bőr - árnyék</translation>
     </message>
@@ -2807,29 +2116,18 @@ p, li { white-space: pre-wrap; }
         <translation>A bemeneti &quot;pencil&quot; fájl útvonala.</translation>
     </message>
     <message>
-<<<<<<< HEAD:translations/Language.hu_HU.ts
         <location filename="../app/main.cpp" line="75"/>
         <location filename="../app/main.cpp" line="81"/>
-=======
-        <location filename="../app/main.cpp" line="76"/>
-        <location filename="../app/main.cpp" line="82"/>
->>>>>>> upstream/master:translations/pencil_hu_HU.ts
         <source>Render the file to &lt;output_path&gt;</source>
         <translation>Fájl leképezése ide: &lt;kimeneti_útvonal&gt;</translation>
     </message>
     <message>
-<<<<<<< HEAD:translations/Language.hu_HU.ts
         <location filename="../app/main.cpp" line="76"/>
         <location filename="../app/main.cpp" line="82"/>
-=======
-        <location filename="../app/main.cpp" line="77"/>
-        <location filename="../app/main.cpp" line="83"/>
->>>>>>> upstream/master:translations/pencil_hu_HU.ts
         <source>output_path</source>
         <translation>kimeneti_útvonal</translation>
     </message>
     <message>
-<<<<<<< HEAD:translations/Language.hu_HU.ts
         <location filename="../app/main.cpp" line="89"/>
         <source>Name of the camera layer to use</source>
         <translation>A használni kívánt kamera réteg neve</translation>
@@ -2841,44 +2139,21 @@ p, li { white-space: pre-wrap; }
     </message>
     <message>
         <location filename="../app/main.cpp" line="94"/>
-=======
-        <location filename="../app/main.cpp" line="90"/>
-        <source>Name of the camera layer to use</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../app/main.cpp" line="91"/>
-        <source>layer_name</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../app/main.cpp" line="95"/>
->>>>>>> upstream/master:translations/pencil_hu_HU.ts
         <source>Width of the output frames</source>
         <translation>A kimeneti képkockák szélessége</translation>
     </message>
     <message>
-<<<<<<< HEAD:translations/Language.hu_HU.ts
         <location filename="../app/main.cpp" line="95"/>
         <location filename="../app/main.cpp" line="100"/>
-=======
-        <location filename="../app/main.cpp" line="96"/>
-        <location filename="../app/main.cpp" line="101"/>
->>>>>>> upstream/master:translations/pencil_hu_HU.ts
         <source>integer</source>
         <translation>egész szám</translation>
     </message>
     <message>
-<<<<<<< HEAD:translations/Language.hu_HU.ts
         <location filename="../app/main.cpp" line="99"/>
-=======
-        <location filename="../app/main.cpp" line="100"/>
->>>>>>> upstream/master:translations/pencil_hu_HU.ts
         <source>Height of the output frames</source>
         <translation>A kimeneti képkockák magassága</translation>
     </message>
     <message>
-<<<<<<< HEAD:translations/Language.hu_HU.ts
         <location filename="../app/main.cpp" line="104"/>
         <source>The first frame you want to include in the exported movie</source>
         <translation>Az első képkocka, amelynek már az exportált videóba kell kerülni</translation>
@@ -2896,48 +2171,20 @@ p, li { white-space: pre-wrap; }
     </message>
     <message>
         <location filename="../app/main.cpp" line="116"/>
-=======
-        <location filename="../app/main.cpp" line="105"/>
-        <source>The first frame you want to include in the exported movie</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../app/main.cpp" line="106"/>
-        <location filename="../app/main.cpp" line="113"/>
-        <source>frame</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../app/main.cpp" line="110"/>
-        <source>The last frame you want to include in the exported movie. Can also be last or last-sound to automatically use the last frame containing animation or sound, respectively</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../app/main.cpp" line="117"/>
->>>>>>> upstream/master:translations/pencil_hu_HU.ts
         <source>Render transparency when possible</source>
         <translation>Átlátszóság leképezése amikor lehetséges</translation>
     </message>
     <message>
-<<<<<<< HEAD:translations/Language.hu_HU.ts
         <location filename="../app/main.cpp" line="135"/>
-=======
-        <location filename="../app/main.cpp" line="136"/>
->>>>>>> upstream/master:translations/pencil_hu_HU.ts
         <source>Warning: width value %1 is not an integer, ignoring.</source>
         <translation>Figyelmeztetés: a szélesség értéke (%1) nem egész szám, ezért figyelmen kívül lesz hagyva.</translation>
     </message>
     <message>
-<<<<<<< HEAD:translations/Language.hu_HU.ts
         <location filename="../app/main.cpp" line="145"/>
-=======
-        <location filename="../app/main.cpp" line="146"/>
->>>>>>> upstream/master:translations/pencil_hu_HU.ts
         <source>Warning: height value %1 is not an integer, ignoring.</source>
         <translation>Figyelmeztetés: a magasság értéke (%1) nem egész szám, ezért figyelmen kívül lesz hagyva.</translation>
     </message>
     <message>
-<<<<<<< HEAD:translations/Language.hu_HU.ts
         <location filename="../app/main.cpp" line="155"/>
         <source>Warning: start value %1 is not an integer, ignoring.</source>
         <translation>Figyelmeztetés: a kezdés értéke (%1) nem egész szám, ezért figyelmen kívül lesz hagyva.</translation>
@@ -3002,144 +2249,60 @@ p, li { white-space: pre-wrap; }
         <location filename="../app/main.cpp" line="296"/>
         <source>Done.</source>
         <translation>Kész.</translation>
-=======
-        <location filename="../app/main.cpp" line="156"/>
-        <source>Warning: start value %1 is not an integer, ignoring.</source>
-        <translation type="unfinished"></translation>
+    </message>
+</context>
+<context>
+    <name>PolylineTool</name>
+    <message>
+        <source>Line</source>
+        <translation type="vanished">Vonal</translation>
     </message>
     <message>
-        <location filename="../app/main.cpp" line="161"/>
-        <source>Warning: start value must be at least 1, ignoring.</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../app/main.cpp" line="181"/>
-        <source>Warning: end value %1 is not an integer, last or last-sound, ignoring.</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../app/main.cpp" line="187"/>
-        <source>Warning: end value %1 is smaller than start value %2, ignoring.</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../app/main.cpp" line="198"/>
-        <source>Error: No input file specified.</source>
-        <translation>Hiba: Nincs bemeneti fájl megadva.</translation>
-    </message>
-    <message>
-        <location filename="../app/main.cpp" line="238"/>
-        <source>Warning: the specified camera layer %1 was not found, ignoring.</source>
-        <translation type="unfinished"></translation>
->>>>>>> upstream/master:translations/pencil_hu_HU.ts
-    </message>
-    <message>
-        <location filename="../app/main.cpp" line="288"/>
-        <source>Warning: Transparency is not currenty supported in movie files</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../app/main.cpp" line="290"/>
-        <source>Exporting movie...</source>
-        <translation type="unfinished">Videó exportálása...</translation>
-    </message>
-    <message>
-        <location filename="../app/main.cpp" line="295"/>
-        <source>Exporting image sequence...</source>
-        <translation>Képsorozat exportálása...</translation>
-    </message>
-    <message>
-        <location filename="../app/main.cpp" line="205"/>
-        <source>Error: the input file at &apos;%1&apos; does not exist</source>
-        <translation>Hiba: a bemeneti fájl &apos;%1&apos; nem létezik</translation>
-    </message>
-    <message>
-        <location filename="../app/main.cpp" line="210"/>
-        <source>Error: the input path &apos;%1&apos; is not a file</source>
-        <translation>Hiba: a bemeneti útvonal &apos;%1&apos; nem egy fájl</translation>
-    </message>
-    <message>
-        <location filename="../app/main.cpp" line="268"/>
-        <source>Warning: Output format is not specified or unsupported. Using PNG.</source>
-        <translation>Figyelmeztetés: a kimeneti formátum nincs megadva vagy nincs támogatva. PNG lesz használva.</translation>
-    </message>
-    <message>
-        <location filename="../app/main.cpp" line="292"/>
-        <location filename="../app/main.cpp" line="297"/>
-        <source>Done.</source>
-        <translation>Kész.</translation>
+        <source>Polyline</source>
+        <translation type="vanished">Vonallánc</translation>
     </message>
 </context>
 <context>
     <name>PreferencesDialog</name>
     <message>
-        <location filename="../app/ui/preferencesdialog.ui" line="20"/>
-        <source>Preferences</source>
-        <translation>Beállítások</translation>
-    </message>
-    <message>
-        <source>Close</source>
-        <comment>Close button of preference dialog.</comment>
-        <translation type="vanished">Bezárás</translation>
-    </message>
-    <message>
-        <location filename="../app/ui/preferencesdialog.ui" line="65"/>
-        <source>General</source>
-        <translation>Általános</translation>
-    </message>
-    <message>
-        <location filename="../app/ui/preferencesdialog.ui" line="80"/>
-        <source>Files</source>
-        <translation>Fájlok</translation>
-    </message>
-    <message>
-        <location filename="../app/ui/preferencesdialog.ui" line="95"/>
-        <source>Timeline</source>
-        <translation>Idővonal</translation>
-    </message>
-    <message>
-        <location filename="../app/ui/preferencesdialog.ui" line="110"/>
+        <location filename="../app/preferencesdialog.cpp" line="120"/>
         <source>Tools</source>
         <translation>Eszközök</translation>
     </message>
     <message>
-        <location filename="../app/ui/preferencesdialog.ui" line="125"/>
+        <location filename="../app/preferencesdialog.cpp" line="23"/>
+        <source>Preferences</source>
+        <translation>Beállítások</translation>
+    </message>
+    <message>
+        <source>Grid</source>
+        <translation type="vanished">Rács</translation>
+    </message>
+    <message>
+        <location filename="../app/preferencesdialog.cpp" line="114"/>
+        <source>Timeline</source>
+        <translation>Idővonal</translation>
+    </message>
+    <message>
+        <location filename="../app/preferencesdialog.cpp" line="76"/>
+        <source>Close</source>
+        <comment>Close button of preference dialog.</comment>
+        <translation>Bezárás</translation>
+    </message>
+    <message>
+        <location filename="../app/preferencesdialog.cpp" line="102"/>
+        <source>General</source>
+        <translation>Általános</translation>
+    </message>
+    <message>
+        <location filename="../app/preferencesdialog.cpp" line="108"/>
+        <source>Files</source>
+        <translation>Fájlok</translation>
+    </message>
+    <message>
+        <location filename="../app/preferencesdialog.cpp" line="126"/>
         <source>Shortcuts</source>
         <translation>Billentyűparancsok</translation>
-    </message>
-</context>
-<context>
-    <name>QApplication</name>
-    <message>
-        <location filename="../core_lib/movieexporter.cpp" line="140"/>
-        <source>Checking environment...</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../core_lib/movieexporter.cpp" line="175"/>
-        <source>Assembling audio...</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../core_lib/movieexporter.cpp" line="182"/>
-        <source>Generating frames...</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../core_lib/movieexporter.cpp" line="192"/>
-        <source>Generating palette...</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../core_lib/movieexporter.cpp" line="197"/>
-        <location filename="../core_lib/movieexporter.cpp" line="204"/>
-        <source>Combining...</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../core_lib/movieexporter.cpp" line="211"/>
-        <source>Done</source>
-        <translation type="unfinished"></translation>
     </message>
 </context>
 <context>
@@ -3153,6 +2316,10 @@ p, li { white-space: pre-wrap; }
         <location filename="../core_lib/util/pencildef.h" line="25"/>
         <source>Images (*.png *.jpg *.jpeg *.tiff *.tif *.bmp *.gif);;PNG (*.png);;JPG(*.jpg *.jpeg);;TIFF(*.tif *.tiff);;BMP(*.bmp);;GIF(*.gif)</source>
         <translation>Képek (*.png *.jpg *.jpeg *.tiff *.tif *.bmp *.gif);;PNG (*.png);;JPG(*.jpg *.jpeg);;TIFF(*.tif *.tiff);;BMP(*.bmp);;GIF(*.gif)</translation>
+    </message>
+    <message>
+        <source>PNG (*.png);;JPG(*.jpg *.jpeg);;TIFF(*.tiff);;TIF(*.tif);;BMP(*.bmp);;GIF(*.gif)</source>
+        <translation type="vanished">PNG (*.png);;JPG(*.jpg *.jpeg);;TIFF(*.tiff);;TIF(*.tif);;BMP(*.bmp);;GIF(*.gif)</translation>
     </message>
     <message>
         <location filename="../core_lib/util/pencilerror.cpp" line="21"/>
@@ -4531,7 +3698,6 @@ p, li { white-space: pre-wrap; }
     </message>
 </context>
 <context>
-<<<<<<< HEAD:translations/Language.hu_HU.ts
     <name>QuaGzipFile</name>
     <message>
         <source>QIODevice::Append is not supported for GZIP</source>
@@ -4569,8 +3735,6 @@ p, li { white-space: pre-wrap; }
     </message>
 </context>
 <context>
-=======
->>>>>>> upstream/master:translations/pencil_hu_HU.ts
     <name>RecentFileMenu</name>
     <message>
         <location filename="../core_lib/interface/recentfilemenu.h" line="38"/>
@@ -4580,27 +3744,22 @@ p, li { white-space: pre-wrap; }
     <message>
         <location filename="../core_lib/interface/recentfilemenu.cpp" line="31"/>
         <source>Clear</source>
-<<<<<<< HEAD:translations/Language.hu_HU.ts
         <translation>Kiürítés</translation>
-=======
-        <translation type="unfinished"></translation>
->>>>>>> upstream/master:translations/pencil_hu_HU.ts
     </message>
 </context>
 <context>
     <name>ScribbleArea</name>
     <message>
-        <location filename="../core_lib/interface/scribblearea.cpp" line="535"/>
+        <location filename="../core_lib/interface/scribblearea.cpp" line="561"/>
         <source>Warning</source>
         <translation>Figyelmeztetés</translation>
     </message>
     <message>
-        <location filename="../core_lib/interface/scribblearea.cpp" line="536"/>
+        <location filename="../core_lib/interface/scribblearea.cpp" line="562"/>
         <source>You are drawing on a hidden layer! Please select another layer (or make the current layer visible).</source>
         <translation>Most egy láthatatlan rétegre rajzol! Válasszon egy másik réteget (vagy tegye láthatóvá az aktuális réteget).</translation>
     </message>
     <message>
-<<<<<<< HEAD:translations/Language.hu_HU.ts
         <source>Delete Selection</source>
         <translation type="vanished">Kijelölés törlése</translation>
     </message>
@@ -4623,76 +3782,36 @@ p, li { white-space: pre-wrap; }
     </message>
     <message>
         <location filename="../core_lib/interface/scribblearea.cpp" line="1726"/>
-=======
-        <location filename="../core_lib/interface/scribblearea.cpp" line="1635"/>
-        <source>Delete Selection</source>
-        <comment>Undo Step: clear the selection area.</comment>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../core_lib/interface/scribblearea.cpp" line="1651"/>
-        <location filename="../core_lib/interface/scribblearea.cpp" line="1659"/>
-        <source>Clear Image</source>
-        <comment>Undo step text</comment>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../core_lib/interface/scribblearea.cpp" line="1686"/>
->>>>>>> upstream/master:translations/pencil_hu_HU.ts
         <source>There is a gap in your drawing (or maybe you have zoomed too much).</source>
         <translation>Egy rés van a rajzon (vagy túlságosan fel van nagyítva).</translation>
     </message>
     <message>
-<<<<<<< HEAD:translations/Language.hu_HU.ts
         <location filename="../core_lib/interface/scribblearea.cpp" line="1727"/>
-=======
-        <location filename="../core_lib/interface/scribblearea.cpp" line="1687"/>
->>>>>>> upstream/master:translations/pencil_hu_HU.ts
         <source>Sorry! This doesn&apos;t always work.Please try again (zoom a bit, click at another location... )&lt;br&gt;if it doesn&apos;t work, zoom a bit and check that your paths are connected by pressing F1.).</source>
         <translation>Elnézést! Ez nem mindig működik. Próbáld újra (egy kis nagyítással vagy máshová kattintva...)&lt;br&gt;Ha nem működik nagyíts egy kicsit és az F1 lenyomásával ellenőrizd, hogy az útvonalak összeérnek-e.).</translation>
     </message>
     <message>
-<<<<<<< HEAD:translations/Language.hu_HU.ts
         <location filename="../core_lib/interface/scribblearea.cpp" line="1731"/>
-=======
-        <location filename="../core_lib/interface/scribblearea.cpp" line="1691"/>
->>>>>>> upstream/master:translations/pencil_hu_HU.ts
         <source>Out of bound.</source>
         <translation>Tartományon kívül.</translation>
     </message>
     <message>
-<<<<<<< HEAD:translations/Language.hu_HU.ts
         <location filename="../core_lib/interface/scribblearea.cpp" line="1732"/>
-=======
-        <location filename="../core_lib/interface/scribblearea.cpp" line="1692"/>
->>>>>>> upstream/master:translations/pencil_hu_HU.ts
         <source>Could not find a closed path.</source>
         <translation>Nem található zárt útvonal.</translation>
     </message>
     <message>
-<<<<<<< HEAD:translations/Language.hu_HU.ts
         <location filename="../core_lib/interface/scribblearea.cpp" line="1733"/>
-=======
-        <location filename="../core_lib/interface/scribblearea.cpp" line="1693"/>
->>>>>>> upstream/master:translations/pencil_hu_HU.ts
         <source>Could not find the root index.</source>
         <translation>Nem található a gyökér index.</translation>
     </message>
     <message>
-<<<<<<< HEAD:translations/Language.hu_HU.ts
         <location filename="../core_lib/interface/scribblearea.cpp" line="1734"/>
-=======
-        <location filename="../core_lib/interface/scribblearea.cpp" line="1694"/>
->>>>>>> upstream/master:translations/pencil_hu_HU.ts
         <source>%1&lt;br&gt;&lt;br&gt;Error: %2</source>
         <translation>%1&lt;br&gt;&lt;br&gt;Hiba: %2</translation>
     </message>
     <message>
-<<<<<<< HEAD:translations/Language.hu_HU.ts
         <location filename="../core_lib/interface/scribblearea.cpp" line="1734"/>
-=======
-        <location filename="../core_lib/interface/scribblearea.cpp" line="1694"/>
->>>>>>> upstream/master:translations/pencil_hu_HU.ts
         <source>Flood fill error</source>
         <translation>Kitöltési hiba</translation>
     </message>
@@ -4730,24 +3849,19 @@ p, li { white-space: pre-wrap; }
         <translation>Alapértelmezett billentyűparancsok visszaállítása</translation>
     </message>
     <message>
-        <location filename="../app/shortcutspage.cpp" line="92"/>
+        <location filename="../app/shortcutspage.cpp" line="95"/>
         <source>Shortcut Conflict!</source>
         <translation>Ütköző billentyűparancsok!</translation>
     </message>
     <message>
-        <location filename="../app/shortcutspage.cpp" line="93"/>
+        <location filename="../app/shortcutspage.cpp" line="96"/>
         <source>%1 is already used, overwrite?</source>
-<<<<<<< HEAD:translations/Language.hu_HU.ts
         <translation>%1 már használatban van. Felülírás?</translation>
-=======
-        <translation type="unfinished"></translation>
->>>>>>> upstream/master:translations/pencil_hu_HU.ts
     </message>
 </context>
 <context>
     <name>TimeControls</name>
     <message>
-<<<<<<< HEAD:translations/Language.hu_HU.ts
         <location filename="../core_lib/interface/timecontrols.cpp" line="91"/>
         <source>Play</source>
         <translation>Lejátszás</translation>
@@ -4766,14 +3880,11 @@ p, li { white-space: pre-wrap; }
         <translation type="vanished">Ismétlés vége</translation>
     </message>
     <message>
-=======
->>>>>>> upstream/master:translations/pencil_hu_HU.ts
         <location filename="../core_lib/interface/timecontrols.cpp" line="68"/>
         <source>Range</source>
         <translation>Tartomány</translation>
     </message>
     <message>
-<<<<<<< HEAD:translations/Language.hu_HU.ts
         <source>Loop control</source>
         <translation type="vanished">Ismétlés vezérlése</translation>
     </message>
@@ -4782,8 +3893,6 @@ p, li { white-space: pre-wrap; }
         <translation type="vanished">FPS: </translation>
     </message>
     <message>
-=======
->>>>>>> upstream/master:translations/pencil_hu_HU.ts
         <location filename="../core_lib/interface/timecontrols.cpp" line="49"/>
         <source>Frames per second</source>
         <translation>Képkockák másodpercenként</translation>
@@ -4804,19 +3913,6 @@ p, li { white-space: pre-wrap; }
         <translation>Lejátszandó tartomány</translation>
     </message>
     <message>
-<<<<<<< HEAD:translations/Language.hu_HU.ts
-=======
-        <location filename="../core_lib/interface/timecontrols.cpp" line="91"/>
-        <source>Play</source>
-        <translation>Lejátszás</translation>
-    </message>
-    <message>
-        <location filename="../core_lib/interface/timecontrols.cpp" line="92"/>
-        <source>Loop</source>
-        <translation>Ismétlés</translation>
-    </message>
-    <message>
->>>>>>> upstream/master:translations/pencil_hu_HU.ts
         <location filename="../core_lib/interface/timecontrols.cpp" line="93"/>
         <source>Sound on/off</source>
         <translation>Hang be/ki</translation>
@@ -4841,26 +3937,6 @@ p, li { white-space: pre-wrap; }
 <context>
     <name>TimeLine</name>
     <message>
-        <location filename="../core_lib/interface/timeline.cpp" line="47"/>
-        <source>Timeline</source>
-        <translation>Idővonal</translation>
-    </message>
-    <message>
-        <location filename="../core_lib/interface/timeline.cpp" line="72"/>
-        <source>Layers:</source>
-        <translation>Rétegek:</translation>
-    </message>
-    <message>
-        <location filename="../core_lib/interface/timeline.cpp" line="78"/>
-        <source>Add Layer</source>
-        <translation>Réteg hozzáadása</translation>
-    </message>
-    <message>
-        <location filename="../core_lib/interface/timeline.cpp" line="83"/>
-        <source>Remove Layer</source>
-        <translation>Réteg eltávolítása</translation>
-    </message>
-    <message>
         <location filename="../core_lib/interface/timeline.cpp" line="96"/>
         <source>New Bitmap Layer</source>
         <translation>Új bitkép réteg</translation>
@@ -4881,7 +3957,6 @@ p, li { white-space: pre-wrap; }
         <translation>Új kamera réteg</translation>
     </message>
     <message>
-<<<<<<< HEAD:translations/Language.hu_HU.ts
         <location filename="../core_lib/interface/timeline.cpp" line="138"/>
         <source>Onion skin:</source>
         <translation>Képfólia:</translation>
@@ -4911,8 +3986,6 @@ p, li { white-space: pre-wrap; }
         <translation>Réteg eltávolítása</translation>
     </message>
     <message>
-=======
->>>>>>> upstream/master:translations/pencil_hu_HU.ts
         <location filename="../core_lib/interface/timeline.cpp" line="101"/>
         <source>&amp;Layer</source>
         <translation>&amp;Réteg</translation>
@@ -4938,17 +4011,11 @@ p, li { white-space: pre-wrap; }
         <translation>Képkocka kétszerezése</translation>
     </message>
     <message>
-        <location filename="../core_lib/interface/timeline.cpp" line="138"/>
-        <source>Onion skin:</source>
-        <translation>Képfólia:</translation>
-    </message>
-    <message>
         <location filename="../core_lib/interface/timeline.cpp" line="143"/>
         <source>Toggle match keyframes</source>
         <translation>Érintkező kulcsképkocka be- és kikapcsolása</translation>
     </message>
     <message>
-<<<<<<< HEAD:translations/Language.hu_HU.ts
         <location filename="../core_lib/interface/timeline.cpp" line="297"/>
         <source>Delete Layer</source>
         <comment>Windows title of Delete current layer pop-up.</comment>
@@ -4956,20 +4023,6 @@ p, li { white-space: pre-wrap; }
     </message>
     <message>
         <location filename="../core_lib/interface/timeline.cpp" line="298"/>
-=======
-        <location filename="../core_lib/interface/timeline.cpp" line="280"/>
-        <source>Delete Layer</source>
-        <comment>Windows title of Delete current layer pop-up.</comment>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../core_lib/interface/timeline.cpp" line="290"/>
-        <source>Please keep at least one camera layer in project</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../core_lib/interface/timeline.cpp" line="281"/>
->>>>>>> upstream/master:translations/pencil_hu_HU.ts
         <source>Are you sure you want to delete layer: </source>
         <translation>Biztosan törölni akarja a következő réteget: </translation>
     </message>
@@ -4993,20 +4046,13 @@ p, li { white-space: pre-wrap; }
     </message>
 </context>
 <context>
-    <name>TimeLineCells</name>
-    <message>
-        <location filename="../core_lib/interface/timelinecells.cpp" line="707"/>
-        <source>Layer Properties</source>
-        <translation type="unfinished">Réteg tulajdonságai</translation>
-    </message>
-    <message>
-        <location filename="../core_lib/interface/timelinecells.cpp" line="708"/>
-        <source>Layer name:</source>
-        <translation type="unfinished">Réteg neve:</translation>
-    </message>
-</context>
-<context>
     <name>Timeline2</name>
+    <message>
+        <location filename="../app/ui/timeline2.ui" line="68"/>
+        <location filename="../app/ui/timeline2.ui" line="82"/>
+        <source>...</source>
+        <translation>...</translation>
+    </message>
     <message>
         <location filename="../app/ui/timeline2.ui" line="14"/>
         <source>Timeline</source>
@@ -5017,49 +4063,42 @@ p, li { white-space: pre-wrap; }
         <source>Layers</source>
         <translation>Rétegek</translation>
     </message>
-    <message>
-        <location filename="../app/ui/timeline2.ui" line="68"/>
-        <location filename="../app/ui/timeline2.ui" line="82"/>
-        <source>...</source>
-        <translation>...</translation>
-    </message>
 </context>
 <context>
     <name>TimelinePage</name>
     <message>
-        <location filename="../app/ui/timelinepage.ui" line="20"/>
+        <location filename="../app/preferencesdialog.cpp" line="462"/>
         <source>Timeline</source>
         <translation>Idővonal</translation>
     </message>
     <message>
-        <location filename="../app/ui/timelinepage.ui" line="60"/>
-        <source>Timeline length:</source>
-        <comment>Preferences</comment>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
+        <location filename="../app/preferencesdialog.cpp" line="463"/>
         <source>Draw timeline labels</source>
-        <translation type="vanished">Idővonal címkéinek kirajzolása</translation>
+        <translation>Idővonal címkéinek kirajzolása</translation>
     </message>
     <message>
-        <location filename="../app/ui/timelinepage.ui" line="26"/>
+        <location filename="../app/preferencesdialog.cpp" line="465"/>
         <source>Frame size</source>
         <translation>Képkocka mérete</translation>
     </message>
     <message>
-        <source>Timeline size in Frames</source>
-        <translation type="vanished">Idővonal mérete képkockákban</translation>
-    </message>
-    <message>
-        <location filename="../app/ui/timelinepage.ui" line="79"/>
+        <location filename="../app/preferencesdialog.cpp" line="473"/>
         <source>Short scrub</source>
         <translation>Rövid helyjelző</translation>
+    </message>
+    <message>
+        <source>Frame size in Pixels</source>
+        <translation type="vanished">Képkocka mérete képpontokban</translation>
+    </message>
+    <message>
+        <location filename="../app/preferencesdialog.cpp" line="467"/>
+        <source>Timeline size in Frames</source>
+        <translation>Idővonal mérete képkockákban</translation>
     </message>
 </context>
 <context>
     <name>ToolBoxWidget</name>
     <message>
-<<<<<<< HEAD:translations/Language.hu_HU.ts
         <source>Pencil Tool &lt;b&gt;(N)&lt;/b&gt;: Sketch with pencil</source>
         <translation type="vanished">Ceruza eszköz &lt;b&gt;(N)&lt;/b&gt;: Rajzolás ceruzával</translation>
     </message>
@@ -5157,130 +4196,127 @@ p, li { white-space: pre-wrap; }
     </message>
     <message>
         <location filename="../app/toolbox.cpp" line="40"/>
-=======
-        <location filename="../app/ui/toolboxwidget.ui" line="14"/>
->>>>>>> upstream/master:translations/pencil_hu_HU.ts
         <source>Tools</source>
         <comment>Window title of tool box</comment>
         <translation>Eszközök</translation>
     </message>
     <message>
-        <location filename="../app/toolbox.cpp" line="77"/>
+        <location filename="../app/toolbox.cpp" line="49"/>
         <source>Pencil Tool (%1): Sketch with pencil</source>
         <translation>Toll eszköz (%1): Rajzolás tollal</translation>
     </message>
     <message>
-        <location filename="../app/toolbox.cpp" line="79"/>
+        <location filename="../app/toolbox.cpp" line="52"/>
         <source>Select Tool (%1): Select an object</source>
         <translation>Kijelölés eszköz (%1): Egy elem kijelölése</translation>
     </message>
     <message>
-        <location filename="../app/toolbox.cpp" line="81"/>
+        <location filename="../app/toolbox.cpp" line="55"/>
         <source>Move Tool (%1): Move an object</source>
         <translation>Mozgatás eszköz (%1): Egy elem mozgatása</translation>
     </message>
     <message>
-        <location filename="../app/toolbox.cpp" line="83"/>
+        <location filename="../app/toolbox.cpp" line="58"/>
         <source>Hand Tool (%1): Move the canvas</source>
         <translation>Kéz eszköz (%1): Rajzvászon mozgatása</translation>
     </message>
     <message>
-        <location filename="../app/toolbox.cpp" line="85"/>
+        <location filename="../app/toolbox.cpp" line="61"/>
         <source>Pen Tool (%1): Sketch with pen</source>
         <translation>Toll eszköz (%1): Rajzolás tollal</translation>
     </message>
     <message>
-        <location filename="../app/toolbox.cpp" line="87"/>
+        <location filename="../app/toolbox.cpp" line="64"/>
         <source>Eraser Tool (%1): Erase</source>
         <translation>Radír eszköz (%1): Radírozás</translation>
     </message>
     <message>
-        <location filename="../app/toolbox.cpp" line="89"/>
+        <location filename="../app/toolbox.cpp" line="67"/>
         <source>Polyline Tool (%1): Create line/curves</source>
         <translation>Vonallánc eszköz (%1): Vonalak/Görbék létrehozása</translation>
     </message>
     <message>
-        <location filename="../app/toolbox.cpp" line="91"/>
+        <location filename="../app/toolbox.cpp" line="70"/>
         <source>Paint Bucket Tool (%1): Fill selected area with a color</source>
         <translation>Festékes vödör eszköz (%1): Kijelölt terület kitöltése színnel</translation>
     </message>
     <message>
-        <location filename="../app/toolbox.cpp" line="93"/>
+        <location filename="../app/toolbox.cpp" line="73"/>
         <source>Brush Tool (%1): Paint smooth stroke with a brush</source>
         <translation>Ecset eszköz (%1): Finom vonalak rajzolása ecsettel</translation>
     </message>
     <message>
-        <location filename="../app/toolbox.cpp" line="95"/>
+        <location filename="../app/toolbox.cpp" line="76"/>
         <source>Eyedropper Tool (%1): Set color from the stage&lt;br&gt;[ALT] for instant access</source>
         <translation>Szemcseppentő eszköz (%1): Szín választása egy tetszőleges helyről&lt;br&gt;[ALT] lenyomásával azonnal aktíválható</translation>
     </message>
     <message>
-        <location filename="../app/toolbox.cpp" line="98"/>
+        <location filename="../app/toolbox.cpp" line="80"/>
         <source>Clear Frame (%1): Erases content of selected frame</source>
         <translation>Képkocka törlése (%1): A kijelölt képkocka tartalmának törlése</translation>
     </message>
     <message>
-        <location filename="../app/toolbox.cpp" line="100"/>
+        <location filename="../app/toolbox.cpp" line="83"/>
         <source>Smudge Tool (%1):&lt;br&gt;Edit polyline/curves&lt;br&gt;Liquify bitmap pixels&lt;br&gt; (%1)+[Alt]: Smooth</source>
         <translation>Maszatolás eszköz (%1):&lt;br&gt;Vonalláncok/Görbék szerkesztése&lt;br&gt;Kép pontjainak elmosása&lt;br&gt; (%1)+[ALT]: Finomítás</translation>
     </message>
     <message>
-        <location filename="../app/toolbox.cpp" line="104"/>
+        <location filename="../app/toolbox.cpp" line="87"/>
         <source>Pencil Tool (%1)</source>
         <translation>Ceruza eszköz (%1)</translation>
     </message>
     <message>
-        <location filename="../app/toolbox.cpp" line="106"/>
+        <location filename="../app/toolbox.cpp" line="89"/>
         <source>Select Tool (%1)</source>
         <translation>Kijelölés eszköz (%1)</translation>
     </message>
     <message>
-        <location filename="../app/toolbox.cpp" line="108"/>
+        <location filename="../app/toolbox.cpp" line="91"/>
         <source>Move Tool (%1)</source>
         <translation>Mozgatás eszköz (%1)</translation>
     </message>
     <message>
-        <location filename="../app/toolbox.cpp" line="110"/>
+        <location filename="../app/toolbox.cpp" line="93"/>
         <source>Hand Tool (%1)</source>
         <translation>Kéz eszköz (%1)</translation>
     </message>
     <message>
-        <location filename="../app/toolbox.cpp" line="112"/>
+        <location filename="../app/toolbox.cpp" line="95"/>
         <source>Pen Tool (%1)</source>
         <translation>Toll eszköz (%1)</translation>
     </message>
     <message>
-        <location filename="../app/toolbox.cpp" line="114"/>
+        <location filename="../app/toolbox.cpp" line="97"/>
         <source>Eraser Tool (%1)</source>
         <translation>Radír eszköz (%1)</translation>
     </message>
     <message>
-        <location filename="../app/toolbox.cpp" line="116"/>
+        <location filename="../app/toolbox.cpp" line="99"/>
         <source>Polyline Tool (%1)</source>
         <translation>Vonallánc eszköz (%1)</translation>
     </message>
     <message>
-        <location filename="../app/toolbox.cpp" line="118"/>
+        <location filename="../app/toolbox.cpp" line="101"/>
         <source>Paint Bucket Tool (%1)</source>
         <translation>Festékes vödör eszköz (%1)</translation>
     </message>
     <message>
-        <location filename="../app/toolbox.cpp" line="120"/>
+        <location filename="../app/toolbox.cpp" line="103"/>
         <source>Brush Tool (%1)</source>
         <translation>Ecset eszköz (%1)</translation>
     </message>
     <message>
-        <location filename="../app/toolbox.cpp" line="122"/>
+        <location filename="../app/toolbox.cpp" line="105"/>
         <source>Eyedropper Tool (%1)</source>
         <translation>Szemcseppentő eszköz (%1)</translation>
     </message>
     <message>
-        <location filename="../app/toolbox.cpp" line="124"/>
+        <location filename="../app/toolbox.cpp" line="107"/>
         <source>Clear Tool (%1)</source>
         <translation>Törlés eszköz (%1)</translation>
     </message>
     <message>
-        <location filename="../app/toolbox.cpp" line="126"/>
+        <location filename="../app/toolbox.cpp" line="109"/>
         <source>Smudge Tool (%1)</source>
         <translation>Maszatolás eszköz (%1)</translation>
     </message>
@@ -5288,109 +4324,115 @@ p, li { white-space: pre-wrap; }
 <context>
     <name>ToolOptionWidget</name>
     <message>
-        <location filename="../app/tooloptionwidget.cpp" line="48"/>
+        <location filename="../app/tooloptionwidget.cpp" line="167"/>
+        <source>Alpha</source>
+        <translation>Alfa</translation>
+    </message>
+    <message>
+        <location filename="../app/tooloptionwidget.cpp" line="99"/>
         <source>Brush</source>
         <translation>Ecset</translation>
     </message>
     <message>
-        <location filename="../app/tooloptionwidget.cpp" line="52"/>
+        <location filename="../app/tooloptionwidget.cpp" line="36"/>
+        <source>Options</source>
+        <comment>Window title of tool options like pen width, feather etc..</comment>
+        <translation>Beállítások</translation>
+    </message>
+    <message>
+        <location filename="../app/tooloptionwidget.cpp" line="101"/>
+        <source>Set Pen Width &lt;br&gt;&lt;b&gt;[SHIFT]+drag&lt;/b&gt;&lt;br&gt;for quick adjustment</source>
+        <translation>Toll szélessége &lt;br&gt;&lt;b&gt;[SHIFT]+húzás&lt;/b&gt;&lt;br&gt;használatával változtatható</translation>
+    </message>
+    <message>
+        <location filename="../app/tooloptionwidget.cpp" line="107"/>
         <source>Feather</source>
         <translation>Lágyítás</translation>
     </message>
     <message>
-        <location filename="../app/tooloptionwidget.cpp" line="56"/>
-        <source>Color Tolerance</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../app/tooloptionwidget.cpp" line="32"/>
-        <source>Options</source>
-        <comment>Window title of tool option panel like pen width, feather etc..</comment>
-        <translation type="unfinished">Beállítások</translation>
-    </message>
-    <message>
-        <location filename="../app/tooloptionwidget.cpp" line="182"/>
-        <source>Stroke Thickness</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../app/tooloptionwidget.cpp" line="187"/>
-        <source>Width</source>
-        <translation type="unfinished">Szélesség</translation>
-    </message>
-</context>
-<context>
-    <name>ToolOptions</name>
-    <message>
-        <location filename="../app/ui/tooloptions.ui" line="14"/>
-        <source>Form</source>
-        <translation type="unfinished">Űrlap</translation>
-    </message>
-    <message>
-        <location filename="../app/ui/tooloptions.ui" line="22"/>
-        <source>Set Pen Width &lt;br&gt;&lt;b&gt;[SHIFT]+drag&lt;/b&gt;&lt;br&gt;for quick adjustment</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../app/ui/tooloptions.ui" line="58"/>
+        <location filename="../app/tooloptionwidget.cpp" line="109"/>
         <source>Set Pen Feather &lt;br&gt;&lt;b&gt;[CTRL]+drag&lt;/b&gt;&lt;br&gt;for quick adjustment</source>
-        <translation type="unfinished"></translation>
+        <translation>Toll lágyítása &lt;br&gt;&lt;b&gt;[CTRL]+húzás&lt;/b&gt;&lt;br&gt;használatával változtatható</translation>
     </message>
     <message>
-        <location filename="../app/ui/tooloptions.ui" line="92"/>
+        <source>Use Feather?</source>
+        <translation type="vanished">Szélek lágyítása?</translation>
+    </message>
+    <message>
+        <location filename="../app/tooloptionwidget.cpp" line="115"/>
+        <source>Use Feather</source>
+        <translation>Szélek lágyítása</translation>
+    </message>
+    <message>
+        <location filename="../app/tooloptionwidget.cpp" line="116"/>
         <source>Enable or disable feathering</source>
-        <translation type="unfinished"></translation>
+        <translation>Szélek lágyításának be- és kikapcsolása</translation>
     </message>
     <message>
-<<<<<<< HEAD:translations/Language.hu_HU.ts
+        <location filename="../app/tooloptionwidget.cpp" line="120"/>
+        <source>Bezier</source>
+        <translation>Bezier</translation>
+    </message>
+    <message>
+        <location filename="../app/tooloptionwidget.cpp" line="121"/>
+        <source>Bezier curve fitting</source>
+        <translation>Bezier görbéhez igazítva</translation>
+    </message>
+    <message>
+        <location filename="../app/tooloptionwidget.cpp" line="125"/>
+        <source>Pressure</source>
+        <translation>Nyomás</translation>
+    </message>
+    <message>
+        <location filename="../app/tooloptionwidget.cpp" line="126"/>
+        <source>Size with pressure</source>
+        <translation>Méretezés nyomással</translation>
+    </message>
+    <message>
+        <location filename="../app/tooloptionwidget.cpp" line="130"/>
+        <source>Anti-Aliasing</source>
+        <translation>Élsimítás</translation>
+    </message>
+    <message>
+        <location filename="../app/tooloptionwidget.cpp" line="131"/>
+        <source>Enable Anti-Aliasing</source>
+        <translation>Élsimítás engedélyezése</translation>
+    </message>
+    <message>
         <location filename="../app/tooloptionwidget.cpp" line="135"/>
         <source>Fill Contour</source>
         <comment>ToolOptions</comment>
         <translation>Körvonal kitöltése</translation>
-=======
-        <location filename="../app/ui/tooloptions.ui" line="95"/>
-        <source>Use Feather</source>
-        <translation type="unfinished"></translation>
->>>>>>> upstream/master:translations/pencil_hu_HU.ts
     </message>
     <message>
-        <location filename="../app/ui/tooloptions.ui" line="102"/>
+        <location filename="../app/tooloptionwidget.cpp" line="136"/>
         <source>Contour will be filled</source>
         <translation>Körvonalak közötti terület kitöltése</translation>
     </message>
     <message>
-        <location filename="../app/ui/tooloptions.ui" line="105"/>
-        <source>Fill Contour</source>
-        <translation type="unfinished"></translation>
+        <source>Stabilization level</source>
+        <translation type="vanished">Stabilizálás mértéke</translation>
     </message>
     <message>
-        <location filename="../app/ui/tooloptions.ui" line="114"/>
-        <source>The extend to which the color variation will be treated as being equal</source>
-        <translation type="unfinished"></translation>
+        <source>No line interpolation</source>
+        <translation type="vanished">Nincs vonaligazítás</translation>
     </message>
     <message>
-<<<<<<< HEAD:translations/Language.hu_HU.ts
         <location filename="../app/tooloptionwidget.cpp" line="140"/>
         <source>Stabilization</source>
         <translation>Stabilizálás</translation>
-=======
-        <location filename="../app/ui/tooloptions.ui" line="133"/>
-        <source>Bezier</source>
-        <translation type="unfinished"></translation>
->>>>>>> upstream/master:translations/pencil_hu_HU.ts
     </message>
     <message>
-        <location filename="../app/ui/tooloptions.ui" line="140"/>
-        <source>Pressure</source>
-        <translation type="unfinished"></translation>
+        <location filename="../app/tooloptionwidget.cpp" line="146"/>
+        <source>Simple line interpolation</source>
+        <translation>Egyszerű vonaligazítás</translation>
     </message>
     <message>
-        <location filename="../app/ui/tooloptions.ui" line="147"/>
-        <source>Anti-Aliasing</source>
-        <translation type="unfinished"></translation>
+        <location filename="../app/tooloptionwidget.cpp" line="146"/>
+        <source>Strong line interpolation</source>
+        <translation>Erős vonaligazítás</translation>
     </message>
     <message>
-<<<<<<< HEAD:translations/Language.hu_HU.ts
         <location filename="../app/tooloptionwidget.cpp" line="146"/>
         <source>No interpolation</source>
         <translation>Nincs igazítás</translation>
@@ -5404,49 +4446,33 @@ p, li { white-space: pre-wrap; }
         <location filename="../app/tooloptionwidget.cpp" line="156"/>
         <source>The extend to which the color variation will be treated as being equal</source>
         <translation>Az egyenlőnek tekintendő színváltozatok eltérésének mértéke</translation>
-=======
-        <location filename="../app/ui/tooloptions.ui" line="154"/>
-        <source>Make invisible</source>
-        <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../app/ui/tooloptions.ui" line="157"/>
+        <location filename="../app/tooloptionwidget.cpp" line="162"/>
         <source>Invisible</source>
-        <translation type="unfinished"></translation>
+        <translation>Láthatatlan</translation>
     </message>
     <message>
-        <location filename="../app/ui/tooloptions.ui" line="164"/>
+        <location filename="../app/tooloptionwidget.cpp" line="163"/>
+        <source>Make invisible</source>
+        <translation>Legyen láthatatlan</translation>
+    </message>
+    <message>
+        <location filename="../app/tooloptionwidget.cpp" line="168"/>
         <source>Preserve Alpha</source>
-        <translation type="unfinished"></translation>
->>>>>>> upstream/master:translations/pencil_hu_HU.ts
+        <translation>Alfa megtartása</translation>
     </message>
     <message>
-        <location filename="../app/ui/tooloptions.ui" line="167"/>
-        <source>Alpha</source>
-        <translation type="unfinished">Alfa</translation>
-    </message>
-    <message>
-        <location filename="../app/ui/tooloptions.ui" line="174"/>
-        <source>Merge vector lines when they are close together</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../app/ui/tooloptions.ui" line="177"/>
+        <location filename="../app/tooloptionwidget.cpp" line="172"/>
         <source>Merge</source>
-        <translation type="unfinished"></translation>
+        <translation>Egyesítés</translation>
     </message>
     <message>
-        <location filename="../app/ui/tooloptions.ui" line="192"/>
-        <source>Stabilizer</source>
-        <translation type="unfinished"></translation>
+        <location filename="../app/tooloptionwidget.cpp" line="173"/>
+        <source>Merge vector lines when they are close together</source>
+        <translation>Vektorvonalak egyesítése ha azok szorosan egymás mellet vannak</translation>
     </message>
     <message>
-        <location filename="../app/ui/tooloptions.ui" line="200"/>
-        <source>None</source>
-        <translation type="unfinished">Semmi</translation>
-    </message>
-    <message>
-<<<<<<< HEAD:translations/Language.hu_HU.ts
         <location filename="../app/tooloptionwidget.cpp" line="299"/>
         <source>Stroke Thickness</source>
         <translation>Körvonal vastagsága</translation>
@@ -5455,52 +4481,42 @@ p, li { white-space: pre-wrap; }
         <location filename="../app/tooloptionwidget.cpp" line="304"/>
         <source>Width</source>
         <translation>Szélesség</translation>
-=======
-        <location filename="../app/ui/tooloptions.ui" line="205"/>
-        <source>Simple</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../app/ui/tooloptions.ui" line="210"/>
-        <source>Strong</source>
-        <translation type="unfinished"></translation>
->>>>>>> upstream/master:translations/pencil_hu_HU.ts
     </message>
 </context>
 <context>
     <name>ToolsPage</name>
     <message>
-        <location filename="../app/ui/toolspage.ui" line="17"/>
+        <location filename="../app/preferencesdialog.cpp" line="616"/>
         <source>Onion skin</source>
         <translation>Képfólia</translation>
     </message>
     <message>
-        <location filename="../app/ui/toolspage.ui" line="23"/>
+        <location filename="../app/preferencesdialog.cpp" line="618"/>
         <source>Maximum onion opacity %</source>
         <translation>Képfóliák maximális átlátszatlansága %</translation>
     </message>
     <message>
-        <location filename="../app/ui/toolspage.ui" line="49"/>
+        <location filename="../app/preferencesdialog.cpp" line="620"/>
         <source>Minimum onion opacity %</source>
         <translation>Képfóliák minimális átlátszatlansága %</translation>
     </message>
     <message>
-        <location filename="../app/ui/toolspage.ui" line="75"/>
+        <location filename="../app/preferencesdialog.cpp" line="622"/>
         <source>Number of previous onion frames shown</source>
         <translation>Megjelenítendő előző képfóliák száma</translation>
     </message>
     <message>
-        <location filename="../app/ui/toolspage.ui" line="104"/>
+        <location filename="../app/preferencesdialog.cpp" line="624"/>
         <source>Number of next onion frames shown</source>
         <translation>Megjelenítendő következő képfóliák száma</translation>
     </message>
     <message>
-        <location filename="../app/ui/toolspage.ui" line="136"/>
+        <location filename="../app/preferencesdialog.cpp" line="660"/>
         <source>Brush Tools</source>
         <translation>Ecset eszköz</translation>
     </message>
     <message>
-        <location filename="../app/ui/toolspage.ui" line="142"/>
+        <location filename="../app/preferencesdialog.cpp" line="661"/>
         <source>Use Quick Sizing</source>
         <translation>Gyors méretezés használata</translation>
     </message>
