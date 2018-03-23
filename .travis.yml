@@ -49,13 +49,18 @@ addons:
       - python3-pip
 
 before_install:
-  - 'if [ "$TRAVIS_OS_NAME" == "osx" ]; then
-    brew update;
-    brew install p7zip;
-    brew install python3;
-    brew install https://raw.githubusercontent.com/Homebrew/homebrew-core/13d52537d1e0e5f913de46390123436d220035f6/Formula/qt.rb;
-    brew link qt --force;
-  fi'
+  - | 
+    if [ "$TRAVIS_OS_NAME" == "osx" ]; then
+        brew update;
+        ver=$(python -V 2>&1 | sed 's/.* \([0-9]\).\([0-9]\).*/\1\2/');
+        python -V
+        if [ "$ver" -le "27" ]; then
+            brew upgrade python;
+        fi
+        brew install p7zip;
+        brew install https://raw.githubusercontent.com/Homebrew/homebrew-core/13d52537d1e0e5f913de46390123436d220035f6/Formula/qt.rb;
+        brew link qt --force;
+    fi
 
 install:
   - pip3 freeze > requirements.txt
@@ -100,7 +105,7 @@ after_success:
       install -Dm755 /usr/bin/ffmpeg Pencil2D/usr/plugins/ffmpeg;
       curl -fsSLO https://github.com/probonopd/linuxdeployqt/releases/download/continuous/linuxdeployqt-continuous-x86_64.AppImage;
       chmod 755 linuxdeployqt-continuous-x86_64.AppImage;
-      LD_LIBRARY_PATH="$LD_LIBRARY_PATH:/usr/lib/x86_64-linux-gnu/pulseaudio" ./linuxdeployqt-continuous-x86_64.AppImage Pencil2D/usr/share/applications/pencil2d.desktop -executable=Pencil2D/usr/plugins/ffmpeg -appimage;
+      LD_LIBRARY_PATH="$LD_LIBRARY_PATH:/usr/lib/x86_64-linux-gnu/pulseaudio" ./linuxdeployqt-continuous-x86_64.AppImage Pencil2D/usr/share/applications/pencil2d.desktop -executable=Pencil2D/usr/plugins/ffmpeg -extra-plugins=iconengines/libqsvgicon.so -appimage;
       mv "Pencil2D-x86_64.AppImage" "pencil2d-linux-$(date +"%Y-%m-%d").AppImage";
      fi'
   - 'if [ "$TRAVIS_OS_NAME" == "osx" ]; then

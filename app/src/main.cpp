@@ -306,6 +306,15 @@ int main(int argc, char* argv[])
 {
     Q_INIT_RESOURCE(core_lib);
 
+    QSettings settings(PENCIL2D, PENCIL2D);
+    if (settings.value("EnableHighDpiScaling", "true").toBool())
+    {
+        // Enable auto screen scaling on high dpi display, for example, a 4k monitor
+        // This attr has to be set before the QApplication is constructed
+        // Only work in Windows & X11
+        PencilApplication::setAttribute(Qt::AA_EnableHighDpiScaling);
+    }
+    
     PencilApplication app( argc, argv );
 
     installTranslator( app );

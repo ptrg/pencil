@@ -35,6 +35,8 @@ public:
     BitmapImage& operator=(const BitmapImage& a);
 
     BitmapImage* clone() override;
+    void loadFile() override;
+    void unloadFile() override;
 
     void paintImage(QPainter& painter);
     void paintImage(QPainter &painter, QImage &image, QRect sourceRect, QRect destRect);
@@ -93,7 +95,7 @@ public:
 
     QRect& bounds() { return mBounds; }
 
-    Status write(const QString& filename);
+    Status writeFile(const QString& filename);
 
 private:
     std::shared_ptr< QImage > mImage;
