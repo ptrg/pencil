@@ -521,19 +521,19 @@
 <context>
     <name>Editor</name>
     <message>
-        <location filename="../core_lib/src/interface/editor.cpp" line="537"/>
-        <location filename="../core_lib/src/interface/editor.cpp" line="558"/>
+        <location filename="../core_lib/src/interface/editor.cpp" line="547"/>
+        <location filename="../core_lib/src/interface/editor.cpp" line="568"/>
         <source>Paste</source>
         <translation>Incolla</translation>
     </message>
     <message>
-        <location filename="../core_lib/src/interface/editor.cpp" line="922"/>
+        <location filename="../core_lib/src/interface/editor.cpp" line="935"/>
         <source>Remove frame</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../core_lib/src/interface/editor.cpp" line="775"/>
-        <location filename="../core_lib/src/interface/editor.cpp" line="801"/>
+        <location filename="../core_lib/src/interface/editor.cpp" line="786"/>
+        <location filename="../core_lib/src/interface/editor.cpp" line="812"/>
         <source>Import Image</source>
         <translation>Importa immagine</translation>
     </message>
@@ -1343,7 +1343,7 @@
     </message>
     <message>
         <location filename="../app/ui/mainwindow2.ui" line="512"/>
-        <location filename="../app/src/mainwindow2.cpp" line="1125"/>
+        <location filename="../app/src/mainwindow2.cpp" line="1127"/>
         <source>Play</source>
         <translation>Riproduci</translation>
     </message>
@@ -1638,14 +1638,14 @@ Vuoi salavare i cambiamenti?</translation>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../app/src/mainwindow2.cpp" line="958"/>
-        <location filename="../app/src/mainwindow2.cpp" line="963"/>
+        <location filename="../app/src/mainwindow2.cpp" line="960"/>
+        <location filename="../app/src/mainwindow2.cpp" line="965"/>
         <source>Undo</source>
         <comment>Menu item text</comment>
         <translation type="unfinished">Annulla</translation>
     </message>
     <message>
-        <location filename="../app/src/mainwindow2.cpp" line="978"/>
+        <location filename="../app/src/mainwindow2.cpp" line="980"/>
         <source>Redo</source>
         <comment>Menu item text</comment>
         <translation type="unfinished">Ripeti</translation>
@@ -1659,7 +1659,7 @@ Vuoi salavare i cambiamenti?</translation>
         <translation type="vanished">Riprendere %1 %2</translation>
     </message>
     <message>
-        <location filename="../app/src/mainwindow2.cpp" line="1120"/>
+        <location filename="../app/src/mainwindow2.cpp" line="1122"/>
         <source>Stop</source>
         <translation>Stop</translation>
     </message>
@@ -3431,50 +3431,50 @@ Vuoi salavare i cambiamenti?</translation>
         <translation>Si sta disegnando su un livello nascosto! Scegliere un altro livello (o rendere visibile questo livello).</translation>
     </message>
     <message>
-        <location filename="../core_lib/src/interface/scribblearea.cpp" line="1635"/>
+        <location filename="../core_lib/src/interface/scribblearea.cpp" line="1633"/>
         <source>Delete Selection</source>
         <comment>Undo Step: clear the selection area.</comment>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../core_lib/src/interface/scribblearea.cpp" line="1651"/>
-        <location filename="../core_lib/src/interface/scribblearea.cpp" line="1659"/>
+        <location filename="../core_lib/src/interface/scribblearea.cpp" line="1649"/>
+        <location filename="../core_lib/src/interface/scribblearea.cpp" line="1657"/>
         <source>Clear Image</source>
         <comment>Undo step text</comment>
         <translation>Cancella immagine</translation>
     </message>
     <message>
-        <location filename="../core_lib/src/interface/scribblearea.cpp" line="1686"/>
+        <location filename="../core_lib/src/interface/scribblearea.cpp" line="1684"/>
         <source>There is a gap in your drawing (or maybe you have zoomed too much).</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../core_lib/src/interface/scribblearea.cpp" line="1687"/>
+        <location filename="../core_lib/src/interface/scribblearea.cpp" line="1685"/>
         <source>Sorry! This doesn&apos;t always work.Please try again (zoom a bit, click at another location... )&lt;br&gt;if it doesn&apos;t work, zoom a bit and check that your paths are connected by pressing F1.).</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../core_lib/src/interface/scribblearea.cpp" line="1691"/>
+        <location filename="../core_lib/src/interface/scribblearea.cpp" line="1689"/>
         <source>Out of bound.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../core_lib/src/interface/scribblearea.cpp" line="1692"/>
+        <location filename="../core_lib/src/interface/scribblearea.cpp" line="1690"/>
         <source>Could not find a closed path.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../core_lib/src/interface/scribblearea.cpp" line="1693"/>
+        <location filename="../core_lib/src/interface/scribblearea.cpp" line="1691"/>
         <source>Could not find the root index.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../core_lib/src/interface/scribblearea.cpp" line="1694"/>
+        <location filename="../core_lib/src/interface/scribblearea.cpp" line="1692"/>
         <source>%1&lt;br&gt;&lt;br&gt;Error: %2</source>
         <translation>%1&lt;br&gt;&lt;br&gt;Errore: %2</translation>
     </message>
     <message>
-        <location filename="../core_lib/src/interface/scribblearea.cpp" line="1694"/>
+        <location filename="../core_lib/src/interface/scribblearea.cpp" line="1692"/>
         <source>Flood fill error</source>
         <translation>Errore di riempimento</translation>
     </message>
@@ -3683,12 +3683,12 @@ Vuoi salavare i cambiamenti?</translation>
 <context>
     <name>TimeLineCells</name>
     <message>
-        <location filename="../core_lib/src/interface/timelinecells.cpp" line="692"/>
+        <location filename="../core_lib/src/interface/timelinecells.cpp" line="686"/>
         <source>Layer Properties</source>
         <translation type="unfinished">Proprietà del livello</translation>
     </message>
     <message>
-        <location filename="../core_lib/src/interface/timelinecells.cpp" line="693"/>
+        <location filename="../core_lib/src/interface/timelinecells.cpp" line="687"/>
         <source>Layer name:</source>
         <translation type="unfinished">Nome del livello:</translation>
     </message>
