@@ -26,14 +26,15 @@ class Editor;
 class BaseDockWidget : public QDockWidget
 {
     Q_OBJECT
-public:
-    explicit BaseDockWidget( QWidget* pParent );
+protected:
+    explicit BaseDockWidget(QWidget* pParent);
     virtual  ~BaseDockWidget();
 
+public:
     virtual void initUI() = 0;
     virtual void updateUI() = 0;
 
-    Editor* editor() { return mEditor; }
+    Editor* editor() const { return mEditor; }
     void setEditor( Editor* e ) { mEditor = e; }
 
 private:

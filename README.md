@@ -1,5 +1,6 @@
 
 [![Build Status](https://travis-ci.org/pencil2d/pencil.svg?branch=master)](https://travis-ci.org/pencil2d/pencil)
+[![Build status](https://ci.appveyor.com/api/projects/status/65p3ccmohnkmim4x?svg=true)](https://ci.appveyor.com/project/chchwy/pencil2d)
 
 # Pencil2D Animation
 
@@ -7,30 +8,18 @@
 
 ## Download ###
 
-### Pencil2D 0.6  (1 December 2017)
+### Pencil2D 0.6.1  (16 April 2018)
 
-[What's new?](https://www.pencil2d.org/2017/12/introducing-pencil2d-0.6.html)
+[What's new?](https://www.pencil2d.org/2018/04/maintenance-release-0.6.1.html)
 
 | Windows 64 bit   | Windows 32 bit    | Mac             | Linux             |
 | :--------------: | :---------------: | :-------------: | :---------------: |
 | [Download][0]    | [Download][1]     | [Download][2]   | [Download][3]     |
 
-[0]: https://github.com/pencil2d/pencil/releases/download/0.6.0/pencil2d-win64-0.6.0-ffmpeg341.zip
-[1]: https://github.com/pencil2d/pencil/releases/download/0.6.0/pencil2d-win32-0.6.0.zip
-[2]: https://github.com/pencil2d/pencil/releases/download/0.6.0/pencil2d-mac-0.6.0.zip
-[3]: https://github.com/pencil2d/pencil/releases/download/0.6.0/pencil2d-linux-amd64-0.6.0.AppImage
-
-### Debian & Ubuntu
-
-```bash    
-sudo apt-get install pencil2d
-```
-
-### Homebrew Cask (macOS)
-
-```bash
-brew cask install pencil2d
-```
+[0]: https://github.com/pencil2d/pencil/releases/download/v0.6.1.1/pencil2d-win64-0.6.1.1.zip
+[1]: https://github.com/pencil2d/pencil/releases/download/v0.6.1.1/pencil2d-win32-0.6.1.1.zip
+[2]: https://github.com/pencil2d/pencil/releases/download/v0.6.1.1/pencil2d-mac-0.6.1.1.zip
+[3]: https://github.com/pencil2d/pencil/releases/download/v0.6.1.1/pencil2d-linux-amd64-0.6.1.1.AppImage
 
 ### Nightly build
 

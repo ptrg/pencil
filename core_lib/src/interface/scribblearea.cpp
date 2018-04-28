@@ -30,10 +30,12 @@ GNU General Public License for more details.
 #include "bitmapimage.h"
 #include "vectorimage.h"
 
+#include "colormanager.h"
 #include "toolmanager.h"
 #include "strokemanager.h"
 #include "layermanager.h"
 #include "playbackmanager.h"
+#include "viewmanager.h"
 
 
 ScribbleArea::ScribbleArea(QWidget* parent) : QWidget(parent),
@@ -59,7 +61,7 @@ bool ScribbleArea::init()
 
     connect(mPrefs, &PreferenceManager::optionChanged, this, &ScribbleArea::settingUpdated);
 
-    int curveSmoothingLevel = mPrefs->getInt(SETTING::CURVE_SMOOTHING);
+    const int curveSmoothingLevel = mPrefs->getInt(SETTING::CURVE_SMOOTHING);
     mCurveSmoothingLevel = curveSmoothingLevel / 20.0; // default value is 1.0
 
     mQuickSizing = mPrefs->isOn(SETTING::QUICK_SIZING);
@@ -580,7 +582,7 @@ void ScribbleArea::mouseMoveEvent(QMouseEvent *event)
         if (currentTool()->isAdjusting)
         {
             ToolPropertyType tool_type;
-            tool_type = event->modifiers() & Qt::ControlModifier ? FEATHER : WIDTH;
+            tool_type = (event->modifiers() & Qt::ControlModifier) ? FEATHER : WIDTH;
             currentTool()->adjustCursor(mOffset.x(), tool_type); //updates cursors given org width or feather and x
             updateCanvasCursor();
             return;
@@ -675,7 +677,9 @@ void ScribbleArea::paintBitmapBuffer()
 
     int frameNumber = mEditor->currentFrame();
 
-    if (layer->getKeyFrameAt(frameNumber) == nullptr)
+    // If there is no keyframe at or before the current position,
+    // just return (since we have nothing to paint on).
+    if (layer->getLastKeyFrameAtPosition(frameNumber) == nullptr)
     {
         updateCurrentFrame();
         return;
@@ -711,14 +715,16 @@ void ScribbleArea::paintBitmapBuffer()
     drawCanvas(frameNumber, rect.adjusted(-1, -1, 1, 1));
     update(rect);
 
-    QPixmapCache::remove(mPixmapCacheKeys[frameNumber]);
-    mPixmapCacheKeys[frameNumber] = QPixmapCache::Key();
+    // Update the cache for the last key-frame.
+    auto lastKeyFramePosition = mEditor->layers()->LastFrameAtFrame(frameNumber);
+    QPixmapCache::remove(mPixmapCacheKeys[lastKeyFramePosition]);
+    mPixmapCacheKeys[lastKeyFramePosition] = QPixmapCache::Key();
     layer->setModified(frameNumber, true);
 
     mBufferImg->clear();
 }
 
-void ScribbleArea::paintBitmapBufferRect(QRect rect)
+void ScribbleArea::paintBitmapBufferRect(const QRect& rect)
 {
     if (allowSmudging() || mEditor->playback()->isPlaying())
     {
@@ -848,6 +854,73 @@ void ScribbleArea::updateCanvasCursor()
     update(mTransCursImg.rect().adjusted(-1, -1, 1, 1)
            .translated(translatedPos));
 
+}
+
+void ScribbleArea::handleDrawingOnEmptyFrame()
+{
+    auto layer = mEditor->layers()->currentLayer();
+
+    if(!layer  ||  !layer->isPaintable())
+    {
+        return;
+    }
+
+    int frameNumber = mEditor->currentFrame();
+    auto previousKeyFrame = layer->getLastKeyFrameAtPosition(frameNumber);
+
+    if(layer->getKeyFrameAt(frameNumber) == nullptr)
+    {
+        // Drawing on an empty frame; take action based on preference.
+        int action = mPrefs->getInt(SETTING::DRAW_ON_EMPTY_FRAME_ACTION);
+
+        switch(action)
+        {
+        case CREATE_NEW_KEY:
+            mEditor->addNewKey();
+            mEditor->scrubTo(frameNumber);  // Refresh timeline.
+
+            // Hack to clear previous frame's content.
+            if(layer->type() == Layer::BITMAP  &&  previousKeyFrame)
+            {
+                auto asBitmapImage = dynamic_cast<BitmapImage *> (previousKeyFrame);
+
+                if(asBitmapImage)
+                {
+                    drawCanvas(frameNumber, asBitmapImage->bounds());
+                }
+            }
+
+            if(layer->type() == Layer::VECTOR)
+            {
+                auto asVectorImage = dynamic_cast<VectorImage *> (previousKeyFrame);
+
+                if(asVectorImage)
+                {
+                    auto copy(*asVectorImage);
+                    copy.selectAll();
+
+                    drawCanvas(frameNumber, copy.getSelectionRect().toRect());
+                }
+            }
+
+            break;
+        case DUPLICATE_PREVIOUS_KEY:
+        {
+            if(previousKeyFrame)
+            {
+                KeyFrame* dupKey = previousKeyFrame->clone();
+                layer->addKeyFrame(frameNumber, dupKey);
+                mEditor->scrubTo(frameNumber);  // Refresh timeline.
+            }
+            break;
+        }
+        case KEEP_DRAWING_ON_PREVIOUS_KEY:
+            // No action needed.
+            break;
+        default:
+            break;
+        }
+    }
 }
 
 void ScribbleArea::paintEvent(QPaintEvent* event)
@@ -1041,7 +1114,7 @@ void ScribbleArea::drawCanvas(int frame, QRect rect)
     o.bAntiAlias           = mPrefs->isOn(SETTING::ANTIALIAS);
     o.bGrid                = mPrefs->isOn(SETTING::GRID);
     o.nGridSize            = mPrefs->getInt(SETTING::GRID_SIZE);
-    o.bAxis                = mPrefs->isOn(SETTING::AXIS);
+    o.bAxis                = false;
     o.bThinLines           = mPrefs->isOn(SETTING::INVISIBLE_LINES);
     o.bOutlines            = mPrefs->isOn(SETTING::OUTLINES);
     o.nShowAllLayers       = mShowAllLayers;
@@ -1059,10 +1132,10 @@ void ScribbleArea::drawCanvas(int frame, QRect rect)
     return;
 }
 
-void ScribbleArea::setGaussianGradient(QGradient &gradient, QColor colour, qreal opacity, qreal mOffset)
+void ScribbleArea::setGaussianGradient(QGradient &gradient, QColor colour, qreal opacity, qreal offset)
 {
-    if (mOffset < 0) { mOffset = 0; }
-    if (mOffset > 100) { mOffset = 100; }
+    if (offset < 0) { offset = 0; }
+    if (offset > 100) { offset = 100; }
 
     int r = colour.red();
     int g = colour.green();
@@ -1072,11 +1145,11 @@ void ScribbleArea::setGaussianGradient(QGradient &gradient, QColor colour, qreal
     int mainColorAlpha = qRound(a * 255 * opacity);
 
     // the more feather (offset), the more softness (opacity)
-    int alphaAdded = qRound((mainColorAlpha * mOffset) / 100);
+    int alphaAdded = qRound((mainColorAlpha * offset) / 100);
 
     gradient.setColorAt(0.0, QColor(r, g, b, mainColorAlpha - alphaAdded));
     gradient.setColorAt(1.0, QColor(r, g, b, 0));
-    gradient.setColorAt(1.0 - (mOffset / 100.0), QColor(r, g, b, mainColorAlpha - alphaAdded));
+    gradient.setColorAt(1.0 - (offset / 100.0), QColor(r, g, b, mainColorAlpha - alphaAdded));
 }
 
 void ScribbleArea::drawPen(QPointF thePoint, qreal brushWidth, QColor fillColour, bool useAA)
@@ -1097,7 +1170,7 @@ void ScribbleArea::drawBrush(QPointF thePoint, qreal brushWidth, qreal mOffset, 
     QRectF rectangle(thePoint.x() - 0.5 * brushWidth, thePoint.y() - 0.5 * brushWidth, brushWidth, brushWidth);
 
     BitmapImage gradientImg;
-    if (usingFeather == true)
+    if (usingFeather)
     {
         QRadialGradient radialGrad(thePoint, 0.5 * brushWidth);
         setGaussianGradient(radialGrad, fillColour, opacity, mOffset);
@@ -1127,7 +1200,7 @@ void ScribbleArea::flipSelection(bool flipVertical)
     QTransform _translate = QTransform::fromTranslate(-centerPoints[1].x(), -centerPoints[1].y());
     QTransform scale = QTransform::fromScale(-scaleX, scaleY);
 
-    if (flipVertical == true)
+    if (flipVertical)
     {
         scale = QTransform::fromScale(scaleX, -scaleY);
     }
@@ -1149,7 +1222,7 @@ void ScribbleArea::blurBrush(BitmapImage *bmiSource_, QPointF srcPoint_, QPointF
     QRectF trgRect(thePoint_.x() - 0.5 * brushWidth_, thePoint_.y() - 0.5 * brushWidth_, brushWidth_, brushWidth_);
 
     BitmapImage bmiSrcClip = bmiSource_->copy(srcRect.toRect());
-    BitmapImage bmiTmpClip = bmiSrcClip; // todo: find a shorter way
+    BitmapImage bmiTmpClip = bmiSrcClip; // TODO: find a shorter way
 
     bmiTmpClip.drawRect(srcRect, Qt::NoPen, radialGrad, QPainter::CompositionMode_Source, mPrefs->isOn(SETTING::ANTIALIAS));
     bmiSrcClip.bounds().moveTo(trgRect.topLeft().toPoint());
@@ -1166,23 +1239,22 @@ void ScribbleArea::liquifyBrush(BitmapImage *bmiSource_, QPointF srcPoint_, QPoi
     setGaussianGradient(radialGrad, QColor(255, 255, 255, 255), opacity_, mOffset_);
 
     // Create gradient brush
-    BitmapImage* bmiTmpClip = new BitmapImage;
-    bmiTmpClip->drawRect(trgRect, Qt::NoPen, radialGrad, QPainter::CompositionMode_Source, mPrefs->isOn(SETTING::ANTIALIAS));
+    BitmapImage bmiTmpClip;
+    bmiTmpClip.drawRect(trgRect, Qt::NoPen, radialGrad, QPainter::CompositionMode_Source, mPrefs->isOn(SETTING::ANTIALIAS));
 
     // Slide texture/pixels of the source image
     qreal factor, factorGrad;
-    int xb, yb, xa, ya;
 
-    for (yb = bmiTmpClip->bounds().top(); yb < bmiTmpClip->bounds().bottom(); yb++)
+    for (int yb = bmiTmpClip.top(); yb < bmiTmpClip.bottom(); yb++)
     {
-        for (xb = bmiTmpClip->bounds().left(); xb < bmiTmpClip->bounds().right(); xb++)
+        for (int xb = bmiTmpClip.left(); xb < bmiTmpClip.right(); xb++)
         {
             QColor color;
-            color.setRgba(bmiTmpClip->pixel(xb, yb));
+            color.setRgba(bmiTmpClip.pixel(xb, yb));
             factorGrad = color.alphaF(); // any from r g b a is ok
 
-            xa = xb - factorGrad*delta.x();
-            ya = yb - factorGrad*delta.y();
+            int xa = xb - factorGrad*delta.x();
+            int ya = yb - factorGrad*delta.y();
 
             color.setRgba(bmiSource_->pixel(xa, ya));
             factor = color.alphaF();
@@ -1199,15 +1271,15 @@ void ScribbleArea::liquifyBrush(BitmapImage *bmiSource_, QPointF srcPoint_, QPoi
                 color.setBlue(color.blue()*factorGrad);
                 color.setAlpha(255 * factorGrad); // Premultiplied color
 
-                bmiTmpClip->setPixel(xb, yb, color.rgba());
+                bmiTmpClip.setPixel(xb, yb, color.rgba());
             }
-            else {
-                bmiTmpClip->setPixel(xb, yb, qRgba(255, 255, 255, 255));
+            else
+            {
+                bmiTmpClip.setPixel(xb, yb, qRgba(255, 255, 255, 255));
             }
         }
     }
-    mBufferImg->paste(bmiTmpClip);
-    delete bmiTmpClip;
+    mBufferImg->paste(&bmiTmpClip);
 }
 
 void ScribbleArea::drawPolyline(QPainterPath path, QPen pen, bool useAA)
@@ -1224,40 +1296,6 @@ void ScribbleArea::drawPolyline(QPainterPath path, QPen pen, bool useAA)
 
 /************************************************************************************/
 // view handling
-
-QTransform ScribbleArea::getView()
-{
-    Layer* layer = mEditor->layers()->currentLayer();
-    if (layer == NULL)
-    {
-        Q_ASSERT(false);
-        return QTransform(); // TODO: error
-    }
-
-    if (layer->type() == Layer::CAMERA)
-    {
-        return ((LayerCamera *)layer)->getViewAtFrame(mEditor->currentFrame());
-    }
-    else
-    {
-        return mEditor->view()->getView();
-    }
-}
-
-QRectF ScribbleArea::getViewRect()
-{
-    QRectF rect = QRectF(-width() / 2, -height() / 2, width(), height());
-    Layer* layer = mEditor->layers()->currentLayer();
-    if (layer == NULL) { return rect; }
-    if (layer->type() == Layer::CAMERA)
-    {
-        return ((LayerCamera *)layer)->getViewRect();
-    }
-    else
-    {
-        return rect;
-    }
-}
 
 QRectF ScribbleArea::getCameraRect()
 {
@@ -1442,6 +1480,56 @@ void ScribbleArea::setSelection(QRectF rect, bool trueOrFalse)
 
     // Temporary disabled this as it breaks selection rotate key (ctrl) event.
     // displaySelectionProperties();
+}
+
+/**
+ * @brief ScribbleArea::manageSelectionOrigin
+ * switches anchor point when crossing threshold
+ */
+void ScribbleArea::manageSelectionOrigin(QPointF currentPoint, QPointF originPoint)
+{
+    int mouseX = currentPoint.x();
+    int mouseY = currentPoint.y();
+
+    QRectF selectRect;
+    if (currentTool()->type() == ToolType::SELECT) {
+        selectRect = mySelection;
+    }
+    else // MOVE
+    {
+        selectRect = myTempTransformedSelection;
+    }
+
+    if (mouseX <= originPoint.x())
+    {
+        selectRect.setLeft(mouseX);
+        selectRect.setRight(originPoint.x());
+    }
+    else
+    {
+        selectRect.setLeft(originPoint.x());
+        selectRect.setRight(mouseX);
+    }
+
+    if (mouseY <= originPoint.y())
+    {
+        selectRect.setTop(mouseY);
+        selectRect.setBottom(originPoint.y());
+    }
+    else
+    {
+        selectRect.setTop(originPoint.y());
+        selectRect.setBottom(mouseY);
+    }
+
+    if (currentTool()->type() == ToolType::SELECT) {
+        mySelection = selectRect;
+    }
+    else // MOVE
+    {
+        myTempTransformedSelection = selectRect;
+    }
+
 }
 
 void ScribbleArea::displaySelectionProperties()

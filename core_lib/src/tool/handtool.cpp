@@ -39,7 +39,7 @@ void HandTool::loadSettings()
     properties.width = -1;
     properties.feather = -1;
     properties.useFeather = false;
-    properties.inpolLevel = -1;
+    properties.stabilizerLevel = -1;
     properties.useAA = -1;
 }
 
@@ -99,7 +99,7 @@ void HandTool::mouseMoveEvent( QMouseEvent* evt )
     }
     else if ( isScale )
     {
-        float delta = ( getCurrentPixel().y() - mLastPixel.y() ) / 100.f ;
+        float delta = ( getCurrentPixel().y() - mLastPixel.y() ) / 100.f;
         float scaleValue = viewMgr->scaling() * (1.f + delta);
         viewMgr->scale(scaleValue);
     }

@@ -21,6 +21,7 @@ GNU General Public License for more details.
 
 #include "editor.h"
 #include "toolmanager.h"
+#include "viewmanager.h"
 #include "scribblearea.h"
 #include "layervector.h"
 #include "layermanager.h"
@@ -42,7 +43,7 @@ void MoveTool::loadSettings()
     properties.width = -1;
     properties.feather = -1;
     properties.useFeather = false;
-    properties.inpolLevel = -1;
+    properties.stabilizerLevel = -1;
     properties.useAA = -1;
 }
 
@@ -130,7 +131,38 @@ void MoveTool::pressOperation(QMouseEvent* event, Layer* layer)
         QRectF selectionRect = mScribbleArea->myTransformedSelection;
         if (!selectionRect.isEmpty())
         {
+            // Hack to "carry over" the selected part of the drawing.
+            // Commented out for now, since it doesn't work right for
+            // vector layers.
+
+//            bool onEmptyFrame = layer->getKeyFrameAt(mEditor->currentFrame()) == nullptr;
+//            bool preferCreateNewKey = mEditor->preference()->getInt(SETTING::DRAW_ON_EMPTY_FRAME_ACTION) == CREATE_NEW_KEY;
+//            bool preferDuplicate = mEditor->preference()->getInt(SETTING::DRAW_ON_EMPTY_FRAME_ACTION) == DUPLICATE_PREVIOUS_KEY;
+
+//            if(onEmptyFrame)
+//            {
+//                if(preferCreateNewKey)
+//                {
+//                    mEditor->copy();
+//                    mScribbleArea->deleteSelection();
+//                }
+//                else if(preferDuplicate)
+//                {
+//                    mEditor->copy();
+//                }
+//            }
+
+//            mScribbleArea->handleDrawingOnEmptyFrame();
             mEditor->backup(typeName());
+
+            // Hack to "carry over" the selected part of the drawing.
+//            if(onEmptyFrame)
+//            {
+//                if(preferCreateNewKey || preferDuplicate)
+//                {
+//                    mEditor->paste();
+//                }
+//            }
         }
 
         if (mScribbleArea->somethingSelected) // there is an area selection
@@ -148,6 +180,8 @@ void MoveTool::pressOperation(QMouseEvent* event, Layer* layer)
 
             mScribbleArea->setSelection(mScribbleArea->myTransformedSelection, true);
             resetSelectionProperties();
+        } else {
+            anchorOriginPoint = getLastPoint();
         }
 
         if (mScribbleArea->getMoveMode() == ScribbleArea::MIDDLE)
@@ -216,18 +250,22 @@ void MoveTool::whichTransformationPoint()
     if (QLineF(getLastPoint(), transformPoint.topLeft()).length() < 10)
     {
         mScribbleArea->setMoveMode(ScribbleArea::TOPLEFT);
+        anchorOriginPoint = mScribbleArea->mySelection.bottomRight();
     }
     if (QLineF(getLastPoint(), transformPoint.topRight()).length() < 10)
     {
         mScribbleArea->setMoveMode(ScribbleArea::TOPRIGHT);
+        anchorOriginPoint = mScribbleArea->mySelection.bottomLeft();
     }
     if (QLineF(getLastPoint(), transformPoint.bottomLeft()).length() < 10)
     {
         mScribbleArea->setMoveMode(ScribbleArea::BOTTOMLEFT);
+        anchorOriginPoint = mScribbleArea->mySelection.topRight();
     }
     if (QLineF(getLastPoint(), transformPoint.bottomRight()).length() < 10)
     {
         mScribbleArea->setMoveMode(ScribbleArea::BOTTOMRIGHT);
+        anchorOriginPoint = mScribbleArea->mySelection.topLeft();
     }
 }
 
@@ -244,30 +282,45 @@ void MoveTool::transformSelection(qreal offsetX, qreal offsetY)
         break;
 
     case ScribbleArea::TOPRIGHT:
+    {
         mScribbleArea->myTempTransformedSelection =
             mScribbleArea->myTransformedSelection.adjusted(0, offsetY, offsetX, 0);
-        break;
 
+        mScribbleArea->manageSelectionOrigin(getCurrentPoint(), anchorOriginPoint);
+        break;
+    }
     case ScribbleArea::TOPLEFT:
+    {
         mScribbleArea->myTempTransformedSelection =
             mScribbleArea->myTransformedSelection.adjusted(offsetX, offsetY, 0, 0);
-        break;
 
+        mScribbleArea->manageSelectionOrigin(getCurrentPoint(), anchorOriginPoint);
+        break;
+    }
     case ScribbleArea::BOTTOMLEFT:
+    {
         mScribbleArea->myTempTransformedSelection =
             mScribbleArea->myTransformedSelection.adjusted(offsetX, 0, 0, offsetY);
-        break;
 
+        mScribbleArea->manageSelectionOrigin(getCurrentPoint(), anchorOriginPoint);
+        break;
+    }
     case ScribbleArea::BOTTOMRIGHT:
+    {
         mScribbleArea->myTempTransformedSelection =
             mScribbleArea->myTransformedSelection.adjusted(0, 0, offsetX, offsetY);
+
+        mScribbleArea->manageSelectionOrigin(getCurrentPoint(), anchorOriginPoint);
         break;
 
+    }
     case ScribbleArea::ROTATION:
+    {
         mScribbleArea->myTempTransformedSelection =
             mScribbleArea->myTransformedSelection; // @ necessary?
         mScribbleArea->myRotatedAngle = getCurrentPixel().x() - getLastPressPixel().x();
         break;
+    }
     default:
         break;
     }

@@ -23,6 +23,7 @@ GNU General Public License for more details.
 #include "colormanager.h"
 #include "strokemanager.h"
 #include "layermanager.h"
+#include "viewmanager.h"
 #include "editor.h"
 #include "scribblearea.h"
 #include "blitrect.h"
@@ -38,7 +39,7 @@ void PenTool::loadSettings()
     m_enabledProperties[PRESSURE] = true;
     m_enabledProperties[VECTORMERGE] = true;
     m_enabledProperties[ANTI_ALIASING] = true;
-    m_enabledProperties[INTERPOLATION] = true;
+    m_enabledProperties[STABILIZATION] = true;
 
     QSettings settings( PENCIL2D, PENCIL2D );
 
@@ -47,13 +48,13 @@ void PenTool::loadSettings()
     properties.invisibility = OFF;
     properties.preserveAlpha = OFF;
     properties.useAA = settings.value( "brushAA").toBool();
-    properties.inpolLevel = 0;
+    properties.stabilizerLevel = settings.value("stabilizerLevel").toInt();
 
     // First run
     if ( properties.width <= 0 )
     {
         setWidth(1.5);
-        setPressure(1);
+        setPressure(true);
     }
 
     mCurrentWidth = properties.width;
@@ -92,12 +93,12 @@ void PenTool::setAA(const int AA )
     settings.sync();
 }
 
-void PenTool::setInpolLevel(const int level)
+void PenTool::setStabilizerLevel(const int level)
 {
-    properties.inpolLevel = level;
+    properties.stabilizerLevel = level;
 
     QSettings settings( PENCIL2D, PENCIL2D);
-    settings.setValue("lineInpol", level);
+    settings.setValue("stabilizerLevel", level);
     settings.sync();
 }
 
@@ -173,8 +174,8 @@ void PenTool::mouseMoveEvent( QMouseEvent *event )
         if ( event->buttons() & Qt::LeftButton )
         {
             drawStroke();
-            if (properties.inpolLevel != m_pStrokeManager->getInpolLevel()) {
-                m_pStrokeManager->setInpolLevel(properties.inpolLevel);
+            if (properties.stabilizerLevel != m_pStrokeManager->getStabilizerLevel()) {
+                m_pStrokeManager->setStabilizerLevel(properties.stabilizerLevel);
             }
 			//qDebug() << "DrawStroke" << event->pos() ;
         }

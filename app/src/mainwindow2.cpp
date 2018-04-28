@@ -35,14 +35,17 @@ GNU General Public License for more details.
 #include "pencildef.h"
 #include "pencilsettings.h"
 #include "object.h"
-#include "filemanager.h"
 #include "editor.h"
+
+#include "filemanager.h"
 #include "colormanager.h"
 #include "layermanager.h"
-#include "layercamera.h"
 #include "toolmanager.h"
 #include "playbackmanager.h"
 #include "soundmanager.h"
+#include "viewmanager.h"
+
+#include "layercamera.h"
 #include "actioncommands.h"
 #include "fileformat.h"     //contains constants used by Pencil File Format
 #include "util.h"
@@ -57,6 +60,7 @@ GNU General Public License for more details.
 #include "preferencesdialog.h"
 #include "timeline.h"
 #include "toolbox.h"
+
 //#include "preview.h"
 #include "timeline2.h"
 #include "errordialog.h"
@@ -67,10 +71,10 @@ GNU General Public License for more details.
 
 #define STRINGIFY(x) #x
 #define TOSTRING(x) STRINGIFY(x)
-#define S__GIT_TIMESTAMP__ TOSTRING(GIT_TIMESTAMP)
+#define S__GIT_TIMESTAMP TOSTRING(GIT_TIMESTAMP)
 
 #ifdef GIT_TIMESTAMP
-#define BUILD_DATE S__GIT_TIMESTAMP__
+#define BUILD_DATE S__GIT_TIMESTAMP
 #else
 #define BUILD_DATE __DATE__
 #endif
@@ -344,6 +348,7 @@ void MainWindow2::createMenus()
 
     // -------------- Help Menu ---------------
     connect(ui->actionHelp, &QAction::triggered, mCommands, &ActionCommands::help);
+    connect(ui->actionQuick_Guide, &QAction::triggered, mCommands, &ActionCommands::quickGuide);
     connect(ui->actionAbout, &QAction::triggered, mCommands, &ActionCommands::about);
     connect(ui->actionWebsite, &QAction::triggered, mCommands, &ActionCommands::website);
     connect(ui->actionReport_Bug, &QAction::triggered, mCommands, &ActionCommands::reportbug);
@@ -720,21 +725,18 @@ void MainWindow2::importImageSequence()
     progress.setMaximum(totalImagesToImport);
     int imagesImportedSoFar = 0;
 
+    QString failedFiles;
+    bool failedImport = false;
     for (QString strImgFile : files)
     {
         QString strImgFileLower = strImgFile.toLower();
+
         if (strImgFileLower.endsWith(".png") ||
             strImgFileLower.endsWith(".jpg") ||
             strImgFileLower.endsWith(".jpeg") ||
-            strImgFileLower.endsWith(".tif") ||
-            strImgFileLower.endsWith(".tiff") ||
             strImgFileLower.endsWith(".bmp"))
         {
             mEditor->importImage(strImgFile);
-            for (int i = 1; i < number; i++)
-            {
-                mEditor->scrubForward();
-            }
 
             imagesImportedSoFar++;
             progress.setValue(imagesImportedSoFar);
@@ -744,8 +746,29 @@ void MainWindow2::importImageSequence()
             {
                 break;
             }
+        } else {
+            failedFiles += strImgFile + "\n";
+            if (!failedImport)
+            {
+                failedImport = true;
+            }
         }
     }
+
+    if (failedImport)
+    {
+        QMessageBox::warning(this,
+                             tr("Warning"),
+                             tr("was unable to import") + failedFiles,
+                             QMessageBox::Ok,
+                             QMessageBox::Ok);
+    }
+
+    for (int i = 1; i < number; i++)
+    {
+        mEditor->scrubForward();
+    }
+
     mEditor->layers()->notifyAnimationLengthChanged();
 
     progress.close();
@@ -953,7 +976,7 @@ void MainWindow2::clearKeyboardShortcuts()
     }
 }
 
-void MainWindow2::undoActSetText(void)
+void MainWindow2::undoActSetText()
 {
     if (mEditor->mBackupIndex < 0)
     {
@@ -982,7 +1005,7 @@ void MainWindow2::undoActSetText(void)
     }
 }
 
-void MainWindow2::undoActSetEnabled(void)
+void MainWindow2::undoActSetEnabled()
 {
     ui->actionUndo->setEnabled(true);
     ui->actionRedo->setEnabled(true);

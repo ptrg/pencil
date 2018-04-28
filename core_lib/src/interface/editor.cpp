@@ -245,10 +245,10 @@ void Editor::backup(int backupLayer, int backupFrame, QString undoText)
                 element->layer = backupLayer;
                 element->frame = backupFrame;
                 element->undoText = undoText;
-                element->somethingSelected = this->getScribbleArea()->somethingSelected;
-                element->mySelection = this->getScribbleArea()->mySelection;
-                element->myTransformedSelection = this->getScribbleArea()->myTransformedSelection;
-                element->myTempTransformedSelection = this->getScribbleArea()->myTempTransformedSelection;
+                element->somethingSelected = getScribbleArea()->somethingSelected;
+                element->mySelection = getScribbleArea()->mySelection;
+                element->myTransformedSelection = getScribbleArea()->myTransformedSelection;
+                element->myTempTransformedSelection = getScribbleArea()->myTempTransformedSelection;
                 mBackupList.append(element);
                 mBackupIndex++;
             }
@@ -262,10 +262,10 @@ void Editor::backup(int backupLayer, int backupFrame, QString undoText)
                 element->layer = backupLayer;
                 element->frame = backupFrame;
                 element->undoText = undoText;
-                element->somethingSelected = this->getScribbleArea()->somethingSelected;
-                element->mySelection = this->getScribbleArea()->mySelection;
-                element->myTransformedSelection = this->getScribbleArea()->myTransformedSelection;
-                element->myTempTransformedSelection = this->getScribbleArea()->myTempTransformedSelection;
+                element->somethingSelected = getScribbleArea()->somethingSelected;
+                element->mySelection = getScribbleArea()->mySelection;
+                element->myTransformedSelection = getScribbleArea()->myTransformedSelection;
+                element->myTempTransformedSelection = getScribbleArea()->myTempTransformedSelection;
                 mBackupList.append(element);
                 mBackupIndex++;
             }
@@ -333,7 +333,7 @@ void Editor::restoreKey()
         BackupSoundElement* lastBackupSoundElement = (BackupSoundElement*)lastBackupElement;
         layerIndex = lastBackupSoundElement->layer;
         frame = lastBackupSoundElement->frame;
-        layer = object()->getLayer(layerIndex);
+
         strSoundFile = lastBackupSoundElement->fileName;
         KeyFrame* key = addKeyFrame(layerIndex, frame);
         SoundClip* clip = dynamic_cast<SoundClip*>(key);
@@ -343,7 +343,8 @@ void Editor::restoreKey()
             {
                 return;
             }
-            else {
+            else
+            {
                 //Status st = sound()->pasteSound(clip, strSoundFile);
                 //Q_ASSERT(st.ok());
             }
@@ -586,12 +587,12 @@ void Editor::clipboardChanged()
     {
         g_clipboardBitmapImage.setImage(new QImage(QApplication::clipboard()->image()));
         g_clipboardBitmapImage.bounds() = QRect(g_clipboardBitmapImage.topLeft(), g_clipboardBitmapImage.image()->size());
-        qDebug() << "New clipboard image" << g_clipboardBitmapImage.image()->size();
+        //qDebug() << "New clipboard image" << g_clipboardBitmapImage.image()->size();
     }
     else
     {
         clipboardBitmapOk = false;
-        qDebug() << "The image has been saved in the clipboard";
+        //qDebug() << "The image has been saved in the clipboard";
     }
 }
 

@@ -401,12 +401,7 @@ void TimeLineCells::paintEvent(QPaintEvent*)
             }
             painter.drawRect(scrubRect);
             painter.setPen(QColor(70, 70, 70, 255));
-            int incr = 0;
-            if (mEditor->currentFrame() < 10)
-            {
-                incr = 4;
-            }
-            else { incr = 0; }
+            int incr = (mEditor->currentFrame() < 10) ? 4 : 0;
             painter.drawText(QPoint(getFrameX(mEditor->currentFrame() - 1) + incr, 15),
                              QString::number(mEditor->currentFrame()));
         }
@@ -534,7 +529,6 @@ void TimeLineCells::mousePressEvent(QMouseEvent* event)
                         mCanMoveFrame = true;
                     }
 
-                    currentLayer->mousePress(event, frameNumber);
                     mTimeLine->updateContent();
                 }
                 else
@@ -611,7 +605,6 @@ void TimeLineCells::mouseMoveEvent(QMouseEvent* event)
                         }
                         mLastFrameNumber = frameNumber;
                     }
-                    currentLayer->mouseMove(event, frameNumber);
                 }
             }
         }
@@ -643,8 +636,6 @@ void TimeLineCells::mouseReleaseEvent(QMouseEvent* event)
             // Add/remove from already selected
             currentLayer->toggleFrameSelected(frameNumber, multipleSelection);
         }
-
-        currentLayer->mouseRelease(event, frameNumber);
     }
     if (mType == TIMELINE_CELL_TYPE::Layers && layerNumber != mStartLayerNumber && mStartLayerNumber != -1 && layerNumber != -1)
     {

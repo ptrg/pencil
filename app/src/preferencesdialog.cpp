@@ -96,17 +96,21 @@ GeneralPage::GeneralPage(QWidget* parent) :
     ui->languageCombo->addItem(tr("Danish") + " (Danish)", "da");
     ui->languageCombo->addItem(tr("German") + " (German)", "de");
     ui->languageCombo->addItem(tr("English") + " (English)", "en");
+    ui->languageCombo->addItem(tr("Estonian") + " (Estonian)", "et");
     ui->languageCombo->addItem(tr("Spanish") + " (Spanish)", "es");
     ui->languageCombo->addItem(tr("French") + " (French)", "fr");
     ui->languageCombo->addItem(tr("Hebrew") + " (Hebrew)", "he");
-    ui->languageCombo->addItem(tr("Hungarian") + " (Hungarian)", "hu-HU");
+    ui->languageCombo->addItem(tr("Hungarian") + " (Hungarian)", "hu_HU");
     ui->languageCombo->addItem(tr("Indonesian") + " (Indonesian)", "id");
     ui->languageCombo->addItem(tr("Italian") + " (Italian)", "it");
     ui->languageCombo->addItem(tr("Japanese") + " (Japanese)", "ja");
-    ui->languageCombo->addItem(tr("Portuguese - Brazil") + "(Portuguese - Brazil)", "pt-BR");
+    ui->languageCombo->addItem(tr("Polish") + " (Polish)", "pl");
+    ui->languageCombo->addItem(tr("Portuguese - Portugal") + "(Portuguese - Portugal)", "pt");
+    ui->languageCombo->addItem(tr("Portuguese - Brazil") + "(Portuguese - Brazil)", "pt_BR");
     ui->languageCombo->addItem(tr("Russian") + " (Russian)", "ru");
-    ui->languageCombo->addItem(tr("Vietnamese ") + " (Vietnamese)", "vi");
-    ui->languageCombo->addItem(tr("Chinese - Taiwan") + " (Chinese - Taiwan)", "zh-TW");
+    ui->languageCombo->addItem(tr("Slovenian") + " (Slovenian)", "sl");
+    ui->languageCombo->addItem(tr("Vietnamese") + " (Vietnamese)", "vi");
+    ui->languageCombo->addItem(tr("Chinese - Taiwan") + " (Chinese - Taiwan)", "zh_TW");
 
     int value = settings.value("windowOpacity").toInt();
     ui->windowOpacityLevel->setValue(100 - value);
@@ -272,6 +276,9 @@ TimelinePage::TimelinePage(QWidget* parent) :
     connect(ui->frameSize, &QSlider::valueChanged, this, &TimelinePage::frameSizeChange);
     connect(ui->timelineLength, spinBoxValueChange, this, &TimelinePage::timelineLengthChanged);
     connect(ui->scrubBox, &QCheckBox::stateChanged, this, &TimelinePage::scrubChange);
+    connect(ui->radioButtonAddNewKey, &QRadioButton::toggled, this, &TimelinePage::radioButtonToggled);
+    connect(ui->radioButtonDuplicate, &QRadioButton::toggled, this, &TimelinePage::radioButtonToggled);
+    connect(ui->radioButtonDrawOnPrev, &QRadioButton::toggled, this, &TimelinePage::radioButtonToggled);
 }
 
 TimelinePage::~TimelinePage()
@@ -295,6 +302,24 @@ void TimelinePage::updateValues()
     ui->timelineLength->setValue(mManager->getInt(SETTING::TIMELINE_SIZE));
     if (mManager->getString(SETTING::TIMELINE_SIZE).toInt() <= 0)
         ui->timelineLength->setValue(240);
+
+    SignalBlocker b4(ui->radioButtonAddNewKey);
+    SignalBlocker b5(ui->radioButtonDuplicate);
+    SignalBlocker b6(ui->radioButtonDrawOnPrev);
+    int action = mManager->getInt(SETTING::DRAW_ON_EMPTY_FRAME_ACTION);
+    switch (action) {
+    case CREATE_NEW_KEY:
+        ui->radioButtonAddNewKey->setChecked(true);
+        break;
+    case DUPLICATE_PREVIOUS_KEY:
+        ui->radioButtonDuplicate->setChecked(true);
+        break;
+    case KEEP_DRAWING_ON_PREVIOUS_KEY:
+        ui->radioButtonDrawOnPrev->setChecked(true);
+        break;
+    default:
+        break;
+    }
 }
 
 void TimelinePage::timelineLengthChanged(int value)
@@ -320,6 +345,22 @@ void TimelinePage::labelChange(bool value)
 void TimelinePage::scrubChange(int value)
 {
     mManager->set(SETTING::SHORT_SCRUB, value != Qt::Unchecked);
+}
+
+void TimelinePage::radioButtonToggled(bool)
+{
+    if(ui->radioButtonAddNewKey->isChecked())
+    {
+        mManager->set(SETTING::DRAW_ON_EMPTY_FRAME_ACTION, CREATE_NEW_KEY);
+    }
+    else if(ui->radioButtonDuplicate->isChecked())
+    {
+        mManager->set(SETTING::DRAW_ON_EMPTY_FRAME_ACTION, DUPLICATE_PREVIOUS_KEY);
+    }
+    else if(ui->radioButtonDrawOnPrev->isChecked())
+    {
+        mManager->set(SETTING::DRAW_ON_EMPTY_FRAME_ACTION, KEEP_DRAWING_ON_PREVIOUS_KEY);
+    }
 }
 
 FilesPage::FilesPage(QWidget* parent) :

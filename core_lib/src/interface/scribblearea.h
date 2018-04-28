@@ -35,17 +35,13 @@ GNU General Public License for more details.
 #include "bitmapimage.h"
 #include "colourref.h"
 #include "vectorselection.h"
-#include "colormanager.h"
-#include "viewmanager.h"
 #include "canvaspainter.h"
 #include "preferencemanager.h"
-
 
 class Layer;
 class Editor;
 class BaseTool;
 class StrokeManager;
-class ColorManager;
 
 
 class ScribbleArea : public QWidget
@@ -93,8 +89,6 @@ public:
     MoveMode getMoveMode() const { return mMoveMode; }
     void setMoveMode( MoveMode moveMode ) { mMoveMode = moveMode; }
 
-    QTransform getView();
-    QRectF getViewRect();
     QRectF getCameraRect();
     QPointF getCentralPoint();
 
@@ -102,7 +96,7 @@ public:
     void updateFrame( int frame );
     void updateAllFrames();
     void updateAllVectorLayersAtCurrentFrame();
-    void updateAllVectorLayersAt( int frame );
+    void updateAllVectorLayersAt(int frameNumber);
 
     bool shouldUpdateAll() const { return mNeedUpdateAll; }
     void setAllDirty() { mNeedUpdateAll = true; }
@@ -115,11 +109,13 @@ public:
 
     StrokeManager* getStrokeManager() const { return mStrokeManager.get(); }
 
-    Editor* editor() { return mEditor; }
+    Editor* editor() const { return mEditor; }
 
     void floodFillError( int errorType );
 
-    bool isMouseInUse() { return mMouseInUse; }
+    bool isMouseInUse() const { return mMouseInUse; }
+
+    void manageSelectionOrigin(QPointF currentPoint, QPointF originPoint);
 
 signals:
     void modification( int );
@@ -129,7 +125,7 @@ signals:
 public slots:
     void clearImage();
     void calculateSelectionRect();
-    QTransform getSelectionTransformation() { return selectionTransformation; }
+    QTransform getSelectionTransformation() const { return selectionTransformation; }
     void calculateSelectionTransformation();
     void paintTransformedSelection();
     void applyTransformedSelection();
@@ -170,7 +166,7 @@ public:
     void liquifyBrush( BitmapImage *bmiSource_, QPointF srcPoint_, QPointF thePoint_, qreal brushWidth_, qreal offset_, qreal opacity_ );
 
     void paintBitmapBuffer();
-    void paintBitmapBufferRect( QRect rect );
+    void paintBitmapBufferRect(const QRect& rect);
     void paintCanvasCursor(QPainter& painter);
     void clearBitmapBuffer();
     void refreshBitmap( const QRectF& rect, int rad );
@@ -178,6 +174,10 @@ public:
     void setGaussianGradient( QGradient &gradient, QColor colour, qreal opacity, qreal offset );
 
     void updateCanvasCursor();
+
+    /// Call this when starting to use a paint tool. Checks whether we are drawing
+    /// on an empty frame, and if so, takes action according to use preference.
+    void handleDrawingOnEmptyFrame();
 
     BitmapImage* mBufferImg = nullptr; // used to pre-draw vector modifications
     BitmapImage* mStrokeImg = nullptr; // used for brush strokes before they are finalized
@@ -236,7 +236,7 @@ private:
     VectorSelection vectorSelection;
     QTransform selectionTransformation;
 
-    PreferenceManager *mPrefs = nullptr;
+    PreferenceManager* mPrefs = nullptr;
 
     QPixmap mCanvas;
     CanvasPainter mCanvasPainter;
