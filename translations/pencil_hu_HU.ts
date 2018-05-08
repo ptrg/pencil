@@ -66,62 +66,62 @@
 <context>
     <name>ActionCommands</name>
     <message>
-        <location filename="../app/src/actioncommands.cpp" line="67"/>
+        <location filename="../app/src/actioncommands.cpp" line="68"/>
         <source>No sound layer exists as a destination for your import. Create a new sound layer?</source>
         <translation>Nincs hang réteg a betöltendő állomány számára. Létrehoz egy új hang réteget?</translation>
     </message>
     <message>
-        <location filename="../app/src/actioncommands.cpp" line="68"/>
+        <location filename="../app/src/actioncommands.cpp" line="69"/>
         <source>Create sound layer</source>
         <translation>Hang réteg létrehozása</translation>
     </message>
     <message>
-        <location filename="../app/src/actioncommands.cpp" line="69"/>
+        <location filename="../app/src/actioncommands.cpp" line="70"/>
         <source>Don&apos;t create layer</source>
         <translation>Ne legyen réteg létrehozva</translation>
     </message>
     <message>
-        <location filename="../app/src/actioncommands.cpp" line="189"/>
+        <location filename="../app/src/actioncommands.cpp" line="190"/>
         <source>Exporting movie</source>
         <translation>Videó exportálása</translation>
     </message>
     <message>
-        <location filename="../app/src/actioncommands.cpp" line="230"/>
+        <location filename="../app/src/actioncommands.cpp" line="231"/>
         <source>Finished. Open movie now?</source>
         <comment>When movie export done.</comment>
         <translation>Kész. Videó megnyitása most?</translation>
     </message>
     <message>
-        <location filename="../app/src/actioncommands.cpp" line="565"/>
-        <location filename="../app/src/actioncommands.cpp" line="578"/>
-        <location filename="../app/src/actioncommands.cpp" line="592"/>
-        <location filename="../app/src/actioncommands.cpp" line="606"/>
-        <source>Layer Properties</source>
-        <translation>Réteg tulajdonságai</translation>
-    </message>
-    <message>
-        <location filename="../app/src/actioncommands.cpp" line="80"/>
         <location filename="../app/src/actioncommands.cpp" line="566"/>
         <location filename="../app/src/actioncommands.cpp" line="579"/>
         <location filename="../app/src/actioncommands.cpp" line="593"/>
         <location filename="../app/src/actioncommands.cpp" line="607"/>
+        <source>Layer Properties</source>
+        <translation>Réteg tulajdonságai</translation>
+    </message>
+    <message>
+        <location filename="../app/src/actioncommands.cpp" line="81"/>
+        <location filename="../app/src/actioncommands.cpp" line="567"/>
+        <location filename="../app/src/actioncommands.cpp" line="580"/>
+        <location filename="../app/src/actioncommands.cpp" line="594"/>
+        <location filename="../app/src/actioncommands.cpp" line="608"/>
         <source>Layer name:</source>
         <translation>Réteg neve:</translation>
     </message>
     <message>
-        <location filename="../app/src/actioncommands.cpp" line="79"/>
+        <location filename="../app/src/actioncommands.cpp" line="80"/>
         <source>Layer Properties</source>
         <comment>Dialog title on creating a sound layer</comment>
         <translation>Réteg tulajdonságai</translation>
     </message>
     <message>
-        <location filename="../app/src/actioncommands.cpp" line="81"/>
+        <location filename="../app/src/actioncommands.cpp" line="82"/>
         <source>Sound Layer</source>
         <comment>Default name on creating a sound layer</comment>
         <translation>Hang réteg</translation>
     </message>
     <message>
-        <location filename="../app/src/actioncommands.cpp" line="107"/>
+        <location filename="../app/src/actioncommands.cpp" line="108"/>
         <source>A sound clip already exists on this frame! Please select another frame or layer.</source>
         <translation>Egy hang klip már el lett helyezve ezen a képkockán. Válasszon másik pozíciót vagy réteget!</translation>
     </message>
@@ -134,58 +134,58 @@
         <translation type="vanished">Kész. Videó megnyitása most?</translation>
     </message>
     <message>
-        <location filename="../app/src/actioncommands.cpp" line="286"/>
+        <location filename="../app/src/actioncommands.cpp" line="287"/>
         <source>Exporting image sequence...</source>
         <translation>Képsorozat exportálása...</translation>
     </message>
     <message>
-        <location filename="../app/src/actioncommands.cpp" line="286"/>
+        <location filename="../app/src/actioncommands.cpp" line="287"/>
         <source>Abort</source>
         <translation>Megszakítás</translation>
     </message>
     <message>
-        <location filename="../app/src/actioncommands.cpp" line="366"/>
+        <location filename="../app/src/actioncommands.cpp" line="367"/>
         <source>Warning</source>
         <translation>Figyelmeztetés</translation>
     </message>
     <message>
-        <location filename="../app/src/actioncommands.cpp" line="367"/>
+        <location filename="../app/src/actioncommands.cpp" line="368"/>
         <source>Unable to export image.</source>
         <translation>A kép nem exportálható.</translation>
     </message>
     <message>
-        <location filename="../app/src/actioncommands.cpp" line="567"/>
+        <location filename="../app/src/actioncommands.cpp" line="568"/>
         <source>Bitmap Layer</source>
         <translation>Bitkép réteg</translation>
     </message>
     <message>
-        <location filename="../app/src/actioncommands.cpp" line="580"/>
+        <location filename="../app/src/actioncommands.cpp" line="581"/>
         <source>Vector Layer</source>
         <translation>Vektor réteg</translation>
     </message>
     <message>
-        <location filename="../app/src/actioncommands.cpp" line="594"/>
+        <location filename="../app/src/actioncommands.cpp" line="595"/>
         <source>Camera Layer</source>
         <translation>Kamera réteg</translation>
     </message>
     <message>
-        <location filename="../app/src/actioncommands.cpp" line="608"/>
+        <location filename="../app/src/actioncommands.cpp" line="609"/>
         <source>Sound Layer</source>
         <translation>Hang réteg</translation>
     </message>
     <message>
-        <location filename="../app/src/actioncommands.cpp" line="625"/>
+        <location filename="../app/src/actioncommands.cpp" line="626"/>
         <source>Delete Layer</source>
         <comment>Windows title of Delete current layer pop-up.</comment>
         <translation>Réteg törlése</translation>
     </message>
     <message>
-        <location filename="../app/src/actioncommands.cpp" line="626"/>
+        <location filename="../app/src/actioncommands.cpp" line="627"/>
         <source>Are you sure you want to delete layer: </source>
         <translation>Biztosan törölni akarja a következő réteget: </translation>
     </message>
     <message>
-        <location filename="../app/src/actioncommands.cpp" line="635"/>
+        <location filename="../app/src/actioncommands.cpp" line="636"/>
         <source>Please keep at least one camera layer in project</source>
         <comment>text when failed to delete camera layer</comment>
         <translation>Legalább egy kamera rétegnek lennie kell projektben</translation>
@@ -194,57 +194,57 @@
 <context>
     <name>BaseTool</name>
     <message>
-        <location filename="../core_lib/src/tool/basetool.cpp" line="39"/>
+        <location filename="../core_lib/src/tool/basetool.cpp" line="40"/>
         <source>Pencil</source>
         <translation>Ceruza</translation>
     </message>
     <message>
-        <location filename="../core_lib/src/tool/basetool.cpp" line="40"/>
+        <location filename="../core_lib/src/tool/basetool.cpp" line="41"/>
         <source>Eraser</source>
         <translation>Radír</translation>
     </message>
     <message>
-        <location filename="../core_lib/src/tool/basetool.cpp" line="41"/>
+        <location filename="../core_lib/src/tool/basetool.cpp" line="42"/>
         <source>Select</source>
         <translation>Kijelölés</translation>
     </message>
     <message>
-        <location filename="../core_lib/src/tool/basetool.cpp" line="42"/>
+        <location filename="../core_lib/src/tool/basetool.cpp" line="43"/>
         <source>Move</source>
         <translation>Mozgatás</translation>
     </message>
     <message>
-        <location filename="../core_lib/src/tool/basetool.cpp" line="43"/>
+        <location filename="../core_lib/src/tool/basetool.cpp" line="44"/>
         <source>Hand</source>
         <translation>Kéz</translation>
     </message>
     <message>
-        <location filename="../core_lib/src/tool/basetool.cpp" line="44"/>
+        <location filename="../core_lib/src/tool/basetool.cpp" line="45"/>
         <source>Smudge</source>
         <translation>Maszatolás</translation>
     </message>
     <message>
-        <location filename="../core_lib/src/tool/basetool.cpp" line="45"/>
+        <location filename="../core_lib/src/tool/basetool.cpp" line="46"/>
         <source>Pen</source>
         <translation>Toll</translation>
     </message>
     <message>
-        <location filename="../core_lib/src/tool/basetool.cpp" line="46"/>
+        <location filename="../core_lib/src/tool/basetool.cpp" line="47"/>
         <source>Polyline</source>
         <translation>Vonallánc</translation>
     </message>
     <message>
-        <location filename="../core_lib/src/tool/basetool.cpp" line="47"/>
+        <location filename="../core_lib/src/tool/basetool.cpp" line="48"/>
         <source>Bucket</source>
         <translation>Vödör</translation>
     </message>
     <message>
-        <location filename="../core_lib/src/tool/basetool.cpp" line="48"/>
+        <location filename="../core_lib/src/tool/basetool.cpp" line="49"/>
         <source>Eyedropper</source>
         <translation>Szemcseppentő</translation>
     </message>
     <message>
-        <location filename="../core_lib/src/tool/basetool.cpp" line="49"/>
+        <location filename="../core_lib/src/tool/basetool.cpp" line="50"/>
         <source>Brush</source>
         <translation>Ecset</translation>
     </message>
@@ -442,8 +442,8 @@
         <translation type="vanished">Színpaletta</translation>
     </message>
     <message>
-        <location filename="../app/src/colorpalettewidget.cpp" line="152"/>
-        <location filename="../app/src/colorpalettewidget.cpp" line="153"/>
+        <location filename="../app/src/colorpalettewidget.cpp" line="159"/>
+        <location filename="../app/src/colorpalettewidget.cpp" line="160"/>
         <source>Colour name</source>
         <translation>Szín neve</translation>
     </message>
@@ -595,8 +595,8 @@
 <context>
     <name>Editor</name>
     <message>
-        <location filename="../core_lib/src/interface/editor.cpp" line="547"/>
-        <location filename="../core_lib/src/interface/editor.cpp" line="568"/>
+        <location filename="../core_lib/src/interface/editor.cpp" line="548"/>
+        <location filename="../core_lib/src/interface/editor.cpp" line="569"/>
         <source>Paste</source>
         <translation>Beillesztés</translation>
     </message>
@@ -605,13 +605,13 @@
         <translation type="vanished">Hang beillesztése</translation>
     </message>
     <message>
-        <location filename="../core_lib/src/interface/editor.cpp" line="786"/>
-        <location filename="../core_lib/src/interface/editor.cpp" line="812"/>
+        <location filename="../core_lib/src/interface/editor.cpp" line="787"/>
+        <location filename="../core_lib/src/interface/editor.cpp" line="813"/>
         <source>Import Image</source>
         <translation>Kép importálása</translation>
     </message>
     <message>
-        <location filename="../core_lib/src/interface/editor.cpp" line="935"/>
+        <location filename="../core_lib/src/interface/editor.cpp" line="936"/>
         <source>Remove frame</source>
         <translation>Képkocka eltávolítása</translation>
     </message>
@@ -1222,56 +1222,80 @@ p, li { white-space: pre-wrap; }
     </message>
     <message>
         <location filename="../app/src/preferencesdialog.cpp" line="99"/>
+        <source>Estonian</source>
+        <translation>Észt</translation>
+    </message>
+    <message>
+        <location filename="../app/src/preferencesdialog.cpp" line="100"/>
         <source>Spanish</source>
         <translation>Spanyol</translation>
     </message>
     <message>
-        <location filename="../app/src/preferencesdialog.cpp" line="100"/>
+        <location filename="../app/src/preferencesdialog.cpp" line="101"/>
         <source>French</source>
         <translation>Francia</translation>
     </message>
     <message>
-        <location filename="../app/src/preferencesdialog.cpp" line="101"/>
+        <location filename="../app/src/preferencesdialog.cpp" line="102"/>
         <source>Hebrew</source>
         <translation>Héber</translation>
     </message>
     <message>
-        <location filename="../app/src/preferencesdialog.cpp" line="102"/>
+        <location filename="../app/src/preferencesdialog.cpp" line="103"/>
         <source>Hungarian</source>
         <translation>Magyar</translation>
     </message>
     <message>
-        <location filename="../app/src/preferencesdialog.cpp" line="103"/>
+        <location filename="../app/src/preferencesdialog.cpp" line="104"/>
         <source>Indonesian</source>
         <translation>Indonéz</translation>
     </message>
     <message>
-        <location filename="../app/src/preferencesdialog.cpp" line="104"/>
+        <location filename="../app/src/preferencesdialog.cpp" line="105"/>
         <source>Italian</source>
         <translation>Olasz</translation>
     </message>
     <message>
-        <location filename="../app/src/preferencesdialog.cpp" line="105"/>
+        <location filename="../app/src/preferencesdialog.cpp" line="106"/>
         <source>Japanese</source>
         <translation>Japán</translation>
     </message>
     <message>
-        <location filename="../app/src/preferencesdialog.cpp" line="106"/>
-        <source>Portuguese - Brazil</source>
-        <translation>Portugál - Brazil</translation>
+        <location filename="../app/src/preferencesdialog.cpp" line="107"/>
+        <source>Polish</source>
+        <translation>Lengyel</translation>
     </message>
     <message>
-        <location filename="../app/src/preferencesdialog.cpp" line="107"/>
+        <location filename="../app/src/preferencesdialog.cpp" line="108"/>
+        <source>Portuguese - Portugal</source>
+        <translation>Portugál - Portugália</translation>
+    </message>
+    <message>
+        <location filename="../app/src/preferencesdialog.cpp" line="109"/>
+        <source>Portuguese - Brazil</source>
+        <translation>Portugál - Brazília</translation>
+    </message>
+    <message>
+        <location filename="../app/src/preferencesdialog.cpp" line="110"/>
         <source>Russian</source>
         <translation>Orosz</translation>
     </message>
     <message>
-        <location filename="../app/src/preferencesdialog.cpp" line="108"/>
-        <source>Vietnamese </source>
+        <location filename="../app/src/preferencesdialog.cpp" line="111"/>
+        <source>Slovenian</source>
+        <translation>Szlovén</translation>
+    </message>
+    <message>
+        <location filename="../app/src/preferencesdialog.cpp" line="112"/>
+        <source>Vietnamese</source>
         <translation>Vietnámi</translation>
     </message>
     <message>
-        <location filename="../app/src/preferencesdialog.cpp" line="109"/>
+        <source>Vietnamese </source>
+        <translation type="vanished">Vietnámi</translation>
+    </message>
+    <message>
+        <location filename="../app/src/preferencesdialog.cpp" line="113"/>
         <source>Chinese - Taiwan</source>
         <translation>Kínai - Taiwan</translation>
     </message>
@@ -1311,12 +1335,12 @@ p, li { white-space: pre-wrap; }
         <translation>Nagy pontosságú pozicionálás táblagépen</translation>
     </message>
     <message>
-        <location filename="../app/src/preferencesdialog.cpp" line="205"/>
+        <location filename="../app/src/preferencesdialog.cpp" line="209"/>
         <source>Restart Required</source>
         <translation>Újraindítás szükséges</translation>
     </message>
     <message>
-        <location filename="../app/src/preferencesdialog.cpp" line="206"/>
+        <location filename="../app/src/preferencesdialog.cpp" line="210"/>
         <source>The language change will take effect after a restart of Pencil2D</source>
         <translation>A nyelv megváltoztatása csak a Pencil2D újraindítása után érvényesül</translation>
     </message>
@@ -1433,12 +1457,12 @@ p, li { white-space: pre-wrap; }
 <context>
     <name>MainWindow2</name>
     <message>
-        <location filename="../app/ui/mainwindow2.ui" line="829"/>
+        <location filename="../app/ui/mainwindow2.ui" line="830"/>
         <source>Color Palette</source>
         <translation>Színpaletta</translation>
     </message>
     <message>
-        <location filename="../app/ui/mainwindow2.ui" line="364"/>
+        <location filename="../app/ui/mainwindow2.ui" line="365"/>
         <source>Paste</source>
         <translation>Beillesztés</translation>
     </message>
@@ -1494,7 +1518,7 @@ p, li { white-space: pre-wrap; }
     </message>
     <message>
         <location filename="../app/ui/mainwindow2.ui" line="170"/>
-        <location filename="../app/ui/mainwindow2.ui" line="797"/>
+        <location filename="../app/ui/mainwindow2.ui" line="798"/>
         <source>Tools</source>
         <translation>Eszközök</translation>
     </message>
@@ -1505,32 +1529,32 @@ p, li { white-space: pre-wrap; }
     </message>
     <message>
         <location filename="../app/ui/mainwindow2.ui" line="199"/>
-        <location filename="../app/ui/mainwindow2.ui" line="728"/>
+        <location filename="../app/ui/mainwindow2.ui" line="729"/>
         <source>Help</source>
         <translation>Súgó</translation>
     </message>
     <message>
-        <location filename="../app/ui/mainwindow2.ui" line="210"/>
+        <location filename="../app/ui/mainwindow2.ui" line="211"/>
         <source>Windows</source>
         <translation>Ablakok</translation>
     </message>
     <message>
-        <location filename="../app/ui/mainwindow2.ui" line="229"/>
+        <location filename="../app/ui/mainwindow2.ui" line="230"/>
         <source>New</source>
         <translation>Új</translation>
     </message>
     <message>
-        <location filename="../app/ui/mainwindow2.ui" line="238"/>
+        <location filename="../app/ui/mainwindow2.ui" line="239"/>
         <source>Open</source>
         <translation>Megnyitás</translation>
     </message>
     <message>
-        <location filename="../app/ui/mainwindow2.ui" line="247"/>
+        <location filename="../app/ui/mainwindow2.ui" line="248"/>
         <source>Save</source>
         <translation>Mentés</translation>
     </message>
     <message>
-        <location filename="../app/ui/mainwindow2.ui" line="256"/>
+        <location filename="../app/ui/mainwindow2.ui" line="257"/>
         <source>Save As ..</source>
         <translation>Mentés másként ..</translation>
     </message>
@@ -1539,7 +1563,7 @@ p, li { white-space: pre-wrap; }
         <translation type="vanished">Nyomtatás</translation>
     </message>
     <message>
-        <location filename="../app/ui/mainwindow2.ui" line="265"/>
+        <location filename="../app/ui/mainwindow2.ui" line="266"/>
         <source>Exit</source>
         <translation>Kilépés</translation>
     </message>
@@ -1548,26 +1572,26 @@ p, li { white-space: pre-wrap; }
         <translation type="vanished">X-sheet ...</translation>
     </message>
     <message>
-        <location filename="../app/ui/mainwindow2.ui" line="270"/>
-        <location filename="../app/ui/mainwindow2.ui" line="298"/>
+        <location filename="../app/ui/mainwindow2.ui" line="271"/>
+        <location filename="../app/ui/mainwindow2.ui" line="299"/>
         <source>Image Sequence...</source>
         <translation>Képsorozat...</translation>
     </message>
     <message>
-        <location filename="../app/ui/mainwindow2.ui" line="275"/>
-        <location filename="../app/ui/mainwindow2.ui" line="293"/>
+        <location filename="../app/ui/mainwindow2.ui" line="276"/>
+        <location filename="../app/ui/mainwindow2.ui" line="294"/>
         <source>Image...</source>
         <translation>Kép...</translation>
     </message>
     <message>
-        <location filename="../app/ui/mainwindow2.ui" line="280"/>
-        <location filename="../app/ui/mainwindow2.ui" line="303"/>
+        <location filename="../app/ui/mainwindow2.ui" line="281"/>
+        <location filename="../app/ui/mainwindow2.ui" line="304"/>
         <source>Movie...</source>
         <translation>Videó...</translation>
     </message>
     <message>
-        <location filename="../app/ui/mainwindow2.ui" line="288"/>
-        <location filename="../app/ui/mainwindow2.ui" line="316"/>
+        <location filename="../app/ui/mainwindow2.ui" line="289"/>
+        <location filename="../app/ui/mainwindow2.ui" line="317"/>
         <source>Palette...</source>
         <translation>Paletta...</translation>
     </message>
@@ -1576,278 +1600,288 @@ p, li { white-space: pre-wrap; }
         <translation type="vanished">Svg kép...</translation>
     </message>
     <message>
-        <location filename="../app/ui/mainwindow2.ui" line="311"/>
+        <location filename="../app/ui/mainwindow2.ui" line="312"/>
         <source>Sound...</source>
         <translation>Hang...</translation>
     </message>
     <message>
-        <location filename="../app/ui/mainwindow2.ui" line="325"/>
+        <location filename="../app/ui/mainwindow2.ui" line="326"/>
         <source>Undo</source>
         <translation>Visszavonás</translation>
     </message>
     <message>
-        <location filename="../app/ui/mainwindow2.ui" line="337"/>
+        <location filename="../app/ui/mainwindow2.ui" line="338"/>
         <source>Redo</source>
         <translation>Újra</translation>
     </message>
     <message>
-        <location filename="../app/ui/mainwindow2.ui" line="346"/>
+        <location filename="../app/ui/mainwindow2.ui" line="347"/>
         <source>Cut</source>
         <translation>Kivágás</translation>
     </message>
     <message>
-        <location filename="../app/ui/mainwindow2.ui" line="355"/>
+        <location filename="../app/ui/mainwindow2.ui" line="356"/>
         <source>Copy</source>
         <translation>Másolás</translation>
     </message>
     <message>
-        <location filename="../app/ui/mainwindow2.ui" line="369"/>
+        <location filename="../app/ui/mainwindow2.ui" line="370"/>
         <source>Crop</source>
         <translation>Csonkítás</translation>
     </message>
     <message>
-        <location filename="../app/ui/mainwindow2.ui" line="374"/>
+        <location filename="../app/ui/mainwindow2.ui" line="375"/>
         <source>Crop To Selection</source>
         <translation>Csonkítás kijelölésre</translation>
     </message>
     <message>
-        <location filename="../app/ui/mainwindow2.ui" line="379"/>
+        <location filename="../app/ui/mainwindow2.ui" line="380"/>
         <source>Select All</source>
         <translation>Minden kijelölése</translation>
     </message>
     <message>
-        <location filename="../app/ui/mainwindow2.ui" line="384"/>
+        <location filename="../app/ui/mainwindow2.ui" line="385"/>
         <source>Deselect All</source>
         <translation>Kijelölés megszüntetése</translation>
     </message>
     <message>
-        <location filename="../app/ui/mainwindow2.ui" line="393"/>
-        <location filename="../app/ui/mainwindow2.ui" line="592"/>
+        <location filename="../app/ui/mainwindow2.ui" line="394"/>
+        <location filename="../app/ui/mainwindow2.ui" line="593"/>
         <source>Clear Frame</source>
         <translation>Képkocka kiürítése</translation>
     </message>
     <message>
-        <location filename="../app/ui/mainwindow2.ui" line="398"/>
+        <location filename="../app/ui/mainwindow2.ui" line="399"/>
         <source>Preferences</source>
         <translation>Beállítások</translation>
     </message>
     <message>
-        <location filename="../app/ui/mainwindow2.ui" line="406"/>
+        <location filename="../app/ui/mainwindow2.ui" line="407"/>
         <source>Reset Windows</source>
         <translation>Ablakok visszaállítása</translation>
     </message>
     <message>
-        <location filename="../app/ui/mainwindow2.ui" line="415"/>
+        <location filename="../app/ui/mainwindow2.ui" line="416"/>
         <source>Zoom In</source>
         <translation>Nagyítás</translation>
     </message>
     <message>
-        <location filename="../app/ui/mainwindow2.ui" line="424"/>
+        <location filename="../app/ui/mainwindow2.ui" line="425"/>
         <source>Zoom Out</source>
         <translation>Kicsinyítés</translation>
     </message>
     <message>
-        <location filename="../app/ui/mainwindow2.ui" line="429"/>
+        <location filename="../app/ui/mainwindow2.ui" line="430"/>
         <source>Rotate Clockwise</source>
         <translation>Forgatás jobbra</translation>
     </message>
     <message>
-        <location filename="../app/ui/mainwindow2.ui" line="434"/>
+        <location filename="../app/ui/mainwindow2.ui" line="435"/>
         <source>Rotate AntiClosewise</source>
         <translation>Forgatás balra</translation>
     </message>
     <message>
-        <location filename="../app/ui/mainwindow2.ui" line="439"/>
+        <location filename="../app/ui/mainwindow2.ui" line="440"/>
         <source>Reset Zoom/Rotate</source>
         <translation>Nagyítás/Elforgatás visszaállítása</translation>
     </message>
     <message>
-        <location filename="../app/ui/mainwindow2.ui" line="448"/>
+        <location filename="../app/ui/mainwindow2.ui" line="449"/>
         <source>Horizontal Flip</source>
         <translation>Vízszintes tükrözés</translation>
     </message>
     <message>
-        <location filename="../app/ui/mainwindow2.ui" line="457"/>
+        <location filename="../app/ui/mainwindow2.ui" line="458"/>
         <source>Vertical Flip</source>
         <translation>Függőleges tükrözés</translation>
     </message>
     <message>
-        <location filename="../app/ui/mainwindow2.ui" line="465"/>
+        <location filename="../app/ui/mainwindow2.ui" line="466"/>
         <source>Preview</source>
         <translation>Előnézet</translation>
     </message>
     <message>
-        <location filename="../app/ui/mainwindow2.ui" line="473"/>
+        <location filename="../app/ui/mainwindow2.ui" line="474"/>
         <source>Grid</source>
         <translation>Rács</translation>
     </message>
     <message>
-        <location filename="../app/ui/mainwindow2.ui" line="485"/>
+        <location filename="../app/ui/mainwindow2.ui" line="486"/>
         <source>Previous</source>
         <translation>Előző</translation>
     </message>
     <message>
-        <location filename="../app/ui/mainwindow2.ui" line="488"/>
+        <location filename="../app/ui/mainwindow2.ui" line="489"/>
         <source>Show previous onion skin</source>
         <translation>Előző képfólia megjelenítése</translation>
     </message>
     <message>
-        <location filename="../app/ui/mainwindow2.ui" line="503"/>
+        <location filename="../app/ui/mainwindow2.ui" line="504"/>
         <source>Show next onion skin</source>
         <translation>Következő képfólia megjelenítése</translation>
     </message>
     <message>
-        <location filename="../app/ui/mainwindow2.ui" line="547"/>
+        <location filename="../app/ui/mainwindow2.ui" line="548"/>
         <source>Extend Frame</source>
         <translation>Képkocka kiterjesztése</translation>
     </message>
     <message>
-        <location filename="../app/ui/mainwindow2.ui" line="778"/>
+        <location filename="../app/ui/mainwindow2.ui" line="779"/>
         <source>MultiLayer Onion Skin</source>
         <translation>Többrétegű képfóliák</translation>
     </message>
     <message>
-        <location filename="../app/ui/mainwindow2.ui" line="789"/>
+        <location filename="../app/ui/mainwindow2.ui" line="790"/>
         <source>Range</source>
         <translation>Tartomány</translation>
     </message>
     <message>
-        <location filename="../app/ui/mainwindow2.ui" line="862"/>
+        <location filename="../app/ui/mainwindow2.ui" line="863"/>
         <source>Pencil2D Website</source>
         <translation>A Pencil2D weblapja</translation>
+    </message>
+    <message>
+        <location filename="../app/ui/mainwindow2.ui" line="873"/>
+        <source>Quick Reference Guide</source>
+        <translation>Rövid útmutató</translation>
+    </message>
+    <message>
+        <location filename="../app/ui/mainwindow2.ui" line="876"/>
+        <source>F1</source>
+        <translation>F1</translation>
     </message>
     <message>
         <source>Pencil2D Webstie</source>
         <translation type="vanished">A Pencil2D weblapja</translation>
     </message>
     <message>
-        <location filename="../app/ui/mainwindow2.ui" line="867"/>
+        <location filename="../app/ui/mainwindow2.ui" line="868"/>
         <source>Report a Bug</source>
         <translation>Hiba jelentése</translation>
     </message>
     <message>
-        <location filename="../app/ui/mainwindow2.ui" line="500"/>
+        <location filename="../app/ui/mainwindow2.ui" line="501"/>
         <source>Next</source>
         <translation>Következő</translation>
     </message>
     <message>
-        <location filename="../app/ui/mainwindow2.ui" line="512"/>
-        <location filename="../app/src/mainwindow2.cpp" line="1127"/>
+        <location filename="../app/ui/mainwindow2.ui" line="513"/>
+        <location filename="../app/src/mainwindow2.cpp" line="1150"/>
         <source>Play</source>
         <translation>Lejátszás</translation>
     </message>
     <message>
-        <location filename="../app/ui/mainwindow2.ui" line="524"/>
+        <location filename="../app/ui/mainwindow2.ui" line="525"/>
         <source>Loop</source>
         <translation>Ismétlés</translation>
     </message>
     <message>
-        <location filename="../app/ui/mainwindow2.ui" line="533"/>
+        <location filename="../app/ui/mainwindow2.ui" line="534"/>
         <source>Next Frame</source>
         <translation>Következő képkocka</translation>
     </message>
     <message>
-        <location filename="../app/ui/mainwindow2.ui" line="542"/>
+        <location filename="../app/ui/mainwindow2.ui" line="543"/>
         <source>Previous Frame</source>
         <translation>Előző képkocka</translation>
     </message>
     <message>
-        <location filename="../app/ui/mainwindow2.ui" line="556"/>
+        <location filename="../app/ui/mainwindow2.ui" line="557"/>
         <source>Add Frame</source>
         <translation>Képkocka hozzáadása</translation>
     </message>
     <message>
-        <location filename="../app/ui/mainwindow2.ui" line="565"/>
+        <location filename="../app/ui/mainwindow2.ui" line="566"/>
         <source>Duplicate Frame</source>
         <translation>Képkocka kétszerezése</translation>
     </message>
     <message>
-        <location filename="../app/ui/mainwindow2.ui" line="574"/>
+        <location filename="../app/ui/mainwindow2.ui" line="575"/>
         <source>Remove Frame</source>
         <translation>Képkocka eltávolítása</translation>
     </message>
     <message>
-        <location filename="../app/ui/mainwindow2.ui" line="583"/>
+        <location filename="../app/ui/mainwindow2.ui" line="584"/>
         <source>Move</source>
         <translation>Mozgatás</translation>
     </message>
     <message>
-        <location filename="../app/ui/mainwindow2.ui" line="601"/>
+        <location filename="../app/ui/mainwindow2.ui" line="602"/>
         <source>Select</source>
         <translation>Kijelölés</translation>
     </message>
     <message>
-        <location filename="../app/ui/mainwindow2.ui" line="610"/>
+        <location filename="../app/ui/mainwindow2.ui" line="611"/>
         <source>Brush</source>
         <translation>Ecset</translation>
     </message>
     <message>
-        <location filename="../app/ui/mainwindow2.ui" line="619"/>
+        <location filename="../app/ui/mainwindow2.ui" line="620"/>
         <source>Polyline</source>
         <translation>Vonallánc</translation>
     </message>
     <message>
-        <location filename="../app/ui/mainwindow2.ui" line="628"/>
+        <location filename="../app/ui/mainwindow2.ui" line="629"/>
         <source>Smudge</source>
         <translation>Maszatolás</translation>
     </message>
     <message>
-        <location filename="../app/ui/mainwindow2.ui" line="637"/>
+        <location filename="../app/ui/mainwindow2.ui" line="638"/>
         <source>Pen</source>
         <translation>Toll</translation>
     </message>
     <message>
-        <location filename="../app/ui/mainwindow2.ui" line="646"/>
+        <location filename="../app/ui/mainwindow2.ui" line="647"/>
         <source>Hand</source>
         <translation>Kéz</translation>
     </message>
     <message>
-        <location filename="../app/ui/mainwindow2.ui" line="655"/>
+        <location filename="../app/ui/mainwindow2.ui" line="656"/>
         <source>Pencil</source>
         <translation>Ceruza</translation>
     </message>
     <message>
-        <location filename="../app/ui/mainwindow2.ui" line="664"/>
+        <location filename="../app/ui/mainwindow2.ui" line="665"/>
         <source>Bucket</source>
         <translation>Vödör</translation>
     </message>
     <message>
-        <location filename="../app/ui/mainwindow2.ui" line="673"/>
+        <location filename="../app/ui/mainwindow2.ui" line="674"/>
         <source>Eyedropper</source>
         <translation>Szemcseppentő</translation>
     </message>
     <message>
-        <location filename="../app/ui/mainwindow2.ui" line="682"/>
+        <location filename="../app/ui/mainwindow2.ui" line="683"/>
         <source>Eraser</source>
         <translation>Radír</translation>
     </message>
     <message>
-        <location filename="../app/ui/mainwindow2.ui" line="691"/>
+        <location filename="../app/ui/mainwindow2.ui" line="692"/>
         <source>New Bitmap Layer</source>
         <translation>Új bitkép réteg</translation>
     </message>
     <message>
-        <location filename="../app/ui/mainwindow2.ui" line="700"/>
+        <location filename="../app/ui/mainwindow2.ui" line="701"/>
         <source>New Vector Layer</source>
         <translation>Új vektor réteg</translation>
     </message>
     <message>
-        <location filename="../app/ui/mainwindow2.ui" line="709"/>
+        <location filename="../app/ui/mainwindow2.ui" line="710"/>
         <source>New Sound Layer</source>
         <translation>Új hang réteg</translation>
     </message>
     <message>
-        <location filename="../app/ui/mainwindow2.ui" line="718"/>
+        <location filename="../app/ui/mainwindow2.ui" line="719"/>
         <source>New Camera Layer</source>
         <translation>Új kamera réteg</translation>
     </message>
     <message>
-        <location filename="../app/ui/mainwindow2.ui" line="723"/>
+        <location filename="../app/ui/mainwindow2.ui" line="724"/>
         <source>Delete Current Layer</source>
         <translation>Aktuális réteg törlése</translation>
     </message>
     <message>
-        <location filename="../app/ui/mainwindow2.ui" line="733"/>
+        <location filename="../app/ui/mainwindow2.ui" line="734"/>
         <source>About</source>
         <translation>Névjegy</translation>
     </message>
@@ -1856,8 +1890,8 @@ p, li { white-space: pre-wrap; }
         <translation type="vanished">Paletta be- és kikapcsolása</translation>
     </message>
     <message>
-        <location filename="../app/ui/mainwindow2.ui" line="738"/>
-        <location filename="../app/ui/mainwindow2.ui" line="741"/>
+        <location filename="../app/ui/mainwindow2.ui" line="739"/>
+        <location filename="../app/ui/mainwindow2.ui" line="742"/>
         <source>Reset to default</source>
         <translation>Alapértékek visszaállítása</translation>
     </message>
@@ -1866,8 +1900,8 @@ p, li { white-space: pre-wrap; }
         <translation type="vanished">Next_KeyFrame</translation>
     </message>
     <message>
-        <location filename="../app/ui/mainwindow2.ui" line="751"/>
-        <location filename="../app/ui/mainwindow2.ui" line="754"/>
+        <location filename="../app/ui/mainwindow2.ui" line="752"/>
+        <location filename="../app/ui/mainwindow2.ui" line="755"/>
         <source>Next KeyFrame</source>
         <translation>Következő kulcsképkocka</translation>
     </message>
@@ -1876,8 +1910,8 @@ p, li { white-space: pre-wrap; }
         <translation type="vanished">Prev_KeyFrame</translation>
     </message>
     <message>
-        <location filename="../app/ui/mainwindow2.ui" line="764"/>
-        <location filename="../app/ui/mainwindow2.ui" line="767"/>
+        <location filename="../app/ui/mainwindow2.ui" line="765"/>
+        <location filename="../app/ui/mainwindow2.ui" line="768"/>
         <source>Previous KeyFrame</source>
         <translation>Előző kulcsképkocka</translation>
     </message>
@@ -1890,98 +1924,103 @@ p, li { white-space: pre-wrap; }
         <translation type="vanished">loopcontrol</translation>
     </message>
     <message>
-        <location filename="../app/ui/mainwindow2.ui" line="805"/>
+        <location filename="../app/ui/mainwindow2.ui" line="806"/>
         <source>Timeline</source>
         <translation>Idővonal</translation>
     </message>
     <message>
-        <location filename="../app/ui/mainwindow2.ui" line="813"/>
+        <location filename="../app/ui/mainwindow2.ui" line="814"/>
         <source>Options</source>
         <translation>Beállítások</translation>
     </message>
     <message>
-        <location filename="../app/ui/mainwindow2.ui" line="821"/>
+        <location filename="../app/ui/mainwindow2.ui" line="822"/>
         <source>Color Wheel</source>
         <translation>Színkerék</translation>
     </message>
     <message>
-        <location filename="../app/ui/mainwindow2.ui" line="837"/>
+        <location filename="../app/ui/mainwindow2.ui" line="838"/>
         <source>Display Options</source>
         <translation>Megjelenítés beállításai</translation>
     </message>
     <message>
-        <location filename="../app/ui/mainwindow2.ui" line="842"/>
+        <location filename="../app/ui/mainwindow2.ui" line="843"/>
         <source>Flip X</source>
         <translation>X tükrözés</translation>
     </message>
     <message>
-        <location filename="../app/ui/mainwindow2.ui" line="847"/>
+        <location filename="../app/ui/mainwindow2.ui" line="848"/>
         <source>Flip Y</source>
         <translation>Y tükrözés</translation>
     </message>
     <message>
-        <location filename="../app/ui/mainwindow2.ui" line="852"/>
+        <location filename="../app/ui/mainwindow2.ui" line="853"/>
         <source>Move Frame Forward</source>
         <translation>Képkocka mozgatása előre</translation>
     </message>
     <message>
-        <location filename="../app/ui/mainwindow2.ui" line="857"/>
+        <location filename="../app/ui/mainwindow2.ui" line="858"/>
         <source>Move Frame Backward</source>
         <translation>Képkocka mozgatása hátra</translation>
     </message>
     <message>
-        <location filename="../app/src/mainwindow2.cpp" line="141"/>
+        <location filename="../app/src/mainwindow2.cpp" line="145"/>
         <source>color palette:&lt;br&gt;use &lt;b&gt;(C)&lt;/b&gt;&lt;br&gt;toggle at cursor</source>
         <translation>Színpaletta:&lt;br&gt;&lt;b&gt;(C)&lt;/b&gt;lenyomásával&lt;br&gt;átváltás a kurzornál</translation>
     </message>
     <message>
-        <location filename="../app/src/mainwindow2.cpp" line="336"/>
+        <location filename="../app/src/mainwindow2.cpp" line="340"/>
         <source>Lock Windows</source>
         <translation>Ablakok zárolása</translation>
     </message>
     <message>
-        <location filename="../app/src/mainwindow2.cpp" line="352"/>
+        <location filename="../app/src/mainwindow2.cpp" line="357"/>
         <source>Open Recent</source>
         <translation>Legutóbbi megnyitása</translation>
     </message>
     <message>
-        <location filename="../app/src/mainwindow2.cpp" line="386"/>
+        <location filename="../app/src/mainwindow2.cpp" line="391"/>
         <source>
 
  You have successfully cleared the list</source>
         <translation>A lista sikeresen ki lett ürítve</translation>
     </message>
     <message>
-        <location filename="../app/src/mainwindow2.cpp" line="591"/>
+        <location filename="../app/src/mainwindow2.cpp" line="596"/>
         <source>&lt;br&gt;&lt;br&gt;An error has occurred and your file may not have saved successfully.If you believe that this error is an issue with Pencil2D, please create a new issue at:&lt;br&gt;&lt;a href=&apos;https://github.com/pencil2d/pencil/issues&apos;&gt;https://github.com/pencil2d/pencil/issues&lt;/a&gt;&lt;br&gt;Please be sure to include the following details in your issue:</source>
         <translation>&lt;br&gt;&lt;br&gt;Hiba történt, ami miatt valószínűleg a fájl mentése sem sikerült. Ha úgy gondolja, hogy az esemény a Pencil2D programban található hibára vezethető vissza, kérjük jelentse a következő helyen:&lt;br&gt;&lt;a href=&apos;https://github.com/pencil2d/pencil/issues&apos;&gt;https://github.com/pencil2d/pencil/issues&lt;/a&gt;&lt;br&gt;Mindenképpen mellékelje az alábbi részleteket is a bejelentéshez:</translation>
     </message>
     <message>
-        <location filename="../app/src/mainwindow2.cpp" line="657"/>
+        <location filename="../app/src/mainwindow2.cpp" line="662"/>
         <source>The animation is not saved yet.
  Do you want to save now?</source>
         <translation>Az animáció még nincs mentve. Szeretné most menteni?</translation>
     </message>
     <message>
-        <location filename="../app/src/mainwindow2.cpp" line="658"/>
+        <location filename="../app/src/mainwindow2.cpp" line="663"/>
         <source>Never ask again</source>
         <comment>AutoSave reminder button</comment>
         <translation>Ne kérdezze újra</translation>
     </message>
     <message>
-        <location filename="../app/src/mainwindow2.cpp" line="714"/>
+        <location filename="../app/src/mainwindow2.cpp" line="719"/>
         <source>Importing image sequence...</source>
         <translation>Képsorozat importálása...</translation>
     </message>
     <message>
-        <location filename="../app/src/mainwindow2.cpp" line="960"/>
-        <location filename="../app/src/mainwindow2.cpp" line="965"/>
+        <location filename="../app/src/mainwindow2.cpp" line="762"/>
+        <source>was unable to import</source>
+        <translation>Az importálás sikertelen volt: </translation>
+    </message>
+    <message>
+        <location filename="../app/src/mainwindow2.cpp" line="983"/>
+        <location filename="../app/src/mainwindow2.cpp" line="988"/>
         <source>Undo</source>
         <comment>Menu item text</comment>
         <translation>Visszavonás</translation>
     </message>
     <message>
-        <location filename="../app/src/mainwindow2.cpp" line="980"/>
+        <location filename="../app/src/mainwindow2.cpp" line="1003"/>
         <source>Redo</source>
         <comment>Menu item text</comment>
         <translation>Újra</translation>
@@ -1991,16 +2030,17 @@ p, li { white-space: pre-wrap; }
         <translation type="vanished">Fájl megnyitása...</translation>
     </message>
     <message>
-        <location filename="../app/src/mainwindow2.cpp" line="457"/>
-        <location filename="../app/src/mainwindow2.cpp" line="485"/>
-        <location filename="../app/src/mainwindow2.cpp" line="628"/>
-        <location filename="../app/src/mainwindow2.cpp" line="687"/>
+        <location filename="../app/src/mainwindow2.cpp" line="462"/>
+        <location filename="../app/src/mainwindow2.cpp" line="490"/>
+        <location filename="../app/src/mainwindow2.cpp" line="633"/>
+        <location filename="../app/src/mainwindow2.cpp" line="692"/>
+        <location filename="../app/src/mainwindow2.cpp" line="761"/>
         <source>Warning</source>
         <translation>Figyelmeztetés</translation>
     </message>
     <message>
-        <location filename="../app/src/mainwindow2.cpp" line="457"/>
-        <location filename="../app/src/mainwindow2.cpp" line="485"/>
+        <location filename="../app/src/mainwindow2.cpp" line="462"/>
+        <location filename="../app/src/mainwindow2.cpp" line="490"/>
         <source>Pencil cannot read this file. If you want to import images, use the command import.</source>
         <translation>A Pencil nem tudja olvasni ezt a fájlt. Képek beemeléséhez az &quot;Importálás&quot; művelet használható.</translation>
     </message>
@@ -2009,19 +2049,19 @@ p, li { white-space: pre-wrap; }
         <translation type="vanished">Mentés másként...</translation>
     </message>
     <message>
-        <location filename="../app/src/mainwindow2.cpp" line="492"/>
+        <location filename="../app/src/mainwindow2.cpp" line="497"/>
         <source>Opening document...</source>
         <translation>Dokumentum megnyitása...</translation>
     </message>
     <message>
-        <location filename="../app/src/mainwindow2.cpp" line="492"/>
-        <location filename="../app/src/mainwindow2.cpp" line="550"/>
-        <location filename="../app/src/mainwindow2.cpp" line="714"/>
+        <location filename="../app/src/mainwindow2.cpp" line="497"/>
+        <location filename="../app/src/mainwindow2.cpp" line="555"/>
+        <location filename="../app/src/mainwindow2.cpp" line="719"/>
         <source>Abort</source>
         <translation>Névjegy</translation>
     </message>
     <message>
-        <location filename="../app/src/mainwindow2.cpp" line="550"/>
+        <location filename="../app/src/mainwindow2.cpp" line="555"/>
         <source>Saving document...</source>
         <translation>Dokumentum mentése...</translation>
     </message>
@@ -2030,7 +2070,7 @@ p, li { white-space: pre-wrap; }
         <translation type="vanished">&lt;br&gt;&lt;br&gt;Hiba történt, ami miatt valószínűleg a fájl mentése sem sikerült. Ha úgy gondolja, hogy az esemény a Pencil2D programban található hibára vezethető vissza, kérjük jelentse a következő helyen:&lt;br&gt;&lt;a href=&apos;https://github.com/pencil2d/pencil/issues&apos;&gt;https://github.com/pencil2d/pencil/issues&lt;/a&gt;&lt;br&gt;Mindenképpen mellékelje az alábbi részleteket is a bejelentéshez:</translation>
     </message>
     <message>
-        <location filename="../app/src/mainwindow2.cpp" line="629"/>
+        <location filename="../app/src/mainwindow2.cpp" line="634"/>
         <source>This animation has been modified.
  Do you want to save your changes?</source>
         <translation>Ez az animáció meg lett változtatva.
@@ -2041,7 +2081,7 @@ p, li { white-space: pre-wrap; }
         <translation type="vanished">Kép importálása...</translation>
     </message>
     <message>
-        <location filename="../app/src/mainwindow2.cpp" line="688"/>
+        <location filename="../app/src/mainwindow2.cpp" line="693"/>
         <source>Unable to import image.&lt;br&gt;&lt;b&gt;TIP:&lt;/b&gt; Use Bitmap layer to import bitmaps.</source>
         <translation>A kép nem importálható.&lt;br&gt;&lt;b&gt;TIPP:&lt;/b&gt; Képek importálásához bitkép réteget kell használni.</translation>
     </message>
@@ -2094,7 +2134,7 @@ p, li { white-space: pre-wrap; }
         <translation type="vanished">Exportálás másként</translation>
     </message>
     <message>
-        <location filename="../app/src/mainwindow2.cpp" line="1122"/>
+        <location filename="../app/src/mainwindow2.cpp" line="1145"/>
         <source>Stop</source>
         <translation>Megállítás</translation>
     </message>
@@ -2109,122 +2149,122 @@ p, li { white-space: pre-wrap; }
 <context>
     <name>Object</name>
     <message>
-        <location filename="../core_lib/src/structure/object.cpp" line="395"/>
+        <location filename="../core_lib/src/structure/object.cpp" line="401"/>
         <source>Red</source>
         <translation>Piros</translation>
     </message>
     <message>
-        <location filename="../core_lib/src/structure/object.cpp" line="401"/>
+        <location filename="../core_lib/src/structure/object.cpp" line="407"/>
         <source>Green</source>
         <translation>Zöld</translation>
     </message>
     <message>
-        <location filename="../core_lib/src/structure/object.cpp" line="405"/>
+        <location filename="../core_lib/src/structure/object.cpp" line="411"/>
         <source>Blue</source>
         <translation>Kék</translation>
     </message>
     <message>
-        <location filename="../core_lib/src/structure/object.cpp" line="394"/>
+        <location filename="../core_lib/src/structure/object.cpp" line="400"/>
         <source>Black</source>
         <translation>Fekete</translation>
     </message>
     <message>
-        <location filename="../core_lib/src/structure/object.cpp" line="396"/>
+        <location filename="../core_lib/src/structure/object.cpp" line="402"/>
         <source>Dark Red</source>
         <translation>Sötét vörös</translation>
     </message>
     <message>
-        <location filename="../core_lib/src/structure/object.cpp" line="397"/>
+        <location filename="../core_lib/src/structure/object.cpp" line="403"/>
         <source>Orange</source>
         <translation>Narancs</translation>
     </message>
     <message>
-        <location filename="../core_lib/src/structure/object.cpp" line="398"/>
+        <location filename="../core_lib/src/structure/object.cpp" line="404"/>
         <source>Dark Orange</source>
         <translation>Sötét narancs</translation>
     </message>
     <message>
-        <location filename="../core_lib/src/structure/object.cpp" line="399"/>
+        <location filename="../core_lib/src/structure/object.cpp" line="405"/>
         <source>Yellow</source>
         <translation>Sárga</translation>
     </message>
     <message>
-        <location filename="../core_lib/src/structure/object.cpp" line="400"/>
+        <location filename="../core_lib/src/structure/object.cpp" line="406"/>
         <source>Dark Yellow</source>
         <translation>Sötét sárga</translation>
     </message>
     <message>
-        <location filename="../core_lib/src/structure/object.cpp" line="402"/>
+        <location filename="../core_lib/src/structure/object.cpp" line="408"/>
         <source>Dark Green</source>
         <translation>Sötét zöld</translation>
     </message>
     <message>
-        <location filename="../core_lib/src/structure/object.cpp" line="403"/>
+        <location filename="../core_lib/src/structure/object.cpp" line="409"/>
         <source>Cyan</source>
         <translation>Cián</translation>
     </message>
     <message>
-        <location filename="../core_lib/src/structure/object.cpp" line="404"/>
+        <location filename="../core_lib/src/structure/object.cpp" line="410"/>
         <source>Dark Cyan</source>
         <translation>Sötét cián</translation>
     </message>
     <message>
-        <location filename="../core_lib/src/structure/object.cpp" line="406"/>
+        <location filename="../core_lib/src/structure/object.cpp" line="412"/>
         <source>Dark Blue</source>
         <translation>Sötét kék</translation>
     </message>
     <message>
-        <location filename="../core_lib/src/structure/object.cpp" line="407"/>
+        <location filename="../core_lib/src/structure/object.cpp" line="413"/>
         <source>White</source>
         <translation>Fehér</translation>
     </message>
     <message>
-        <location filename="../core_lib/src/structure/object.cpp" line="408"/>
+        <location filename="../core_lib/src/structure/object.cpp" line="414"/>
         <source>Very Light Grey</source>
         <translation>Halvány szürke</translation>
     </message>
     <message>
-        <location filename="../core_lib/src/structure/object.cpp" line="409"/>
+        <location filename="../core_lib/src/structure/object.cpp" line="415"/>
         <source>Light Grey</source>
         <translation>Világos szürke</translation>
     </message>
     <message>
-        <location filename="../core_lib/src/structure/object.cpp" line="410"/>
+        <location filename="../core_lib/src/structure/object.cpp" line="416"/>
         <source>Grey</source>
         <translation>Szürke</translation>
     </message>
     <message>
-        <location filename="../core_lib/src/structure/object.cpp" line="411"/>
+        <location filename="../core_lib/src/structure/object.cpp" line="417"/>
         <source>Dark Grey</source>
         <translation>Sötét szürke</translation>
     </message>
     <message>
-        <location filename="../core_lib/src/structure/object.cpp" line="412"/>
+        <location filename="../core_lib/src/structure/object.cpp" line="418"/>
         <source>Light Skin</source>
         <translation>Világos bőr</translation>
     </message>
     <message>
-        <location filename="../core_lib/src/structure/object.cpp" line="413"/>
+        <location filename="../core_lib/src/structure/object.cpp" line="419"/>
         <source>Light Skin - shade</source>
         <translation>Világos bőr - árnyék</translation>
     </message>
     <message>
-        <location filename="../core_lib/src/structure/object.cpp" line="414"/>
+        <location filename="../core_lib/src/structure/object.cpp" line="420"/>
         <source>Skin</source>
         <translation>Bőr</translation>
     </message>
     <message>
-        <location filename="../core_lib/src/structure/object.cpp" line="415"/>
+        <location filename="../core_lib/src/structure/object.cpp" line="421"/>
         <source>Skin - shade</source>
         <translation>Bőr - árnyék</translation>
     </message>
     <message>
-        <location filename="../core_lib/src/structure/object.cpp" line="416"/>
+        <location filename="../core_lib/src/structure/object.cpp" line="422"/>
         <source>Dark Skin</source>
         <translation>Sötét bőr</translation>
     </message>
     <message>
-        <location filename="../core_lib/src/structure/object.cpp" line="417"/>
+        <location filename="../core_lib/src/structure/object.cpp" line="423"/>
         <source>Dark Skin - shade</source>
         <translation>Sötét bőr - árnyék</translation>
     </message>
@@ -2359,26 +2399,26 @@ p, li { white-space: pre-wrap; }
         <translation>Figyelmeztetés: a kimeneti formátum nincs megadva vagy nincs támogatva. PNG lesz használva.</translation>
     </message>
     <message>
-        <location filename="../app/src/main.cpp" line="289"/>
+        <location filename="../app/src/main.cpp" line="288"/>
         <source>Warning: Transparency is not currently supported in movie files</source>
         <comment>Command line warning</comment>
         <translation>Figyelmeztetés: Az átlátszóság jelenleg nincs támogatva a videofájlokban</translation>
     </message>
     <message>
-        <location filename="../app/src/main.cpp" line="291"/>
+        <location filename="../app/src/main.cpp" line="290"/>
         <source>Exporting movie...</source>
         <comment>Command line task progress</comment>
         <translation>Videó exportálása...</translation>
     </message>
     <message>
-        <location filename="../app/src/main.cpp" line="293"/>
-        <location filename="../app/src/main.cpp" line="298"/>
+        <location filename="../app/src/main.cpp" line="292"/>
+        <location filename="../app/src/main.cpp" line="297"/>
         <source>Done.</source>
         <comment>Command line task done</comment>
         <translation>Kész.</translation>
     </message>
     <message>
-        <location filename="../app/src/main.cpp" line="296"/>
+        <location filename="../app/src/main.cpp" line="295"/>
         <source>Exporting image sequence...</source>
         <comment>Command line task progress</comment>
         <translation>Képsorozat exportálása...</translation>
@@ -2487,40 +2527,44 @@ p, li { white-space: pre-wrap; }
     </message>
     <message>
         <location filename="../core_lib/src/util/pencildef.h" line="25"/>
+        <source>Images (*.png *.jpg *.jpeg *.bmp *.gif);;PNG (*.png);;JPG(*.jpg *.jpeg);;BMP(*.bmp);;GIF(*.gif)</source>
+        <translation>Képek (*.png *.jpg *.jpeg *.bmp *.gif);;PNG (*.png);;JPG(*.jpg *.jpeg);;BMP(*.bmp);;GIF(*.gif)</translation>
+    </message>
+    <message>
         <source>Images (*.png *.jpg *.jpeg *.tiff *.tif *.bmp *.gif);;PNG (*.png);;JPG(*.jpg *.jpeg);;TIFF(*.tif *.tiff);;BMP(*.bmp);;GIF(*.gif)</source>
-        <translation>Képek (*.png *.jpg *.jpeg *.tiff *.tif *.bmp *.gif);;PNG (*.png);;JPG(*.jpg *.jpeg);;TIFF(*.tif *.tiff);;BMP(*.bmp);;GIF(*.gif)</translation>
+        <translation type="vanished">Képek (*.png *.jpg *.jpeg *.tiff *.tif *.bmp *.gif);;PNG (*.png);;JPG(*.jpg *.jpeg);;TIFF(*.tif *.tiff);;BMP(*.bmp);;GIF(*.gif)</translation>
     </message>
     <message>
         <source>PNG (*.png);;JPG(*.jpg *.jpeg);;TIFF(*.tiff);;TIF(*.tif);;BMP(*.bmp);;GIF(*.gif)</source>
         <translation type="vanished">PNG (*.png);;JPG(*.jpg *.jpeg);;TIFF(*.tiff);;TIF(*.tif);;BMP(*.bmp);;GIF(*.gif)</translation>
     </message>
     <message>
-        <location filename="../core_lib/src/util/pencilerror.cpp" line="21"/>
+        <location filename="../core_lib/src/util/pencilerror.cpp" line="37"/>
         <source>Everything ok.</source>
         <translation>Minden rendben.</translation>
     </message>
     <message>
-        <location filename="../core_lib/src/util/pencilerror.cpp" line="22"/>
+        <location filename="../core_lib/src/util/pencilerror.cpp" line="38"/>
         <source>Ooops, Something went wrong.</source>
         <translation>Hoppá, valami rosszul sikerült.</translation>
     </message>
     <message>
-        <location filename="../core_lib/src/util/pencilerror.cpp" line="23"/>
+        <location filename="../core_lib/src/util/pencilerror.cpp" line="39"/>
         <source>File doesn&apos;t exist.</source>
         <translation>A fájl nem létezik.</translation>
     </message>
     <message>
-        <location filename="../core_lib/src/util/pencilerror.cpp" line="24"/>
+        <location filename="../core_lib/src/util/pencilerror.cpp" line="40"/>
         <source>Cannot open file.</source>
         <translation>A fájl nem nyitható meg.</translation>
     </message>
     <message>
-        <location filename="../core_lib/src/util/pencilerror.cpp" line="25"/>
+        <location filename="../core_lib/src/util/pencilerror.cpp" line="41"/>
         <source>The file is not a valid xml document.</source>
         <translation>Ez a fájl nem egy érvényes XML dokumentum.</translation>
     </message>
     <message>
-        <location filename="../core_lib/src/util/pencilerror.cpp" line="26"/>
+        <location filename="../core_lib/src/util/pencilerror.cpp" line="42"/>
         <source>The file is not valid pencil document.</source>
         <translation>Ez a fájl nem egy érvényes Pencil dokumentum.</translation>
     </message>
@@ -2535,1337 +2579,1337 @@ p, li { white-space: pre-wrap; }
         <translation>Pencil animáció fájl PCLX(*.pclx);;Régi Pencil animáció fájl PCL(*.pcl)</translation>
     </message>
     <message>
-        <location filename="../app/src/colordictionary.h" line="279"/>
+        <location filename="../app/src/colordictionary.h" line="282"/>
         <source>Vivid Pink</source>
         <translation>Élénk rózsaszín</translation>
     </message>
     <message>
-        <location filename="../app/src/colordictionary.h" line="280"/>
+        <location filename="../app/src/colordictionary.h" line="283"/>
         <source>Strong Pink</source>
         <translation>Erős rózsaszín</translation>
     </message>
     <message>
-        <location filename="../app/src/colordictionary.h" line="281"/>
+        <location filename="../app/src/colordictionary.h" line="284"/>
         <source>Deep Pink</source>
         <translation>Mély rózsaszín</translation>
     </message>
     <message>
-        <location filename="../app/src/colordictionary.h" line="282"/>
+        <location filename="../app/src/colordictionary.h" line="285"/>
         <source>Light Pink</source>
         <translation>Világos rózsaszín</translation>
     </message>
     <message>
-        <location filename="../app/src/colordictionary.h" line="283"/>
+        <location filename="../app/src/colordictionary.h" line="286"/>
         <source>Moderate Pink</source>
         <translation>Mérsékelt rózsaszín</translation>
     </message>
     <message>
-        <location filename="../app/src/colordictionary.h" line="284"/>
+        <location filename="../app/src/colordictionary.h" line="287"/>
         <source>Dark Pink</source>
         <translation>Sötét rózsaszín</translation>
     </message>
     <message>
-        <location filename="../app/src/colordictionary.h" line="285"/>
+        <location filename="../app/src/colordictionary.h" line="288"/>
         <source>Pale Pink</source>
         <translation>Halvány rózsaszín</translation>
     </message>
     <message>
-        <location filename="../app/src/colordictionary.h" line="286"/>
+        <location filename="../app/src/colordictionary.h" line="289"/>
         <source>Grayish Pink</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../app/src/colordictionary.h" line="287"/>
+        <location filename="../app/src/colordictionary.h" line="290"/>
         <source>Pinkish White</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../app/src/colordictionary.h" line="288"/>
+        <location filename="../app/src/colordictionary.h" line="291"/>
         <source>Pinkish Gray</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../app/src/colordictionary.h" line="289"/>
+        <location filename="../app/src/colordictionary.h" line="292"/>
         <source>Vivid Red</source>
         <translation>Élénk vörös</translation>
     </message>
     <message>
-        <location filename="../app/src/colordictionary.h" line="290"/>
+        <location filename="../app/src/colordictionary.h" line="293"/>
         <source>Strong Red</source>
         <translation>Erős vörös</translation>
     </message>
     <message>
-        <location filename="../app/src/colordictionary.h" line="291"/>
+        <location filename="../app/src/colordictionary.h" line="294"/>
         <source>Deep Red</source>
         <translation>Mély vörös</translation>
     </message>
     <message>
-        <location filename="../app/src/colordictionary.h" line="292"/>
+        <location filename="../app/src/colordictionary.h" line="295"/>
         <source>Very Deep Red</source>
         <translation>Nagyon mély vörös</translation>
     </message>
     <message>
-        <location filename="../app/src/colordictionary.h" line="293"/>
+        <location filename="../app/src/colordictionary.h" line="296"/>
         <source>Moderate Red</source>
         <translation>Mérsékelt vörös</translation>
     </message>
     <message>
-        <location filename="../app/src/colordictionary.h" line="294"/>
+        <location filename="../app/src/colordictionary.h" line="297"/>
         <source>Dark Red</source>
         <translation>Sötét vörös</translation>
     </message>
     <message>
-        <location filename="../app/src/colordictionary.h" line="295"/>
+        <location filename="../app/src/colordictionary.h" line="298"/>
         <source>Very Dark Red</source>
         <translation>Nagyon sötét vörös</translation>
     </message>
     <message>
-        <location filename="../app/src/colordictionary.h" line="296"/>
+        <location filename="../app/src/colordictionary.h" line="299"/>
         <source>Light Grayish Red</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../app/src/colordictionary.h" line="297"/>
+        <location filename="../app/src/colordictionary.h" line="300"/>
         <source>Grayish Red</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../app/src/colordictionary.h" line="298"/>
+        <location filename="../app/src/colordictionary.h" line="301"/>
         <source>Dark Grayish Red</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../app/src/colordictionary.h" line="299"/>
+        <location filename="../app/src/colordictionary.h" line="302"/>
         <source>Blackish Red</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../app/src/colordictionary.h" line="300"/>
+        <location filename="../app/src/colordictionary.h" line="303"/>
         <source>Reddish Gray</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../app/src/colordictionary.h" line="301"/>
+        <location filename="../app/src/colordictionary.h" line="304"/>
         <source>Dark Reddish Gray</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../app/src/colordictionary.h" line="302"/>
+        <location filename="../app/src/colordictionary.h" line="305"/>
         <source>Reddish Black</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../app/src/colordictionary.h" line="303"/>
+        <location filename="../app/src/colordictionary.h" line="306"/>
         <source>Vivid Yellowish Pink</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../app/src/colordictionary.h" line="304"/>
+        <location filename="../app/src/colordictionary.h" line="307"/>
         <source>Strong Yellowish Pink</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../app/src/colordictionary.h" line="305"/>
+        <location filename="../app/src/colordictionary.h" line="308"/>
         <source>Deep Yellowish Pink</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../app/src/colordictionary.h" line="306"/>
+        <location filename="../app/src/colordictionary.h" line="309"/>
         <source>Light Yellowish Pink</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../app/src/colordictionary.h" line="307"/>
+        <location filename="../app/src/colordictionary.h" line="310"/>
         <source>Moderate Yellowish Pink</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../app/src/colordictionary.h" line="308"/>
+        <location filename="../app/src/colordictionary.h" line="311"/>
         <source>Dark Yellowish Pink</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../app/src/colordictionary.h" line="309"/>
+        <location filename="../app/src/colordictionary.h" line="312"/>
         <source>Pale Yellowish Pink</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../app/src/colordictionary.h" line="310"/>
+        <location filename="../app/src/colordictionary.h" line="313"/>
         <source>Grayish Yellowish Pink</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../app/src/colordictionary.h" line="311"/>
+        <location filename="../app/src/colordictionary.h" line="314"/>
         <source>Brownish Pink</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../app/src/colordictionary.h" line="312"/>
+        <location filename="../app/src/colordictionary.h" line="315"/>
         <source>Vivid Reddish Orange</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../app/src/colordictionary.h" line="313"/>
+        <location filename="../app/src/colordictionary.h" line="316"/>
         <source>Strong Reddish Orange</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../app/src/colordictionary.h" line="314"/>
+        <location filename="../app/src/colordictionary.h" line="317"/>
         <source>Deep Reddish Orange</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../app/src/colordictionary.h" line="315"/>
+        <location filename="../app/src/colordictionary.h" line="318"/>
         <source>Moderate Reddish Orange</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../app/src/colordictionary.h" line="316"/>
+        <location filename="../app/src/colordictionary.h" line="319"/>
         <source>Dark Reddish Orange</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../app/src/colordictionary.h" line="317"/>
+        <location filename="../app/src/colordictionary.h" line="320"/>
         <source>Grayish Reddish Orange</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../app/src/colordictionary.h" line="318"/>
+        <location filename="../app/src/colordictionary.h" line="321"/>
         <source>Strong Reddish Brown</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../app/src/colordictionary.h" line="319"/>
+        <location filename="../app/src/colordictionary.h" line="322"/>
         <source>Deep Reddish Brown</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../app/src/colordictionary.h" line="320"/>
+        <location filename="../app/src/colordictionary.h" line="323"/>
         <source>Light Reddish Brown</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../app/src/colordictionary.h" line="321"/>
+        <location filename="../app/src/colordictionary.h" line="324"/>
         <source>Moderate Reddish Brown</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../app/src/colordictionary.h" line="322"/>
+        <location filename="../app/src/colordictionary.h" line="325"/>
         <source>Dark Reddish Brown</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../app/src/colordictionary.h" line="323"/>
+        <location filename="../app/src/colordictionary.h" line="326"/>
         <source>Light Grayish Reddish Brown</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../app/src/colordictionary.h" line="324"/>
+        <location filename="../app/src/colordictionary.h" line="327"/>
         <source>Grayish Reddish Brown</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../app/src/colordictionary.h" line="325"/>
+        <location filename="../app/src/colordictionary.h" line="328"/>
         <source>Dark Grayish Reddish Brown</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../app/src/colordictionary.h" line="326"/>
+        <location filename="../app/src/colordictionary.h" line="329"/>
         <source>Vivid Orange</source>
         <translation>Élénk narancs</translation>
     </message>
     <message>
-        <location filename="../app/src/colordictionary.h" line="327"/>
+        <location filename="../app/src/colordictionary.h" line="330"/>
         <source>Brilliant Orange</source>
         <translation>Ragyogó narancs</translation>
     </message>
     <message>
-        <location filename="../app/src/colordictionary.h" line="328"/>
+        <location filename="../app/src/colordictionary.h" line="331"/>
         <source>Strong Orange</source>
         <translation>Erős narancs</translation>
     </message>
     <message>
-        <location filename="../app/src/colordictionary.h" line="329"/>
+        <location filename="../app/src/colordictionary.h" line="332"/>
         <source>Deep Orange</source>
         <translation>Mély narancs</translation>
     </message>
     <message>
-        <location filename="../app/src/colordictionary.h" line="330"/>
+        <location filename="../app/src/colordictionary.h" line="333"/>
         <source>Light Orange</source>
         <translation>Világos narancs</translation>
     </message>
     <message>
-        <location filename="../app/src/colordictionary.h" line="331"/>
+        <location filename="../app/src/colordictionary.h" line="334"/>
         <source>Moderate Orange</source>
         <translation>Mérsékelt narancs</translation>
     </message>
     <message>
-        <location filename="../app/src/colordictionary.h" line="332"/>
+        <location filename="../app/src/colordictionary.h" line="335"/>
         <source>Brownish Orange</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../app/src/colordictionary.h" line="333"/>
+        <location filename="../app/src/colordictionary.h" line="336"/>
         <source>Strong Brown</source>
         <translation>Erős barna</translation>
     </message>
     <message>
-        <location filename="../app/src/colordictionary.h" line="334"/>
+        <location filename="../app/src/colordictionary.h" line="337"/>
         <source>Deep Brown</source>
         <translation>Mély barna</translation>
     </message>
     <message>
-        <location filename="../app/src/colordictionary.h" line="335"/>
+        <location filename="../app/src/colordictionary.h" line="338"/>
         <source>Light Brown</source>
         <translation>Világos barna</translation>
     </message>
     <message>
-        <location filename="../app/src/colordictionary.h" line="336"/>
+        <location filename="../app/src/colordictionary.h" line="339"/>
         <source>Moderate Brown</source>
         <translation>Mérsékelt barna</translation>
     </message>
     <message>
-        <location filename="../app/src/colordictionary.h" line="337"/>
+        <location filename="../app/src/colordictionary.h" line="340"/>
         <source>Dark Brown</source>
         <translation>Sötét barna</translation>
     </message>
     <message>
-        <location filename="../app/src/colordictionary.h" line="338"/>
+        <location filename="../app/src/colordictionary.h" line="341"/>
         <source>Light Grayish Brown</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../app/src/colordictionary.h" line="339"/>
+        <location filename="../app/src/colordictionary.h" line="342"/>
         <source>Grayish Brown</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../app/src/colordictionary.h" line="340"/>
+        <location filename="../app/src/colordictionary.h" line="343"/>
         <source>Dark Grayish Brown</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../app/src/colordictionary.h" line="341"/>
+        <location filename="../app/src/colordictionary.h" line="344"/>
         <source>Light Brownish Gray</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../app/src/colordictionary.h" line="342"/>
+        <location filename="../app/src/colordictionary.h" line="345"/>
         <source>Brownish Gray</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../app/src/colordictionary.h" line="343"/>
+        <location filename="../app/src/colordictionary.h" line="346"/>
         <source>Brownish Black</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../app/src/colordictionary.h" line="344"/>
+        <location filename="../app/src/colordictionary.h" line="347"/>
         <source>Vivid Orange Yellow</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../app/src/colordictionary.h" line="345"/>
+        <location filename="../app/src/colordictionary.h" line="348"/>
         <source>Brilliant Orange Yellow</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../app/src/colordictionary.h" line="346"/>
+        <location filename="../app/src/colordictionary.h" line="349"/>
         <source>Strong Orange Yellow</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../app/src/colordictionary.h" line="347"/>
+        <location filename="../app/src/colordictionary.h" line="350"/>
         <source>Deep Orange Yellow</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../app/src/colordictionary.h" line="348"/>
+        <location filename="../app/src/colordictionary.h" line="351"/>
         <source>Light Orange Yellow</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../app/src/colordictionary.h" line="349"/>
+        <location filename="../app/src/colordictionary.h" line="352"/>
         <source>Moderate Orange Yellow</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../app/src/colordictionary.h" line="350"/>
+        <location filename="../app/src/colordictionary.h" line="353"/>
         <source>Dark Orange Yellow</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../app/src/colordictionary.h" line="351"/>
+        <location filename="../app/src/colordictionary.h" line="354"/>
         <source>Pale Orange Yellow</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../app/src/colordictionary.h" line="352"/>
+        <location filename="../app/src/colordictionary.h" line="355"/>
         <source>Strong Yellowish Brown</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../app/src/colordictionary.h" line="353"/>
+        <location filename="../app/src/colordictionary.h" line="356"/>
         <source>Deep Yellowish Brown</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../app/src/colordictionary.h" line="354"/>
+        <location filename="../app/src/colordictionary.h" line="357"/>
         <source>Light Yellowish Brown</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../app/src/colordictionary.h" line="355"/>
+        <location filename="../app/src/colordictionary.h" line="358"/>
         <source>Moderate Yellowish Brown</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../app/src/colordictionary.h" line="356"/>
+        <location filename="../app/src/colordictionary.h" line="359"/>
         <source>Dark Yellowish Brown</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../app/src/colordictionary.h" line="357"/>
+        <location filename="../app/src/colordictionary.h" line="360"/>
         <source>Light Grayish Yellowish Brown</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../app/src/colordictionary.h" line="358"/>
+        <location filename="../app/src/colordictionary.h" line="361"/>
         <source>Grayish Yellowish Brown</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../app/src/colordictionary.h" line="359"/>
+        <location filename="../app/src/colordictionary.h" line="362"/>
         <source>Dark Grayish Yellowish Brown</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../app/src/colordictionary.h" line="360"/>
+        <location filename="../app/src/colordictionary.h" line="363"/>
         <source>Vivid Yellow</source>
         <translation>Élénk sárga</translation>
     </message>
     <message>
-        <location filename="../app/src/colordictionary.h" line="361"/>
+        <location filename="../app/src/colordictionary.h" line="364"/>
         <source>Brilliant Yellow</source>
         <translation>Ragyogó sárga</translation>
     </message>
     <message>
-        <location filename="../app/src/colordictionary.h" line="362"/>
+        <location filename="../app/src/colordictionary.h" line="365"/>
         <source>Strong Yellow</source>
         <translation>Erős sárga</translation>
     </message>
     <message>
-        <location filename="../app/src/colordictionary.h" line="363"/>
+        <location filename="../app/src/colordictionary.h" line="366"/>
         <source>Deep Yellow</source>
         <translation>Mély sárga</translation>
     </message>
     <message>
-        <location filename="../app/src/colordictionary.h" line="364"/>
+        <location filename="../app/src/colordictionary.h" line="367"/>
         <source>Light Yellow</source>
         <translation>Világos sárga</translation>
     </message>
     <message>
-        <location filename="../app/src/colordictionary.h" line="365"/>
+        <location filename="../app/src/colordictionary.h" line="368"/>
         <source>Moderate Yellow</source>
         <translation>Mérsékelt sárga</translation>
     </message>
     <message>
-        <location filename="../app/src/colordictionary.h" line="366"/>
+        <location filename="../app/src/colordictionary.h" line="369"/>
         <source>Dark Yellow</source>
         <translation>Sötét sárga</translation>
     </message>
     <message>
-        <location filename="../app/src/colordictionary.h" line="367"/>
+        <location filename="../app/src/colordictionary.h" line="370"/>
         <source>Pale Yellow</source>
         <translation>Halvány sárga</translation>
     </message>
     <message>
-        <location filename="../app/src/colordictionary.h" line="368"/>
+        <location filename="../app/src/colordictionary.h" line="371"/>
         <source>Grayish Yellow</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../app/src/colordictionary.h" line="369"/>
+        <location filename="../app/src/colordictionary.h" line="372"/>
         <source>Dark Grayish Yellow</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../app/src/colordictionary.h" line="370"/>
+        <location filename="../app/src/colordictionary.h" line="373"/>
         <source>Yellowish White</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../app/src/colordictionary.h" line="371"/>
+        <location filename="../app/src/colordictionary.h" line="374"/>
         <source>Yellowish Gray</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../app/src/colordictionary.h" line="372"/>
+        <location filename="../app/src/colordictionary.h" line="375"/>
         <source>Light Olive Brown</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../app/src/colordictionary.h" line="373"/>
+        <location filename="../app/src/colordictionary.h" line="376"/>
         <source>Moderate Olive Brown</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../app/src/colordictionary.h" line="374"/>
+        <location filename="../app/src/colordictionary.h" line="377"/>
         <source>Dark Olive Brown</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../app/src/colordictionary.h" line="375"/>
+        <location filename="../app/src/colordictionary.h" line="378"/>
         <source>Vivid Greenish Yellow</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../app/src/colordictionary.h" line="376"/>
+        <location filename="../app/src/colordictionary.h" line="379"/>
         <source>Brilliant Greenish Yellow</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../app/src/colordictionary.h" line="377"/>
+        <location filename="../app/src/colordictionary.h" line="380"/>
         <source>Strong Greenish Yellow</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../app/src/colordictionary.h" line="378"/>
+        <location filename="../app/src/colordictionary.h" line="381"/>
         <source>Deep Greenish Yellow</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../app/src/colordictionary.h" line="379"/>
+        <location filename="../app/src/colordictionary.h" line="382"/>
         <source>Light Greenish Yellow</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../app/src/colordictionary.h" line="380"/>
+        <location filename="../app/src/colordictionary.h" line="383"/>
         <source>Moderate Greenish Yellow</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../app/src/colordictionary.h" line="381"/>
+        <location filename="../app/src/colordictionary.h" line="384"/>
         <source>Dark Greenish Yellow</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../app/src/colordictionary.h" line="382"/>
+        <location filename="../app/src/colordictionary.h" line="385"/>
         <source>Pale Greenish Yellow</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../app/src/colordictionary.h" line="383"/>
+        <location filename="../app/src/colordictionary.h" line="386"/>
         <source>Grayish Greenish Yellow</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../app/src/colordictionary.h" line="384"/>
+        <location filename="../app/src/colordictionary.h" line="387"/>
         <source>Light Olive</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../app/src/colordictionary.h" line="385"/>
+        <location filename="../app/src/colordictionary.h" line="388"/>
         <source>Moderate Olive</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../app/src/colordictionary.h" line="386"/>
+        <location filename="../app/src/colordictionary.h" line="389"/>
         <source>Dark Olive</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../app/src/colordictionary.h" line="387"/>
+        <location filename="../app/src/colordictionary.h" line="390"/>
         <source>Light Grayish Olive</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../app/src/colordictionary.h" line="388"/>
+        <location filename="../app/src/colordictionary.h" line="391"/>
         <source>Grayish Olive</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../app/src/colordictionary.h" line="389"/>
+        <location filename="../app/src/colordictionary.h" line="392"/>
         <source>Dark Grayish Olive</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../app/src/colordictionary.h" line="390"/>
+        <location filename="../app/src/colordictionary.h" line="393"/>
         <source>Light Olive Gray</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../app/src/colordictionary.h" line="391"/>
+        <location filename="../app/src/colordictionary.h" line="394"/>
         <source>Olive Gray</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../app/src/colordictionary.h" line="392"/>
+        <location filename="../app/src/colordictionary.h" line="395"/>
         <source>Olive Black</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../app/src/colordictionary.h" line="393"/>
+        <location filename="../app/src/colordictionary.h" line="396"/>
         <source>Vivid Yellow Green</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../app/src/colordictionary.h" line="394"/>
+        <location filename="../app/src/colordictionary.h" line="397"/>
         <source>Brilliant Yellow Green</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../app/src/colordictionary.h" line="395"/>
+        <location filename="../app/src/colordictionary.h" line="398"/>
         <source>Strong Yellow Green</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../app/src/colordictionary.h" line="396"/>
+        <location filename="../app/src/colordictionary.h" line="399"/>
         <source>Deep Yellow Green</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../app/src/colordictionary.h" line="397"/>
+        <location filename="../app/src/colordictionary.h" line="400"/>
         <source>Light Yellow Green</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../app/src/colordictionary.h" line="398"/>
+        <location filename="../app/src/colordictionary.h" line="401"/>
         <source>Moderate Yellow Green</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../app/src/colordictionary.h" line="399"/>
+        <location filename="../app/src/colordictionary.h" line="402"/>
         <source>Pale Yellow Green</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../app/src/colordictionary.h" line="400"/>
+        <location filename="../app/src/colordictionary.h" line="403"/>
         <source>Grayish Yellow Green</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../app/src/colordictionary.h" line="401"/>
+        <location filename="../app/src/colordictionary.h" line="404"/>
         <source>Strong Olive Green</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../app/src/colordictionary.h" line="402"/>
+        <location filename="../app/src/colordictionary.h" line="405"/>
         <source>Deep Olive Green</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../app/src/colordictionary.h" line="403"/>
+        <location filename="../app/src/colordictionary.h" line="406"/>
         <source>Moderate Olive Green</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../app/src/colordictionary.h" line="404"/>
+        <location filename="../app/src/colordictionary.h" line="407"/>
         <source>Dark Olive Green</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../app/src/colordictionary.h" line="405"/>
+        <location filename="../app/src/colordictionary.h" line="408"/>
         <source>Grayish Olive Green</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../app/src/colordictionary.h" line="406"/>
+        <location filename="../app/src/colordictionary.h" line="409"/>
         <source>Dark Grayish Olive Green</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../app/src/colordictionary.h" line="407"/>
+        <location filename="../app/src/colordictionary.h" line="410"/>
         <source>Vivid Yellowish Green</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../app/src/colordictionary.h" line="408"/>
+        <location filename="../app/src/colordictionary.h" line="411"/>
         <source>Brilliant Yellowish Green</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../app/src/colordictionary.h" line="409"/>
+        <location filename="../app/src/colordictionary.h" line="412"/>
         <source>Strong Yellowish Green</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../app/src/colordictionary.h" line="410"/>
+        <location filename="../app/src/colordictionary.h" line="413"/>
         <source>Deep Yellowish Green</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../app/src/colordictionary.h" line="411"/>
+        <location filename="../app/src/colordictionary.h" line="414"/>
         <source>Very Deep Yellowish Green</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../app/src/colordictionary.h" line="412"/>
+        <location filename="../app/src/colordictionary.h" line="415"/>
         <source>Very Light Yellowish Green</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../app/src/colordictionary.h" line="413"/>
+        <location filename="../app/src/colordictionary.h" line="416"/>
         <source>Light Yellowish Green</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../app/src/colordictionary.h" line="414"/>
+        <location filename="../app/src/colordictionary.h" line="417"/>
         <source>Moderate Yellowish Green</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../app/src/colordictionary.h" line="415"/>
+        <location filename="../app/src/colordictionary.h" line="418"/>
         <source>Dark Yellowish Green</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../app/src/colordictionary.h" line="416"/>
+        <location filename="../app/src/colordictionary.h" line="419"/>
         <source>Very Dark Yellowish Green</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../app/src/colordictionary.h" line="417"/>
+        <location filename="../app/src/colordictionary.h" line="420"/>
         <source>Vivid Green</source>
         <translation>Élénk zöld</translation>
     </message>
     <message>
-        <location filename="../app/src/colordictionary.h" line="418"/>
+        <location filename="../app/src/colordictionary.h" line="421"/>
         <source>Brilliant Green</source>
         <translation>Ragyogó zöld</translation>
     </message>
     <message>
-        <location filename="../app/src/colordictionary.h" line="419"/>
+        <location filename="../app/src/colordictionary.h" line="422"/>
         <source>Strong Green</source>
         <translation>Erős zöld</translation>
     </message>
     <message>
-        <location filename="../app/src/colordictionary.h" line="420"/>
+        <location filename="../app/src/colordictionary.h" line="423"/>
         <source>Deep Green</source>
         <translation>Mély zöld</translation>
     </message>
     <message>
-        <location filename="../app/src/colordictionary.h" line="421"/>
+        <location filename="../app/src/colordictionary.h" line="424"/>
         <source>Very Light Green</source>
         <translation>Nagyon világos zöld</translation>
     </message>
     <message>
-        <location filename="../app/src/colordictionary.h" line="422"/>
+        <location filename="../app/src/colordictionary.h" line="425"/>
         <source>Light Green</source>
         <translation>Világos zöld</translation>
     </message>
     <message>
-        <location filename="../app/src/colordictionary.h" line="423"/>
+        <location filename="../app/src/colordictionary.h" line="426"/>
         <source>Moderate Green</source>
         <translation>Mérsékelt zöld</translation>
     </message>
     <message>
-        <location filename="../app/src/colordictionary.h" line="424"/>
+        <location filename="../app/src/colordictionary.h" line="427"/>
         <source>Dark Green</source>
         <translation>Sötét zöld</translation>
     </message>
     <message>
-        <location filename="../app/src/colordictionary.h" line="425"/>
+        <location filename="../app/src/colordictionary.h" line="428"/>
         <source>Very Dark Green</source>
         <translation>Nagyon sötét zöld</translation>
     </message>
     <message>
-        <location filename="../app/src/colordictionary.h" line="426"/>
+        <location filename="../app/src/colordictionary.h" line="429"/>
         <source>Very Pale Green</source>
         <translation>Nagyon halvány zöld</translation>
     </message>
     <message>
-        <location filename="../app/src/colordictionary.h" line="427"/>
+        <location filename="../app/src/colordictionary.h" line="430"/>
         <source>Pale Green</source>
         <translation>Halvány zöld</translation>
     </message>
     <message>
-        <location filename="../app/src/colordictionary.h" line="428"/>
+        <location filename="../app/src/colordictionary.h" line="431"/>
         <source>Grayish Green</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../app/src/colordictionary.h" line="429"/>
+        <location filename="../app/src/colordictionary.h" line="432"/>
         <source>Dark Grayish Green</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../app/src/colordictionary.h" line="430"/>
+        <location filename="../app/src/colordictionary.h" line="433"/>
         <source>Blackish Green</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../app/src/colordictionary.h" line="431"/>
+        <location filename="../app/src/colordictionary.h" line="434"/>
         <source>Greenish White</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../app/src/colordictionary.h" line="432"/>
+        <location filename="../app/src/colordictionary.h" line="435"/>
         <source>Light Greenish Gray</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../app/src/colordictionary.h" line="433"/>
+        <location filename="../app/src/colordictionary.h" line="436"/>
         <source>Greenish Gray</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../app/src/colordictionary.h" line="434"/>
+        <location filename="../app/src/colordictionary.h" line="437"/>
         <source>Dark Greenish Gray</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../app/src/colordictionary.h" line="435"/>
+        <location filename="../app/src/colordictionary.h" line="438"/>
         <source>Greenish Black</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../app/src/colordictionary.h" line="436"/>
+        <location filename="../app/src/colordictionary.h" line="439"/>
         <source>Vivid Bluish Green</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../app/src/colordictionary.h" line="437"/>
+        <location filename="../app/src/colordictionary.h" line="440"/>
         <source>Brilliant Bluish Green</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../app/src/colordictionary.h" line="438"/>
+        <location filename="../app/src/colordictionary.h" line="441"/>
         <source>Strong Bluish Green</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../app/src/colordictionary.h" line="439"/>
+        <location filename="../app/src/colordictionary.h" line="442"/>
         <source>Deep Bluish Green</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../app/src/colordictionary.h" line="440"/>
+        <location filename="../app/src/colordictionary.h" line="443"/>
         <source>Very Light Bluish Green</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../app/src/colordictionary.h" line="441"/>
+        <location filename="../app/src/colordictionary.h" line="444"/>
         <source>Light Bluish Green</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../app/src/colordictionary.h" line="442"/>
+        <location filename="../app/src/colordictionary.h" line="445"/>
         <source>Moderate Bluish Green</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../app/src/colordictionary.h" line="443"/>
+        <location filename="../app/src/colordictionary.h" line="446"/>
         <source>Dark Bluish Green</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../app/src/colordictionary.h" line="444"/>
+        <location filename="../app/src/colordictionary.h" line="447"/>
         <source>Very Dark Bluish Green</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../app/src/colordictionary.h" line="445"/>
+        <location filename="../app/src/colordictionary.h" line="448"/>
         <source>Vivid Greenish Blue</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../app/src/colordictionary.h" line="446"/>
+        <location filename="../app/src/colordictionary.h" line="449"/>
         <source>Brilliant Greenish Blue</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../app/src/colordictionary.h" line="447"/>
+        <location filename="../app/src/colordictionary.h" line="450"/>
         <source>Strong Greenish Blue</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../app/src/colordictionary.h" line="448"/>
+        <location filename="../app/src/colordictionary.h" line="451"/>
         <source>Deep Greenish Blue</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../app/src/colordictionary.h" line="449"/>
+        <location filename="../app/src/colordictionary.h" line="452"/>
         <source>Very Light Greenish Blue</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../app/src/colordictionary.h" line="450"/>
+        <location filename="../app/src/colordictionary.h" line="453"/>
         <source>Light Greenish Blue</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../app/src/colordictionary.h" line="451"/>
+        <location filename="../app/src/colordictionary.h" line="454"/>
         <source>Moderate Greenish Blue</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../app/src/colordictionary.h" line="452"/>
+        <location filename="../app/src/colordictionary.h" line="455"/>
         <source>Dark Greenish Blue</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../app/src/colordictionary.h" line="453"/>
+        <location filename="../app/src/colordictionary.h" line="456"/>
         <source>Very Dark Greenish Blue</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../app/src/colordictionary.h" line="454"/>
+        <location filename="../app/src/colordictionary.h" line="457"/>
         <source>Vivid Blue</source>
         <translation>Élénk kék</translation>
     </message>
     <message>
-        <location filename="../app/src/colordictionary.h" line="455"/>
+        <location filename="../app/src/colordictionary.h" line="458"/>
         <source>Brilliant Blue</source>
         <translation>Ragyogó kék</translation>
     </message>
     <message>
-        <location filename="../app/src/colordictionary.h" line="456"/>
+        <location filename="../app/src/colordictionary.h" line="459"/>
         <source>Strong Blue</source>
         <translation>Erős kék</translation>
     </message>
     <message>
-        <location filename="../app/src/colordictionary.h" line="457"/>
+        <location filename="../app/src/colordictionary.h" line="460"/>
         <source>Deep Blue</source>
         <translation>Mély kék</translation>
     </message>
     <message>
-        <location filename="../app/src/colordictionary.h" line="458"/>
+        <location filename="../app/src/colordictionary.h" line="461"/>
         <source>Very Light Blue</source>
         <translation>Nagyon világos kék</translation>
     </message>
     <message>
-        <location filename="../app/src/colordictionary.h" line="459"/>
+        <location filename="../app/src/colordictionary.h" line="462"/>
         <source>Light Blue</source>
         <translation>Világos kék</translation>
     </message>
     <message>
-        <location filename="../app/src/colordictionary.h" line="460"/>
+        <location filename="../app/src/colordictionary.h" line="463"/>
         <source>Moderate Blue</source>
         <translation>Mérsékelt kék</translation>
     </message>
     <message>
-        <location filename="../app/src/colordictionary.h" line="461"/>
+        <location filename="../app/src/colordictionary.h" line="464"/>
         <source>Dark Blue</source>
         <translation>Sötét kék</translation>
     </message>
     <message>
-        <location filename="../app/src/colordictionary.h" line="462"/>
+        <location filename="../app/src/colordictionary.h" line="465"/>
         <source>Very Pale Blue</source>
         <translation>Nagyon halvány kék</translation>
     </message>
     <message>
-        <location filename="../app/src/colordictionary.h" line="463"/>
+        <location filename="../app/src/colordictionary.h" line="466"/>
         <source>Pale Blue</source>
         <translation>Halvány kék</translation>
     </message>
     <message>
-        <location filename="../app/src/colordictionary.h" line="464"/>
+        <location filename="../app/src/colordictionary.h" line="467"/>
         <source>Grayish Blue</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../app/src/colordictionary.h" line="465"/>
+        <location filename="../app/src/colordictionary.h" line="468"/>
         <source>Dark Grayish Blue</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../app/src/colordictionary.h" line="466"/>
+        <location filename="../app/src/colordictionary.h" line="469"/>
         <source>Blackish Blue</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../app/src/colordictionary.h" line="467"/>
+        <location filename="../app/src/colordictionary.h" line="470"/>
         <source>Bluish White</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../app/src/colordictionary.h" line="468"/>
+        <location filename="../app/src/colordictionary.h" line="471"/>
         <source>Light Bluish Gray</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../app/src/colordictionary.h" line="469"/>
+        <location filename="../app/src/colordictionary.h" line="472"/>
         <source>Bluish Gray</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../app/src/colordictionary.h" line="470"/>
+        <location filename="../app/src/colordictionary.h" line="473"/>
         <source>Dark Bluish Gray</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../app/src/colordictionary.h" line="471"/>
+        <location filename="../app/src/colordictionary.h" line="474"/>
         <source>Bluish Black</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../app/src/colordictionary.h" line="472"/>
+        <location filename="../app/src/colordictionary.h" line="475"/>
         <source>Vivid Purplish Blue</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../app/src/colordictionary.h" line="473"/>
+        <location filename="../app/src/colordictionary.h" line="476"/>
         <source>Brilliant Purplish Blue</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../app/src/colordictionary.h" line="474"/>
+        <location filename="../app/src/colordictionary.h" line="477"/>
         <source>Strong Purplish Blue</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../app/src/colordictionary.h" line="475"/>
+        <location filename="../app/src/colordictionary.h" line="478"/>
         <source>Deep Purplish Blue</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../app/src/colordictionary.h" line="476"/>
+        <location filename="../app/src/colordictionary.h" line="479"/>
         <source>Very Light Purplish Blue</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../app/src/colordictionary.h" line="477"/>
+        <location filename="../app/src/colordictionary.h" line="480"/>
         <source>Light Purplish Blue</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../app/src/colordictionary.h" line="478"/>
+        <location filename="../app/src/colordictionary.h" line="481"/>
         <source>Moderate Purplish Blue</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../app/src/colordictionary.h" line="479"/>
+        <location filename="../app/src/colordictionary.h" line="482"/>
         <source>Dark Purplish Blue</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../app/src/colordictionary.h" line="480"/>
+        <location filename="../app/src/colordictionary.h" line="483"/>
         <source>Very Pale Purplish Blue</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../app/src/colordictionary.h" line="481"/>
+        <location filename="../app/src/colordictionary.h" line="484"/>
         <source>Pale Purplish Blue</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../app/src/colordictionary.h" line="482"/>
+        <location filename="../app/src/colordictionary.h" line="485"/>
         <source>Grayish Purplish Blue</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../app/src/colordictionary.h" line="483"/>
+        <location filename="../app/src/colordictionary.h" line="486"/>
         <source>Vivid Violet</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../app/src/colordictionary.h" line="484"/>
+        <location filename="../app/src/colordictionary.h" line="487"/>
         <source>Brilliant Violet</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../app/src/colordictionary.h" line="485"/>
+        <location filename="../app/src/colordictionary.h" line="488"/>
         <source>Strong Violet</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../app/src/colordictionary.h" line="486"/>
+        <location filename="../app/src/colordictionary.h" line="489"/>
         <source>Deep Violet</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../app/src/colordictionary.h" line="487"/>
+        <location filename="../app/src/colordictionary.h" line="490"/>
         <source>Very Light Violet</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../app/src/colordictionary.h" line="488"/>
+        <location filename="../app/src/colordictionary.h" line="491"/>
         <source>Light Violet</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../app/src/colordictionary.h" line="489"/>
+        <location filename="../app/src/colordictionary.h" line="492"/>
         <source>Moderate Violet</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../app/src/colordictionary.h" line="490"/>
+        <location filename="../app/src/colordictionary.h" line="493"/>
         <source>Dark Violet</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../app/src/colordictionary.h" line="491"/>
+        <location filename="../app/src/colordictionary.h" line="494"/>
         <source>Very Pale Violet</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../app/src/colordictionary.h" line="492"/>
+        <location filename="../app/src/colordictionary.h" line="495"/>
         <source>Pale Violet</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../app/src/colordictionary.h" line="493"/>
+        <location filename="../app/src/colordictionary.h" line="496"/>
         <source>Grayish Violet</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../app/src/colordictionary.h" line="494"/>
+        <location filename="../app/src/colordictionary.h" line="497"/>
         <source>Vivid Purple</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../app/src/colordictionary.h" line="495"/>
+        <location filename="../app/src/colordictionary.h" line="498"/>
         <source>Brilliant Purple</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../app/src/colordictionary.h" line="496"/>
+        <location filename="../app/src/colordictionary.h" line="499"/>
         <source>Strong Purple</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../app/src/colordictionary.h" line="497"/>
+        <location filename="../app/src/colordictionary.h" line="500"/>
         <source>Deep Purple</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../app/src/colordictionary.h" line="498"/>
+        <location filename="../app/src/colordictionary.h" line="501"/>
         <source>Very Deep Purple</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../app/src/colordictionary.h" line="499"/>
+        <location filename="../app/src/colordictionary.h" line="502"/>
         <source>Very Light Purple</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../app/src/colordictionary.h" line="500"/>
+        <location filename="../app/src/colordictionary.h" line="503"/>
         <source>Light Purple</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../app/src/colordictionary.h" line="501"/>
+        <location filename="../app/src/colordictionary.h" line="504"/>
         <source>Moderate Purple</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../app/src/colordictionary.h" line="502"/>
+        <location filename="../app/src/colordictionary.h" line="505"/>
         <source>Dark Purple</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../app/src/colordictionary.h" line="503"/>
+        <location filename="../app/src/colordictionary.h" line="506"/>
         <source>Very Dark Purple</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../app/src/colordictionary.h" line="504"/>
+        <location filename="../app/src/colordictionary.h" line="507"/>
         <source>Very Pale Purple</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../app/src/colordictionary.h" line="505"/>
+        <location filename="../app/src/colordictionary.h" line="508"/>
         <source>Pale Purple</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../app/src/colordictionary.h" line="506"/>
+        <location filename="../app/src/colordictionary.h" line="509"/>
         <source>Grayish Purple</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../app/src/colordictionary.h" line="507"/>
+        <location filename="../app/src/colordictionary.h" line="510"/>
         <source>Dark Grayish Purple</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../app/src/colordictionary.h" line="508"/>
+        <location filename="../app/src/colordictionary.h" line="511"/>
         <source>Blackish Purple</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../app/src/colordictionary.h" line="509"/>
+        <location filename="../app/src/colordictionary.h" line="512"/>
         <source>Purplish White</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../app/src/colordictionary.h" line="510"/>
+        <location filename="../app/src/colordictionary.h" line="513"/>
         <source>Light Purplish Gray</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../app/src/colordictionary.h" line="511"/>
+        <location filename="../app/src/colordictionary.h" line="514"/>
         <source>Purplish Gray</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../app/src/colordictionary.h" line="512"/>
+        <location filename="../app/src/colordictionary.h" line="515"/>
         <source>Dark Purplish Gray</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../app/src/colordictionary.h" line="513"/>
+        <location filename="../app/src/colordictionary.h" line="516"/>
         <source>Purplish Black</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../app/src/colordictionary.h" line="514"/>
+        <location filename="../app/src/colordictionary.h" line="517"/>
         <source>Vivid Reddish Purple</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../app/src/colordictionary.h" line="515"/>
+        <location filename="../app/src/colordictionary.h" line="518"/>
         <source>Strong Reddish Purple</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../app/src/colordictionary.h" line="516"/>
+        <location filename="../app/src/colordictionary.h" line="519"/>
         <source>Deep Reddish Purple</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../app/src/colordictionary.h" line="517"/>
+        <location filename="../app/src/colordictionary.h" line="520"/>
         <source>Very Deep Reddish Purple</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../app/src/colordictionary.h" line="518"/>
+        <location filename="../app/src/colordictionary.h" line="521"/>
         <source>Light Reddish Purple</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../app/src/colordictionary.h" line="519"/>
+        <location filename="../app/src/colordictionary.h" line="522"/>
         <source>Moderate Reddish Purple</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../app/src/colordictionary.h" line="520"/>
+        <location filename="../app/src/colordictionary.h" line="523"/>
         <source>Dark Reddish Purple</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../app/src/colordictionary.h" line="521"/>
+        <location filename="../app/src/colordictionary.h" line="524"/>
         <source>Very Dark Reddish Purple</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../app/src/colordictionary.h" line="522"/>
+        <location filename="../app/src/colordictionary.h" line="525"/>
         <source>Pale Reddish Purple</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../app/src/colordictionary.h" line="523"/>
+        <location filename="../app/src/colordictionary.h" line="526"/>
         <source>Grayish Reddish Purple</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../app/src/colordictionary.h" line="524"/>
+        <location filename="../app/src/colordictionary.h" line="527"/>
         <source>Brilliant Purplish Pink</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../app/src/colordictionary.h" line="525"/>
+        <location filename="../app/src/colordictionary.h" line="528"/>
         <source>Strong Purplish Pink</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../app/src/colordictionary.h" line="526"/>
+        <location filename="../app/src/colordictionary.h" line="529"/>
         <source>Deep Purplish Pink</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../app/src/colordictionary.h" line="527"/>
+        <location filename="../app/src/colordictionary.h" line="530"/>
         <source>Light Purplish Pink</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../app/src/colordictionary.h" line="528"/>
+        <location filename="../app/src/colordictionary.h" line="531"/>
         <source>Moderate Purplish Pink</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../app/src/colordictionary.h" line="529"/>
+        <location filename="../app/src/colordictionary.h" line="532"/>
         <source>Dark Purplish Pink</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../app/src/colordictionary.h" line="530"/>
+        <location filename="../app/src/colordictionary.h" line="533"/>
         <source>Pale Purplish Pink</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../app/src/colordictionary.h" line="531"/>
+        <location filename="../app/src/colordictionary.h" line="534"/>
         <source>Grayish Purplish Pink</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../app/src/colordictionary.h" line="532"/>
+        <location filename="../app/src/colordictionary.h" line="535"/>
         <source>Vivid Purplish Red</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../app/src/colordictionary.h" line="533"/>
+        <location filename="../app/src/colordictionary.h" line="536"/>
         <source>Strong Purplish Red</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../app/src/colordictionary.h" line="534"/>
+        <location filename="../app/src/colordictionary.h" line="537"/>
         <source>Deep Purplish Red</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../app/src/colordictionary.h" line="535"/>
+        <location filename="../app/src/colordictionary.h" line="538"/>
         <source>Very Deep Purplish Red</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../app/src/colordictionary.h" line="536"/>
+        <location filename="../app/src/colordictionary.h" line="539"/>
         <source>Moderate Purplish Red</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../app/src/colordictionary.h" line="537"/>
+        <location filename="../app/src/colordictionary.h" line="540"/>
         <source>Dark Purplish Red</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../app/src/colordictionary.h" line="538"/>
+        <location filename="../app/src/colordictionary.h" line="541"/>
         <source>Very Dark Purplish Red</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../app/src/colordictionary.h" line="539"/>
+        <location filename="../app/src/colordictionary.h" line="542"/>
         <source>Light Grayish Purplish Red</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../app/src/colordictionary.h" line="540"/>
+        <location filename="../app/src/colordictionary.h" line="543"/>
         <source>Grayish Purplish Red</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../app/src/colordictionary.h" line="541"/>
+        <location filename="../app/src/colordictionary.h" line="544"/>
         <source>White</source>
         <translation>Fehér</translation>
     </message>
     <message>
-        <location filename="../app/src/colordictionary.h" line="542"/>
+        <location filename="../app/src/colordictionary.h" line="545"/>
         <source>Light Gray</source>
         <translation>Világos szürke</translation>
     </message>
     <message>
-        <location filename="../app/src/colordictionary.h" line="543"/>
+        <location filename="../app/src/colordictionary.h" line="546"/>
         <source>Medium Gray</source>
         <translation>Közepes szürge</translation>
     </message>
     <message>
-        <location filename="../app/src/colordictionary.h" line="544"/>
+        <location filename="../app/src/colordictionary.h" line="547"/>
         <source>Dark Gray</source>
         <translation>Sötét szürke</translation>
     </message>
     <message>
-        <location filename="../app/src/colordictionary.h" line="545"/>
+        <location filename="../app/src/colordictionary.h" line="548"/>
         <source>Black</source>
         <translation>Fekete</translation>
     </message>
@@ -3923,12 +3967,12 @@ p, li { white-space: pre-wrap; }
 <context>
     <name>ScribbleArea</name>
     <message>
-        <location filename="../core_lib/src/interface/scribblearea.cpp" line="535"/>
+        <location filename="../core_lib/src/interface/scribblearea.cpp" line="537"/>
         <source>Warning</source>
         <translation>Figyelmeztetés</translation>
     </message>
     <message>
-        <location filename="../core_lib/src/interface/scribblearea.cpp" line="536"/>
+        <location filename="../core_lib/src/interface/scribblearea.cpp" line="538"/>
         <source>You are drawing on a hidden layer! Please select another layer (or make the current layer visible).</source>
         <translation>Most egy láthatatlan rétegre rajzol! Válasszon egy másik réteget (vagy tegye láthatóvá az aktuális réteget).</translation>
     </message>
@@ -3941,50 +3985,50 @@ p, li { white-space: pre-wrap; }
         <translation type="vanished">Kép kiürítése</translation>
     </message>
     <message>
-        <location filename="../core_lib/src/interface/scribblearea.cpp" line="1633"/>
+        <location filename="../core_lib/src/interface/scribblearea.cpp" line="1721"/>
         <source>Delete Selection</source>
         <comment>Undo Step: clear the selection area.</comment>
         <translation>Kijelölés törlése</translation>
     </message>
     <message>
-        <location filename="../core_lib/src/interface/scribblearea.cpp" line="1649"/>
-        <location filename="../core_lib/src/interface/scribblearea.cpp" line="1657"/>
+        <location filename="../core_lib/src/interface/scribblearea.cpp" line="1737"/>
+        <location filename="../core_lib/src/interface/scribblearea.cpp" line="1745"/>
         <source>Clear Image</source>
         <comment>Undo step text</comment>
         <translation>Kép kiürítése</translation>
     </message>
     <message>
-        <location filename="../core_lib/src/interface/scribblearea.cpp" line="1684"/>
+        <location filename="../core_lib/src/interface/scribblearea.cpp" line="1772"/>
         <source>There is a gap in your drawing (or maybe you have zoomed too much).</source>
         <translation>Egy rés van a rajzon (vagy túlságosan fel van nagyítva).</translation>
     </message>
     <message>
-        <location filename="../core_lib/src/interface/scribblearea.cpp" line="1685"/>
+        <location filename="../core_lib/src/interface/scribblearea.cpp" line="1773"/>
         <source>Sorry! This doesn&apos;t always work.Please try again (zoom a bit, click at another location... )&lt;br&gt;if it doesn&apos;t work, zoom a bit and check that your paths are connected by pressing F1.).</source>
         <translation>Elnézést! Ez nem mindig működik. Próbáld újra (egy kis nagyítással vagy máshová kattintva...)&lt;br&gt;Ha nem működik nagyíts egy kicsit és az F1 lenyomásával ellenőrizd, hogy az útvonalak összeérnek-e.).</translation>
     </message>
     <message>
-        <location filename="../core_lib/src/interface/scribblearea.cpp" line="1689"/>
+        <location filename="../core_lib/src/interface/scribblearea.cpp" line="1777"/>
         <source>Out of bound.</source>
         <translation>Tartományon kívül.</translation>
     </message>
     <message>
-        <location filename="../core_lib/src/interface/scribblearea.cpp" line="1690"/>
+        <location filename="../core_lib/src/interface/scribblearea.cpp" line="1778"/>
         <source>Could not find a closed path.</source>
         <translation>Nem található zárt útvonal.</translation>
     </message>
     <message>
-        <location filename="../core_lib/src/interface/scribblearea.cpp" line="1691"/>
+        <location filename="../core_lib/src/interface/scribblearea.cpp" line="1779"/>
         <source>Could not find the root index.</source>
         <translation>Nem található a gyökér index.</translation>
     </message>
     <message>
-        <location filename="../core_lib/src/interface/scribblearea.cpp" line="1692"/>
+        <location filename="../core_lib/src/interface/scribblearea.cpp" line="1780"/>
         <source>%1&lt;br&gt;&lt;br&gt;Error: %2</source>
         <translation>%1&lt;br&gt;&lt;br&gt;Hiba: %2</translation>
     </message>
     <message>
-        <location filename="../core_lib/src/interface/scribblearea.cpp" line="1692"/>
+        <location filename="../core_lib/src/interface/scribblearea.cpp" line="1780"/>
         <source>Flood fill error</source>
         <translation>Kitöltési hiba</translation>
     </message>
@@ -4213,12 +4257,12 @@ p, li { white-space: pre-wrap; }
 <context>
     <name>TimeLineCells</name>
     <message>
-        <location filename="../core_lib/src/interface/timelinecells.cpp" line="686"/>
+        <location filename="../core_lib/src/interface/timelinecells.cpp" line="677"/>
         <source>Layer Properties</source>
         <translation>Réteg tulajdonságai</translation>
     </message>
     <message>
-        <location filename="../core_lib/src/interface/timelinecells.cpp" line="687"/>
+        <location filename="../core_lib/src/interface/timelinecells.cpp" line="678"/>
         <source>Layer name:</source>
         <translation>Réteg neve:</translation>
     </message>
@@ -4268,6 +4312,46 @@ p, li { white-space: pre-wrap; }
         <location filename="../app/ui/timelinepage.ui" line="79"/>
         <source>Short scrub</source>
         <translation>Rövid helyjelző</translation>
+    </message>
+    <message>
+        <location filename="../app/ui/timelinepage.ui" line="89"/>
+        <source>Drawing</source>
+        <translation>Rajzolás</translation>
+    </message>
+    <message>
+        <location filename="../app/ui/timelinepage.ui" line="95"/>
+        <source>When drawing on an empty frame:</source>
+        <translation>Nem létező képkockára történő rajzoláskor:</translation>
+    </message>
+    <message>
+        <location filename="../app/ui/timelinepage.ui" line="102"/>
+        <source>Create a new (blank) key-frame and start drawing on it.</source>
+        <translation>Új (üres) kulcs-képkocka létrehozása és rajzolás rá</translation>
+    </message>
+    <message>
+        <location filename="../app/ui/timelinepage.ui" line="105"/>
+        <source>Create a new (blank) key-frame</source>
+        <translation>Új (üres) kulcs-képkocka létrehozása</translation>
+    </message>
+    <message>
+        <location filename="../app/ui/timelinepage.ui" line="115"/>
+        <source>Duplicate the previous key-frame and start drawing on the duplicate.</source>
+        <translation>Másolat készítése az előző kulcs-képkockáról és rajzolás a másolatra</translation>
+    </message>
+    <message>
+        <location filename="../app/ui/timelinepage.ui" line="118"/>
+        <source>Duplicate the previous key-frame</source>
+        <translation>Másolat készítése az előző kulcs-képkockáról</translation>
+    </message>
+    <message>
+        <location filename="../app/ui/timelinepage.ui" line="125"/>
+        <source>Keep drawing on the previous key-frame</source>
+        <translation>Rajzolás folytatása az előző kulcs-képkockán</translation>
+    </message>
+    <message>
+        <location filename="../app/ui/timelinepage.ui" line="137"/>
+        <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;(Applies to Pencil, Erasor, Pen, Polyline, Bucket and Brush tools)&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;(Ez a ceruza, radír, toll, vonallánc, festékes vödör és ecset eszközökre vonatkozik.)&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <source>Frame size in Pixels</source>
@@ -4637,12 +4721,12 @@ p, li { white-space: pre-wrap; }
         <translation>Beállítások</translation>
     </message>
     <message>
-        <location filename="../app/src/tooloptionwidget.cpp" line="182"/>
+        <location filename="../app/src/tooloptionwidget.cpp" line="183"/>
         <source>Stroke Thickness</source>
         <translation>Körvonal vastagsága</translation>
     </message>
     <message>
-        <location filename="../app/src/tooloptionwidget.cpp" line="187"/>
+        <location filename="../app/src/tooloptionwidget.cpp" line="188"/>
         <source>Width</source>
         <translation>Szélesség</translation>
     </message>

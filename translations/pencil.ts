@@ -841,66 +841,76 @@
     </message>
     <message>
         <location filename="../app/src/preferencesdialog.cpp" line="99"/>
-        <source>Spanish</source>
+        <source>Estonian</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../app/src/preferencesdialog.cpp" line="100"/>
-        <source>French</source>
+        <source>Spanish</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../app/src/preferencesdialog.cpp" line="101"/>
-        <source>Hebrew</source>
+        <source>French</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../app/src/preferencesdialog.cpp" line="102"/>
-        <source>Hungarian</source>
+        <source>Hebrew</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../app/src/preferencesdialog.cpp" line="103"/>
-        <source>Indonesian</source>
+        <source>Hungarian</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../app/src/preferencesdialog.cpp" line="104"/>
-        <source>Italian</source>
+        <source>Indonesian</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../app/src/preferencesdialog.cpp" line="105"/>
-        <source>Japanese</source>
+        <source>Italian</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../app/src/preferencesdialog.cpp" line="106"/>
-        <source>Portuguese - Portugal</source>
+        <source>Japanese</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../app/src/preferencesdialog.cpp" line="107"/>
-        <source>Portuguese - Brazil</source>
+        <source>Polish</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../app/src/preferencesdialog.cpp" line="108"/>
-        <source>Russian</source>
+        <source>Portuguese - Portugal</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../app/src/preferencesdialog.cpp" line="109"/>
-        <source>Slovenian</source>
+        <source>Portuguese - Brazil</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../app/src/preferencesdialog.cpp" line="110"/>
-        <source>Vietnamese</source>
+        <source>Russian</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../app/src/preferencesdialog.cpp" line="111"/>
+        <source>Slovenian</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../app/src/preferencesdialog.cpp" line="112"/>
+        <source>Vietnamese</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../app/src/preferencesdialog.cpp" line="113"/>
         <source>Chinese - Taiwan</source>
         <translation type="unfinished"></translation>
     </message>
@@ -945,12 +955,12 @@
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../app/src/preferencesdialog.cpp" line="207"/>
+        <location filename="../app/src/preferencesdialog.cpp" line="209"/>
         <source>Restart Required</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../app/src/preferencesdialog.cpp" line="208"/>
+        <location filename="../app/src/preferencesdialog.cpp" line="210"/>
         <source>The language change will take effect after a restart of Pencil2D</source>
         <translation type="unfinished"></translation>
     </message>
