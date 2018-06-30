@@ -142,6 +142,8 @@ LayerCamera* Object::addNewCameraLayer()
 
     layerCamera->addNewKeyFrameAt(1);
 
+    connect(layerCamera, &LayerCamera::resolutionChanged, this, &Object::layerViewChanged);
+
     return layerCamera;
 }
 
@@ -272,12 +274,12 @@ void Object::deleteLayer(Layer* layer)
     }
 }
 
-ColourRef Object::getColour(int i) const
+ColourRef Object::getColour(int index) const
 {
     ColourRef result(Qt::white, "error");
-    if (i > -1 && i < mPalette.size())
+    if (index > -1 && index < mPalette.size())
     {
-        result = mPalette.at(i);
+        result = mPalette.at(index);
     }
     return result;
 }
@@ -285,7 +287,13 @@ ColourRef Object::getColour(int i) const
 void Object::setColour(int index, QColor newColour)
 {
     Q_ASSERT(index >= 0);
+
     mPalette[index].colour = newColour;
+}
+
+void Object::setColourRef(int index, ColourRef newColourRef)
+{
+    mPalette[index] = newColourRef;
 }
 
 void Object::addColour(QColor colour)
@@ -293,7 +301,12 @@ void Object::addColour(QColor colour)
     addColour(ColourRef(colour, "Colour " + QString::number(mPalette.size())));
 }
 
-bool Object::removeColour(int index)
+void Object::addColourAtIndex(int index, ColourRef newColour)
+{
+    mPalette.insert(index, newColour);
+}
+
+bool Object::isColourInUse(int index)
 {
     for (int i = 0; i < getLayerCount(); i++)
     {
@@ -301,9 +314,19 @@ bool Object::removeColour(int index)
         if (layer->type() == Layer::VECTOR)
         {
             LayerVector* layerVector = (LayerVector*)layer;
-            if (layerVector->usesColour(index)) return false;
+
+            if (layerVector->usesColour(index))
+            {
+                return true;
+            }
         }
     }
+    return false;
+
+}
+
+void Object::removeColour(int index)
+{
     for (int i = 0; i < getLayerCount(); i++)
     {
         Layer* layer = getLayer(i);
@@ -313,8 +336,9 @@ bool Object::removeColour(int index)
             layerVector->removeColour(index);
         }
     }
+
     mPalette.removeAt(index);
-    return true;
+
     // update the vector pictures using that colour !
 }
 
@@ -323,19 +347,37 @@ void Object::renameColour(int i, QString text)
     mPalette[i].name = text;
 }
 
-bool Object::savePalette(QString filePath)
+QString Object::savePalette(QString dataFolder)
 {
-    return exportPalette(filePath + "/palette.xml");
+    QString fullPath = QDir(dataFolder).filePath("palette.xml");
+    bool ok = exportPalette(fullPath);
+    if (ok)
+        return fullPath;
+    return "";
 }
 
-bool Object::exportPalette(QString filePath)
+void Object::exportPaletteGPL(QFile& file)
 {
-    QFile file(filePath);
-    if (!file.open(QFile::WriteOnly | QFile::Text))
+
+    QString fileName = QFileInfo(file).baseName();
+    QTextStream out(&file);
+
+    out << "GIMP Palette" << "\n";
+    out << "Name: " << fileName << "\n";
+    out << "#" << "\n";
+
+    for (int i = 0; i < mPalette.size(); i++)
     {
-        qDebug("Error: cannot export palette");
-        return false;
+        ColourRef ref = mPalette.at(i);
+
+        QColor toRgb = ref.colour.toRgb();
+        out << QString("%1 %2 %3").arg(toRgb.red()).arg(toRgb.green()).arg(toRgb.blue());
+        out << " " << ref.name << "\n";
     }
+}
+
+void Object::exportPalettePencil(QFile& file)
+{
     QTextStream out(&file);
 
     QDomDocument doc("PencilPalette");
@@ -352,22 +394,105 @@ bool Object::exportPalette(QString filePath)
         tag.setAttribute("alpha", ref.colour.alpha());
         root.appendChild(tag);
     }
-
     int IndentSize = 2;
     doc.save(out, IndentSize);
+}
+
+bool Object::exportPalette(QString filePath)
+{
+    QFile file(filePath);
+    if (!file.open(QFile::WriteOnly | QFile::Text))
+    {
+        qDebug("Error: cannot export palette");
+        return false;
+    }
+
+    if (file.fileName().endsWith(".gpl", Qt::CaseInsensitive))
+    {
+        exportPaletteGPL(file);
+    } else {
+        exportPalettePencil(file);
+    }
 
     file.close();
     return true;
 }
 
-bool Object::importPalette(QString filePath)
+void Object::importPaletteGPL(QFile& file)
 {
-    QFile file(filePath);
-    if (!file.open(QFile::ReadOnly))
-    {
-        return false;
-    }
 
+    QTextStream in(&file);
+    QString line;
+
+    bool hashFound = false;
+    bool colorFound = false;
+    while (in.readLineInto(&line))
+    {
+        quint8 red = 0;
+        quint8 green = 0;
+        quint8 blue = 0;
+
+        int countInLine = 0;
+        QString name;
+
+        if (!colorFound)
+        {
+            hashFound = (line == "#") ? true : false;
+        }
+
+        if (!hashFound)
+        {
+            continue;
+        }
+        else if (!colorFound)
+        {
+            colorFound = true;
+            continue;
+        }
+
+        for (QString snip : line.split(" "))
+        {
+            if (countInLine == 0) // assume red
+            {
+                red = snip.toInt();
+            }
+            else if (countInLine == 1) // assume green
+            {
+                green = snip.toInt();
+            }
+            else if (countInLine == 2) // assume blue
+            {
+                blue = snip.toInt();
+            }
+            else
+            {
+
+                // assume last bit of line is a name
+                // gimp interprets as untitled
+                if (snip == "---")
+                {
+                    name = "untitled";
+                }
+                else
+                {
+                    name += snip + " ";
+                }
+            }
+            countInLine++;
+        }
+
+        // trim additional spaces
+        name = name.trimmed();
+
+        if (QColor(red, green, blue).isValid())
+        {
+            mPalette.append(ColourRef(QColor(red,green,blue), name));
+        }
+    }
+}
+
+void Object::importPalettePencil(QFile& file)
+{
     QDomDocument doc;
     doc.setContent(&file);
 
@@ -387,6 +512,23 @@ bool Object::importPalette(QString filePath)
             mPalette.append(ColourRef(QColor(r, g, b, a), name));
         }
         tag = tag.nextSibling();
+    }
+}
+
+bool Object::importPalette(QString filePath)
+{
+    QFile file(filePath);
+
+    if (!file.open(QFile::ReadOnly))
+    {
+        return false;
+    }
+
+    if (file.fileName().endsWith(".gpl", Qt::CaseInsensitive))
+    {
+        importPaletteGPL(file);
+    } else {
+        importPalettePencil(file);
     }
     file.close();
     return true;
@@ -419,10 +561,10 @@ void Object::loadDefaultPalette()
     addColour(ColourRef(QColor(255, 214, 156), QString(tr("Skin"))));
     addColour(ColourRef(QColor(207, 174, 127), QString(tr("Skin - shade"))));
     addColour(ColourRef(QColor(255, 198, 116), QString(tr("Dark Skin"))));
-    addColour(ColourRef(QColor(227, 177, 105), QString(tr("Dark Skin - shade"))));
+    addColour(ColourRef(QColor(227, 177, 105), QString(tr("Dark Skin - shade")) ));
 }
 
-void Object::paintImage(QPainter& painter, int frameNumber,
+void Object::paintImage(QPainter& painter,int frameNumber,
                         bool background,
                         bool antialiasing) const
 {
@@ -451,16 +593,19 @@ void Object::paintImage(QPainter& painter, int frameNumber,
             if (layer->type() == Layer::BITMAP)
             {
                 LayerBitmap* layerBitmap = (LayerBitmap*)layer;
-                layerBitmap->getLastBitmapImageAtFrame(frameNumber, 0)->paintImage(painter);
+
+                BitmapImage* bitmap = layerBitmap->getLastBitmapImageAtFrame(frameNumber);
+                if (bitmap)
+                    bitmap->paintImage(painter);
+
             }
             // paints the vector images
             if (layer->type() == Layer::VECTOR)
             {
                 LayerVector* layerVector = (LayerVector*)layer;
-                layerVector->getLastVectorImageAtFrame(frameNumber, 0)->paintImage(painter,
-                                                                                   false,
-                                                                                   false,
-                                                                                   antialiasing);
+                VectorImage* vec = layerVector->getLastVectorImageAtFrame(frameNumber, 0);
+                if (vec)
+                    vec->paintImage(painter, false, false, antialiasing);
             }
         }
     }

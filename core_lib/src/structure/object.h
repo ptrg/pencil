@@ -82,16 +82,25 @@ public:
     QString copyFileToDataFolder( QString strFilePath );
 
     // Color palette
-    ColourRef getColour( int i ) const;
+    ColourRef getColour( int index ) const;
     void setColour(int index, QColor newColour);
+    void setColourRef(int index, ColourRef newColourRef);
     void addColour( QColor );
+
     void addColour( ColourRef newColour ) { mPalette.append( newColour ); }
-    bool removeColour( int index );
+    void addColourAtIndex(int index, ColourRef newColour);
+    void removeColour( int index );
+    bool isColourInUse( int index );
     void renameColour( int i, QString text );
     int getColourCount() { return mPalette.size(); }
     bool importPalette( QString filePath );
+    void importPaletteGPL(QFile& file);
+    void importPalettePencil(QFile& file);
+
     bool exportPalette( QString filePath );
-    bool savePalette( QString filePath );
+    void exportPaletteGPL(QFile& file);
+    void exportPalettePencil(QFile& file);
+    QString savePalette( QString filePath );
 
     void loadDefaultPalette();
 
@@ -136,6 +145,9 @@ public:
     void setData( ObjectData* );
 
     int totalKeyFrameCount();
+
+signals:
+    void layerViewChanged();
 
 private:
     int getMaxLayerID();

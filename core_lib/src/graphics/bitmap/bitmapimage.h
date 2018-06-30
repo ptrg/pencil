@@ -74,8 +74,8 @@ public:
     void clear(QRect rectangle);
     void clear(QRectF rectangle) { clear(rectangle.toRect()); }
 
-    static bool compareColor(QRgb color1, QRgb color2, int tolerance);
-    static void floodFill(BitmapImage* targetImage, QRect cameraRect, QPoint point, QRgb oldColor, QRgb newColor, int tolerance);
+    static bool compareColor(QRgb newColor, QRgb oldColor, int tolerance, QHash<QRgb, bool> *cache);
+    static void floodFill(BitmapImage* targetImage, QRect cameraRect, QPoint point, QRgb newColor, int tolerance);
 
     void drawLine(QPointF P1, QPointF P2, QPen pen, QPainter::CompositionMode cm, bool antialiasing);
     void drawRect(QRectF rectangle, QPen pen, QBrush brush, QPainter::CompositionMode cm, bool antialiasing);
@@ -92,6 +92,7 @@ public:
     int bottom() { return mBounds.bottom(); }
     int width() { return mBounds.width(); }
     int height() { return mBounds.height(); }
+    QSize size() { return mBounds.size(); }
 
     QRect& bounds() { return mBounds; }
 
