@@ -133,9 +133,20 @@ Status ActionCommands::importSound()
     return st;
 }
 
-Status ActionCommands::exportMovie()
+Status ActionCommands::exportGif()
 {
-    auto dialog = new ExportMovieDialog(mParent);
+    // exporting gif
+    return exportMovie(true);
+}
+
+Status ActionCommands::exportMovie(bool isGif)
+{
+    ExportMovieDialog* dialog = nullptr;
+    if (isGif) {
+        dialog = new ExportMovieDialog(mParent, ImportExportDialog::Export, FileType::GIF);
+    } else {
+        dialog = new ExportMovieDialog(mParent);
+    }
     OnScopeExit(dialog->deleteLater());
 
     dialog->init();
@@ -227,6 +238,17 @@ Status ActionCommands::exportMovie()
 
     if (st.ok() && QFile::exists(strMoviePath))
     {
+        if (isGif) {
+            auto btn = QMessageBox::question(mParent, "Pencil2D",
+                                             tr("Finished. Open file location?"));
+
+            if (btn == QMessageBox::Yes)
+            {
+                QString path = dialog->getAbsolutePath();
+                QDesktopServices::openUrl(QUrl::fromLocalFile(path));
+            }
+            return Status::OK;
+        }
         auto btn = QMessageBox::question(mParent, "Pencil2D",
                                          tr("Finished. Open movie now?", "When movie export done."));
         if (btn == QMessageBox::Yes)
@@ -572,7 +594,7 @@ Status ActionCommands::addNewBitmapLayer()
     bool ok;
     QString text = QInputDialog::getText(nullptr, tr("Layer Properties"),
                                          tr("Layer name:"), QLineEdit::Normal,
-                                         tr("Bitmap Layer"), &ok);
+                                         nameSuggest(tr("Bitmap Layer")), &ok);
     if (ok && !text.isEmpty())
     {
         mEditor->layers()->createBitmapLayer(text);
@@ -585,12 +607,11 @@ Status ActionCommands::addNewVectorLayer()
     bool ok;
     QString text = QInputDialog::getText(nullptr, tr("Layer Properties"),
                                          tr("Layer name:"), QLineEdit::Normal,
-                                         tr("Vector Layer"), &ok);
+                                         nameSuggest(tr("Vector Layer")), &ok);
     if (ok && !text.isEmpty())
     {
         mEditor->layers()->createVectorLayer(text);
     }
-
     return Status::OK;
 }
 
@@ -599,12 +620,11 @@ Status ActionCommands::addNewCameraLayer()
     bool ok;
     QString text = QInputDialog::getText(nullptr, tr("Layer Properties"),
                                          tr("Layer name:"), QLineEdit::Normal,
-                                         tr("Camera Layer"), &ok);
+                                         nameSuggest(tr("Camera Layer")), &ok);
     if (ok && !text.isEmpty())
     {
         mEditor->layers()->createCameraLayer(text);
     }
-
     return Status::OK;
 }
 
@@ -613,15 +633,13 @@ Status ActionCommands::addNewSoundLayer()
     bool ok = false;
     QString strLayerName = QInputDialog::getText(nullptr, tr("Layer Properties"),
                                                  tr("Layer name:"), QLineEdit::Normal,
-                                                 tr("Sound Layer"), &ok);
+                                                 nameSuggest(tr("Sound Layer")), &ok);
     if (ok && !strLayerName.isEmpty())
     {
         Layer* layer = mEditor->layers()->createSoundLayer(strLayerName);
         mEditor->layers()->setCurrentLayer(layer);
-
-        return Status::OK;
-    }
-    return Status::FAIL;
+   }
+    return Status::OK;
 }
 
 Status ActionCommands::deleteCurrentLayer()
@@ -644,6 +662,33 @@ Status ActionCommands::deleteCurrentLayer()
         }
     }
     return Status::OK;
+}
+
+QString ActionCommands::nameSuggest(QString s)
+{
+    LayerManager* layerMgr = mEditor->layers();
+    // if no layers: return 's'
+    if (layerMgr->count() == 0)
+    {
+        return s;
+    }
+    QVector<QString> sLayers;
+    // fill Vector with layer names
+    for (int i = 0; i < layerMgr->count(); i++)
+    {
+        sLayers.append(layerMgr->getLayer(i)->name());
+    }
+    // if 's' is not in list, then return 's'
+    if (!sLayers.contains(s))
+    {
+        return s;
+    }
+    int j = 2;
+    QString tmp = s;
+    do {
+        tmp = s + " " + QString::number(j++);
+    } while (sLayers.contains(tmp));
+    return tmp;
 }
 
 

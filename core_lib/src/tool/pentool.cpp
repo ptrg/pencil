@@ -47,8 +47,8 @@ void PenTool::loadSettings()
     properties.pressure = settings.value("penPressure").toBool();
     properties.invisibility = OFF;
     properties.preserveAlpha = OFF;
-    properties.useAA = settings.value("brushAA").toBool();
-    properties.stabilizerLevel = settings.value("stabilizerLevel").toInt();
+    properties.useAA = settings.value("penAA").toBool();
+    properties.stabilizerLevel = settings.value("penLineStabilization").toInt();
 
     // First run
     if (properties.width <= 0)
@@ -89,7 +89,7 @@ void PenTool::setAA(const int AA)
 
     // Update settings
     QSettings settings(PENCIL2D, PENCIL2D);
-    settings.setValue("brushAA", AA);
+    settings.setValue("penAA", AA);
     settings.sync();
 }
 
@@ -98,7 +98,7 @@ void PenTool::setStabilizerLevel(const int level)
     properties.stabilizerLevel = level;
 
     QSettings settings(PENCIL2D, PENCIL2D);
-    settings.setValue("stabilizerLevel", level);
+    settings.setValue("penLineStabilization", level);
     settings.sync();
 }
 
@@ -316,13 +316,12 @@ void PenTool::paintVectorStroke(Layer* layer)
     VectorImage* vectorImage = pLayerVector->getLastVectorImageAtFrame(mEditor->currentFrame(), 0);
     vectorImage->addCurve(curve, mEditor->view()->scaling(), false);
 
-    if (vectorImage->isAnyCurveSelected() || mScribbleArea->somethingSelected)
+    if (vectorImage->isAnyCurveSelected() || mScribbleArea->isSomethingSelected())
     {
         mScribbleArea->deselectAll();
     }
 
     vectorImage->setSelected(vectorImage->getLastCurveNumber(), true);
-    mScribbleArea->somethingSelected = true;
 
     mScribbleArea->setModified(mEditor->layers()->currentLayerIndex(), mEditor->currentFrame());
     mScribbleArea->setAllDirty();

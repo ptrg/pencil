@@ -37,7 +37,6 @@ GNU General Public License for more details.
 #include "layervector.h"
 #include "layercamera.h"
 #include "backupelement.h"
-#include "activeframepool.h"
 
 #include "colormanager.h"
 #include "toolmanager.h"
@@ -65,15 +64,12 @@ Editor::Editor(QObject* parent) : QObject(parent)
     clipboardBitmapOk = false;
     clipboardVectorOk = false;
     clipboardSoundClipOk = false;
-
-    mActiveFramePool.reset(new ActiveFramePool(200));
 }
 
 Editor::~Editor()
 {
     // a lot more probably needs to be cleaned here...
     clearUndoStack();
-    mActiveFramePool->clear();
 }
 
 bool Editor::init()
@@ -166,6 +162,9 @@ void Editor::settingUpdated(SETTING setting)
         mScribbleArea->updateAllFrames();
         emit updateTimeLine();
         break;
+    case SETTING::FRAME_POOL_SIZE:
+        mObject->setActiveFramePoolSize(mPreferenceManager->getInt(SETTING::FRAME_POOL_SIZE));
+        break;
     default:
         break;
     }
@@ -191,7 +190,8 @@ void Editor::backup(QString undoText)
         if (layers()->currentLayer()->type() == Layer::SOUND)
         {
             frame = layers()->currentLayer()->getKeyFrameWhichCovers(mLastModifiedFrame);
-            if (frame != nullptr) {
+            if (frame != nullptr)
+            {
                 backup(mLastModifiedLayer, frame->pos(), undoText);
             }
         }
@@ -229,6 +229,7 @@ void Editor::backup(int backupLayer, int backupFrame, QString undoText)
         delete mBackupList.takeFirst();
         mBackupIndex--;
     }
+
     Layer* layer = mObject->getLayer(backupLayer);
     if (layer != NULL)
     {
@@ -245,7 +246,7 @@ void Editor::backup(int backupLayer, int backupFrame, QString undoText)
                 element->layer = backupLayer;
                 element->frame = backupFrame;
                 element->undoText = undoText;
-                element->somethingSelected = getScribbleArea()->somethingSelected;
+                element->somethingSelected = getScribbleArea()->isSomethingSelected();
                 element->mySelection = getScribbleArea()->mySelection;
                 element->myTransformedSelection = getScribbleArea()->myTransformedSelection;
                 element->myTempTransformedSelection = getScribbleArea()->myTempTransformedSelection;
@@ -262,7 +263,7 @@ void Editor::backup(int backupLayer, int backupFrame, QString undoText)
                 element->layer = backupLayer;
                 element->frame = backupFrame;
                 element->undoText = undoText;
-                element->somethingSelected = getScribbleArea()->somethingSelected;
+                element->somethingSelected = getScribbleArea()->isSomethingSelected();
                 element->mySelection = getScribbleArea()->mySelection;
                 element->myTransformedSelection = getScribbleArea()->myTransformedSelection;
                 element->myTempTransformedSelection = getScribbleArea()->myTempTransformedSelection;
@@ -355,10 +356,7 @@ void Editor::restoreKey()
 void BackupBitmapElement::restore(Editor* editor)
 {
     Layer* layer = editor->object()->getLayer(this->layer);
-    editor->getScribbleArea()->somethingSelected = this->somethingSelected;
-    editor->getScribbleArea()->mySelection = this->mySelection;
-    editor->getScribbleArea()->myTransformedSelection = this->myTransformedSelection;
-    editor->getScribbleArea()->myTempTransformedSelection = this->myTempTransformedSelection;
+    editor->getScribbleArea()->setSelection(mySelection);
 
     editor->updateFrame(this->frame);
     editor->scrubTo(this->frame);
@@ -383,10 +381,7 @@ void BackupBitmapElement::restore(Editor* editor)
 void BackupVectorElement::restore(Editor* editor)
 {
     Layer* layer = editor->object()->getLayer(this->layer);
-    editor->getScribbleArea()->somethingSelected = this->somethingSelected;
-    editor->getScribbleArea()->mySelection = this->mySelection;
-    editor->getScribbleArea()->myTransformedSelection = this->myTransformedSelection;
-    editor->getScribbleArea()->myTempTransformedSelection = this->myTempTransformedSelection;
+    editor->getScribbleArea()->setSelection(mySelection);
 
     editor->updateFrameAndVector(this->frame);
     editor->scrubTo(this->frame);
@@ -490,21 +485,6 @@ void Editor::updateAutoSaveCounter()
     }
 }
 
-void Editor::updateActiveFrames(int frame)
-{
-    int beginFrame = std::max(frame - 3, 1);
-    int endFrame = frame + 4;
-    for (int i = 0; i < mObject->getLayerCount(); ++i)
-    {
-        Layer* layer = mObject->getLayer(i);
-        for (int k = beginFrame; k < endFrame; ++k)
-        {
-            KeyFrame* key = layer->getKeyFrameAt(k);
-            mActiveFramePool->put(key);
-        }
-    }
-}
-
 void Editor::cut()
 {
     copy();
@@ -515,26 +495,30 @@ void Editor::cut()
 void Editor::copy()
 {
     Layer* layer = mObject->getLayer(layers()->currentLayerIndex());
-    if (layer != NULL)
+    if (layer == NULL) 
     {
-        if (layer->type() == Layer::BITMAP)
+        return;
+    }
+
+    if (layer->type() == Layer::BITMAP)
+    {
+        LayerBitmap* layerBitmap = (LayerBitmap*)layer;
+        if (mScribbleArea->isSomethingSelected())
         {
-            if (mScribbleArea->somethingSelected)
-            {
-                g_clipboardBitmapImage = ((LayerBitmap*)layer)->getLastBitmapImageAtFrame(currentFrame(), 0)->copy(mScribbleArea->getSelection().toRect());  // copy part of the image
-            }
-            else
-            {
-                g_clipboardBitmapImage = ((LayerBitmap*)layer)->getLastBitmapImageAtFrame(currentFrame(), 0)->copy();  // copy the whole image
-            }
-            clipboardBitmapOk = true;
-            if (g_clipboardBitmapImage.image() != NULL) QApplication::clipboard()->setImage(*g_clipboardBitmapImage.image());
+            g_clipboardBitmapImage = layerBitmap->getLastBitmapImageAtFrame(currentFrame(), 0)->copy(mScribbleArea->getSelection().toRect());  // copy part of the image
         }
-        if (layer->type() == Layer::VECTOR)
+        else
         {
-            clipboardVectorOk = true;
-            g_clipboardVectorImage = *(((LayerVector*)layer)->getLastVectorImageAtFrame(currentFrame(), 0));  // copy the image
+            g_clipboardBitmapImage = layerBitmap->getLastBitmapImageAtFrame(currentFrame(), 0)->copy();  // copy the whole image
         }
+        clipboardBitmapOk = true;
+        if (g_clipboardBitmapImage.image() != NULL)
+            QApplication::clipboard()->setImage(*g_clipboardBitmapImage.image());
+    }
+    if (layer->type() == Layer::VECTOR)
+    {
+        clipboardVectorOk = true;
+        g_clipboardVectorImage = *(((LayerVector*)layer)->getLastVectorImageAtFrame(currentFrame(), 0));  // copy the image
     }
 }
 
@@ -549,7 +533,7 @@ void Editor::paste()
 
             BitmapImage tobePasted = g_clipboardBitmapImage.copy();
             qDebug() << "to be pasted --->" << tobePasted.image()->size();
-            if (mScribbleArea->somethingSelected)
+            if (mScribbleArea->isSomethingSelected())
             {
                 QRectF selection = mScribbleArea->getSelection();
                 if (g_clipboardBitmapImage.width() <= selection.width() && g_clipboardBitmapImage.height() <= selection.height())
@@ -570,7 +554,7 @@ void Editor::paste()
             mScribbleArea->deselectAll();
             VectorImage* vectorImage = ((LayerVector*)layer)->getLastVectorImageAtFrame(currentFrame(), 0);
             vectorImage->paste(g_clipboardVectorImage);  // paste the clipboard
-            mScribbleArea->setSelection(vectorImage->getSelectionRect(), true);
+            mScribbleArea->setSelection(vectorImage->getSelectionRect());
         }
     }
     mScribbleArea->updateCurrentFrame();
@@ -636,15 +620,14 @@ Status Editor::setObject(Object* newObject)
         return Status::SAFE;
     }
 
+    clearUndoStack();
     mObject.reset(newObject);
-
 
     for (BaseManager* m : mAllManagers)
     {
         m->load(mObject.get());
     }
 
-    mActiveFramePool->clear();
     g_clipboardVectorImage.setObject(newObject);
 
     updateObject();
@@ -664,14 +647,17 @@ void Editor::updateObject()
     scrubTo(mObject->data()->getCurrentFrame());
     setCurrentLayerIndex(mObject->data()->getCurrentLayer());
 
-    clearUndoStack();
-
     mAutosaveCounter = 0;
     mAutosaveNerverAskAgain = false;
 
     if (mScribbleArea)
     {
         mScribbleArea->updateAllFrames();
+    }
+    
+    if (mPreferenceManager)
+    {
+        mObject->setActiveFramePoolSize(mPreferenceManager->getInt(SETTING::FRAME_POOL_SIZE));
     }
 
     emit updateLayerCount();
@@ -760,7 +746,7 @@ QString Editor::workingDir() const
     return mObject->workingDir();
 }
 
-bool Editor::importBitmapImage(QString filePath)
+bool Editor::importBitmapImage(QString filePath, int space)
 {
     QImageReader reader(filePath);
 
@@ -781,15 +767,22 @@ bool Editor::importBitmapImage(QString filePath)
         }
         BitmapImage* bitmapImage = layer->getBitmapImageAtFrame(currentFrame());
 
-        QRect boundaries = img.rect();
-        boundaries.moveTopLeft(mScribbleArea->getCentralPoint().toPoint() - QPoint(boundaries.width() / 2, boundaries.height() / 2));
-
-        BitmapImage importedBitmapImage{ boundaries, img };
+        BitmapImage importedBitmapImage(mScribbleArea->getCentralPoint().toPoint() - QPoint(img.width() / 2, img.height() / 2), img);
         bitmapImage->paste(&importedBitmapImage);
 
-        scrubTo(currentFrame() + 1);
+        if (space > 1) {
+            scrubTo(currentFrame() + space);
+        } else {
+            scrubTo(currentFrame() + 1);
+        }
 
         backup(tr("Import Image"));
+
+        // Workaround for tiff import getting stuck in this loop
+        if (!reader.supportsAnimation())
+        {
+            break;
+        }
     }
 
     return true;
@@ -841,6 +834,16 @@ bool Editor::importImage(QString filePath)
     }
 }
 
+bool Editor::importGIF(QString filePath, int numOfImages)
+{
+    Layer* layer = layers()->currentLayer();
+    if (layer->type() == Layer::BITMAP) {
+        return importBitmapImage(filePath, numOfImages);
+    } else {
+        return false;
+    }
+}
+
 void Editor::updateFrame(int frameNumber)
 {
     mScribbleArea->updateFrame(frameNumber);
@@ -869,10 +872,7 @@ void Editor::setCurrentLayerIndex(int i)
 
 void Editor::scrubTo(int frame)
 {
-    if (frame < 1)
-    {
-        frame = 1;
-    }
+    if (frame < 1) { frame = 1; }
     int oldFrame = mFrame;
     mFrame = frame;
 
@@ -886,8 +886,7 @@ void Editor::scrubTo(int frame)
     {
         emit updateTimeLine(); // needs to update the timeline to update onion skin positions
     }
-
-    updateActiveFrames(frame);
+    mObject->updateActiveFrames(frame);
 }
 
 void Editor::scrubForward()

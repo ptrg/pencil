@@ -81,12 +81,14 @@ HEADERS +=  \
     src/tool/strokemanager.h \
     src/tool/stroketool.h \
     src/util/blitrect.h \
+    src/util/colordictionary.h \
     src/util/fileformat.h \
     src/util/pencildef.h \
     src/util/pencilerror.h \
     src/util/pencilsettings.h \
     src/util/util.h \
     src/util/log.h \
+    src/util/movemode.h \
     src/canvaspainter.h \
     src/soundplayer.h \
     src/movieexporter.h \
@@ -156,6 +158,9 @@ SOURCES +=  src/graphics/bitmap/bitmapimage.cpp \
     src/qminiz.cpp \
     src/activeframepool.cpp
 
+FORMS += \
+    ui/camerapropertiesdialog.ui
+
 win32 {
     CONFIG -= flat
 
@@ -172,6 +177,3 @@ unix:!macx {
     INCLUDEPATH += src/external/linux
     SOURCES += src/external/linux/linux.cpp
 }
-
-FORMS += \
-    ui/camerapropertiesdialog.ui
