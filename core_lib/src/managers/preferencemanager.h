@@ -57,6 +57,9 @@ enum class SETTING
     ONION_NEXT_FRAMES_NUM,
     ONION_WHILE_PLAYBACK,
     ONION_TYPE,
+    FLIP_ROLL_MSEC,
+    FLIP_ROLL_DRAWINGS,
+    FLIP_INBETWEEN_MSEC,
     GRID_SIZE_W,
     GRID_SIZE_H,
     QUICK_SIZING,
@@ -82,7 +85,7 @@ class PreferenceManager : public BaseManager
 
 public:
     explicit PreferenceManager(Editor* editor);
-    ~PreferenceManager();
+    ~PreferenceManager() override;
 
     virtual bool init() override;
     Status load(Object*) override;

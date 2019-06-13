@@ -137,7 +137,7 @@ void ViewManager::updateViewTransforms()
 
     float flipX = mIsFlipHorizontal ? -1.f : 1.f;
     float flipY = mIsFlipVertical ? -1.f : 1.f;
-    QTransform f = QTransform::fromScale(flipX, flipY);
+    QTransform f = QTransform::fromScale(static_cast<qreal>(flipX), static_cast<qreal>(flipY));
 
     mViewCanvas = mView * f * mCentre;
     mViewCanvasInverse = mViewCanvas.inverted();
@@ -156,7 +156,7 @@ void ViewManager::translate(float dx, float dy)
 {
     if (mCurrentCamera)
     {
-        mCurrentCamera->translate(dx, dy);
+        mCurrentCamera->translate(static_cast<qreal>(dx), static_cast<qreal>(dy));
         updateViewTransforms();
 
         Q_EMIT viewChanged();
@@ -165,14 +165,14 @@ void ViewManager::translate(float dx, float dy)
 
 void ViewManager::translate(QPointF offset)
 {
-    translate(offset.x(), offset.y());
+    translate(static_cast<float>(offset.x()), static_cast<float>(offset.y()));
 }
 
 float ViewManager::rotation()
 {
     if (mCurrentCamera)
     {
-        return mCurrentCamera->rotation();
+        return static_cast<float>(mCurrentCamera->rotation());
     }
     return 0.0f;
 }
@@ -181,7 +181,7 @@ void ViewManager::rotate(float degree)
 {
     if (mCurrentCamera)
     {
-        mCurrentCamera->rotate(degree);
+        mCurrentCamera->rotate(static_cast<qreal>(degree));
         updateViewTransforms();
 
         Q_EMIT viewChanged();
@@ -192,7 +192,7 @@ float ViewManager::scaling()
 {
     if (mCurrentCamera)
     {
-        return mCurrentCamera->scaling();
+        return static_cast<float>(mCurrentCamera->scaling());
     }
     return 0.0f;
 }
@@ -214,15 +214,50 @@ void ViewManager::scaleUp()
 
 void ViewManager::scaleDown()
 {
-    for (int i = gZoomLevels.size() - 1; i >= 0; --i)
+    for (int i = static_cast<int>(gZoomLevels.size()) - 1; i >= 0; --i)
     {
-        if (gZoomLevels[i] < scaling())
+        if (gZoomLevels[static_cast<unsigned>(i)] < scaling())
         {
-            scale(gZoomLevels[i]);
+            scale(gZoomLevels[static_cast<unsigned>(i)]);
             return;
         }
     }
     scale(scaling() * 0.8333f);
+}
+
+void ViewManager::scale100()
+{
+    scale(1.0f);
+}
+
+void ViewManager::scale400()
+{
+    scale(4.0f);
+}
+
+void ViewManager::scale300()
+{
+    scale(3.0f);
+}
+
+void ViewManager::scale200()
+{
+    scale(2.0f);
+}
+
+void ViewManager::scale50()
+{
+    scale(0.5f);
+}
+
+void ViewManager::scale33()
+{
+    scale(0.33f);
+}
+
+void ViewManager::scale25()
+{
+    scale(0.25f);
 }
 
 void ViewManager::scale(float scaleValue)
@@ -238,7 +273,7 @@ void ViewManager::scale(float scaleValue)
 
     if (mCurrentCamera)
     {
-        mCurrentCamera->scale(scaleValue);
+        mCurrentCamera->scale(static_cast<qreal>(scaleValue));
         updateViewTransforms();
 
         Q_EMIT viewChanged();
@@ -272,7 +307,7 @@ void ViewManager::flipVertical(bool b)
 void ViewManager::setCanvasSize(QSize size)
 {
     mCanvasSize = size;
-    mCentre = QTransform::fromTranslate(mCanvasSize.width() / 2.f, mCanvasSize.height() / 2.f);
+    mCentre = QTransform::fromTranslate(mCanvasSize.width() / 2., mCanvasSize.height() / 2.);
 
     updateViewTransforms();
     Q_EMIT viewChanged();

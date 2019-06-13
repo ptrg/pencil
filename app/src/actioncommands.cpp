@@ -542,6 +542,11 @@ void ActionCommands::duplicateKey()
 {
     Layer* layer = mEditor->layers()->currentLayer();
     if (layer == nullptr) return;
+    if (!layer->visible())
+    {
+        mEditor->showLayerNotVisibleWarning();
+        return;
+    }
 
     KeyFrame* key = layer->getKeyFrameAt(mEditor->currentFrame());
     if (key == nullptr) return;
@@ -563,7 +568,8 @@ void ActionCommands::duplicateKey()
     }
     else
     {
-        key->setFileName(""); // don't share filename
+        dupKey->setFileName(""); // don't share filename
+        dupKey->modification();
     }
 
     mEditor->layers()->notifyAnimationLengthChanged();

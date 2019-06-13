@@ -480,9 +480,14 @@ void Editor::updateAutoSaveCounter()
     mAutosaveCounter++;
     if (mAutosaveCounter >= mAutosaveNumber)
     {
-        mAutosaveCounter = 0;
+        resetAutoSaveCounter();
         emit needSave();
     }
+}
+
+void Editor::resetAutoSaveCounter()
+{
+    mAutosaveCounter = 0;
 }
 
 void Editor::cut()
@@ -839,11 +844,11 @@ bool Editor::importImage(QString filePath)
 bool Editor::importGIF(QString filePath, int numOfImages)
 {
     Layer* layer = layers()->currentLayer();
-    if (layer->type() == Layer::BITMAP) {
+    if (layer->type() == Layer::BITMAP)
+    {
         return importBitmapImage(filePath, numOfImages);
-    } else {
-        return false;
     }
+    return false;
 }
 
 void Editor::updateFrame(int frameNumber)
@@ -918,6 +923,12 @@ KeyFrame* Editor::addKeyFrame(int layerNumber, int frameIndex)
         return nullptr;
     }
 
+    if (!layer->visible())
+    {
+        mScribbleArea->showLayerNotVisibleWarning();
+        return nullptr;
+    }
+
     while (layer->keyExists(frameIndex))
     {
         frameIndex += 1;
@@ -934,6 +945,14 @@ KeyFrame* Editor::addKeyFrame(int layerNumber, int frameIndex)
 void Editor::removeKey()
 {
     Layer* layer = layers()->currentLayer();
+    Q_ASSERT(layer != nullptr);
+
+    if (!layer->visible())
+    {
+        mScribbleArea->showLayerNotVisibleWarning();
+        return;
+    }
+
     if (!layer->keyExistsWhichCovers(currentFrame()))
     {
         return;
@@ -941,6 +960,7 @@ void Editor::removeKey()
 
     backup(tr("Remove frame"));
 
+    mScribbleArea->deselectAll();
     layer->removeKeyFrame(currentFrame());
 
     scrubBackward();
@@ -974,12 +994,17 @@ void Editor::switchVisibilityOfLayer(int layerNumber)
     emit updateTimeLine();
 }
 
-void Editor::moveLayer(int i, int j)
+void Editor::showLayerNotVisibleWarning()
 {
-    mObject->moveLayer(i, j);
+    return mScribbleArea->showLayerNotVisibleWarning();
+}
+
+void Editor::swapLayers(int i, int j)
+{
+    mObject->swapLayers(i, j);
     if (j < i)
     {
-        layers()->setCurrentLayer(j);
+        layers()->setCurrentLayer(j + 1);
     }
     else
     {
