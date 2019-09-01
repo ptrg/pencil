@@ -234,59 +234,59 @@
         <location filename="../app/src/checkupdatesdialog.cpp" line="27"/>
         <source>Checking for Updates...</source>
         <comment>status description in the check-for-update dialog</comment>
-        <translation type="unfinished"/>
+        <translation>Frissítések keresése...</translation>
     </message>
     <message>
         <location filename="../app/src/checkupdatesdialog.cpp" line="39"/>
         <source>Download</source>
-        <translation type="unfinished"/>
+        <translation>Letöltés</translation>
     </message>
     <message>
         <location filename="../app/src/checkupdatesdialog.cpp" line="40"/>
         <source>Close</source>
-        <translation type="unfinished"/>
+        <translation>Bezárás</translation>
     </message>
     <message>
         <location filename="../app/src/checkupdatesdialog.cpp" line="93"/>
         <source>&lt;b&gt;You are using a Pencil2D nightly build&lt;/b&gt;</source>
-        <translation type="unfinished"/>
+        <translation>&lt;b&gt;Ön a Pencil2D napi forráskódból készült (&quot;nightly build&quot;) változatát használja&lt;/b&gt;</translation>
     </message>
     <message>
         <location filename="../app/src/checkupdatesdialog.cpp" line="94"/>
         <source>Please go %1 here %2 to check new nightly builds.</source>
-        <translation type="unfinished"/>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../app/src/checkupdatesdialog.cpp" line="104"/>
         <source>&lt;b&gt;An error occurred while checking for updates&lt;/b&gt;</source>
         <comment>error msg of check-for-update</comment>
-        <translation type="unfinished"/>
+        <translation>&lt;b&gt;Hiba történt a frissítések keresése közben&lt;/b&gt;</translation>
     </message>
     <message>
         <location filename="../app/src/checkupdatesdialog.cpp" line="105"/>
         <source>Please check your internet connection and try again later.</source>
         <comment>error msg of check-for-update</comment>
-        <translation type="unfinished"/>
+        <translation>Ellenőrizze az internet elérhetőségét és próbálja újra.</translation>
     </message>
     <message>
         <location filename="../app/src/checkupdatesdialog.cpp" line="132"/>
         <source>&lt;b&gt;A new version of Pencil2D is available!&lt;/b&gt;</source>
-        <translation type="unfinished"/>
+        <translation>&lt;b&gt;A Pencil2D újabb változata elérhető!&lt;/b&gt;</translation>
     </message>
     <message>
         <location filename="../app/src/checkupdatesdialog.cpp" line="133"/>
         <source>Pencil2D %1 is now available -- you have %2. Would you like to download it?</source>
-        <translation type="unfinished"/>
+        <translation>A Pencil2D %1 már elérhető -- Önnél a(z) %2 fut. Szeretné letölteni az újabb változatot?</translation>
     </message>
     <message>
         <location filename="../app/src/checkupdatesdialog.cpp" line="141"/>
         <source>&lt;b&gt;Pencil2D is up to date&lt;/b&gt;</source>
-        <translation type="unfinished"/>
+        <translation>A Pencil2D naprakész</translation>
     </message>
     <message>
         <location filename="../app/src/checkupdatesdialog.cpp" line="142"/>
         <source>Version</source>
-        <translation type="unfinished"/>
+        <translation>Változat</translation>
     </message>
 </context>
 <context>
@@ -632,7 +632,7 @@
     <message>
         <location filename="../app/ui/exportimageoptions.ui" line="98"/>
         <source>TIFF</source>
-        <translation type="unfinished"/>
+        <translation>TIFF</translation>
     </message>
     <message>
         <location filename="../app/ui/exportimageoptions.ui" line="106"/>
@@ -667,7 +667,7 @@
     <message>
         <location filename="../app/ui/exportimageoptions.ui" line="238"/>
         <source>Export keyframes only</source>
-        <translation type="unfinished"/>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../app/ui/exportimageoptions.ui" line="177"/>
@@ -763,17 +763,17 @@
     <message>
         <location filename="../app/ui/exportmovieoptions.ui" line="249"/>
         <source>Exporter Settings</source>
-        <translation type="unfinished"/>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../app/ui/exportmovieoptions.ui" line="267"/>
         <source>WebM and APNG only</source>
-        <translation type="unfinished"/>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../app/ui/exportmovieoptions.ui" line="270"/>
         <source>Transparency</source>
-        <translation type="unfinished"/>
+        <translation type="unfinished"></translation>
     </message>
 </context>
 <context>
@@ -863,7 +863,7 @@
         <location filename="../app/src/filedialogex.cpp" line="170"/>
         <location filename="../app/src/filedialogex.cpp" line="186"/>
         <source>Palette (*.xml *.gpl);;Pencil2D Palette (*.xml);;GIMP Palette (*.gpl)</source>
-        <translation type="unfinished"/>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../app/src/filedialogex.cpp" line="184"/>
@@ -1025,12 +1025,12 @@
         <location filename="../app/ui/generalpage.ui" line="307"/>
         <source>Advanced</source>
         <comment>groupBox title in Preference</comment>
-        <translation type="unfinished"/>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../app/ui/generalpage.ui" line="322"/>
         <source>Cached Frame Number:</source>
-        <translation type="unfinished"/>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../app/src/preferencesdialog.cpp" line="97"/>
@@ -1065,12 +1065,12 @@
     <message>
         <location filename="../app/src/preferencesdialog.cpp" line="96"/>
         <source>Catalan </source>
-        <translation type="unfinished"/>
+        <translation>Katalán</translation>
     </message>
     <message>
         <location filename="../app/src/preferencesdialog.cpp" line="100"/>
         <source>Greek</source>
-        <translation type="unfinished"/>
+        <translation>Görög</translation>
     </message>
     <message>
         <location filename="../app/src/preferencesdialog.cpp" line="104"/>
@@ -1105,7 +1105,7 @@
     <message>
         <location filename="../app/src/preferencesdialog.cpp" line="110"/>
         <source>Kabyle</source>
-        <translation type="unfinished"/>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../app/src/preferencesdialog.cpp" line="111"/>
@@ -1175,12 +1175,12 @@
     <message>
         <location filename="../app/ui/generalpage.ui" line="245"/>
         <source>Grid Height</source>
-        <translation type="unfinished"/>
+        <translation>Rács magassága</translation>
     </message>
     <message>
         <location filename="../app/ui/generalpage.ui" line="252"/>
         <source>Grid Width</source>
-        <translation type="unfinished"/>
+        <translation>Rács szélessége</translation>
     </message>
     <message>
         <location filename="../app/ui/generalpage.ui" line="297"/>
@@ -1332,7 +1332,7 @@
     <message>
         <location filename="../app/ui/mainwindow2.ui" line="136"/>
         <source>Zoom</source>
-        <translation type="unfinished"/>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../app/ui/mainwindow2.ui" line="166"/>
@@ -1413,7 +1413,7 @@
     <message>
         <location filename="../app/ui/mainwindow2.ui" line="345"/>
         <source>Image Sequence Numbered...</source>
-        <translation type="unfinished"/>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../app/ui/mainwindow2.ui" line="354"/>
@@ -1672,7 +1672,7 @@
         <location filename="../app/ui/mainwindow2.ui" line="780"/>
         <location filename="../app/ui/mainwindow2.ui" line="783"/>
         <source>Next Keyframe</source>
-        <translation type="unfinished"/>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../app/ui/mainwindow2.ui" line="807"/>
@@ -1713,62 +1713,62 @@
     <message>
         <location filename="../app/ui/mainwindow2.ui" line="919"/>
         <source>Check for Updates</source>
-        <translation type="unfinished"/>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../app/ui/mainwindow2.ui" line="924"/>
         <source>Pencil2D Forum</source>
-        <translation type="unfinished"/>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../app/ui/mainwindow2.ui" line="929"/>
         <source>Pencil2D Discord</source>
-        <translation type="unfinished"/>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../app/ui/mainwindow2.ui" line="934"/>
         <source>200%</source>
-        <translation type="unfinished"/>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../app/ui/mainwindow2.ui" line="939"/>
         <source>300%</source>
-        <translation type="unfinished"/>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../app/ui/mainwindow2.ui" line="944"/>
         <source>400%</source>
-        <translation type="unfinished"/>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../app/ui/mainwindow2.ui" line="949"/>
         <source>50%</source>
-        <translation type="unfinished"/>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../app/ui/mainwindow2.ui" line="954"/>
         <source>33%</source>
-        <translation type="unfinished"/>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../app/ui/mainwindow2.ui" line="959"/>
         <source>25%</source>
-        <translation type="unfinished"/>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../app/ui/mainwindow2.ui" line="964"/>
         <source>100%</source>
-        <translation type="unfinished"/>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../app/ui/mainwindow2.ui" line="969"/>
         <source>Flip In-Between</source>
-        <translation type="unfinished"/>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../app/ui/mainwindow2.ui" line="974"/>
         <source>Flip Rolling</source>
-        <translation type="unfinished"/>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../app/ui/mainwindow2.ui" line="280"/>
@@ -1778,7 +1778,7 @@
     <message>
         <location filename="../app/ui/mainwindow2.ui" line="463"/>
         <source>Rotate Anticlockwise</source>
-        <translation type="unfinished"/>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../app/ui/mainwindow2.ui" line="793"/>
@@ -1874,7 +1874,7 @@
     <message>
         <location filename="../app/src/mainwindow2.cpp" line="525"/>
         <source>The file you have selected does not exist, so we are unable to open it. Please make sure that you&apos;ve entered the correct path and that the file is accessible and try again.</source>
-        <translation type="unfinished"/>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../app/src/mainwindow2.cpp" line="534"/>
@@ -1961,7 +1961,7 @@
     <message>
         <location filename="../app/src/mainwindow2.cpp" line="922"/>
         <source>Illegal numbering</source>
-        <translation type="unfinished"/>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../app/src/mainwindow2.cpp" line="964"/>
@@ -1999,7 +1999,7 @@
     <message>
         <location filename="../core_lib/src/tool/movetool.cpp" line="365"/>
         <source>You are about to switch away, do you want to apply the transformation?</source>
-        <translation type="unfinished"/>
+        <translation type="unfinished"></translation>
     </message>
 </context>
 <context>
@@ -2169,7 +2169,7 @@
         <location filename="../core_lib/src/util/pencildef.h" line="29"/>
         <location filename="../core_lib/src/util/pencildef.h" line="32"/>
         <source>Images (*.png *.jpg *.jpeg *.bmp *.tif *.tiff);;PNG (*.png);;JPG(*.jpg *.jpeg);;BMP(*.bmp);; TIFF(*.tif *.tiff)</source>
-        <translation type="unfinished"/>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../core_lib/src/util/pencilerror.cpp" line="98"/>
@@ -3554,169 +3554,169 @@
     <message>
         <location filename="../core_lib/src/structure/filemanager.cpp" line="31"/>
         <source>There was an error processing your file. This usually means that your project has been at least partially corrupted. You can try again with a newer version of Pencil2D, or you can try to use a backup file if you have one. If you contact us through one of our official channels we may be able to help you. For reporting issues, the best places to reach us are:</source>
-        <translation type="unfinished"/>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../core_lib/src/movieexporter.cpp" line="98"/>
         <source>Checking environment...</source>
-        <translation type="unfinished"/>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../core_lib/src/movieexporter.cpp" line="149"/>
         <source>Done</source>
-        <translation type="unfinished"/>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../app/src/main.cpp" line="75"/>
         <source>Pencil2D is an animation/drawing software for Mac OS X, Windows, and Linux. It lets you create traditional hand-drawn animation (cartoon) using both bitmap and vector graphics.</source>
-        <translation type="unfinished"/>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../app/src/main.cpp" line="78"/>
         <source>Path to the input pencil file.</source>
-        <translation type="unfinished"/>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../app/src/main.cpp" line="81"/>
         <location filename="../app/src/main.cpp" line="87"/>
         <source>Render the file to &lt;output_path&gt;</source>
-        <translation type="unfinished"/>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../app/src/main.cpp" line="82"/>
         <location filename="../app/src/main.cpp" line="88"/>
         <source>output_path</source>
-        <translation type="unfinished"/>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../app/src/main.cpp" line="95"/>
         <source>Name of the camera layer to use</source>
-        <translation type="unfinished"/>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../app/src/main.cpp" line="96"/>
         <source>layer_name</source>
-        <translation type="unfinished"/>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../app/src/main.cpp" line="100"/>
         <source>Width of the output frames</source>
-        <translation type="unfinished"/>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../app/src/main.cpp" line="101"/>
         <location filename="../app/src/main.cpp" line="106"/>
         <source>integer</source>
-        <translation type="unfinished"/>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../app/src/main.cpp" line="105"/>
         <source>Height of the output frames</source>
-        <translation type="unfinished"/>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../app/src/main.cpp" line="110"/>
         <source>The first frame you want to include in the exported movie</source>
-        <translation type="unfinished"/>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../app/src/main.cpp" line="111"/>
         <location filename="../app/src/main.cpp" line="118"/>
         <source>frame</source>
-        <translation type="unfinished"/>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../app/src/main.cpp" line="115"/>
         <source>The last frame you want to include in the exported movie. Can also be last or last-sound to automatically use the last frame containing animation or sound, respectively</source>
-        <translation type="unfinished"/>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../app/src/main.cpp" line="122"/>
         <source>Render transparency when possible</source>
-        <translation type="unfinished"/>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../app/src/main.cpp" line="141"/>
         <source>Warning: width value %1 is not an integer, ignoring.</source>
-        <translation type="unfinished"/>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../app/src/main.cpp" line="151"/>
         <source>Warning: height value %1 is not an integer, ignoring.</source>
-        <translation type="unfinished"/>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../app/src/main.cpp" line="161"/>
         <source>Warning: start value %1 is not an integer, ignoring.</source>
-        <translation type="unfinished"/>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../app/src/main.cpp" line="166"/>
         <source>Warning: start value must be at least 1, ignoring.</source>
-        <translation type="unfinished"/>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../app/src/main.cpp" line="186"/>
         <source>Warning: end value %1 is not an integer, last or last-sound, ignoring.</source>
-        <translation type="unfinished"/>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../app/src/main.cpp" line="192"/>
         <source>Warning: end value %1 is smaller than start value %2, ignoring.</source>
-        <translation type="unfinished"/>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../app/src/main.cpp" line="203"/>
         <source>Error: No input file specified.</source>
-        <translation type="unfinished"/>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../app/src/main.cpp" line="210"/>
         <source>Error: the input file at &apos;%1&apos; does not exist</source>
         <comment>Command line error</comment>
-        <translation type="unfinished"/>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../app/src/main.cpp" line="215"/>
         <source>Error: the input path &apos;%1&apos; is not a file</source>
         <comment>Command line error</comment>
-        <translation type="unfinished"/>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../app/src/main.cpp" line="244"/>
         <source>Warning: the specified camera layer %1 was not found, ignoring.</source>
-        <translation type="unfinished"/>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../app/src/main.cpp" line="277"/>
         <source>Warning: Output format is not specified or unsupported. Using PNG.</source>
         <comment>Command line warning</comment>
-        <translation type="unfinished"/>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../app/src/main.cpp" line="299"/>
         <source>Warning: Transparency is not currently supported in movie files</source>
         <comment>Command line warning</comment>
-        <translation type="unfinished"/>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../app/src/main.cpp" line="301"/>
         <source>Exporting movie...</source>
         <comment>Command line task progress</comment>
-        <translation type="unfinished"/>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../app/src/main.cpp" line="303"/>
         <location filename="../app/src/main.cpp" line="308"/>
         <source>Done.</source>
         <comment>Command line task done</comment>
-        <translation type="unfinished"/>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../app/src/main.cpp" line="306"/>
         <source>Exporting image sequence...</source>
         <comment>Command line task progress</comment>
-        <translation type="unfinished"/>
+        <translation type="unfinished"></translation>
     </message>
 </context>
 <context>
@@ -3742,7 +3742,7 @@
     <message>
         <location filename="../core_lib/src/interface/scribblearea.cpp" line="705"/>
         <source>You are trying to modify a hidden layer! Please select another layer (or make the current layer visible).</source>
-        <translation type="unfinished"/>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../core_lib/src/interface/scribblearea.cpp" line="1953"/>
@@ -3818,7 +3818,7 @@
     <message>
         <location filename="../app/ui/shortcutspage.ui" line="73"/>
         <source>Clear</source>
-        <translation type="unfinished"/>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../app/ui/shortcutspage.ui" line="100"/>
@@ -3941,7 +3941,7 @@
         <location filename="../core_lib/src/interface/timeline.cpp" line="99"/>
         <source>&amp;Layer</source>
         <comment>Timeline add-layer menu</comment>
-        <translation>Réteg</translation>
+        <translation>&amp;Réteg</translation>
     </message>
     <message>
         <location filename="../core_lib/src/interface/timeline.cpp" line="117"/>
@@ -3966,12 +3966,12 @@
     <message>
         <location filename="../core_lib/src/interface/timeline.cpp" line="135"/>
         <source>Zoom:</source>
-        <translation type="unfinished"/>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../core_lib/src/interface/timeline.cpp" line="142"/>
         <source>Adjust frame width</source>
-        <translation type="unfinished"/>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../core_lib/src/interface/timeline.cpp" line="145"/>
@@ -4083,7 +4083,7 @@
     <message>
         <location filename="../app/ui/timelinepage.ui" line="135"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;(Applies to Pencil, Eraser, Pen, Polyline, Bucket and Brush tools)&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation type="unfinished"/>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../app/ui/timelinepage.ui" line="160"/>
@@ -4098,22 +4098,22 @@
     <message>
         <location filename="../app/ui/timelinepage.ui" line="180"/>
         <source>Flip and Roll</source>
-        <translation type="unfinished"/>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../app/ui/timelinepage.ui" line="188"/>
         <source>Maximum numbers of drawings in roll</source>
-        <translation type="unfinished"/>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../app/ui/timelinepage.ui" line="240"/>
         <source>Msecs per drawing in flip inbetween</source>
-        <translation type="unfinished"/>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../app/ui/timelinepage.ui" line="289"/>
         <source>Msecs per drawing in flip roll</source>
-        <translation type="unfinished"/>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../app/ui/timelinepage.ui" line="77"/>
@@ -4265,13 +4265,13 @@
     <message>
         <location filename="../app/src/tooloptionwidget.cpp" line="56"/>
         <source>Color Tolerance</source>
-        <translation type="unfinished"></translation>
+        <translation>Színtűrés</translation>
     </message>
     <message>
         <location filename="../app/src/tooloptionwidget.cpp" line="32"/>
         <source>Options</source>
         <comment>Window title of tool option panel like pen width, feather etc..</comment>
-        <translation type="unfinished"></translation>
+        <translation>Beállítások</translation>
     </message>
     <message>
         <location filename="../app/src/tooloptionwidget.cpp" line="183"/>
@@ -4281,7 +4281,7 @@
     <message>
         <location filename="../app/src/tooloptionwidget.cpp" line="188"/>
         <source>Width</source>
-        <translation type="unfinished"></translation>
+        <translation>Szélesség</translation>
     </message>
 </context>
 <context>
@@ -4370,7 +4370,7 @@
     <message>
         <location filename="../app/ui/tooloptions.ui" line="114"/>
         <source>The extent to which the color variation will be treated as being equal</source>
-        <translation type="unfinished"/>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../app/ui/tooloptions.ui" line="157"/>
